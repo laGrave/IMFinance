@@ -8,6 +8,7 @@
 
 #import "IMAccountsListTableViewController.h"
 #import "Account.h"
+#import "IMTransactionsTableViewController.h"
 
 @interface IMAccountsListTableViewController ()
 
@@ -48,6 +49,7 @@
     self.accountsList = [Account MR_findAll];
     [self.tableView reloadData];
 }
+
 
 #pragma mark - Table view data source
 
@@ -124,15 +126,13 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Account *account = [self.accountsList objectAtIndex:indexPath.row];
+
+    IMTransactionsTableViewController *transactionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"IMTransactionsTableViewController"];
+    transactionsVC.accountKey = account.key;
+    [self.navigationController pushViewController:transactionsVC animated:YES];
 }
 
 @end

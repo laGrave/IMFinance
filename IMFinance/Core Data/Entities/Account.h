@@ -27,6 +27,7 @@
 @property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSNumber * value;
 @property (nonatomic, retain) NSString * website;
+@property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) Date *date;
 @property (nonatomic, retain) NSSet *transactions;
 @end

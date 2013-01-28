@@ -27,6 +27,7 @@
 @dynamic type;
 @dynamic value;
 @dynamic website;
+@dynamic key;
 @dynamic date;
 @dynamic transactions;
 

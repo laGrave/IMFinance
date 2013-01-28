@@ -21,6 +21,7 @@
 @property (nonatomic, retain) NSString * note;
 @property (nonatomic, retain) NSString * userImagePath;
 @property (nonatomic, retain) NSNumber * value;
+@property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) Account *account;
 @property (nonatomic, retain) Category *category;
 @property (nonatomic, retain) Contractor *contractor;

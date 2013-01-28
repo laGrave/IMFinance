@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A741CC1A898D4B31B347DB75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591F429DE7F4C5AB075756F /* libPods.a */; };
+		DC36749516B6A56100D26206 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = DC36749416B6A56100D26206 /* Account.m */; };
+		DC36749B16B6A82B00D26206 /* IMTransactionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC36749A16B6A82B00D26206 /* IMTransactionsTableViewController.m */; };
+		DC36749E16B6AB2000D26206 /* IMTransactionCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC36749D16B6AB2000D26206 /* IMTransactionCreationViewController.m */; };
 		DCD7264516B67B6A006F5E2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD7264416B67B6A006F5E2D /* UIKit.framework */; };
 		DCD7264716B67B6A006F5E2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD7264616B67B6A006F5E2D /* Foundation.framework */; };
 		DCD7264916B67B6A006F5E2D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD7264816B67B6A006F5E2D /* CoreGraphics.framework */; };
@@ -22,7 +25,6 @@
 		DCD7268616B67D3F006F5E2D /* IMAccountCreationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7268116B67D3F006F5E2D /* IMAccountCreationTableViewController.m */; };
 		DCD7268716B67D3F006F5E2D /* IMAccountsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7268316B67D3F006F5E2D /* IMAccountsListTableViewController.m */; };
 		DCD7268816B67D3F006F5E2D /* IMCurrenciesListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7268516B67D3F006F5E2D /* IMCurrenciesListTableViewController.m */; };
-		DCD726A316B68649006F5E2D /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7269A16B68649006F5E2D /* Account.m */; };
 		DCD726A416B68649006F5E2D /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7269C16B68649006F5E2D /* Category.m */; };
 		DCD726A516B68649006F5E2D /* Contractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7269E16B68649006F5E2D /* Contractor.m */; };
 		DCD726A616B68649006F5E2D /* Date.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726A016B68649006F5E2D /* Date.m */; };
@@ -46,6 +48,12 @@
 /* Begin PBXFileReference section */
 		6591F429DE7F4C5AB075756F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B208322CA55F4E3780DE5636 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		DC36749316B6A56000D26206 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		DC36749416B6A56100D26206 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		DC36749916B6A82B00D26206 /* IMTransactionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTransactionsTableViewController.h; sourceTree = "<group>"; };
+		DC36749A16B6A82B00D26206 /* IMTransactionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTransactionsTableViewController.m; sourceTree = "<group>"; };
+		DC36749C16B6AB2000D26206 /* IMTransactionCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTransactionCreationViewController.h; sourceTree = "<group>"; };
+		DC36749D16B6AB2000D26206 /* IMTransactionCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTransactionCreationViewController.m; sourceTree = "<group>"; };
 		DCD7264116B67B6A006F5E2D /* IMFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD7264416B67B6A006F5E2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DCD7264616B67B6A006F5E2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,8 +75,6 @@
 		DCD7268316B67D3F006F5E2D /* IMAccountsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountsListTableViewController.m; sourceTree = "<group>"; };
 		DCD7268416B67D3F006F5E2D /* IMCurrenciesListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCurrenciesListTableViewController.h; sourceTree = "<group>"; };
 		DCD7268516B67D3F006F5E2D /* IMCurrenciesListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCurrenciesListTableViewController.m; sourceTree = "<group>"; };
-		DCD7269916B68649006F5E2D /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
-		DCD7269A16B68649006F5E2D /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		DCD7269B16B68649006F5E2D /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
 		DCD7269C16B68649006F5E2D /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		DCD7269D16B68649006F5E2D /* Contractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contractor.h; sourceTree = "<group>"; };
@@ -203,6 +209,10 @@
 				DCD7268316B67D3F006F5E2D /* IMAccountsListTableViewController.m */,
 				DCD7268416B67D3F006F5E2D /* IMCurrenciesListTableViewController.h */,
 				DCD7268516B67D3F006F5E2D /* IMCurrenciesListTableViewController.m */,
+				DC36749916B6A82B00D26206 /* IMTransactionsTableViewController.h */,
+				DC36749A16B6A82B00D26206 /* IMTransactionsTableViewController.m */,
+				DC36749C16B6AB2000D26206 /* IMTransactionCreationViewController.h */,
+				DC36749D16B6AB2000D26206 /* IMTransactionCreationViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -210,8 +220,8 @@
 		DCD7269816B68649006F5E2D /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				DCD7269916B68649006F5E2D /* Account.h */,
-				DCD7269A16B68649006F5E2D /* Account.m */,
+				DC36749316B6A56000D26206 /* Account.h */,
+				DC36749416B6A56100D26206 /* Account.m */,
 				DCD7269B16B68649006F5E2D /* Category.h */,
 				DCD7269C16B68649006F5E2D /* Category.m */,
 				DCD7269D16B68649006F5E2D /* Contractor.h */,
@@ -393,7 +403,6 @@
 				DCD7268616B67D3F006F5E2D /* IMAccountCreationTableViewController.m in Sources */,
 				DCD7268716B67D3F006F5E2D /* IMAccountsListTableViewController.m in Sources */,
 				DCD7268816B67D3F006F5E2D /* IMCurrenciesListTableViewController.m in Sources */,
-				DCD726A316B68649006F5E2D /* Account.m in Sources */,
 				DCD726A416B68649006F5E2D /* Category.m in Sources */,
 				DCD726A516B68649006F5E2D /* Contractor.m in Sources */,
 				DCD726A616B68649006F5E2D /* Date.m in Sources */,
@@ -409,6 +418,9 @@
 				DCD726CD16B68806006F5E2D /* MBCheckMarkView.m in Sources */,
 				DCD726CE16B68806006F5E2D /* MBSpinningCircle.m in Sources */,
 				DCD726D516B68833006F5E2D /* CurrencyConfig.m in Sources */,
+				DC36749516B6A56100D26206 /* Account.m in Sources */,
+				DC36749B16B6A82B00D26206 /* IMTransactionsTableViewController.m in Sources */,
+				DC36749E16B6AB2000D26206 /* IMTransactionCreationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

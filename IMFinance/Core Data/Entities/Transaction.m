@@ -23,6 +23,7 @@
 @dynamic note;
 @dynamic userImagePath;
 @dynamic value;
+@dynamic key;
 @dynamic account;
 @dynamic category;
 @dynamic contractor;

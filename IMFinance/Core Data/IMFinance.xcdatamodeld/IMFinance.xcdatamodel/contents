@@ -6,8 +6,9 @@
         <attribute name="cardNumber" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="currency" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="key" attributeType="String" syncable="YES"/>
         <attribute name="limit" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="ownerName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pinCode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -44,7 +45,8 @@
         <attribute name="fee" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="geo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="key" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userImagePath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -54,10 +56,10 @@
         <relationship name="date" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Date" inverseName="transaction" inverseEntity="Date" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-191" positionY="36" width="128" height="285"/>
+        <element name="Account" positionX="-191" positionY="36" width="128" height="300"/>
         <element name="Category" positionX="45" positionY="-45" width="128" height="165"/>
         <element name="Contractor" positionX="360" positionY="294" width="128" height="75"/>
         <element name="Date" positionX="-63" positionY="414" width="128" height="120"/>
-        <element name="Transaction" positionX="160" positionY="192" width="128" height="225"/>
+        <element name="Transaction" positionX="160" positionY="192" width="128" height="240"/>
     </elements>
 </model>

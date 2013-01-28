@@ -8,6 +8,8 @@
 
 #import "IMCoreDataManager.h"
 
+#import <NSHash/NSString+NSHash.h>
+
 #import "Account.h"
 #import "Transaction.h"
 
@@ -65,6 +67,7 @@ static NSString *kAcccountCurrency = @"currency";
     dispatch_async([self background_save_queue], ^{
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
             Account *newAccount = [Account MR_createInContext:localContext];
+            newAccount.key = [[[NSDate date] description] MD5];
             newAccount.name = [parameters objectForKey:kAccountName];
             newAccount.value = [parameters objectForKey:kAccountValue];
             newAccount.currency = [parameters objectForKey:kAcccountCurrency];
@@ -82,6 +85,7 @@ static NSString *kAcccountCurrency = @"currency";
 static NSString *kTransactionName = @"name";
 static NSString *kTransactionValue = @"value";
 static NSString *kTransactionCurrency = @"currency";
+static NSString *kTransactionAccountKey = @"account key";
 
 /*
  создание и сохранение новой транзакции с набором параметров
@@ -93,10 +97,16 @@ static NSString *kTransactionCurrency = @"currency";
 
     dispatch_async([self background_save_queue], ^{
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
+            Account *account = [Account MR_findFirstByAttribute:@"key"
+                                                      withValue:[parameters valueForKey:kTransactionAccountKey]
+                                                      inContext:localContext];
+            
             Transaction *newT = [Transaction MR_createInContext:localContext];
+            newT.key = [[[NSDate date] description] MD5];
             newT.name = [parameters objectForKey:kTransactionName];
             newT.value = [parameters objectForKey:kTransactionValue];
             newT.currency = [parameters objectForKey:kTransactionCurrency];
+            newT.account = account;
             
         }
                           completion:^(BOOL success, NSError *error){

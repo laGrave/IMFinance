@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A741CC1A898D4B31B347DB75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591F429DE7F4C5AB075756F /* libPods.a */; };
+		DCD7264516B67B6A006F5E2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD7264416B67B6A006F5E2D /* UIKit.framework */; };
+		DCD7264716B67B6A006F5E2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD7264616B67B6A006F5E2D /* Foundation.framework */; };
+		DCD7264916B67B6A006F5E2D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD7264816B67B6A006F5E2D /* CoreGraphics.framework */; };
+		DCD7264F16B67B6B006F5E2D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCD7264D16B67B6B006F5E2D /* InfoPlist.strings */; };
+		DCD7265116B67B6B006F5E2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7265016B67B6B006F5E2D /* main.m */; };
+		DCD7265516B67B6B006F5E2D /* IMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7265416B67B6B006F5E2D /* IMAppDelegate.m */; };
+		DCD7265716B67B6B006F5E2D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD7265616B67B6B006F5E2D /* Default.png */; };
+		DCD7265916B67B6B006F5E2D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD7265816B67B6B006F5E2D /* Default@2x.png */; };
+		DCD7265B16B67B6B006F5E2D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD7265A16B67B6B006F5E2D /* Default-568h@2x.png */; };
+		DCD7267316B67C8E006F5E2D /* IMFinance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCD7267116B67C8E006F5E2D /* IMFinance.xcdatamodeld */; };
+		DCD7267516B67CC3006F5E2D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD7267416B67CC3006F5E2D /* CoreData.framework */; };
+		DCD7268616B67D3F006F5E2D /* IMAccountCreationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7268116B67D3F006F5E2D /* IMAccountCreationTableViewController.m */; };
+		DCD7268716B67D3F006F5E2D /* IMAccountsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7268316B67D3F006F5E2D /* IMAccountsListTableViewController.m */; };
+		DCD7268816B67D3F006F5E2D /* IMCurrenciesListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7268516B67D3F006F5E2D /* IMCurrenciesListTableViewController.m */; };
+		DCD726A316B68649006F5E2D /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7269A16B68649006F5E2D /* Account.m */; };
+		DCD726A416B68649006F5E2D /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7269C16B68649006F5E2D /* Category.m */; };
+		DCD726A516B68649006F5E2D /* Contractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7269E16B68649006F5E2D /* Contractor.m */; };
+		DCD726A616B68649006F5E2D /* Date.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726A016B68649006F5E2D /* Date.m */; };
+		DCD726A716B68649006F5E2D /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726A216B68649006F5E2D /* Transaction.m */; };
+		DCD726AA16B686DA006F5E2D /* IMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726A916B686DA006F5E2D /* IMCoreDataManager.m */; };
+		DCD726AC16B687D4006F5E2D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD726AB16B687D4006F5E2D /* QuartzCore.framework */; };
+		DCD726C616B68806006F5E2D /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726B116B68806006F5E2D /* NSString+Trim.m */; };
+		DCD726C716B68806006F5E2D /* UIFont+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726B316B68806006F5E2D /* UIFont+Alert.m */; };
+		DCD726C816B68806006F5E2D /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726B516B68806006F5E2D /* UIView+Animations.m */; };
+		DCD726C916B68806006F5E2D /* MBAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726B716B68806006F5E2D /* MBAlertView.m */; };
+		DCD726CA16B68806006F5E2D /* MBHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726B916B68806006F5E2D /* MBHUDView.m */; };
+		DCD726CB16B68806006F5E2D /* MBAlertViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726BC16B68806006F5E2D /* MBAlertViewItem.m */; };
+		DCD726CC16B68806006F5E2D /* MBAlertViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726C116B68806006F5E2D /* MBAlertViewButton.m */; };
+		DCD726CD16B68806006F5E2D /* MBCheckMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726C316B68806006F5E2D /* MBCheckMarkView.m */; };
+		DCD726CE16B68806006F5E2D /* MBSpinningCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726C516B68806006F5E2D /* MBSpinningCircle.m */; };
+		DCD726D416B68833006F5E2D /* Currency.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCD726D116B68833006F5E2D /* Currency.plist */; };
+		DCD726D516B68833006F5E2D /* CurrencyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726D316B68833006F5E2D /* CurrencyConfig.m */; };
+		DCD726D916B6897A006F5E2D /* IPhone3.5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD726D816B6897A006F5E2D /* IPhone3.5.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6591F429DE7F4C5AB075756F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B208322CA55F4E3780DE5636 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		DCD7264116B67B6A006F5E2D /* IMFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCD7264416B67B6A006F5E2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DCD7264616B67B6A006F5E2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DCD7264816B67B6A006F5E2D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DCD7264C16B67B6A006F5E2D /* IMFinance-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IMFinance-Info.plist"; sourceTree = "<group>"; };
+		DCD7264E16B67B6B006F5E2D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DCD7265016B67B6B006F5E2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCD7265216B67B6B006F5E2D /* IMFinance-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IMFinance-Prefix.pch"; sourceTree = "<group>"; };
+		DCD7265316B67B6B006F5E2D /* IMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAppDelegate.h; sourceTree = "<group>"; };
+		DCD7265416B67B6B006F5E2D /* IMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMAppDelegate.m; sourceTree = "<group>"; };
+		DCD7265616B67B6B006F5E2D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DCD7265816B67B6B006F5E2D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DCD7265A16B67B6B006F5E2D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DCD7267216B67C8E006F5E2D /* IMFinance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IMFinance.xcdatamodel; sourceTree = "<group>"; };
+		DCD7267416B67CC3006F5E2D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DCD7268016B67D3F006F5E2D /* IMAccountCreationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountCreationTableViewController.h; sourceTree = "<group>"; };
+		DCD7268116B67D3F006F5E2D /* IMAccountCreationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountCreationTableViewController.m; sourceTree = "<group>"; };
+		DCD7268216B67D3F006F5E2D /* IMAccountsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountsListTableViewController.h; sourceTree = "<group>"; };
+		DCD7268316B67D3F006F5E2D /* IMAccountsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountsListTableViewController.m; sourceTree = "<group>"; };
+		DCD7268416B67D3F006F5E2D /* IMCurrenciesListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCurrenciesListTableViewController.h; sourceTree = "<group>"; };
+		DCD7268516B67D3F006F5E2D /* IMCurrenciesListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCurrenciesListTableViewController.m; sourceTree = "<group>"; };
+		DCD7269916B68649006F5E2D /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		DCD7269A16B68649006F5E2D /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		DCD7269B16B68649006F5E2D /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		DCD7269C16B68649006F5E2D /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		DCD7269D16B68649006F5E2D /* Contractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contractor.h; sourceTree = "<group>"; };
+		DCD7269E16B68649006F5E2D /* Contractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contractor.m; sourceTree = "<group>"; };
+		DCD7269F16B68649006F5E2D /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
+		DCD726A016B68649006F5E2D /* Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Date.m; sourceTree = "<group>"; };
+		DCD726A116B68649006F5E2D /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		DCD726A216B68649006F5E2D /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		DCD726A816B686DA006F5E2D /* IMCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCoreDataManager.h; sourceTree = "<group>"; };
+		DCD726A916B686DA006F5E2D /* IMCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCoreDataManager.m; sourceTree = "<group>"; };
+		DCD726AB16B687D4006F5E2D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DCD726B016B68806006F5E2D /* NSString+Trim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Trim.h"; sourceTree = "<group>"; };
+		DCD726B116B68806006F5E2D /* NSString+Trim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
+		DCD726B216B68806006F5E2D /* UIFont+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Alert.h"; sourceTree = "<group>"; };
+		DCD726B316B68806006F5E2D /* UIFont+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Alert.m"; sourceTree = "<group>"; };
+		DCD726B416B68806006F5E2D /* UIView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animations.h"; sourceTree = "<group>"; };
+		DCD726B516B68806006F5E2D /* UIView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animations.m"; sourceTree = "<group>"; };
+		DCD726B616B68806006F5E2D /* MBAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAlertView.h; sourceTree = "<group>"; };
+		DCD726B716B68806006F5E2D /* MBAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAlertView.m; sourceTree = "<group>"; };
+		DCD726B816B68806006F5E2D /* MBHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBHUDView.h; sourceTree = "<group>"; };
+		DCD726B916B68806006F5E2D /* MBHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBHUDView.m; sourceTree = "<group>"; };
+		DCD726BB16B68806006F5E2D /* MBAlertViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAlertViewItem.h; sourceTree = "<group>"; };
+		DCD726BC16B68806006F5E2D /* MBAlertViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAlertViewItem.m; sourceTree = "<group>"; };
+		DCD726BD16B68806006F5E2D /* MBAlertViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAlertViewSubclass.h; sourceTree = "<group>"; };
+		DCD726BF16B68806006F5E2D /* AlertViewUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewUI.h; sourceTree = "<group>"; };
+		DCD726C016B68806006F5E2D /* MBAlertViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAlertViewButton.h; sourceTree = "<group>"; };
+		DCD726C116B68806006F5E2D /* MBAlertViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAlertViewButton.m; sourceTree = "<group>"; };
+		DCD726C216B68806006F5E2D /* MBCheckMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCheckMarkView.h; sourceTree = "<group>"; };
+		DCD726C316B68806006F5E2D /* MBCheckMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCheckMarkView.m; sourceTree = "<group>"; };
+		DCD726C416B68806006F5E2D /* MBSpinningCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSpinningCircle.h; sourceTree = "<group>"; };
+		DCD726C516B68806006F5E2D /* MBSpinningCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpinningCircle.m; sourceTree = "<group>"; };
+		DCD726D116B68833006F5E2D /* Currency.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Currency.plist; sourceTree = "<group>"; };
+		DCD726D216B68833006F5E2D /* CurrencyConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyConfig.h; sourceTree = "<group>"; };
+		DCD726D316B68833006F5E2D /* CurrencyConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyConfig.m; sourceTree = "<group>"; };
+		DCD726D816B6897A006F5E2D /* IPhone3.5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IPhone3.5.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCD7263E16B67B6A006F5E2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD726AC16B687D4006F5E2D /* QuartzCore.framework in Frameworks */,
+				DCD7267516B67CC3006F5E2D /* CoreData.framework in Frameworks */,
+				DCD7264516B67B6A006F5E2D /* UIKit.framework in Frameworks */,
+				DCD7264716B67B6A006F5E2D /* Foundation.framework in Frameworks */,
+				DCD7264916B67B6A006F5E2D /* CoreGraphics.framework in Frameworks */,
+				A741CC1A898D4B31B347DB75 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCD7263816B67B6A006F5E2D = {
+			isa = PBXGroup;
+			children = (
+				DCD7264A16B67B6A006F5E2D /* IMFinance */,
+				DCD7264316B67B6A006F5E2D /* Frameworks */,
+				DCD7264216B67B6A006F5E2D /* Products */,
+				B208322CA55F4E3780DE5636 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		DCD7264216B67B6A006F5E2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCD7264116B67B6A006F5E2D /* IMFinance.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCD7264316B67B6A006F5E2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCD726AB16B687D4006F5E2D /* QuartzCore.framework */,
+				DCD7267416B67CC3006F5E2D /* CoreData.framework */,
+				DCD7264416B67B6A006F5E2D /* UIKit.framework */,
+				DCD7264616B67B6A006F5E2D /* Foundation.framework */,
+				DCD7264816B67B6A006F5E2D /* CoreGraphics.framework */,
+				6591F429DE7F4C5AB075756F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCD7264A16B67B6A006F5E2D /* IMFinance */ = {
+			isa = PBXGroup;
+			children = (
+				DCD7266116B67C80006F5E2D /* Core Data */,
+				DCD7267F16B67D3F006F5E2D /* View Controllers */,
+				DCD726AD16B68806006F5E2D /* Libraries */,
+				DCD726CF16B68833006F5E2D /* Utilities */,
+				DCD7265316B67B6B006F5E2D /* IMAppDelegate.h */,
+				DCD7265416B67B6B006F5E2D /* IMAppDelegate.m */,
+				DCD726D816B6897A006F5E2D /* IPhone3.5.storyboard */,
+				DCD7264B16B67B6A006F5E2D /* Supporting Files */,
+			);
+			path = IMFinance;
+			sourceTree = "<group>";
+		};
+		DCD7264B16B67B6A006F5E2D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCD7264C16B67B6A006F5E2D /* IMFinance-Info.plist */,
+				DCD7264D16B67B6B006F5E2D /* InfoPlist.strings */,
+				DCD7265016B67B6B006F5E2D /* main.m */,
+				DCD7265216B67B6B006F5E2D /* IMFinance-Prefix.pch */,
+				DCD7265616B67B6B006F5E2D /* Default.png */,
+				DCD7265816B67B6B006F5E2D /* Default@2x.png */,
+				DCD7265A16B67B6B006F5E2D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCD7266116B67C80006F5E2D /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				DCD7267116B67C8E006F5E2D /* IMFinance.xcdatamodeld */,
+				DCD726A816B686DA006F5E2D /* IMCoreDataManager.h */,
+				DCD726A916B686DA006F5E2D /* IMCoreDataManager.m */,
+				DCD7269816B68649006F5E2D /* Entities */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		DCD7267F16B67D3F006F5E2D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCD7268016B67D3F006F5E2D /* IMAccountCreationTableViewController.h */,
+				DCD7268116B67D3F006F5E2D /* IMAccountCreationTableViewController.m */,
+				DCD7268216B67D3F006F5E2D /* IMAccountsListTableViewController.h */,
+				DCD7268316B67D3F006F5E2D /* IMAccountsListTableViewController.m */,
+				DCD7268416B67D3F006F5E2D /* IMCurrenciesListTableViewController.h */,
+				DCD7268516B67D3F006F5E2D /* IMCurrenciesListTableViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DCD7269816B68649006F5E2D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DCD7269916B68649006F5E2D /* Account.h */,
+				DCD7269A16B68649006F5E2D /* Account.m */,
+				DCD7269B16B68649006F5E2D /* Category.h */,
+				DCD7269C16B68649006F5E2D /* Category.m */,
+				DCD7269D16B68649006F5E2D /* Contractor.h */,
+				DCD7269E16B68649006F5E2D /* Contractor.m */,
+				DCD7269F16B68649006F5E2D /* Date.h */,
+				DCD726A016B68649006F5E2D /* Date.m */,
+				DCD726A116B68649006F5E2D /* Transaction.h */,
+				DCD726A216B68649006F5E2D /* Transaction.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DCD726AD16B68806006F5E2D /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				DCD726AE16B68806006F5E2D /* MBAlertView */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		DCD726AE16B68806006F5E2D /* MBAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				DCD726AF16B68806006F5E2D /* Categories */,
+				DCD726B616B68806006F5E2D /* MBAlertView.h */,
+				DCD726B716B68806006F5E2D /* MBAlertView.m */,
+				DCD726B816B68806006F5E2D /* MBHUDView.h */,
+				DCD726B916B68806006F5E2D /* MBHUDView.m */,
+				DCD726BA16B68806006F5E2D /* Protected */,
+				DCD726BE16B68806006F5E2D /* Views */,
+			);
+			path = MBAlertView;
+			sourceTree = "<group>";
+		};
+		DCD726AF16B68806006F5E2D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DCD726B016B68806006F5E2D /* NSString+Trim.h */,
+				DCD726B116B68806006F5E2D /* NSString+Trim.m */,
+				DCD726B216B68806006F5E2D /* UIFont+Alert.h */,
+				DCD726B316B68806006F5E2D /* UIFont+Alert.m */,
+				DCD726B416B68806006F5E2D /* UIView+Animations.h */,
+				DCD726B516B68806006F5E2D /* UIView+Animations.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		DCD726BA16B68806006F5E2D /* Protected */ = {
+			isa = PBXGroup;
+			children = (
+				DCD726BB16B68806006F5E2D /* MBAlertViewItem.h */,
+				DCD726BC16B68806006F5E2D /* MBAlertViewItem.m */,
+				DCD726BD16B68806006F5E2D /* MBAlertViewSubclass.h */,
+			);
+			path = Protected;
+			sourceTree = "<group>";
+		};
+		DCD726BE16B68806006F5E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DCD726BF16B68806006F5E2D /* AlertViewUI.h */,
+				DCD726C016B68806006F5E2D /* MBAlertViewButton.h */,
+				DCD726C116B68806006F5E2D /* MBAlertViewButton.m */,
+				DCD726C216B68806006F5E2D /* MBCheckMarkView.h */,
+				DCD726C316B68806006F5E2D /* MBCheckMarkView.m */,
+				DCD726C416B68806006F5E2D /* MBSpinningCircle.h */,
+				DCD726C516B68806006F5E2D /* MBSpinningCircle.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DCD726CF16B68833006F5E2D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DCD726D016B68833006F5E2D /* Currency */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DCD726D016B68833006F5E2D /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				DCD726D116B68833006F5E2D /* Currency.plist */,
+				DCD726D216B68833006F5E2D /* CurrencyConfig.h */,
+				DCD726D316B68833006F5E2D /* CurrencyConfig.m */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCD7264016B67B6A006F5E2D /* IMFinance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCD7265E16B67B6B006F5E2D /* Build configuration list for PBXNativeTarget "IMFinance" */;
+			buildPhases = (
+				DCD7263D16B67B6A006F5E2D /* Sources */,
+				DCD7263E16B67B6A006F5E2D /* Frameworks */,
+				DCD7263F16B67B6A006F5E2D /* Resources */,
+				4E1D7FF6818248008BFCBAFF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IMFinance;
+			productName = IMFinance;
+			productReference = DCD7264116B67B6A006F5E2D /* IMFinance.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCD7263916B67B6A006F5E2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IM;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Igor Mishchenko";
+			};
+			buildConfigurationList = DCD7263C16B67B6A006F5E2D /* Build configuration list for PBXProject "IMFinance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DCD7263816B67B6A006F5E2D;
+			productRefGroup = DCD7264216B67B6A006F5E2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCD7264016B67B6A006F5E2D /* IMFinance */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCD7263F16B67B6A006F5E2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD7264F16B67B6B006F5E2D /* InfoPlist.strings in Resources */,
+				DCD7265716B67B6B006F5E2D /* Default.png in Resources */,
+				DCD7265916B67B6B006F5E2D /* Default@2x.png in Resources */,
+				DCD7265B16B67B6B006F5E2D /* Default-568h@2x.png in Resources */,
+				DCD726D416B68833006F5E2D /* Currency.plist in Resources */,
+				DCD726D916B6897A006F5E2D /* IPhone3.5.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E1D7FF6818248008BFCBAFF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCD7263D16B67B6A006F5E2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD7265116B67B6B006F5E2D /* main.m in Sources */,
+				DCD7265516B67B6B006F5E2D /* IMAppDelegate.m in Sources */,
+				DCD7267316B67C8E006F5E2D /* IMFinance.xcdatamodeld in Sources */,
+				DCD7268616B67D3F006F5E2D /* IMAccountCreationTableViewController.m in Sources */,
+				DCD7268716B67D3F006F5E2D /* IMAccountsListTableViewController.m in Sources */,
+				DCD7268816B67D3F006F5E2D /* IMCurrenciesListTableViewController.m in Sources */,
+				DCD726A316B68649006F5E2D /* Account.m in Sources */,
+				DCD726A416B68649006F5E2D /* Category.m in Sources */,
+				DCD726A516B68649006F5E2D /* Contractor.m in Sources */,
+				DCD726A616B68649006F5E2D /* Date.m in Sources */,
+				DCD726A716B68649006F5E2D /* Transaction.m in Sources */,
+				DCD726AA16B686DA006F5E2D /* IMCoreDataManager.m in Sources */,
+				DCD726C616B68806006F5E2D /* NSString+Trim.m in Sources */,
+				DCD726C716B68806006F5E2D /* UIFont+Alert.m in Sources */,
+				DCD726C816B68806006F5E2D /* UIView+Animations.m in Sources */,
+				DCD726C916B68806006F5E2D /* MBAlertView.m in Sources */,
+				DCD726CA16B68806006F5E2D /* MBHUDView.m in Sources */,
+				DCD726CB16B68806006F5E2D /* MBAlertViewItem.m in Sources */,
+				DCD726CC16B68806006F5E2D /* MBAlertViewButton.m in Sources */,
+				DCD726CD16B68806006F5E2D /* MBCheckMarkView.m in Sources */,
+				DCD726CE16B68806006F5E2D /* MBSpinningCircle.m in Sources */,
+				DCD726D516B68833006F5E2D /* CurrencyConfig.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DCD7264D16B67B6B006F5E2D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCD7264E16B67B6B006F5E2D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCD7265C16B67B6B006F5E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCD7265D16B67B6B006F5E2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCD7265F16B67B6B006F5E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B208322CA55F4E3780DE5636 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IMFinance/IMFinance-Prefix.pch";
+				INFOPLIST_FILE = "IMFinance/IMFinance-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DCD7266016B67B6B006F5E2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B208322CA55F4E3780DE5636 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IMFinance/IMFinance-Prefix.pch";
+				INFOPLIST_FILE = "IMFinance/IMFinance-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCD7263C16B67B6A006F5E2D /* Build configuration list for PBXProject "IMFinance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD7265C16B67B6B006F5E2D /* Debug */,
+				DCD7265D16B67B6B006F5E2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCD7265E16B67B6B006F5E2D /* Build configuration list for PBXNativeTarget "IMFinance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD7265F16B67B6B006F5E2D /* Debug */,
+				DCD7266016B67B6B006F5E2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DCD7267116B67C8E006F5E2D /* IMFinance.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DCD7267216B67C8E006F5E2D /* IMFinance.xcdatamodel */,
+			);
+			currentVersion = DCD7267216B67C8E006F5E2D /* IMFinance.xcdatamodel */;
+			path = IMFinance.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DCD7263916B67B6A006F5E2D /* Project object */;
+}

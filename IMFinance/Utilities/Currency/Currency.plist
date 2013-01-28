@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Ruble</key>
+	<dict>
+		<key>key</key>
+		<string>price_rub</string>
+		<key>id</key>
+		<string>ruble</string>
+		<key>sign</key>
+		<string>р.</string>
+		<key>name</key>
+		<string>Российский Рубль</string>
+		<key>locale</key>
+		<string>ru_RU</string>
+	</dict>
+	<key>Dollar</key>
+	<dict>
+		<key>key</key>
+		<string>price_usd</string>
+		<key>id</key>
+		<string>dollar</string>
+		<key>sign</key>
+		<string>$</string>
+		<key>name</key>
+		<string>Доллар США</string>
+		<key>locale</key>
+		<string>us_US</string>
+	</dict>
+	<key>Euro</key>
+	<dict>
+		<key>id</key>
+		<string>euro</string>
+		<key>sign</key>
+		<string>€</string>
+		<key>name</key>
+		<string>Евро</string>
+		<key>locale</key>
+		<string>fr_FR</string>
+	</dict>
+	<key>Kazakhstani tenge</key>
+	<dict>
+		<key>key</key>
+		<string>price_kzt</string>
+		<key>id</key>
+		<string>tenge</string>
+		<key>sign</key>
+		<string>т</string>
+		<key>name</key>
+		<string>Казахстанский тенге</string>
+		<key>locale</key>
+		<string>kz_KZ</string>
+	</dict>
+	<key>Belarusian ruble</key>
+	<dict>
+		<key>key</key>
+		<string>price_byr</string>
+		<key>id</key>
+		<string>belarusian ruble</string>
+		<key>sign</key>
+		<string>Br</string>
+		<key>name</key>
+		<string>Белорусский рубль</string>
+		<key>locale</key>
+		<string>by_BY</string>
+	</dict>
+	<key>Hryvnia</key>
+	<dict>
+		<key>key</key>
+		<string>price_uah</string>
+		<key>id</key>
+		<string>hryvnia</string>
+		<key>sign</key>
+		<string>г</string>
+		<key>name</key>
+		<string>Гривна</string>
+		<key>locale</key>
+		<string>ua_UA</string>
+	</dict>
+</dict>
+</plist>

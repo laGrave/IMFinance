@@ -2,8 +2,8 @@
 //  IMAppDelegate.h
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 28.01.13.
-//  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
+//  Created by Игорь Мищенко on 20.01.13.
+//  Copyright (c) 2013 Igor Mischenko. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -97,6 +97,7 @@ static NSString *kTransactionCurrency = @"currency";
             newT.name = [parameters objectForKey:kTransactionName];
             newT.value = [parameters objectForKey:kTransactionValue];
             newT.currency = [parameters objectForKey:kTransactionCurrency];
+            
         }
                           completion:^(BOOL success, NSError *error){
                               (success) ? successBlock() : failureBlock(error);

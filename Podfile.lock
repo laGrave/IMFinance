@@ -1,11 +1,14 @@
 
-COCOAPODS: 0.16.1
+SPEC CHECKSUMS: 
+  NSHash: 08e81b655e7d2e3d9b872c192e52f77b76694918
+  MagicalRecord: aedbebe987d02d1215718a904c93d7965e48e398
 
 PODS: 
 - MagicalRecord (2.1)
+- NSHash (1.0.1)
+
+COCOAPODS: 0.16.1
 
 DEPENDENCIES: 
 - MagicalRecord (~> 2.1)
-
-SPEC CHECKSUMS: 
-  MagicalRecord: aedbebe987d02d1215718a904c93d7965e48e398
+- NSHash (~> 1.0.1)

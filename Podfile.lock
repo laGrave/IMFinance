@@ -3,18 +3,15 @@ PODS:
 - JASidePanels (1.2.0)
 - MagicalRecord (2.1)
 - NSHash (1.0.1)
-- RECurtainViewController (1.0.1)
 
-COCOAPODS: 0.16.1
+SPEC CHECKSUMS: 
+  NSHash: 08e81b655e7d2e3d9b872c192e52f77b76694918
+  JASidePanels: 9a5796c3a56b016d885d5cc84907ac6cc41a20c8
+  MagicalRecord: aedbebe987d02d1215718a904c93d7965e48e398
 
 DEPENDENCIES: 
 - JASidePanels
 - MagicalRecord (~> 2.1)
 - NSHash (~> 1.0.1)
-- RECurtainViewController (~> 1.0.1)
 
-SPEC CHECKSUMS: 
-  JASidePanels: 9a5796c3a56b016d885d5cc84907ac6cc41a20c8
-  MagicalRecord: aedbebe987d02d1215718a904c93d7965e48e398
-  NSHash: 08e81b655e7d2e3d9b872c192e52f77b76694918
-  RECurtainViewController: 324eac345d9af40e802dedbc7760d259107f64e4
+COCOAPODS: 0.16.1

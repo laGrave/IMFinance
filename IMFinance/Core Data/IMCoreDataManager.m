@@ -52,25 +52,36 @@ static IMCoreDataManager *sharedInstance = nil;
 #pragma mark -
 #pragma mark Core Data - Accounts
 
-static NSString *kAccountName = @"name";
-static NSString *kAccountValue = @"value";
-static NSString *kAcccountCurrency = @"currency";
+static NSString *kAccountKey = @"account key";
+static NSString *kAccountName = @"account name";
+static NSString *kAccountValue = @"account value";
+static NSString *kAcccountCurrency = @"account currency";
 
 /* 
 создание и сохранение нового счета с набором параметров
 в фоне с параметрами в виде блоков
 */
-- (void)addAccountInBackground:(NSDictionary *)parameters
-                   withSuccess:(void (^)())successBlock
-                       failure:(void (^)(NSError *))failureBlock {
+- (void)editAccountInBackground:(NSDictionary *)parameters
+                    withSuccess:(void (^)())successBlock
+                        failure:(void (^)(NSError *))failureBlock {
     
     dispatch_async([self background_save_queue], ^{
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
-            Account *newAccount = [Account MR_createInContext:localContext];
-            newAccount.key = [[[NSDate date] description] MD5];
-            newAccount.name = [parameters objectForKey:kAccountName];
-            newAccount.value = [parameters objectForKey:kAccountValue];
-            newAccount.currency = [parameters objectForKey:kAcccountCurrency];
+            Account *account;
+            
+            NSString *key = [parameters valueForKey:kAccountKey];
+            
+            if (key && key.length) {
+                account = [Account MR_findFirstByAttribute:@"key" withValue:key inContext:localContext];
+            }
+            else {
+                account = [Account MR_createInContext:localContext];
+                account.key = [[[NSDate date] description] MD5];
+            }
+            
+            account.name = [parameters objectForKey:kAccountName];
+            account.value = ([parameters objectForKey:kAccountValue]);
+//            account.currency = [parameters objectForKey:kAcccountCurrency];
         }
                           completion:^(BOOL success, NSError *error){
                               (success) ? successBlock() : failureBlock(error);
@@ -82,10 +93,10 @@ static NSString *kAcccountCurrency = @"currency";
 #pragma mark -
 #pragma mark Core Data - Transactions
 
-static NSString *kTransactionName = @"name";
-static NSString *kTransactionValue = @"value";
-static NSString *kTransactionCurrency = @"currency";
-static NSString *kTransactionAccountKey = @"account key";
+static NSString *kTransactionKey = @"transaction key";
+static NSString *kTransactionName = @"transaction name";
+static NSString *kTransactionValue = @"transaction value";
+static NSString *kTransactionCurrency = @"transaction currency";
 
 /*
  создание и сохранение новой транзакции с набором параметров
@@ -97,16 +108,27 @@ static NSString *kTransactionAccountKey = @"account key";
 
     dispatch_async([self background_save_queue], ^{
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
+            
+            Transaction *transaction;
+            
+            NSString *key = [parameters valueForKey:kTransactionKey];
+            
+            if (key && key.length) {
+                transaction = [Transaction MR_findFirstByAttribute:@"key" withValue:key inContext:localContext];
+            }
+            else {
+                transaction = [Transaction MR_createInContext:localContext];
+                transaction.key = [[[NSDate date] description] MD5];
+            }
+            
             Account *account = [Account MR_findFirstByAttribute:@"key"
-                                                      withValue:[parameters valueForKey:kTransactionAccountKey]
+                                                      withValue:[parameters valueForKey:kAccountKey]
                                                       inContext:localContext];
             
-            Transaction *newT = [Transaction MR_createInContext:localContext];
-            newT.key = [[[NSDate date] description] MD5];
-            newT.name = [parameters objectForKey:kTransactionName];
-            newT.value = [parameters objectForKey:kTransactionValue];
-            newT.currency = [parameters objectForKey:kTransactionCurrency];
-            newT.account = account;
+            transaction.name = [parameters objectForKey:kTransactionName];
+            transaction.value = [parameters objectForKey:kTransactionValue];
+            transaction.currency = [parameters objectForKey:kTransactionCurrency];
+            transaction.account = account;
             
         }
                           completion:^(BOOL success, NSError *error){

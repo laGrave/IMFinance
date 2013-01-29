@@ -71,8 +71,8 @@
     
     [MagicalRecord setupCoreDataStack];
     
-    //выбрать нужный storyboard в зависимости от типа устройства и экрана
-    [self initializeStoryBoardBasedOnScreenSize];
+//    //выбрать нужный storyboard в зависимости от типа устройства и экрана
+//    [self initializeStoryBoardBasedOnScreenSize];
     
     return YES;
 }

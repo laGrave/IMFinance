@@ -1,5 +1,5 @@
 //
-//  IMTransactionsTableViewController.h
+//  IMAccountEditViewController.h
 //  IMFinance
 //
 //  Created by Igor Mishchenko on 29.01.13.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IMTransactionsTableViewController : UITableViewController
+@interface IMAccountEditViewController : UIViewController
+
+@property (nonatomic, strong) NSString *accountKey;
 
 @end

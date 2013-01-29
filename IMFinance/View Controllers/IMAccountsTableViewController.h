@@ -1,5 +1,5 @@
 //
-//  IMTransactionsTableViewController.h
+//  IMAccountsTableViewController.h
 //  IMFinance
 //
 //  Created by Igor Mishchenko on 29.01.13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IMTransactionsTableViewController : UITableViewController
+@interface IMAccountsTableViewController : UITableViewController
 
 @end

@@ -8,33 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
-#define kCurrencyRuble @"ruble"
-#define kCurrencyDollar @"dollar"
-#define kCurrencyEuro @"euro"
-#define kCurrencyTenge @"tenge"
-#define kCurrencyHryvnia @"hryvnia"
-#define kCurrencyBelRuble @"belarusian ruble"
-enum numbersValidCurrency {
-    currencyTenge = 2,
-    currencyBelRuble = 4,
-    currencyHryvnia = 3,
-    currencyDollar = 1,
-    currencyEuro = 5,
-    currencyRuble = 0
-};
+@class CurrencyConfig;
 
-@class ProductPrice;
-@class User, Series;
+@protocol CurrencyConfigDelegate <NSObject>
+
+- (void)currencyConfigDidLoadExchangeRates:(CurrencyConfig *)currencyConfig;
+
+@end
 
 @interface CurrencyConfig : NSObject
 
-+ (NSArray *)currenciesList;
-+ (NSString *)currencySignByName:(NSString *)currencyName;
-+ (NSString *)currencySignByNumber:(NSNumber *)currencyNumber;
-+ (NSDictionary *)currencyByID:(NSString *)currencyID;
-+ (NSDictionary *)currencyByName:(NSString *)currencyName;
-+ (NSString *)currencyKeyByNumber:(NSNumber *)currencyNumber;
-+ (NSNumber *)currencyNumberByKey:(NSString *)key;
+@property (nonatomic, strong) NSMutableDictionary *exchangeRates;
+@property (nonatomic, weak) id <CurrencyConfigDelegate> delegate;
+
+- (NSArray *)currenciesList;
+
+//получаем курсы валют онлайн
+- (void)loadExchangeRates;
 
 
 @end

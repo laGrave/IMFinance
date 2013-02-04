@@ -10,6 +10,8 @@
 		A741CC1A898D4B31B347DB75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591F429DE7F4C5AB075756F /* libPods.a */; };
 		DC15943616B7E69100672A89 /* IMAccountEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC15943516B7E69100672A89 /* IMAccountEditViewController.m */; };
 		DC36749516B6A56100D26206 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = DC36749416B6A56100D26206 /* Account.m */; };
+		DC8812AF16BFE85200DAE434 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8812AE16BFE85200DAE434 /* libz.dylib */; };
+		DC8812B216BFF9BB00DAE434 /* IMCurrecyPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8812B116BFF9BB00DAE434 /* IMCurrecyPickerViewController.m */; };
 		DC98389416B7C84C00BE939C /* IMSidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389316B7C84C00BE939C /* IMSidePanelController.m */; };
 		DC98389716B7C89D00BE939C /* IMLeftSidePanelControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389616B7C89D00BE939C /* IMLeftSidePanelControllerViewController.m */; };
 		DC98389B16B7C9D000BE939C /* IMSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389A16B7C9D000BE939C /* IMSummaryViewController.m */; };
@@ -53,6 +55,9 @@
 		DC15943516B7E69100672A89 /* IMAccountEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountEditViewController.m; sourceTree = "<group>"; };
 		DC36749316B6A56000D26206 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		DC36749416B6A56100D26206 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		DC8812AE16BFE85200DAE434 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DC8812B016BFF9BA00DAE434 /* IMCurrecyPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCurrecyPickerViewController.h; sourceTree = "<group>"; };
+		DC8812B116BFF9BB00DAE434 /* IMCurrecyPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCurrecyPickerViewController.m; sourceTree = "<group>"; };
 		DC98389216B7C84C00BE939C /* IMSidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSidePanelController.h; sourceTree = "<group>"; };
 		DC98389316B7C84C00BE939C /* IMSidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSidePanelController.m; sourceTree = "<group>"; };
 		DC98389516B7C89D00BE939C /* IMLeftSidePanelControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMLeftSidePanelControllerViewController.h; sourceTree = "<group>"; };
@@ -120,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC8812AF16BFE85200DAE434 /* libz.dylib in Frameworks */,
 				DCD726AC16B687D4006F5E2D /* QuartzCore.framework in Frameworks */,
 				DCD7267516B67CC3006F5E2D /* CoreData.framework in Frameworks */,
 				DCD7264516B67B6A006F5E2D /* UIKit.framework in Frameworks */,
@@ -150,6 +156,8 @@
 				DC98389316B7C84C00BE939C /* IMSidePanelController.m */,
 				DC98389816B7C8A400BE939C /* Left Side */,
 				DC98389C16B7C9D400BE939C /* Center */,
+				DC8812B016BFF9BA00DAE434 /* IMCurrecyPickerViewController.h */,
+				DC8812B116BFF9BB00DAE434 /* IMCurrecyPickerViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -196,6 +204,7 @@
 		DCD7264316B67B6A006F5E2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC8812AE16BFE85200DAE434 /* libz.dylib */,
 				DCD726AB16B687D4006F5E2D /* QuartzCore.framework */,
 				DCD7267416B67CC3006F5E2D /* CoreData.framework */,
 				DCD7264416B67B6A006F5E2D /* UIKit.framework */,
@@ -451,6 +460,7 @@
 				DC98389F16B7CCBC00BE939C /* IMAccountsTableViewController.m in Sources */,
 				DC9838A216B7CCCB00BE939C /* IMTransactionsTableViewController.m in Sources */,
 				DC15943616B7E69100672A89 /* IMAccountEditViewController.m in Sources */,
+				DC8812B216BFF9BB00DAE434 /* IMCurrecyPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

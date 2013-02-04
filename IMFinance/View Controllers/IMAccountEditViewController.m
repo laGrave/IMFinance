@@ -122,7 +122,6 @@ static NSString *kAcccountCurrency = @"account currency";
 }
 
 
-
 #pragma mark -
 #pragma mark - UITextFieldDelegate protocol implementation
 

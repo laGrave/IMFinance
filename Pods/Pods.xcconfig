@@ -1,7 +1,7 @@
 ALWAYS_SEARCH_USER_PATHS = YES
 HEADER_SEARCH_PATHS = ${PODS_HEADERS_SEARCH_PATHS}
-OTHER_LDFLAGS = -ObjC -framework CoreData -framework QuartzCore
-PODS_BUILD_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/JASidePanels" "${PODS_ROOT}/BuildHeaders/MagicalRecord" "${PODS_ROOT}/BuildHeaders/NSHash"
+OTHER_LDFLAGS = -ObjC -lz -framework CoreData -framework QuartzCore
+PODS_BUILD_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/JASidePanels" "${PODS_ROOT}/BuildHeaders/MagicalRecord" "${PODS_ROOT}/BuildHeaders/NSHash" "${PODS_ROOT}/BuildHeaders/TBXML"
 PODS_HEADERS_SEARCH_PATHS = ${PODS_PUBLIC_HEADERS_SEARCH_PATHS}
-PODS_PUBLIC_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/JASidePanels" "${PODS_ROOT}/Headers/MagicalRecord" "${PODS_ROOT}/Headers/NSHash"
+PODS_PUBLIC_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/JASidePanels" "${PODS_ROOT}/Headers/MagicalRecord" "${PODS_ROOT}/Headers/NSHash" "${PODS_ROOT}/Headers/TBXML"
 PODS_ROOT = ${SRCROOT}/Pods

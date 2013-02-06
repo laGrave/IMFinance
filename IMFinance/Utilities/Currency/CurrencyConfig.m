@@ -20,14 +20,16 @@
 }
 
 
-- (void)loadExchangeRates {
-    
-    // initialize rate array
-    self.exchangeRates = [[NSMutableDictionary alloc] init];
+- (void)loadExchangeRatesWithSuccess:(void(^)(NSDictionary *exchangeRates))successHandler
+                               error:(void(^)(NSError *error, NSDictionary *oldRates))errorHandler {
+
     
     // Load and parse the rates.xml file
     [TBXML tbxmlWithURL:[NSURL URLWithString:@"http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml"]
                 success:^(TBXML *tbxml){
+                    // initialize new rate array
+                    self.exchangeRates = [[NSMutableDictionary alloc] init];
+                    
                     // If TBXML found a root node, process element and iterate all children
                     if (tbxml.rootXMLElement)
                         [self traverseElement:tbxml.rootXMLElement];
@@ -35,13 +37,13 @@
                     // add EUR to rate table
                     [self.exchangeRates setObject:@"1.0" forKey:@"EUR"];
                     
-                    if ([self.delegate conformsToProtocol:@protocol(CurrencyConfigDelegate)]) {
-                        [self.delegate currencyConfigDidLoadExchangeRates:self];
-                    }
+                    successHandler(self.exchangeRates);
                 }
                 failure:^(TBXML *tbxml, NSError *error){
                     NSLog(@"error %@", error.description);
+                    errorHandler(error, self.exchangeRates);
                 }];
+
 }
 
 

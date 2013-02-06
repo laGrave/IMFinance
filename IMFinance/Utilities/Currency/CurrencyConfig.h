@@ -8,18 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class CurrencyConfig;
-
-@protocol CurrencyConfigDelegate <NSObject>
-
-- (void)currencyConfigDidLoadExchangeRates:(CurrencyConfig *)currencyConfig;
-
-@end
-
 @interface CurrencyConfig : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary *exchangeRates;
-@property (nonatomic, weak) id <CurrencyConfigDelegate> delegate;
 
 //список международных кодов всех валют в программе
 - (NSArray *)currenciesList;
@@ -39,7 +30,8 @@
                            byCurrency:(NSString *)secondCurCode;
 
 //получаем курсы валют онлайн
-- (void)loadExchangeRates;
+- (void)loadExchangeRatesWithSuccess:(void(^)(NSDictionary *exchangeRates))successHandler
+                               error:(void(^)(NSError *error, NSDictionary *oldRates))errorHandler;
 
 
 @end

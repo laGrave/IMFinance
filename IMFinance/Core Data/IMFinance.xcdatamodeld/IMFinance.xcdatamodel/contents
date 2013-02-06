@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C2034" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Account" representedClassName="Account" syncable="YES">
         <attribute name="accountNumber" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="bankName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cardNumber" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
-        <attribute name="currency" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" minValueString="0" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="key" attributeType="String" syncable="YES"/>
         <attribute name="limit" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -21,7 +21,6 @@
     </entity>
     <entity name="Category" representedClassName="Category" syncable="YES">
         <attribute name="budget" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="currency" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="type" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
@@ -41,7 +40,7 @@
         <relationship name="transaction" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="date" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="Transaction" representedClassName="Transaction" syncable="YES">
-        <attribute name="currency" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="currency" attributeType="String" syncable="YES"/>
         <attribute name="fee" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="geo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -57,7 +56,7 @@
     </entity>
     <elements>
         <element name="Account" positionX="-191" positionY="36" width="128" height="300"/>
-        <element name="Category" positionX="45" positionY="-45" width="128" height="165"/>
+        <element name="Category" positionX="45" positionY="-45" width="128" height="150"/>
         <element name="Contractor" positionX="360" positionY="294" width="128" height="75"/>
         <element name="Date" positionX="-63" positionY="414" width="128" height="120"/>
         <element name="Transaction" positionX="160" positionY="192" width="128" height="240"/>

@@ -10,7 +10,7 @@
 
 #import "CurrencyConfig.h"
 
-@interface IMCurrecyPickerViewController () <CurrencyConfigDelegate>
+@interface IMCurrecyPickerViewController ()
 
 @property (nonatomic, strong) CurrencyConfig *currenciesConfig;
 
@@ -34,8 +34,12 @@
 //    [[NSUserDefaults standardUserDefaults] setObject:@"RUB" forKey:@"default currency code"];
 
     self.currenciesConfig = [[CurrencyConfig alloc] init];
-    self.currenciesConfig.delegate = self;
-    [self.currenciesConfig loadExchangeRates];
+    [self.currenciesConfig loadExchangeRatesWithSuccess:^(NSDictionary *rates){
+                                                      [self.tableView reloadData];
+                                                }
+                                                  error:^(NSError *error, NSDictionary *oldRates){
+                                                      NSLog(@"error during loading rates: %@", error.description);
+                                                  }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,15 +89,6 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-}
-
-
-#pragma mark -
-#pragma mark - CurrencyConfigDelegate protocol implementation
-
-- (void)currencyConfigDidLoadExchangeRates:(CurrencyConfig *)currencyConfig {
-
-    [self.tableView reloadData];
 }
 
 @end

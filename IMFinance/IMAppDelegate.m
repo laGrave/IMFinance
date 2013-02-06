@@ -71,6 +71,16 @@
     
     [MagicalRecord setupCoreDataStack];
     
+    [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],@"firstLaunch",nil]];
+    BOOL firstLaunch = [[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"];
+    if (firstLaunch) {
+        NSLocale *currentLocale = [NSLocale autoupdatingCurrentLocale];
+        NSString *currencyCode = [currentLocale objectForKey:NSLocaleCurrencyCode];
+        [[NSUserDefaults standardUserDefaults] setObject:currencyCode forKey:@"default currency code"];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
+    }
+    
+    
 //    //выбрать нужный storyboard в зависимости от типа устройства и экрана
 //    [self initializeStoryBoardBasedOnScreenSize];
     

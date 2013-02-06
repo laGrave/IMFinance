@@ -30,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+//    [[NSUserDefaults standardUserDefaults] setObject:@"RUB" forKey:@"default currency code"];
 
     self.currenciesConfig = [[CurrencyConfig alloc] init];
     self.currenciesConfig.delegate = self;
@@ -61,11 +63,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSString *curLocale = [[self.currenciesConfig currenciesList] objectAtIndex:indexPath.row];
-    NSDecimalNumber *rate = [self.currenciesConfig.exchangeRates objectForKey:curLocale];
+    NSString *curCode = [[self.currenciesConfig currenciesList] objectAtIndex:indexPath.row];
+    NSString *curName = [self.currenciesConfig currencyNameWithCode:curCode];
+    NSString *rate = [self.currenciesConfig exchangeRateForCurrencyByDefaultCurrency:curCode];
 
-    cell.textLabel.text = curLocale;
-    cell.detailTextLabel.text = (rate) ? [NSString stringWithFormat:@"%@", rate] : @"";
+    cell.textLabel.text = curName;
+    cell.detailTextLabel.text = rate;
     
     return cell;
 }

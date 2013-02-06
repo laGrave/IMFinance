@@ -15,7 +15,8 @@
 
 - (NSArray *)currenciesList {
 
-    return [NSLocale ISOCurrencyCodes];
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Currency" ofType:@"plist"];
+    return [NSArray arrayWithContentsOfFile:plistPath];
 }
 
 
@@ -81,5 +82,52 @@
     } while ((element = element->nextSibling));
 }
 
+
+- (NSString *)currencyNameWithCode:(NSString *)code inLocale:(NSLocale *)locale {
+
+    NSLocale *loc = locale;
+    if (!loc) {
+        locale = [NSLocale autoupdatingCurrentLocale];
+    }
+    
+    return [locale displayNameForKey:NSLocaleCurrencyCode value:code];
+}
+
+
+- (NSString *)currencyNameWithCode:(NSString *)code {
+
+    return [self currencyNameWithCode:code inLocale:nil];
+}
+
+
+- (NSString *)exchangeRateForCurrencyByEuro:(NSString *)currencyCode {
+
+    NSString *rate = [self.exchangeRates objectForKey:currencyCode];
+    return (rate.length) ? rate : @"";
+}
+
+
+- (NSString *)exchangeRateForCurrencyByDefaultCurrency:(NSString *)currencyCode {
+
+    NSString *defaultCurCode = [[NSUserDefaults standardUserDefaults] objectForKey:@"default currency code"];
+    if (!defaultCurCode) defaultCurCode = @"EUR";
+    
+    return [self exchangeRateForCurrency:currencyCode byCurrency:defaultCurCode];
+}
+
+
+- (NSString *)exchangeRateForCurrency:(NSString *)firstCurCode
+                           byCurrency:(NSString *)secondCurCode {
+
+    NSString *firstRate  = [self exchangeRateForCurrencyByEuro:firstCurCode];
+    NSString *secondRate = [self exchangeRateForCurrencyByEuro:secondCurCode];
+
+    if (firstRate.length && secondRate.length) {
+        NSDecimalNumber *a = [NSDecimalNumber decimalNumberWithString:firstRate];
+        NSDecimalNumber *b = [NSDecimalNumber decimalNumberWithString:secondRate];
+        return [[b decimalNumberByDividingBy:a] stringValue];
+    }
+    else return @"";
+}
 
 @end

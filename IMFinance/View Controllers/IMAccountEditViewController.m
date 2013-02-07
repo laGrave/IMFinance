@@ -167,8 +167,6 @@ static NSString *kAccountCurrency = @"account currency";
     [self.params setValue:currencyCode forKey:kAccountCurrency];
     NSString *currencyName = [[[CurrencyConfig alloc] init] currencyNameWithCode:currencyCode];
     [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

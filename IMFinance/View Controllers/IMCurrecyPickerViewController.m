@@ -30,16 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    [[NSUserDefaults standardUserDefaults] setObject:@"RUB" forKey:@"default currency code"];
 
     self.currenciesConfig = [[CurrencyConfig alloc] init];
-    [self.currenciesConfig loadExchangeRatesWithSuccess:^(NSDictionary *rates){
-                                                      [self.tableView reloadData];
-                                                }
-                                                  error:^(NSError *error, NSDictionary *oldRates){
-                                                      NSLog(@"error during loading rates: %@", error.description);
-                                                  }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,6 +74,8 @@
     
     NSString *curCode = [[self.currenciesConfig currenciesList] objectAtIndex:indexPath.row];
     [self.delegate pickerDidSelectCurrency:curCode];
+    
+    if (self.navigationController) [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

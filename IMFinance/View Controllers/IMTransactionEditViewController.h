@@ -10,7 +10,7 @@
 
 @interface IMTransactionEditViewController : UIViewController
 
-
+@property (nonatomic, strong) NSString *accountKey;
 @property (nonatomic, strong) NSString *transactionKey;
 
 @end

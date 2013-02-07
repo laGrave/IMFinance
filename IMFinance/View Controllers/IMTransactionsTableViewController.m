@@ -67,6 +67,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - 
+#pragma mark Instance Methods
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    if ([segue.identifier isEqualToString:@"edit transaction"] && self.accountKey && self.accountKey.length) {
+        UINavigationController *navVC = (UINavigationController *)segue.destinationViewController;
+        IMTransactionEditViewController *transactionEditVC = (IMTransactionEditViewController *)[navVC topViewController];
+        transactionEditVC.accountKey = self.accountKey;
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

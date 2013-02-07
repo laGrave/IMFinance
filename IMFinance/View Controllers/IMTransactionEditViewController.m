@@ -30,6 +30,7 @@ static NSString *kAccountKey = @"account key";
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *valueTextField;
 @property (weak, nonatomic) IBOutlet UIButton *currencyButton;
+@property (weak, nonatomic) IBOutlet UIButton *accountButton;
 
 @property (nonatomic, strong) NSDictionary *params;
 
@@ -79,8 +80,20 @@ static NSString *kAccountKey = @"account key";
         [self.params setValue:trans.currency forKey:kTransactionCurrency];
         [self.params setValue:trans.account.key forKey:kAccountKey];
         
+        NSString *currencyName = [[[CurrencyConfig alloc] init] currencyNameWithCode:trans.currency];
+        [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
+        
         self.nameTextField.text = trans.name;
         self.valueTextField.text = [NSString stringWithFormat:@"%@", trans.value];
+    }
+    else if (self.accountKey) {
+        Account *account = [Account MR_findFirstByAttribute:@"key" withValue:self.accountKey];
+        [self.params setValue:self.accountKey forKey:kAccountKey];
+        [self.params setValue:account.currency forKey:kTransactionCurrency];
+        
+        [self.accountButton setTitle:account.name forState:UIControlStateNormal];
+        NSString *currencyName = [[[CurrencyConfig alloc] init] currencyNameWithCode:account.currency];
+        [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
     }
 }
 
@@ -179,18 +192,17 @@ static NSString *kAccountKey = @"account key";
     [self.params setValue:currencyCode forKey:kTransactionCurrency];
     NSString *currencyName = [[[CurrencyConfig alloc] init] currencyNameWithCode:currencyCode];
     [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
 #pragma mark -
 #pragma mark - IMAccountSelectorControllerDelegate protocol implementation
 
-- (void)selectorDidSelectAccount:(Account *)account {
+- (void)selectorDidSelectAccount:(NSString *)accountKey {
 
-    [self.params setValue:account.key forKey:kAccountKey];
-    [self.navigationController popViewControllerAnimated:YES];
+    Account *account = [Account MR_findFirstByAttribute:accountKey withValue:kAccountKey];
+    [self.params setValue:accountKey forKey:kAccountKey];
+    [self.accountButton setTitle:account.name forState:UIControlStateNormal];
 }
 
 @end

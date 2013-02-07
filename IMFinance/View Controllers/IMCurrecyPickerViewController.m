@@ -69,10 +69,8 @@
     // Configure the cell...
     NSString *curCode = [[self.currenciesConfig currenciesList] objectAtIndex:indexPath.row];
     NSString *curName = [self.currenciesConfig currencyNameWithCode:curCode];
-    NSString *rate = [self.currenciesConfig exchangeRateForCurrencyByDefaultCurrency:curCode];
 
     cell.textLabel.text = curName;
-    cell.detailTextLabel.text = rate;
     
     return cell;
 }
@@ -80,15 +78,10 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *curCode = [[self.currenciesConfig currenciesList] objectAtIndex:indexPath.row];
+    [self.delegate pickerDidSelectCurrency:curCode];
 }
 
 @end

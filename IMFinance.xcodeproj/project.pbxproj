@@ -12,6 +12,8 @@
 		DC36749516B6A56100D26206 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = DC36749416B6A56100D26206 /* Account.m */; };
 		DC8812AF16BFE85200DAE434 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8812AE16BFE85200DAE434 /* libz.dylib */; };
 		DC8812B216BFF9BB00DAE434 /* IMCurrecyPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8812B116BFF9BB00DAE434 /* IMCurrecyPickerViewController.m */; };
+		DC8812FF16C3BCC300DAE434 /* IMTransactionEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8812FE16C3BCC300DAE434 /* IMTransactionEditViewController.m */; };
+		DC90987216C3E63F00CF9D00 /* IMAccountSelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC90987116C3E63F00CF9D00 /* IMAccountSelectorController.m */; };
 		DC98389416B7C84C00BE939C /* IMSidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389316B7C84C00BE939C /* IMSidePanelController.m */; };
 		DC98389716B7C89D00BE939C /* IMLeftSidePanelControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389616B7C89D00BE939C /* IMLeftSidePanelControllerViewController.m */; };
 		DC98389B16B7C9D000BE939C /* IMSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389A16B7C9D000BE939C /* IMSummaryViewController.m */; };
@@ -58,6 +60,10 @@
 		DC8812AE16BFE85200DAE434 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		DC8812B016BFF9BA00DAE434 /* IMCurrecyPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCurrecyPickerViewController.h; sourceTree = "<group>"; };
 		DC8812B116BFF9BB00DAE434 /* IMCurrecyPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCurrecyPickerViewController.m; sourceTree = "<group>"; };
+		DC8812FD16C3BCC300DAE434 /* IMTransactionEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTransactionEditViewController.h; sourceTree = "<group>"; };
+		DC8812FE16C3BCC300DAE434 /* IMTransactionEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTransactionEditViewController.m; sourceTree = "<group>"; };
+		DC90987016C3E63F00CF9D00 /* IMAccountSelectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountSelectorController.h; sourceTree = "<group>"; };
+		DC90987116C3E63F00CF9D00 /* IMAccountSelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountSelectorController.m; sourceTree = "<group>"; };
 		DC98389216B7C84C00BE939C /* IMSidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSidePanelController.h; sourceTree = "<group>"; };
 		DC98389316B7C84C00BE939C /* IMSidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSidePanelController.m; sourceTree = "<group>"; };
 		DC98389516B7C89D00BE939C /* IMLeftSidePanelControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMLeftSidePanelControllerViewController.h; sourceTree = "<group>"; };
@@ -145,8 +151,21 @@
 				DC98389E16B7CCBC00BE939C /* IMAccountsTableViewController.m */,
 				DC15943416B7E69100672A89 /* IMAccountEditViewController.h */,
 				DC15943516B7E69100672A89 /* IMAccountEditViewController.m */,
+				DC90987016C3E63F00CF9D00 /* IMAccountSelectorController.h */,
+				DC90987116C3E63F00CF9D00 /* IMAccountSelectorController.m */,
 			);
 			name = Accounts;
+			sourceTree = "<group>";
+		};
+		DC8812FC16C3BC9100DAE434 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				DC9838A016B7CCCB00BE939C /* IMTransactionsTableViewController.h */,
+				DC9838A116B7CCCB00BE939C /* IMTransactionsTableViewController.m */,
+				DC8812FD16C3BCC300DAE434 /* IMTransactionEditViewController.h */,
+				DC8812FE16C3BCC300DAE434 /* IMTransactionEditViewController.m */,
+			);
+			name = Transactions;
 			sourceTree = "<group>";
 		};
 		DC98389116B7C84C00BE939C /* View Controllers */ = {
@@ -177,8 +196,7 @@
 				DC98389916B7C9D000BE939C /* IMSummaryViewController.h */,
 				DC98389A16B7C9D000BE939C /* IMSummaryViewController.m */,
 				DC15943316B7E66000672A89 /* Accounts */,
-				DC9838A016B7CCCB00BE939C /* IMTransactionsTableViewController.h */,
-				DC9838A116B7CCCB00BE939C /* IMTransactionsTableViewController.m */,
+				DC8812FC16C3BC9100DAE434 /* Transactions */,
 			);
 			name = Center;
 			sourceTree = "<group>";
@@ -461,6 +479,8 @@
 				DC9838A216B7CCCB00BE939C /* IMTransactionsTableViewController.m in Sources */,
 				DC15943616B7E69100672A89 /* IMAccountEditViewController.m in Sources */,
 				DC8812B216BFF9BB00DAE434 /* IMCurrecyPickerViewController.m in Sources */,
+				DC8812FF16C3BCC300DAE434 /* IMTransactionEditViewController.m in Sources */,
+				DC90987216C3E63F00CF9D00 /* IMAccountSelectorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

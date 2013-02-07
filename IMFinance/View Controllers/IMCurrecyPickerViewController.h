@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol IMCurrecyPickerViewControllerDelegate <NSObject>
+
+- (void)pickerDidSelectCurrency:(NSString *)currencyCode;
+
+@end
+
 @interface IMCurrecyPickerViewController : UITableViewController
+
+@property (nonatomic, weak) id <IMCurrecyPickerViewControllerDelegate> delegate;
 
 @end

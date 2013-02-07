@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C2034" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Account" representedClassName="Account" syncable="YES">
         <attribute name="accountNumber" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="bankName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cardNumber" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
-        <attribute name="currency" optional="YES" attributeType="String" minValueString="0" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="key" attributeType="String" syncable="YES"/>
         <attribute name="limit" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -45,12 +45,12 @@
         <attribute name="geo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="key" attributeType="String" syncable="YES"/>
-        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userImagePath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="account" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="transactions" inverseEntity="Account" syncable="YES"/>
-        <relationship name="category" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="transactions" inverseEntity="Category" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="transactions" inverseEntity="Category" syncable="YES"/>
         <relationship name="contractor" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Contractor" inverseName="transactions" inverseEntity="Contractor" syncable="YES"/>
         <relationship name="date" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Date" inverseName="transaction" inverseEntity="Date" syncable="YES"/>
     </entity>

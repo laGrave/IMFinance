@@ -2,7 +2,7 @@
 //  Category.h
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 28.01.13.
+//  Created by Igor Mishchenko on 07.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -14,7 +14,6 @@
 @interface Category : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * budget;
-@property (nonatomic, retain) NSNumber * currency;
 @property (nonatomic, retain) NSData * image;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * type;

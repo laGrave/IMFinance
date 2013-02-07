@@ -1,25 +1,31 @@
 //
-//  IMAccountEditViewController.m
+//  IMTransactionEditViewController.m
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 29.01.13.
+//  Created by Igor Mishchenko on 07.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
-#import "IMAccountEditViewController.h"
+#import "IMTransactionEditViewController.h"
 
 #import "IMCoreDataManager.h"
+#import "Transaction.h"
 #import "Account.h"
 
-#import "IMCurrecyPickerViewController.h"
 #import "CurrencyConfig.h"
+#import "IMCurrecyPickerViewController.h"
 
+#import "IMAccountSelectorController.h"
+
+
+static NSString *kTransactionKey = @"transaction key";
+static NSString *kTransactionName = @"transaction name";
+static NSString *kTransactionValue = @"transaction value";
+static NSString *kTransactionCurrency = @"transaction currency";
 static NSString *kAccountKey = @"account key";
-static NSString *kAccountName = @"account name";
-static NSString *kAccountValue = @"account value";
-static NSString *kAccountCurrency = @"account currency";
 
-@interface IMAccountEditViewController () <UITextFieldDelegate, IMCurrecyPickerViewControllerDelegate>
+
+@interface IMTransactionEditViewController () <IMCurrecyPickerViewControllerDelegate, UITextFieldDelegate, IMAccountSelectorControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *valueTextField;
@@ -29,14 +35,13 @@ static NSString *kAccountCurrency = @"account currency";
 
 @end
 
-@implementation IMAccountEditViewController
-
+@implementation IMTransactionEditViewController
 
 #pragma mark -
 #pragma mark - Getters
 
 - (NSDictionary *)params {
-
+    
     if (!_params) {
         _params = [[NSMutableDictionary alloc] init];
     }
@@ -47,6 +52,14 @@ static NSString *kAccountCurrency = @"account currency";
 #pragma mark -
 #pragma mark - View Controller's Lifecycle
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -56,24 +69,19 @@ static NSString *kAccountCurrency = @"account currency";
     self.nameTextField.delegate = self;
     self.valueTextField.delegate = self;
     
-    if (self.accountKey) {
-        Account *account = [Account MR_findFirstByAttribute:@"key" withValue:self.accountKey];
+    if (self.transactionKey) {
+        Transaction *trans = [Transaction MR_findFirstByAttribute:@"key" withValue:self.transactionKey];
         
-        [self.params setValue:account.key forKey:kAccountKey];
-        [self.params setValue:account.name forKey:kAccountName];
-        [self.params setValue:account.value forKey:kAccountValue];
+        [self.params setValue:trans.key forKey:kTransactionKey];
+        [self.params setValue:trans.name forKey:kTransactionName];
+        [self.params setValue:trans.value forKey:kTransactionValue];
+        [self.currencyButton setTitle:[[[CurrencyConfig alloc] init] currencyNameWithCode:trans.currency] forState:UIControlStateNormal];
+        [self.params setValue:trans.currency forKey:kTransactionCurrency];
+        [self.params setValue:trans.account.key forKey:kAccountKey];
         
-        NSString *currency = account.currency;
-        if (currency && currency.length) {
-            [self.currencyButton setTitle:[[[CurrencyConfig alloc] init] currencyNameWithCode:currency] forState:UIControlStateNormal];
-            [self.params setValue:account.currency forKey:kAccountCurrency];
-        }
-        
-        
-        self.nameTextField.text = account.name;
-        self.valueTextField.text = [NSString stringWithFormat:@"%@", account.value];
+        self.nameTextField.text = trans.name;
+        self.valueTextField.text = [NSString stringWithFormat:@"%@", trans.value];
     }
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,12 +95,17 @@ static NSString *kAccountCurrency = @"account currency";
 #pragma mark - Instance Methods
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
+    
     if ([segue.identifier isEqualToString:@"select currency"]) {
         IMCurrecyPickerViewController *picker = (IMCurrecyPickerViewController *)segue.destinationViewController;
         picker.delegate = self;
     }
+    if ([segue.identifier isEqualToString:@"select account"]) {
+        IMAccountSelectorController *accountSelector = (IMAccountSelectorController *)segue.destinationViewController;
+        accountSelector.delegate = self;
+    }
 }
+
 
 - (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender {
     
@@ -107,26 +120,25 @@ static NSString *kAccountCurrency = @"account currency";
     }
     
     if ([self setupParams]) {
-        [[IMCoreDataManager sharedInstance] editAccountWithParams:self.params
-                                                          success:^{[self dismissViewControllerAnimated:YES completion:NULL];}
-                                                          failure:^(NSError *error){;}];
+        [[IMCoreDataManager sharedInstance] editTransactionWithParams:self.params
+                                                              success:^{[self dismissViewControllerAnimated:YES completion:NULL];}
+                                                              failure:^(NSError *error){NSLog(@"%@", error.userInfo);}];
     }
     else NSLog(@"заполните все поля!");
 }
 
 
 - (BOOL)setupParams {
-
+    
     
     for (UITextField *textField in self.view.subviews) {
         if ([textField isKindOfClass:[UITextField class]]) {
             [textField resignFirstResponder];
-            if (!textField.text.length) return NO;
         }
     }
     
-    [self.params setValue:self.nameTextField.text forKey:kAccountName];
-    [self.params setValue:[NSNumber numberWithDouble:self.valueTextField.text.doubleValue] forKey:kAccountValue];
+    [self.params setValue:self.nameTextField.text forKey:kTransactionName];
+    [self.params setValue:[NSNumber numberWithDouble:self.valueTextField.text.doubleValue] forKey:kTransactionValue];
     
     return YES;
 }
@@ -136,14 +148,14 @@ static NSString *kAccountCurrency = @"account currency";
 #pragma mark - UITextFieldDelegate protocol implementation
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-
+    
     [textField resignFirstResponder];
     return YES;
 }
 
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-
+    
     if (textField == self.valueTextField && [textField.text isEqualToString:@"0"]) {
         textField.text = @"";
     }
@@ -151,7 +163,7 @@ static NSString *kAccountCurrency = @"account currency";
 
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-
+    
     if (textField == self.valueTextField && !textField.text.length) {
         textField.text = @"0";
     }
@@ -163,11 +175,21 @@ static NSString *kAccountCurrency = @"account currency";
 #pragma mark - IMCurrecyPickerViewControllerDelegate protocol implementation
 
 - (void)pickerDidSelectCurrency:(NSString *)currencyCode {
-
-    [self.params setValue:currencyCode forKey:kAccountCurrency];
+    
+    [self.params setValue:currencyCode forKey:kTransactionCurrency];
     NSString *currencyName = [[[CurrencyConfig alloc] init] currencyNameWithCode:currencyCode];
     [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
     
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+#pragma mark -
+#pragma mark - IMAccountSelectorControllerDelegate protocol implementation
+
+- (void)selectorDidSelectAccount:(Account *)account {
+
+    [self.params setValue:account.key forKey:kAccountKey];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

@@ -10,4 +10,6 @@
 
 @interface IMTransactionsTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSString *accountKey;
+
 @end

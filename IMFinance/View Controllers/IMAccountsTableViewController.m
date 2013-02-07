@@ -11,6 +11,7 @@
 #import "Account.h"
 
 #import "IMAccountEditViewController.h"
+#import "IMTransactionsTableViewController.h"
 
 @interface IMAccountsTableViewController () <NSFetchedResultsControllerDelegate>
 
@@ -133,7 +134,7 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     
     Account *account = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
@@ -141,6 +142,15 @@
     accountEditVC.accountKey = account.key;
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:accountEditVC];
     [self presentViewController:navVC animated:YES completion:NULL];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Account *account = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    IMTransactionsTableViewController *trancVC = [self.storyboard instantiateViewControllerWithIdentifier:@"transactions table view controller"];
+    trancVC.accountKey = account.key;
+    [self.navigationController pushViewController:trancVC animated:YES];
 }
 
 

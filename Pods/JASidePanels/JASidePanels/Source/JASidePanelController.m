@@ -177,6 +177,11 @@ static char ja_kvoContext;
     [self styleContainer:self.centerPanelContainer animate:NO duration:0.0f];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self _adjustCenterFrame]; //Account for possible rotation while view appearing
+}
+
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
 
 - (void)viewDidUnload {
@@ -346,15 +351,8 @@ static char ja_kvoContext;
         // update the state immediately to prevent user interaction on the side panels while animating
         JASidePanelState previousState = self.state;
         self.state = JASidePanelCenterVisible;
-        [UIView animateWithDuration:0.2f animations:^{
-            // first move the centerPanel offscreen
-            CGFloat x = (previousState == JASidePanelLeftVisible) ? self.view.bounds.size.width : -self.view.bounds.size.width;
-            _centerPanelRestingFrame.origin.x = x;
-            self.centerPanelContainer.frame = _centerPanelRestingFrame;
-        } completion:^(__unused BOOL finished) {
-            [self _swapCenter:previous with:_centerPanel];
-            [self _showCenterPanel:YES bounce:NO];
-        }];
+        [self _swapCenter:previous with:_centerPanel];
+        [self _showCenterPanel:YES bounce:NO];
     }
 }
 

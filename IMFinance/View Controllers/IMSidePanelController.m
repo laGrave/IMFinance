@@ -29,6 +29,7 @@
 	// Do any additional setup after loading the view.
     
     self.leftFixedWidth = 100;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +43,9 @@
     
     [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"left side panel"]];
 //    [self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"center panel"]];
-    [self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"accounts table view controller"]];
+    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"summary view controller"];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self setCenterPanel:navVC];
 }
 
 @end

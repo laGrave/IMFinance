@@ -2,7 +2,7 @@
 //  Transaction.h
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 28.01.13.
+//  Created by Igor Mishchenko on 07.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -13,15 +13,15 @@
 
 @interface Transaction : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * currency;
+@property (nonatomic, retain) NSString * currency;
 @property (nonatomic, retain) NSNumber * fee;
 @property (nonatomic, retain) NSString * geo;
 @property (nonatomic, retain) NSData * image;
+@property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * note;
 @property (nonatomic, retain) NSString * userImagePath;
 @property (nonatomic, retain) NSNumber * value;
-@property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) Account *account;
 @property (nonatomic, retain) Category *category;
 @property (nonatomic, retain) Contractor *contractor;

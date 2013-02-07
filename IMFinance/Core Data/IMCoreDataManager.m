@@ -12,6 +12,7 @@
 
 #import "Account.h"
 #import "Transaction.h"
+#import "Date.h"
 
 static dispatch_queue_t coredata_background_save_queue;
 
@@ -55,15 +56,15 @@ static IMCoreDataManager *sharedInstance = nil;
 static NSString *kAccountKey = @"account key";
 static NSString *kAccountName = @"account name";
 static NSString *kAccountValue = @"account value";
-static NSString *kAcccountCurrency = @"account currency";
+static NSString *kAccountCurrency = @"account currency";
 
 /* 
 создание и сохранение нового счета с набором параметров
 в фоне с параметрами в виде блоков
 */
-- (void)editAccountInBackground:(NSDictionary *)parameters
-                    withSuccess:(void (^)())successBlock
-                        failure:(void (^)(NSError *))failureBlock {
+- (void)editAccountWithParams:(NSDictionary *)parameters
+                      success:(void (^)())successBlock
+                      failure:(void (^)(NSError *))failureBlock {
     
     dispatch_async([self background_save_queue], ^{
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
@@ -81,7 +82,7 @@ static NSString *kAcccountCurrency = @"account currency";
             
             account.name = [parameters objectForKey:kAccountName];
             account.value = ([parameters objectForKey:kAccountValue]);
-//            account.currency = [parameters objectForKey:kAcccountCurrency];
+            account.currency = [parameters objectForKey:kAccountCurrency];
         }
                           completion:^(BOOL success, NSError *error){
                               (success) ? successBlock() : failureBlock(error);
@@ -102,10 +103,10 @@ static NSString *kTransactionCurrency = @"transaction currency";
  создание и сохранение новой транзакции с набором параметров
  в фоне с параметрами в виде блоков
  */
-- (void)addTransaction:(NSDictionary *)parameters
-           withSuccess:(void (^)())successBlock
-               failure:(void(^)())failureBlock {
-
+- (void)editTransactionWithParams:(NSDictionary *)parameters
+                          success:(void (^)())successBlock
+                          failure:(void (^)())failureBlock {
+    
     dispatch_async([self background_save_queue], ^{
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
             
@@ -119,13 +120,20 @@ static NSString *kTransactionCurrency = @"transaction currency";
             else {
                 transaction = [Transaction MR_createInContext:localContext];
                 transaction.key = [[[NSDate date] description] MD5];
+            
+                Date *date = [Date MR_createInContext:localContext];
+                date.start = [NSDate date];
+                transaction.date = date;
             }
             
             Account *account = [Account MR_findFirstByAttribute:@"key"
                                                       withValue:[parameters valueForKey:kAccountKey]
                                                       inContext:localContext];
             
-            transaction.name = [parameters objectForKey:kTransactionName];
+            NSString *name = [parameters objectForKey:kTransactionName];
+            name = (name) ? name : @"";
+            
+            transaction.name = name;
             transaction.value = [parameters objectForKey:kTransactionValue];
             transaction.currency = [parameters objectForKey:kTransactionCurrency];
             transaction.account = account;

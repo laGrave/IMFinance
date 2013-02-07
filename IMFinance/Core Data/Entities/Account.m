@@ -2,7 +2,7 @@
 //  Account.m
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 28.01.13.
+//  Created by Igor Mishchenko on 07.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -18,6 +18,7 @@
 @dynamic cardNumber;
 @dynamic currency;
 @dynamic image;
+@dynamic key;
 @dynamic limit;
 @dynamic name;
 @dynamic ownerName;
@@ -27,7 +28,6 @@
 @dynamic type;
 @dynamic value;
 @dynamic website;
-@dynamic key;
 @dynamic date;
 @dynamic transactions;
 

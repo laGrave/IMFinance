@@ -21,17 +21,17 @@
  создание и сохранение нового счета с набором параметров
  в фоне с параметрами в виде блоков
  */
-- (void)editAccountInBackground:(NSDictionary *)parameters
-                    withSuccess:(void (^)())successBlock
-                        failure:(void (^)(NSError *error))failureBlock;
+- (void)editAccountWithParams:(NSDictionary *)parameters
+                      success:(void (^)())successBlock
+                      failure:(void (^)(NSError *error))failureBlock;
 
 
 /*
  создание и сохранение новой транзакции с набором параметров
  в фоне с параметрами в виде блоков
  */
-- (void)addTransaction:(NSDictionary *)parameters
-           withSuccess:(void (^)())successBlock
-               failure:(void(^)())failureBlock;
+- (void)editTransactionWithParams:(NSDictionary *)parameters
+                          success:(void (^)())successBlock
+                          failure:(void(^)())failureBlock;
 
 @end

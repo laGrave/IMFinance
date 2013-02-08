@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>JASidePanels 1.2.1 Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">JASidePanels 1.2.1 </a></h1>
+				<a id="developerHome" href="index.html">Jesse Andersen</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">JASidePanels 1.2.1 Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main">
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">JASidePanels 1.2.1 Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1>JASidePanels</h1>
+
+<p>JASidePanels is a UIViewController container designed for presenting a center panel with revealable side panels &ndash; one to the left and one to the right.  The main inspiration for this project is the menuing system in Path 2.0 and Facebook&rsquo;s iOS apps.</p>
+
+<h2>Demo</h2>
+
+<p>!<a href="https://img.skitch.com/20120322-dx6k69577ra37wwgqgmsgksqpx.jpg">iPhone Example</a>
+!<a href="https://img.skitch.com/20120322-ttu951nfb8cpd5ti5r1ni8428y.jpg">iPad Example</a></p>
+
+<h2>Example 1: Code</h2>
+
+<p>```  objc</p>
+
+<h1>import &ldquo;JAAppDelegate.h&rdquo;</h1>
+
+<h1>import &ldquo;<a href="Classes/JASidePanelController.html">JASidePanelController</a>.h&rdquo;</h1>
+
+<h1>import &ldquo;JACenterViewController.h&rdquo;</h1>
+
+<h1>import &ldquo;JALeftViewController.h&rdquo;</h1>
+
+<h1>import &ldquo;JARightViewController.h&rdquo;</h1>
+
+<p>@implementation JAAppDelegate</p>
+
+<p>@synthesize window = <em>window;
+@synthesize viewController = </em>viewController;</p>
+
+<ul>
+<li><p>(BOOL)application:(UIApplication <em>)application didFinishLaunchingWithOptions:(NSDictionary </em>)launchOptions {
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];</p>
+
+<p>  self.viewController = [[JASidePanelController alloc] init];
+  self.viewController.leftPanel = [[JALeftViewController alloc] init];
+  self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[JACenterViewController alloc] init]];
+  self.viewController.rightPanel = [[JARightViewController alloc] init];</p>
+
+<p>  self.window.rootViewController = self.viewController;
+  [self.window makeKeyAndVisible];
+  return YES;
+}</p></li>
+</ul>
+
+
+<p>@end</p>
+
+<p>```</p>
+
+<h2>Example 2: Storyboards</h2>
+
+<ol>
+<li>Create a subclass of <a href="Classes/JASidePanelController.html"><code>JASidePanelController</code></a>. In this example we call it <code>mySidePanelController</code>.</li>
+<li>In the Storyboard designate the root view&rsquo;s owner as <code>mySidePanelController</code>.</li>
+<li>Make sure to <code>#import "</code>JASidePanelController<code>.h"</code> in <code>mySidePanelController.h</code>.</li>
+<li>Add more views to your Storyboard, and give them identifiers &ldquo;leftViewController&rdquo;, &ldquo;centerViewController&rdquo; and &ldquo;rightViewController&rdquo;. Note that in the new XCode the identifier is called &ldquo;Storyboard ID&rdquo; and can be found in the Identity inspector (in older versions the identifier is found in the Attributes inspector).</li>
+<li>Add a method <code>awakeFromNib</code> to <code>mySidePanelController.m</code> with the following code:</li>
+</ol>
+
+
+<p>```  objc</p>
+
+<p>&ndash;(void) awakeFromNib
+{
+  [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@&ldquo;leftViewController&rdquo;]];
+  [self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@&ldquo;centerViewController&rdquo;]];
+  [self setRightPanel:[self.storyboard instantiateViewControllerWithIdentifier:@&ldquo;rightViewController&rdquo;]];
+}</p>
+
+<p>```</p>
+
+<h2>Usage</h2>
+
+<p>Only two files are required for using JASidePanels: <code></code>JASidePanelController<code>.h</code> &amp; <code></code>JASidePanelController<code>.m</code></p>
+
+<p>The easiest way to use JASidePanels is to copy the files into your XCode Project.</p>
+
+<p>Alternatively, you can setup a git submodule and reference the files in your Xcode project. I prefer this method as it enables you to receive bugfixes/updates for the project.
+<code>git submodule add </code>https://github.com/gotosleep/JASidePanels.git<code> JASidePanels</code></p>
+
+<p>Make sure to include the QuartzCore framework in your target.</p>
+
+<h2>UIViewController+JASidePanel Category</h2>
+
+<p>A UIViewController+JASidePanel category is included in the project. Usage is optional. The category adds a single convenience property to UIViewController: <strong>sidePanelController</strong>. The property provides access to the nearest <a href="Classes/JASidePanelController.html">JASidePanelController</a> ancestor in your view controller heirarchy. It behaves similar to the <em>navigationController</em> UIViewController property provided by Apple. Here&rsquo;s an example:</p>
+
+<p>``` objc</p>
+
+<h1>import &ldquo;JASidePanelController.h&rdquo;</h1>
+
+<h1>import &ldquo;UIViewController+JASidePanel.h&rdquo;</h1>
+
+<p>@interface JALeftViewController : UIViewController
+@end</p>
+
+<p>@implementation JALeftViewController</p>
+
+<ul>
+<li>(void)viewDidLoad {
+  [super viewDidLoad];
+  // sweet, I can access my parent JASidePanelController as a property!
+  [self.sidePanelController showCenterPanel:YES];
+}</li>
+</ul>
+
+
+<p>@end</p>
+
+<p>```</p>
+
+<h2>Requirements</h2>
+
+<p>JASidePanels requires iOS 5.0+ and Xcode 4.3+ The projects uses ARC, but it may be used with non-ARC projects by setting the: <code>-fobjc-arc</code> compiler flag on <code></code>JASidePanelController<code>.m</code>. You can set this flag under Target &ndash;> Build Phases &ndash;> Compile Sources</p>
+
+<h2>Apps</h2>
+
+<p>JASidePanels is used in the following apps:</p>
+
+<ul>
+<li>Scribd &ndash; <a href="http://itunes.apple.com/us/app/scribd-worlds-largest-online/id542557212?ls=1&amp;mt=8">http://itunes.apple.com/us/app/scribd-worlds-largest-online/id542557212?ls=1&amp;mt=8</a></li>
+<li>Float Reader &ndash; <a href="http://itunes.apple.com/us/app/float-reader/id447992005?ls=1&amp;mt=8">http://itunes.apple.com/us/app/float-reader/id447992005?ls=1&amp;mt=8</a></li>
+</ul>
+
+
+<h2>License</h2>
+
+<p>```</p>
+
+<p> Permission is hereby granted, free of charge, to any person obtaining a copy of
+ this software and associated documentation files (the &ldquo;Software&rdquo;), to deal in
+ the Software without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ of the Software, and to permit persons to whom the Software is furnished to do
+ so, subject to the following conditions:</p>
+
+<p> The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.</p>
+
+<p> If you happen to meet one of the copyright holders in a bar you are obligated
+ to buy them one pint of beer.</p>
+
+<p> THE SOFTWARE IS PROVIDED &ldquo;AS IS&rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.</p>
+
+<p> ```</p>
+
+<h2>Alternatives</h2>
+
+<p>Other projects implementing a similar UI</p>
+
+<ul>
+<li>DDMenuController &ndash; <a href="https://github.com/devindoty/DDMenuController">https://github.com/devindoty/DDMenuController</a></li>
+<li>JTRevealSidebarDemo &ndash; <a href="https://github.com/mystcolor/JTRevealSidebarDemo">https://github.com/mystcolor/JTRevealSidebarDemo</a></li>
+<li>ECSlidingViewController &ndash; <a href="https://github.com/edgecase/ECSlidingViewController">https://github.com/edgecase/ECSlidingViewController</a></li>
+<li>ViewDeck &ndash; <a href="https://github.com/Inferis/ViewDeck">https://github.com/Inferis/ViewDeck</a></li>
+<li>ZUUIRevealController &ndash; <a href="https://github.com/pkluz/ZUUIRevealController">https://github.com/pkluz/ZUUIRevealController</a></li>
+<li>GHSidebarNav &ndash; <a href="https://github.com/gresrun/GHSidebarNav">https://github.com/gresrun/GHSidebarNav</a></li>
+</ul>
+
+						
+						
+					</div>
+					
+                        
+                    
+					
+					
+					<div class="index-column">
+						<h2 class="index-title">Class References</h2>
+						<ul>
+							
+							<li><a href="Classes/JASidePanelController.html">JASidePanelController</a></li>
+							
+						</ul>
+					</div>
+					
+					
+						
+					<div class="index-column">
+						
+						
+						<h2 class="index-title">Category References</h2>
+						<ul>
+							
+							<li><a href="Categories/UIViewController+JASidePanel.html">UIViewController(JASidePanel)</a></li>
+							
+						</ul>
+						
+					</div>
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Jesse Andersen. All rights reserved. (Last updated: 2013-02-07)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>

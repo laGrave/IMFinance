@@ -1,0 +1,529 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>NSManagedObjectContext(MagicalSavesShortHand) Category Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">MagicalRecord 2.1 </a></h1>
+				<a id="developerHome" href="../index.html">Saul Mora</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">NSManagedObjectContext(MagicalSavesShortHand) Category Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/save">&nbsp;&nbsp;&nbsp;&nbsp;- save</option>
+	
+	<option value="//api/name/saveInBackgroundCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- saveInBackgroundCompletion:</option>
+	
+	<option value="//api/name/saveInBackgroundErrorHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- saveInBackgroundErrorHandler:</option>
+	
+	<option value="//api/name/saveInBackgroundErrorHandler:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- saveInBackgroundErrorHandler:completion:</option>
+	
+	<option value="//api/name/saveNestedContexts">&nbsp;&nbsp;&nbsp;&nbsp;- saveNestedContexts</option>
+	
+	<option value="//api/name/saveNestedContextsErrorHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- saveNestedContextsErrorHandler:</option>
+	
+	<option value="//api/name/saveNestedContextsErrorHandler:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- saveNestedContextsErrorHandler:completion:</option>
+	
+	<option value="//api/name/saveOnlySelfAndWait">&nbsp;&nbsp;&nbsp;&nbsp;- saveOnlySelfAndWait</option>
+	
+	<option value="//api/name/saveOnlySelfWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- saveOnlySelfWithCompletion:</option>
+	
+	<option value="//api/name/saveToPersistentStoreAndWait">&nbsp;&nbsp;&nbsp;&nbsp;- saveToPersistentStoreAndWait</option>
+	
+	<option value="//api/name/saveToPersistentStoreWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- saveToPersistentStoreWithCompletion:</option>
+	
+	<option value="//api/name/saveWithErrorCallback:">&nbsp;&nbsp;&nbsp;&nbsp;- saveWithErrorCallback:</option>
+	
+	<option value="//api/name/saveWithOptions:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- saveWithOptions:completion:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/save">save</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveInBackgroundCompletion:">saveInBackgroundCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveInBackgroundErrorHandler:">saveInBackgroundErrorHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveInBackgroundErrorHandler:completion:">saveInBackgroundErrorHandler:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveNestedContexts">saveNestedContexts</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveNestedContextsErrorHandler:">saveNestedContextsErrorHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveNestedContextsErrorHandler:completion:">saveNestedContextsErrorHandler:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveOnlySelfAndWait">saveOnlySelfAndWait</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveOnlySelfWithCompletion:">saveOnlySelfWithCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveToPersistentStoreAndWait">saveToPersistentStoreAndWait</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveToPersistentStoreWithCompletion:">saveToPersistentStoreWithCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveWithErrorCallback:">saveWithErrorCallback:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveWithOptions:completion:">saveWithOptions:completion:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="NSManagedObjectContext(MagicalSavesShortHand) Category Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">NSManagedObjectContext(MagicalSavesShortHand) Category Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">MagicalRecordShorthand.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveOnlySelfWithCompletion:">&ndash;&nbsp;saveOnlySelfWithCompletion:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveToPersistentStoreWithCompletion:">&ndash;&nbsp;saveToPersistentStoreWithCompletion:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveOnlySelfAndWait">&ndash;&nbsp;saveOnlySelfAndWait</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveToPersistentStoreAndWait">&ndash;&nbsp;saveToPersistentStoreAndWait</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveWithOptions:completion:">&ndash;&nbsp;saveWithOptions:completion:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/save">&ndash;&nbsp;save</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveWithErrorCallback:">&ndash;&nbsp;saveWithErrorCallback:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveInBackgroundCompletion:">&ndash;&nbsp;saveInBackgroundCompletion:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveInBackgroundErrorHandler:">&ndash;&nbsp;saveInBackgroundErrorHandler:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveInBackgroundErrorHandler:completion:">&ndash;&nbsp;saveInBackgroundErrorHandler:completion:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveNestedContexts">&ndash;&nbsp;saveNestedContexts</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveNestedContextsErrorHandler:">&ndash;&nbsp;saveNestedContextsErrorHandler:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveNestedContextsErrorHandler:completion:">&ndash;&nbsp;saveNestedContextsErrorHandler:completion:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/save" title="save"></a>
+	<h3 class="subsubtitle method-title">save</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)save</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveInBackgroundCompletion:" title="saveInBackgroundCompletion:"></a>
+	<h3 class="subsubtitle method-title">saveInBackgroundCompletion:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)saveInBackgroundCompletion:(void ( ^ ) ( void ))<em>completion</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveInBackgroundErrorHandler:" title="saveInBackgroundErrorHandler:"></a>
+	<h3 class="subsubtitle method-title">saveInBackgroundErrorHandler:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)saveInBackgroundErrorHandler:(void ( ^ ) ( NSError *error ))<em>errorCallback</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveInBackgroundErrorHandler:completion:" title="saveInBackgroundErrorHandler:completion:"></a>
+	<h3 class="subsubtitle method-title">saveInBackgroundErrorHandler:completion:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)saveInBackgroundErrorHandler:(void ( ^ ) ( NSError *error ))<em>errorCallback</em> completion:(void ( ^ ) ( void ))<em>completion</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveNestedContexts" title="saveNestedContexts"></a>
+	<h3 class="subsubtitle method-title">saveNestedContexts</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)saveNestedContexts</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveNestedContextsErrorHandler:" title="saveNestedContextsErrorHandler:"></a>
+	<h3 class="subsubtitle method-title">saveNestedContextsErrorHandler:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)saveNestedContextsErrorHandler:(void ( ^ ) ( NSError *error ))<em>errorCallback</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveNestedContextsErrorHandler:completion:" title="saveNestedContextsErrorHandler:completion:"></a>
+	<h3 class="subsubtitle method-title">saveNestedContextsErrorHandler:completion:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)saveNestedContextsErrorHandler:(void ( ^ ) ( NSError *error ))<em>errorCallback</em> completion:(void ( ^ ) ( void ))<em>completion</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveOnlySelfAndWait" title="saveOnlySelfAndWait"></a>
+	<h3 class="subsubtitle method-title">saveOnlySelfAndWait</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)saveOnlySelfAndWait</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveOnlySelfWithCompletion:" title="saveOnlySelfWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">saveOnlySelfWithCompletion:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)saveOnlySelfWithCompletion:(MRSaveCompletionHandler)<em>completion</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveToPersistentStoreAndWait" title="saveToPersistentStoreAndWait"></a>
+	<h3 class="subsubtitle method-title">saveToPersistentStoreAndWait</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)saveToPersistentStoreAndWait</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveToPersistentStoreWithCompletion:" title="saveToPersistentStoreWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">saveToPersistentStoreWithCompletion:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)saveToPersistentStoreWithCompletion:(MRSaveCompletionHandler)<em>completion</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveWithErrorCallback:" title="saveWithErrorCallback:"></a>
+	<h3 class="subsubtitle method-title">saveWithErrorCallback:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)saveWithErrorCallback:(void ( ^ ) ( NSError *error ))<em>errorCallback</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveWithOptions:completion:" title="saveWithOptions:completion:"></a>
+	<h3 class="subsubtitle method-title">saveWithOptions:completion:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)saveWithOptions:(MRSaveContextOptions)<em>mask</em> completion:(MRSaveCompletionHandler)<em>completion</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Saul Mora. All rights reserved. (Last updated: 2013-02-07)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

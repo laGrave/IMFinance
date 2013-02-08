@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/igormishchenko/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.TBXML-1.5.docset
+Time: 2013-02-07 12:53:56 +0000

@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/JASidePanelController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/JASidePanelController</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setLeftPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) UIViewController *leftPanel</Declaration>
+			
+			
+			<Anchor>//api/name/leftPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/leftPanel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) UIViewController *leftPanel</Declaration>
+			
+			
+			<Anchor>//api/name/leftPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setCenterPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) UIViewController *centerPanel</Declaration>
+			
+			
+			<Anchor>//api/name/centerPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/centerPanel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) UIViewController *centerPanel</Declaration>
+			
+			
+			<Anchor>//api/name/centerPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setRightPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) UIViewController *rightPanel</Declaration>
+			
+			
+			<Anchor>//api/name/rightPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/rightPanel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) UIViewController *rightPanel</Declaration>
+			
+			
+			<Anchor>//api/name/rightPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/showLeftPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>- (void)showLeftPanel:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/showLeftPanel:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/showRightPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>- (void)showRightPanel:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/showRightPanel:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/showCenterPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>- (void)showCenterPanel:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/showCenterPanel:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/toggleLeftPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>- (void)toggleLeftPanel:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/toggleLeftPanel:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/toggleRightPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>- (void)toggleRightPanel:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/toggleRightPanel:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setCenterPanelHidden:animated:duration:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>- (void)setCenterPanelHidden:(BOOL)centerPanelHidden animated:(BOOL)animated duration:(NSTimeInterval)duration</Declaration>
+			
+			
+			<Anchor>//api/name/setCenterPanelHidden:animated:duration:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setStyle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) JASidePanelStyle style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/style</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) JASidePanelStyle style</Declaration>
+			
+			
+			<Anchor>//api/name/style</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setLeftGapPercentage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat leftGapPercentage</Declaration>
+			
+			
+			<Anchor>//api/name/leftGapPercentage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/leftGapPercentage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat leftGapPercentage</Declaration>
+			
+			
+			<Anchor>//api/name/leftGapPercentage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setLeftFixedWidth:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat leftFixedWidth</Declaration>
+			
+			
+			<Anchor>//api/name/leftFixedWidth</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/leftFixedWidth</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat leftFixedWidth</Declaration>
+			
+			
+			<Anchor>//api/name/leftFixedWidth</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setLeftVisibleWidth:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) CGFloat leftVisibleWidth</Declaration>
+			
+			
+			<Anchor>//api/name/leftVisibleWidth</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/leftVisibleWidth</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) CGFloat leftVisibleWidth</Declaration>
+			
+			
+			<Anchor>//api/name/leftVisibleWidth</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setRightGapPercentage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat rightGapPercentage</Declaration>
+			
+			
+			<Anchor>//api/name/rightGapPercentage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/rightGapPercentage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat rightGapPercentage</Declaration>
+			
+			
+			<Anchor>//api/name/rightGapPercentage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setRightFixedWidth:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat rightFixedWidth</Declaration>
+			
+			
+			<Anchor>//api/name/rightFixedWidth</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/rightFixedWidth</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat rightFixedWidth</Declaration>
+			
+			
+			<Anchor>//api/name/rightFixedWidth</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setRightVisibleWidth:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) CGFloat rightVisibleWidth</Declaration>
+			
+			
+			<Anchor>//api/name/rightVisibleWidth</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/rightVisibleWidth</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) CGFloat rightVisibleWidth</Declaration>
+			
+			
+			<Anchor>//api/name/rightVisibleWidth</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/styleContainer:animate:duration:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>- (void)styleContainer:(UIView *)container animate:(BOOL)animate duration:(NSTimeInterval)duration</Declaration>
+			
+			
+			<Anchor>//api/name/styleContainer:animate:duration:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/stylePanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>- (void)stylePanel:(UIView *)panel</Declaration>
+			
+			
+			<Anchor>//api/name/stylePanel:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setMinimumMovePercentage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat minimumMovePercentage</Declaration>
+			
+			
+			<Anchor>//api/name/minimumMovePercentage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/minimumMovePercentage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat minimumMovePercentage</Declaration>
+			
+			
+			<Anchor>//api/name/minimumMovePercentage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setMaximumAnimationDuration:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat maximumAnimationDuration</Declaration>
+			
+			
+			<Anchor>//api/name/maximumAnimationDuration</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/maximumAnimationDuration</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat maximumAnimationDuration</Declaration>
+			
+			
+			<Anchor>//api/name/maximumAnimationDuration</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setBounceDuration:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat bounceDuration</Declaration>
+			
+			
+			<Anchor>//api/name/bounceDuration</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/bounceDuration</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat bounceDuration</Declaration>
+			
+			
+			<Anchor>//api/name/bounceDuration</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setBouncePercentage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat bouncePercentage</Declaration>
+			
+			
+			<Anchor>//api/name/bouncePercentage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/bouncePercentage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat bouncePercentage</Declaration>
+			
+			
+			<Anchor>//api/name/bouncePercentage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setBounceOnSidePanelOpen:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL bounceOnSidePanelOpen</Declaration>
+			
+			
+			<Anchor>//api/name/bounceOnSidePanelOpen</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/bounceOnSidePanelOpen</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL bounceOnSidePanelOpen</Declaration>
+			
+			
+			<Anchor>//api/name/bounceOnSidePanelOpen</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setBounceOnSidePanelClose:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL bounceOnSidePanelClose</Declaration>
+			
+			
+			<Anchor>//api/name/bounceOnSidePanelClose</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/bounceOnSidePanelClose</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL bounceOnSidePanelClose</Declaration>
+			
+			
+			<Anchor>//api/name/bounceOnSidePanelClose</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setPanningLimitedToTopViewController:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL panningLimitedToTopViewController</Declaration>
+			
+			
+			<Anchor>//api/name/panningLimitedToTopViewController</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/panningLimitedToTopViewController</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL panningLimitedToTopViewController</Declaration>
+			
+			
+			<Anchor>//api/name/panningLimitedToTopViewController</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setRecognizesPanGesture:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL recognizesPanGesture</Declaration>
+			
+			
+			<Anchor>//api/name/recognizesPanGesture</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/recognizesPanGesture</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL recognizesPanGesture</Declaration>
+			
+			
+			<Anchor>//api/name/recognizesPanGesture</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/JASidePanelController/defaultImage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>+ (UIImage *)defaultImage</Declaration>
+			
+			
+			<Anchor>//api/name/defaultImage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/leftButtonForCenterPanel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>- (UIBarButtonItem *)leftButtonForCenterPanel</Declaration>
+			
+			
+			<Anchor>//api/name/leftButtonForCenterPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) JASidePanelState state</Declaration>
+			
+			
+			<Anchor>//api/name/state</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/state</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) JASidePanelState state</Declaration>
+			
+			
+			<Anchor>//api/name/state</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setCenterPanelHidden:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL centerPanelHidden</Declaration>
+			
+			
+			<Anchor>//api/name/centerPanelHidden</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/centerPanelHidden</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL centerPanelHidden</Declaration>
+			
+			
+			<Anchor>//api/name/centerPanelHidden</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setVisiblePanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, weak, readonly) UIViewController *visiblePanel</Declaration>
+			
+			
+			<Anchor>//api/name/visiblePanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/visiblePanel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, weak, readonly) UIViewController *visiblePanel</Declaration>
+			
+			
+			<Anchor>//api/name/visiblePanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setShouldDelegateAutorotateToVisiblePanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldDelegateAutorotateToVisiblePanel</Declaration>
+			
+			
+			<Anchor>//api/name/shouldDelegateAutorotateToVisiblePanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/shouldDelegateAutorotateToVisiblePanel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldDelegateAutorotateToVisiblePanel</Declaration>
+			
+			
+			<Anchor>//api/name/shouldDelegateAutorotateToVisiblePanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setCanUnloadRightPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL canUnloadRightPanel</Declaration>
+			
+			
+			<Anchor>//api/name/canUnloadRightPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/canUnloadRightPanel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL canUnloadRightPanel</Declaration>
+			
+			
+			<Anchor>//api/name/canUnloadRightPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setCanUnloadLeftPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL canUnloadLeftPanel</Declaration>
+			
+			
+			<Anchor>//api/name/canUnloadLeftPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/canUnloadLeftPanel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL canUnloadLeftPanel</Declaration>
+			
+			
+			<Anchor>//api/name/canUnloadLeftPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setShouldResizeRightPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldResizeRightPanel</Declaration>
+			
+			
+			<Anchor>//api/name/shouldResizeRightPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/shouldResizeRightPanel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldResizeRightPanel</Declaration>
+			
+			
+			<Anchor>//api/name/shouldResizeRightPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setShouldResizeLeftPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldResizeLeftPanel</Declaration>
+			
+			
+			<Anchor>//api/name/shouldResizeLeftPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/shouldResizeLeftPanel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldResizeLeftPanel</Declaration>
+			
+			
+			<Anchor>//api/name/shouldResizeLeftPanel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setAllowRightOverpan:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowRightOverpan</Declaration>
+			
+			
+			<Anchor>//api/name/allowRightOverpan</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/allowRightOverpan</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowRightOverpan</Declaration>
+			
+			
+			<Anchor>//api/name/allowRightOverpan</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setAllowLeftOverpan:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowLeftOverpan</Declaration>
+			
+			
+			<Anchor>//api/name/allowLeftOverpan</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/allowLeftOverpan</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowLeftOverpan</Declaration>
+			
+			
+			<Anchor>//api/name/allowLeftOverpan</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setLeftPanelContainer:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIView *leftPanelContainer</Declaration>
+			
+			
+			<Anchor>//api/name/leftPanelContainer</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/leftPanelContainer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIView *leftPanelContainer</Declaration>
+			
+			
+			<Anchor>//api/name/leftPanelContainer</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setRightPanelContainer:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIView *rightPanelContainer</Declaration>
+			
+			
+			<Anchor>//api/name/rightPanelContainer</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/rightPanelContainer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIView *rightPanelContainer</Declaration>
+			
+			
+			<Anchor>//api/name/rightPanelContainer</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JASidePanelController/setCenterPanelContainer:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIView *centerPanelContainer</Declaration>
+			
+			
+			<Anchor>//api/name/centerPanelContainer</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JASidePanelController/centerPanelContainer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>JASidePanelController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIView *centerPanelContainer</Declaration>
+			
+			
+			<Anchor>//api/name/centerPanelContainer</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xcQ-a0-YtJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xcQ-a0-YtJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -79,6 +79,22 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" textLabel="N4J-bK-yKZ" style="IBUITableViewCellStyleDefault" id="ePh-5h-Wvj">
+                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Тест" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4J-bK-yKZ">
+                                                    <fontDescription key="fontDescription" name="Helvetica-Oblique" family="Helvetica" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -139,7 +155,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1n-8D-OFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3266" y="335"/>
+            <point key="canvasLocation" x="2893" y="335"/>
         </scene>
         <!--Account Edit View Controller-->
         <scene sceneID="GJJ-xc-oJ8">
@@ -204,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDX-oC-wf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4079" y="335"/>
+            <point key="canvasLocation" x="3706" y="335"/>
         </scene>
         <!--Currecy Picker View Controller-->
         <scene sceneID="HnV-0l-8Tp">
@@ -241,7 +257,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vbl-D5-Pex" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4623" y="629"/>
+            <point key="canvasLocation" x="4228" y="631"/>
         </scene>
         <!--Summary View Controller-->
         <scene sceneID="aTU-i2-6W0">
@@ -305,7 +321,21 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJ5-5W-zYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3266" y="911"/>
+            <point key="canvasLocation" x="2893" y="911"/>
+        </scene>
+        <!--TestVC-->
+        <scene sceneID="uK8-Lv-tea">
+            <objects>
+                <viewController storyboardIdentifier="test vc" id="h6g-7Y-zUA" customClass="TestVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VxN-me-ayg">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cU-bX-w4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2889" y="1493"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rrH-1p-phT">
@@ -323,7 +353,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9t-S2-Zz2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3680" y="335"/>
+            <point key="canvasLocation" x="3307" y="335"/>
         </scene>
         <!--Transaction Edit View Controller-->
         <scene sceneID="Vxm-Kw-2cr">
@@ -402,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gV1-sc-n8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4057" y="917"/>
+            <point key="canvasLocation" x="3684" y="917"/>
         </scene>
         <!--Account Selector Controller-->
         <scene sceneID="c0s-aS-CZ9">
@@ -432,7 +462,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwb-YC-NGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4623" y="1220"/>
+            <point key="canvasLocation" x="4228" y="1222"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jDw-5L-rRo">
@@ -450,15 +480,64 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVG-WN-3Vt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3686" y="917"/>
+            <point key="canvasLocation" x="3313" y="917"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="IMAccountEditViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMAccountEditViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="currencyButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="valueTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="IMAccountSelectorController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMAccountSelectorController.h"/>
+        </class>
+        <class className="IMAccountsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMAccountsTableViewController.h"/>
+        </class>
+        <class className="IMCurrecyPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMCurrecyPickerViewController.h"/>
+        </class>
+        <class className="IMLeftSidePanelControllerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMLeftSidePanelControllerViewController.h"/>
+        </class>
+        <class className="IMSidePanelController" superclassName="JASidePanelController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMSidePanelController.h"/>
+        </class>
+        <class className="IMSummaryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMSummaryViewController.h"/>
+        </class>
+        <class className="IMTransactionEditViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMTransactionEditViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="accountButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="currencyButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="valueTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="IMTransactionsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMTransactionsTableViewController.h"/>
+        </class>
+        <class className="JASidePanelController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JASidePanelController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TestVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TestVC.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="s8p-IF-Sys"/>
+        <segue reference="2O9-z5-Ylv"/>
     </inferredMetricsTieBreakers>
 </document>

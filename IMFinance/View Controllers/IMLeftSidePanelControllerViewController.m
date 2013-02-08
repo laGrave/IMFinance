@@ -58,6 +58,10 @@
             break;
         case 2:
             storyboardID = @"transactions table view controller";
+            break;
+        case 3:
+            storyboardID = @"test vc";
+            break;
         default:
             break;
     }

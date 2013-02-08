@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>never</string>
+	<string>everyDay</string>
+	<string>everyWeek</string>
+	<string>every2Weeks</string>
+	<string>everyMonth</string>
+	<string>every2Month</string>
+	<string>every3Months</string>
+	<string>every6Months</string>
+	<string>everyYear</string>
+	<string>Custom</string>
+</array>
+</plist>

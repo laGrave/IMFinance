@@ -46,7 +46,7 @@
         <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="userImagePath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="account" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="transactions" inverseEntity="Account" syncable="YES"/>
+        <relationship name="account" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="transactions" inverseEntity="Account" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="transactions" inverseEntity="Category" syncable="YES"/>
         <relationship name="contractor" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Contractor" inverseName="transactions" inverseEntity="Contractor" syncable="YES"/>
     </entity>

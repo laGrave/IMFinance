@@ -20,6 +20,12 @@
 }
 
 
+- (NSString *)defaultCurrencyCode {
+
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"default currency code"];
+}
+
+
 - (void)loadExchangeRatesWithSuccess:(void(^)(NSDictionary *exchangeRates))successHandler
                                error:(void(^)(NSError *error, NSDictionary *oldRates))errorHandler {
 

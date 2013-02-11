@@ -2,7 +2,7 @@
 //  Contractor.m
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 07.02.13.
+//  Created by Igor Mishchenko on 11.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 

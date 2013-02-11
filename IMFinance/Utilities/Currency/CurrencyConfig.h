@@ -15,6 +15,9 @@
 //список международных кодов всех валют в программе
 - (NSArray *)currenciesList;
 
+//код валюты, выбранной пользователем по умолчанию
+- (NSString *)defaultCurrencyCode;
+
 //название валюты по ее коду на выбранном языке
 - (NSString *)currencyNameWithCode:(NSString *)code inLocale:(NSLocale *)locale;
 //название валюты по ее коду на текущем языке системы

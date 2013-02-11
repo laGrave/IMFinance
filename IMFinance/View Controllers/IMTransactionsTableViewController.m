@@ -36,7 +36,7 @@
     }
     else predicate = nil;
     
-    _fetchedResultsController = [Transaction MR_fetchAllSortedBy:@"date.start" ascending:NO withPredicate:predicate groupBy:nil delegate:self];
+    _fetchedResultsController = [Transaction MR_fetchAllSortedBy:@"startDate" ascending:NO withPredicate:predicate groupBy:nil delegate:self];
     
     return _fetchedResultsController;
 }
@@ -86,30 +86,38 @@
     return [[self.fetchedResultsController sections] count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     Transaction *trans = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = trans.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", trans.value];
+    
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    [numberFormatter setCurrencyCode:trans.currency];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [numberFormatter stringFromNumber:trans.value]];
     
     return cell;
 }
 
+
 // Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
+
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath

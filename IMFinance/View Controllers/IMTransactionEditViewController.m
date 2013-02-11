@@ -17,20 +17,24 @@
 
 #import "IMAccountSelectorController.h"
 
+#import "IMDateStartPicker.h"
+
 
 static NSString *kTransactionKey = @"transaction key";
 static NSString *kTransactionName = @"transaction name";
 static NSString *kTransactionValue = @"transaction value";
 static NSString *kTransactionCurrency = @"transaction currency";
 static NSString *kAccountKey = @"account key";
+static NSString *kTransactionStartDate = @"transaction start date";
 
 
-@interface IMTransactionEditViewController () <IMCurrecyPickerViewControllerDelegate, UITextFieldDelegate, IMAccountSelectorControllerDelegate>
+@interface IMTransactionEditViewController () <IMCurrecyPickerViewControllerDelegate, UITextFieldDelegate, IMAccountSelectorControllerDelegate, IMDateStartPickerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *valueTextField;
 @property (weak, nonatomic) IBOutlet UIButton *currencyButton;
 @property (weak, nonatomic) IBOutlet UIButton *accountButton;
+@property (weak, nonatomic) IBOutlet UIButton *startDateButton;
 
 @property (nonatomic, strong) NSDictionary *params;
 
@@ -70,6 +74,8 @@ static NSString *kAccountKey = @"account key";
     self.nameTextField.delegate = self;
     self.valueTextField.delegate = self;
     
+    CurrencyConfig *curConfig = [[CurrencyConfig alloc] init];
+    
     if (self.transactionKey) {
         Transaction *trans = [Transaction MR_findFirstByAttribute:@"key" withValue:self.transactionKey];
         
@@ -79,8 +85,9 @@ static NSString *kAccountKey = @"account key";
         [self.currencyButton setTitle:[[[CurrencyConfig alloc] init] currencyNameWithCode:trans.currency] forState:UIControlStateNormal];
         [self.params setValue:trans.currency forKey:kTransactionCurrency];
         [self.params setValue:trans.account.key forKey:kAccountKey];
+        [self.params setValue:trans.startDate forKey:kTransactionStartDate];
         
-        NSString *currencyName = [[[CurrencyConfig alloc] init] currencyNameWithCode:trans.currency];
+        NSString *currencyName = [curConfig currencyNameWithCode:trans.currency];
         [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
         
         self.nameTextField.text = trans.name;
@@ -91,8 +98,19 @@ static NSString *kAccountKey = @"account key";
         [self.params setValue:self.accountKey forKey:kAccountKey];
         [self.params setValue:account.currency forKey:kTransactionCurrency];
         
+        [self.params setValue:[NSDate date] forKey:kTransactionStartDate];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        NSString *dateString = [dateFormatter stringFromDate:[NSDate date]];
+        [self.startDateButton setTitle:dateString forState:UIControlStateNormal];
+        
         [self.accountButton setTitle:account.name forState:UIControlStateNormal];
-        NSString *currencyName = [[[CurrencyConfig alloc] init] currencyNameWithCode:account.currency];
+        NSString *currencyName = [curConfig currencyNameWithCode:account.currency];
+        [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
+    }
+    else {
+        [self.params setValue:[curConfig defaultCurrencyCode] forKey:kTransactionCurrency];
+        NSString *currencyName = [curConfig currencyNameWithCode:[curConfig defaultCurrencyCode]];
         [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
     }
 }
@@ -140,6 +158,12 @@ static NSString *kAccountKey = @"account key";
     else NSLog(@"заполните все поля!");
 }
 
+- (IBAction)startDateButtonPressed:(UIButton *)sender {
+    
+    IMDateStartPicker *startDatePicker = [[IMDateStartPicker alloc] initWithDate:[self.params valueForKey:kTransactionStartDate]
+                                                                        delegate:self];
+    [self.view addSubview:startDatePicker];
+}
 
 - (BOOL)setupParams {
     
@@ -203,6 +227,25 @@ static NSString *kAccountKey = @"account key";
     Account *account = [Account MR_findFirstByAttribute:accountKey withValue:kAccountKey];
     [self.params setValue:accountKey forKey:kAccountKey];
     [self.accountButton setTitle:account.name forState:UIControlStateNormal];
+}
+
+
+#pragma mark -
+#pragma mark - IMDateStartPickerDelegate protocol implementation
+
+- (void)startDatePickerDidSelectDate:(NSDate *)startDate {
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    NSString *dateString = [dateFormatter stringFromDate:startDate];
+    [self.startDateButton setTitle:dateString forState:UIControlStateNormal];
+    
+    [self.params setValue:startDate forKey:kTransactionStartDate];
+}
+
+- (void)startDatePickerShouldDismiss:(IMDateStartPicker *)picker {
+
+    [picker removeFromSuperview];
 }
 
 @end

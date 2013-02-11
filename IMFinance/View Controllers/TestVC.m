@@ -8,9 +8,11 @@
 
 #import "TestVC.h"
 
-#import "IMDatePickerView.h"
+#import "IMDateIntervalPicker.h"
+#import "IMDateStartPicker.h"
+#import "IMDateEndPicker.h"
 
-@interface TestVC () <IMDatePickerViewDelegate>
+@interface TestVC () <IMDateIntervalPickerDelegate, IMDateStartPickerDelegate, IMDateEndPickerDelegate>
 
 @end
 
@@ -34,11 +36,17 @@ static NSString *kDateEnd = @"end date";
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[NSDate date], kDateStart, [NSNumber numberWithInteger:14], kDateInterval, nil];
+//    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[NSDate date], kDateStart, [NSNumber numberWithInteger:14], kDateInterval, nil];
     
 //    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"IMDatePickerView" owner:nil options:nil];
 //    IMDatePickerView *view = [views objectAtIndex:0];
-    IMDatePickerView *view = [[IMDatePickerView alloc] initWithParams:params delegate:self];
+//    IMDatePickerView *view = [[IMDatePickerView alloc] initWithParams:params delegate:self];
+    
+//    IMDateIntervalPicker *view = [[IMDateIntervalPicker alloc] initWithInterval:0 delegate:self];
+    
+    NSDate *yesterday = [NSDate dateWithTimeIntervalSinceNow:-86400];
+//    IMDateStartPicker *view = [[IMDateStartPicker alloc] initWithDate:yesterday delegate:self];
+    IMDateEndPicker *view = [[IMDateEndPicker alloc] initWithDate:yesterday delegate:self];
     [self.view addSubview:view];
     
 }
@@ -49,9 +57,30 @@ static NSString *kDateEnd = @"end date";
     // Dispose of any resources that can be recreated.
 }
 
-- (void)datePicker:(IMDatePickerView *)picker didSelectDateParameters:(NSDictionary *)params {
 
-    [picker removeFromSuperview];
+#pragma mark -
+#pragma mark - IMDateIntervalPickerViewDelegate protocol implementation
+
+- (void)intervalPickerDidSelectInterval:(NSInteger)interval {
+
+    NSLog(@"selected interval in days: %ld", (long)interval);
 }
 
+
+#pragma mark -
+#pragma mark - IMDateStartPickerDelegate protocol implementation
+
+- (void)startDatePickerDidSelectDate:(NSDate *)startDate {
+
+    NSLog(@"selected date: %@", startDate);
+}
+
+
+#pragma mark -
+#pragma mark - IMDateEndPickerDelegate protocol implementation
+
+- (void)endDatePickerDidSelectDate:(NSDate *)endDate {
+
+    NSLog(@"selected date %@", endDate);
+}
 @end

@@ -2,14 +2,14 @@
 //  Account.h
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 07.02.13.
+//  Created by Igor Mishchenko on 11.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Date, Transaction;
+@class Transaction;
 
 @interface Account : NSManagedObject
 
@@ -28,7 +28,8 @@
 @property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSNumber * value;
 @property (nonatomic, retain) NSString * website;
-@property (nonatomic, retain) Date *date;
+@property (nonatomic, retain) NSDate * startDate;
+@property (nonatomic, retain) NSDate * endDate;
 @property (nonatomic, retain) NSSet *transactions;
 @end
 

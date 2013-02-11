@@ -2,14 +2,14 @@
 //  Transaction.h
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 07.02.13.
+//  Created by Igor Mishchenko on 11.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Account, Category, Contractor, Date;
+@class Account, Category, Contractor;
 
 @interface Transaction : NSManagedObject
 
@@ -22,9 +22,11 @@
 @property (nonatomic, retain) NSString * note;
 @property (nonatomic, retain) NSString * userImagePath;
 @property (nonatomic, retain) NSNumber * value;
+@property (nonatomic, retain) NSDate * startDate;
+@property (nonatomic, retain) NSNumber * repeatInterval;
+@property (nonatomic, retain) NSDate * endDate;
 @property (nonatomic, retain) Account *account;
 @property (nonatomic, retain) Category *category;
 @property (nonatomic, retain) Contractor *contractor;
-@property (nonatomic, retain) Date *date;
 
 @end

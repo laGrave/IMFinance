@@ -2,7 +2,7 @@
 //  Transaction.m
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 07.02.13.
+//  Created by Igor Mishchenko on 11.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -10,7 +10,6 @@
 #import "Account.h"
 #import "Category.h"
 #import "Contractor.h"
-#import "Date.h"
 
 
 @implementation Transaction
@@ -24,9 +23,11 @@
 @dynamic note;
 @dynamic userImagePath;
 @dynamic value;
+@dynamic startDate;
+@dynamic repeatInterval;
+@dynamic endDate;
 @dynamic account;
 @dynamic category;
 @dynamic contractor;
-@dynamic date;
 
 @end

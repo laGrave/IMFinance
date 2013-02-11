@@ -71,6 +71,7 @@
     
     [MagicalRecord setupCoreDataStack];
     
+    //при первом запуске валюту по умолчанию на основании локали телефона
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],@"firstLaunch",nil]];
     BOOL firstLaunch = [[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"];
     if (firstLaunch) {

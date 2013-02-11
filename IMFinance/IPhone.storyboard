@@ -394,18 +394,34 @@
                                     <segue destination="OIe-Be-k8x" kind="push" identifier="select account" id="xhO-Lv-GRh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJH-BB-yH7">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Дата">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startDateButtonPressed:" destination="DeW-Dh-2wg" eventType="touchUpInside" id="HKc-gj-vFQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1VA-Am-xgZ" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3td-yB-8ls"/>
+                            <constraint firstItem="aJH-BB-yH7" firstAttribute="top" secondItem="bYy-5H-R2N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5ow-dv-C7r"/>
                             <constraint firstItem="bYy-5H-R2N" firstAttribute="top" secondItem="yGX-qx-bFT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7wv-uT-Sq4"/>
                             <constraint firstItem="1VA-Am-xgZ" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="20" symbolic="YES" type="default" id="PPe-cp-2bx"/>
                             <constraint firstAttribute="trailing" secondItem="ZSI-XY-nTt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QMb-Uu-BN0"/>
+                            <constraint firstItem="aJH-BB-yH7" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XGG-Kv-eJd"/>
                             <constraint firstAttribute="trailing" secondItem="yGX-qx-bFT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ZdP-KA-hY9"/>
                             <constraint firstItem="ZSI-XY-nTt" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="b0i-V8-UCT"/>
                             <constraint firstItem="yGX-qx-bFT" firstAttribute="top" secondItem="ZSI-XY-nTt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gVS-fe-bpR"/>
                             <constraint firstItem="bYy-5H-R2N" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lSE-jx-V74"/>
                             <constraint firstItem="ZSI-XY-nTt" firstAttribute="top" secondItem="1VA-Am-xgZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ldq-1E-a3M"/>
+                            <constraint firstAttribute="trailing" secondItem="aJH-BB-yH7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pOn-Fh-UWG"/>
                             <constraint firstAttribute="trailing" secondItem="1VA-Am-xgZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="peI-p6-kHM"/>
                             <constraint firstItem="yGX-qx-bFT" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tMi-xj-yu4"/>
                             <constraint firstAttribute="trailing" secondItem="bYy-5H-R2N" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="yYc-g8-Yac"/>
@@ -427,6 +443,7 @@
                         <outlet property="accountButton" destination="bYy-5H-R2N" id="enk-wA-f8q"/>
                         <outlet property="currencyButton" destination="yGX-qx-bFT" id="jNG-YB-jkH"/>
                         <outlet property="nameTextField" destination="1VA-Am-xgZ" id="PmQ-xu-6ji"/>
+                        <outlet property="startDateButton" destination="aJH-BB-yH7" id="wiB-kh-IIs"/>
                         <outlet property="valueTextField" destination="ZSI-XY-nTt" id="crb-T5-UNm"/>
                     </connections>
                 </viewController>
@@ -483,55 +500,6 @@
             <point key="canvasLocation" x="3313" y="917"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="IMAccountEditViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMAccountEditViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="currencyButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="valueTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="IMAccountSelectorController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMAccountSelectorController.h"/>
-        </class>
-        <class className="IMAccountsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMAccountsTableViewController.h"/>
-        </class>
-        <class className="IMCurrecyPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMCurrecyPickerViewController.h"/>
-        </class>
-        <class className="IMLeftSidePanelControllerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMLeftSidePanelControllerViewController.h"/>
-        </class>
-        <class className="IMSidePanelController" superclassName="JASidePanelController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMSidePanelController.h"/>
-        </class>
-        <class className="IMSummaryViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMSummaryViewController.h"/>
-        </class>
-        <class className="IMTransactionEditViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMTransactionEditViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="accountButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="currencyButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="valueTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="IMTransactionsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMTransactionsTableViewController.h"/>
-        </class>
-        <class className="JASidePanelController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/JASidePanelController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="TestVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TestVC.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

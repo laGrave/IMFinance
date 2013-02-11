@@ -98,6 +98,7 @@ static NSString *kTransactionKey = @"transaction key";
 static NSString *kTransactionName = @"transaction name";
 static NSString *kTransactionValue = @"transaction value";
 static NSString *kTransactionCurrency = @"transaction currency";
+static NSString *kTransactionStartDate = @"transaction start date";
 
 /*
  создание и сохранение новой транзакции с набором параметров
@@ -121,9 +122,7 @@ static NSString *kTransactionCurrency = @"transaction currency";
                 transaction = [Transaction MR_createInContext:localContext];
                 transaction.key = [[[NSDate date] description] MD5];
             
-                Date *date = [Date MR_createInContext:localContext];
-                date.start = [NSDate date];
-                transaction.date = date;
+                transaction.startDate = [NSDate date];
             }
             
             Account *account = [Account MR_findFirstByAttribute:@"key"
@@ -137,6 +136,9 @@ static NSString *kTransactionCurrency = @"transaction currency";
             transaction.value = [parameters objectForKey:kTransactionValue];
             transaction.currency = [parameters objectForKey:kTransactionCurrency];
             transaction.account = account;
+            
+            NSDate *startDate = [parameters objectForKey:kTransactionStartDate];
+            if (startDate) transaction.startDate = startDate;
             
         }
                           completion:^(BOOL success, NSError *error){

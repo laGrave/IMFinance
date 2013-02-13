@@ -23,8 +23,8 @@
     <entity name="Category" representedClassName="Category" syncable="YES">
         <attribute name="budget" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="incomeType" attributeType="Boolean" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <attribute name="type" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
         <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="subcategories" inverseEntity="Category" syncable="YES"/>
         <relationship name="subcategories" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Category" inverseName="parent" inverseEntity="Category" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Transaction" inverseName="category" inverseEntity="Transaction" syncable="YES"/>
@@ -39,6 +39,7 @@
         <attribute name="fee" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="geo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="incomeType" attributeType="Boolean" syncable="YES"/>
         <attribute name="key" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
@@ -54,6 +55,6 @@
         <element name="Account" positionX="-191" positionY="36" width="128" height="315"/>
         <element name="Category" positionX="45" positionY="-45" width="128" height="150"/>
         <element name="Contractor" positionX="360" positionY="294" width="128" height="75"/>
-        <element name="Transaction" positionX="160" positionY="192" width="128" height="270"/>
+        <element name="Transaction" positionX="160" positionY="192" width="128" height="285"/>
     </elements>
 </model>

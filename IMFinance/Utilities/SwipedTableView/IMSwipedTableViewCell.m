@@ -11,6 +11,33 @@
 @implementation IMSwipedTableViewCell
 
 @synthesize cellBackgroundView = _cellBackgroundView;
+@synthesize cellContentView = _cellContentView;
+
+- (UIView *)cellContentView {
+
+    if (!_cellContentView) {
+        UIView *contenView = [[UIView alloc] initWithFrame:self.bounds];
+        contenView.backgroundColor = [UIColor blueColor];
+        [self setCellContentView:contenView];
+    }
+    return _cellContentView;
+}
+
+
+- (void)setCellContentView:(UIView *)cellContentView {
+
+    if (_cellContentView) {
+        [_cellContentView removeFromSuperview];
+        _cellContentView = nil;
+    }
+    
+    if (self.superview) {
+        cellContentView.frame = self.bounds;
+        [self addSubview:cellContentView];
+        _cellContentView = cellContentView;
+    }
+}
+
 
 - (UIView *)cellBackgroundView {
 
@@ -31,11 +58,12 @@
     }
     
     if (self.superview) {
-        cellBackgroundView.frame = self.frame;
+        cellBackgroundView.frame = self.bounds;
         [self.superview insertSubview:cellBackgroundView belowSubview:self];
         _cellBackgroundView = cellBackgroundView;
     }
 }
+
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -51,6 +79,16 @@
 //    [super setSelected:selected animated:animated];
 //
 //    // Configure the view for the selected state
+    UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    [self addGestureRecognizer:panRecognizer];
+}
+
+
+- (void)pan:(UIPanGestureRecognizer *)recognizer {
+
+//    if (recognizer.state == UIGestureRecognizerStateChanged || recognizer.state == UIGestureRecognizerStateEnded) {
+//        <#statements#>
+//    }
 }
 
 
@@ -76,9 +114,9 @@
     
     CGFloat deltaX = location.x - previousLocation.x;
     
-    CGRect cellFrame = self.frame;
+    CGRect cellFrame = self.cellContentView.frame;
     cellFrame.origin.x += deltaX;
-    self.frame = cellFrame;
+    self.cellContentView.frame = cellFrame;
 }
 
 
@@ -88,7 +126,7 @@
         [self.delegate touchesEnded:touches inCell:self];
     }
     [UIView animateWithDuration:0.4 animations:^{
-        self.frame = self.backgroundView.frame;
+        self.cellContentView.frame = self.bounds;
     }];
 }
 

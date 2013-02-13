@@ -95,6 +95,7 @@ static NSString *kAccountCurrency = @"account currency";
 #pragma mark Core Data - Transactions
 
 static NSString *kTransactionKey = @"transaction key";
+static NSString *kTransactionIncomeType = @"transaction income type";
 static NSString *kTransactionName = @"transaction name";
 static NSString *kTransactionValue = @"transaction value";
 static NSString *kTransactionCurrency = @"transaction currency";
@@ -133,6 +134,7 @@ static NSString *kTransactionStartDate = @"transaction start date";
             name = (name) ? name : @"";
             
             transaction.name = name;
+            transaction.incomeType = [parameters objectForKey:kTransactionIncomeType];
             transaction.value = [parameters objectForKey:kTransactionValue];
             transaction.currency = [parameters objectForKey:kTransactionCurrency];
             transaction.account = account;

@@ -43,7 +43,6 @@
 		DCD7267516B67CC3006F5E2D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD7267416B67CC3006F5E2D /* CoreData.framework */; };
 		DCD726A416B68649006F5E2D /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7269C16B68649006F5E2D /* Category.m */; };
 		DCD726A516B68649006F5E2D /* Contractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7269E16B68649006F5E2D /* Contractor.m */; };
-		DCD726A616B68649006F5E2D /* Date.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726A016B68649006F5E2D /* Date.m */; };
 		DCD726A716B68649006F5E2D /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726A216B68649006F5E2D /* Transaction.m */; };
 		DCD726AA16B686DA006F5E2D /* IMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726A916B686DA006F5E2D /* IMCoreDataManager.m */; };
 		DCD726AC16B687D4006F5E2D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD726AB16B687D4006F5E2D /* QuartzCore.framework */; };
@@ -123,8 +122,6 @@
 		DCD7269C16B68649006F5E2D /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		DCD7269D16B68649006F5E2D /* Contractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contractor.h; sourceTree = "<group>"; };
 		DCD7269E16B68649006F5E2D /* Contractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contractor.m; sourceTree = "<group>"; };
-		DCD7269F16B68649006F5E2D /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
-		DCD726A016B68649006F5E2D /* Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Date.m; sourceTree = "<group>"; };
 		DCD726A116B68649006F5E2D /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		DCD726A216B68649006F5E2D /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		DCD726A816B686DA006F5E2D /* IMCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCoreDataManager.h; sourceTree = "<group>"; };
@@ -343,8 +340,6 @@
 				DCD7269C16B68649006F5E2D /* Category.m */,
 				DCD7269D16B68649006F5E2D /* Contractor.h */,
 				DCD7269E16B68649006F5E2D /* Contractor.m */,
-				DCD7269F16B68649006F5E2D /* Date.h */,
-				DCD726A016B68649006F5E2D /* Date.m */,
 				DCD726A116B68649006F5E2D /* Transaction.h */,
 				DCD726A216B68649006F5E2D /* Transaction.m */,
 			);
@@ -527,7 +522,6 @@
 				DCD7267316B67C8E006F5E2D /* IMFinance.xcdatamodeld in Sources */,
 				DCD726A416B68649006F5E2D /* Category.m in Sources */,
 				DCD726A516B68649006F5E2D /* Contractor.m in Sources */,
-				DCD726A616B68649006F5E2D /* Date.m in Sources */,
 				DCD726A716B68649006F5E2D /* Transaction.m in Sources */,
 				DCD726AA16B686DA006F5E2D /* IMCoreDataManager.m in Sources */,
 				DCD726C616B68806006F5E2D /* NSString+Trim.m in Sources */,

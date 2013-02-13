@@ -2,7 +2,7 @@
 //  Transaction.m
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 11.02.13.
+//  Created by Igor Mishchenko on 13.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -15,17 +15,18 @@
 @implementation Transaction
 
 @dynamic currency;
+@dynamic endDate;
 @dynamic fee;
 @dynamic geo;
 @dynamic image;
 @dynamic key;
 @dynamic name;
 @dynamic note;
+@dynamic repeatInterval;
+@dynamic startDate;
 @dynamic userImagePath;
 @dynamic value;
-@dynamic startDate;
-@dynamic repeatInterval;
-@dynamic endDate;
+@dynamic incomeType;
 @dynamic account;
 @dynamic category;
 @dynamic contractor;

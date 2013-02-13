@@ -23,5 +23,6 @@
 
 @property (nonatomic, weak) id <IMSwipedTableViewCellDelegate> delegate;
 @property (nonatomic, strong) UIView *cellBackgroundView;
+@property (nonatomic, strong) UIView *cellContentView;
 
 @end

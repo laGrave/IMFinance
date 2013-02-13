@@ -22,6 +22,7 @@
 
 static NSString *kTransactionKey = @"transaction key";
 static NSString *kTransactionName = @"transaction name";
+static NSString *kTransactionIncomeType = @"transaction income type";
 static NSString *kTransactionValue = @"transaction value";
 static NSString *kTransactionCurrency = @"transaction currency";
 static NSString *kAccountKey = @"account key";
@@ -81,6 +82,7 @@ static NSString *kTransactionStartDate = @"transaction start date";
         
         [self.params setValue:trans.key forKey:kTransactionKey];
         [self.params setValue:trans.name forKey:kTransactionName];
+        [self.params setValue:trans.incomeType forKey:kTransactionIncomeType];
         [self.params setValue:trans.value forKey:kTransactionValue];
         [self.currencyButton setTitle:[[[CurrencyConfig alloc] init] currencyNameWithCode:trans.currency] forState:UIControlStateNormal];
         [self.params setValue:trans.currency forKey:kTransactionCurrency];

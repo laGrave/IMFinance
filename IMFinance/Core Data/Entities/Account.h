@@ -2,7 +2,7 @@
 //  Account.h
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 11.02.13.
+//  Created by Igor Mishchenko on 13.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSString * bankName;
 @property (nonatomic, retain) NSNumber * cardNumber;
 @property (nonatomic, retain) NSString * currency;
+@property (nonatomic, retain) NSDate * endDate;
 @property (nonatomic, retain) NSData * image;
 @property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) NSNumber * limit;
@@ -25,11 +26,10 @@
 @property (nonatomic, retain) NSString * phoneNumber;
 @property (nonatomic, retain) NSNumber * pinCode;
 @property (nonatomic, retain) NSNumber * secutityCode;
+@property (nonatomic, retain) NSDate * startDate;
 @property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSNumber * value;
 @property (nonatomic, retain) NSString * website;
-@property (nonatomic, retain) NSDate * startDate;
-@property (nonatomic, retain) NSDate * endDate;
 @property (nonatomic, retain) NSSet *transactions;
 @end
 

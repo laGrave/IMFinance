@@ -25,17 +25,18 @@ static NSString *kTransactionName = @"transaction name";
 static NSString *kTransactionIncomeType = @"transaction income type";
 static NSString *kTransactionValue = @"transaction value";
 static NSString *kTransactionCurrency = @"transaction currency";
-static NSString *kAccountKey = @"account key";
 static NSString *kTransactionStartDate = @"transaction start date";
+static NSString *kAccountKey = @"account key";
 
 
-@interface IMTransactionEditViewController () <IMCurrecyPickerViewControllerDelegate, UITextFieldDelegate, IMAccountSelectorControllerDelegate, IMDateStartPickerDelegate>
+@interface IMTransactionEditViewController () <IMCurrecyPickerViewControllerDelegate, UITextFieldDelegate, IMAccountSelectorControllerDelegate, IMDateStartPickerDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *valueTextField;
 @property (weak, nonatomic) IBOutlet UIButton *currencyButton;
 @property (weak, nonatomic) IBOutlet UIButton *accountButton;
 @property (weak, nonatomic) IBOutlet UIButton *startDateButton;
+@property (weak, nonatomic) IBOutlet UIButton *incomeTypeButton;
 
 @property (nonatomic, strong) NSDictionary *params;
 
@@ -79,42 +80,34 @@ static NSString *kTransactionStartDate = @"transaction start date";
     
     if (self.transactionKey) {
         Transaction *trans = [Transaction MR_findFirstByAttribute:@"key" withValue:self.transactionKey];
+        self.nameTextField.text = trans.name;
+        self.valueTextField.text = [NSString stringWithFormat:@"%@", trans.value];
         
         [self.params setValue:trans.key forKey:kTransactionKey];
         [self.params setValue:trans.name forKey:kTransactionName];
         [self.params setValue:trans.incomeType forKey:kTransactionIncomeType];
         [self.params setValue:trans.value forKey:kTransactionValue];
-        [self.currencyButton setTitle:[[[CurrencyConfig alloc] init] currencyNameWithCode:trans.currency] forState:UIControlStateNormal];
         [self.params setValue:trans.currency forKey:kTransactionCurrency];
         [self.params setValue:trans.account.key forKey:kAccountKey];
         [self.params setValue:trans.startDate forKey:kTransactionStartDate];
-        
-        NSString *currencyName = [curConfig currencyNameWithCode:trans.currency];
-        [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
-        
-        self.nameTextField.text = trans.name;
-        self.valueTextField.text = [NSString stringWithFormat:@"%@", trans.value];
     }
     else if (self.accountKey) {
         Account *account = [Account MR_findFirstByAttribute:@"key" withValue:self.accountKey];
+        [self.accountButton setTitle:account.name forState:UIControlStateNormal];
+        
         [self.params setValue:self.accountKey forKey:kAccountKey];
         [self.params setValue:account.currency forKey:kTransactionCurrency];
-        
         [self.params setValue:[NSDate date] forKey:kTransactionStartDate];
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-        NSString *dateString = [dateFormatter stringFromDate:[NSDate date]];
-        [self.startDateButton setTitle:dateString forState:UIControlStateNormal];
-        
-        [self.accountButton setTitle:account.name forState:UIControlStateNormal];
-        NSString *currencyName = [curConfig currencyNameWithCode:account.currency];
-        [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
+        [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
     }
     else {
+        [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
         [self.params setValue:[curConfig defaultCurrencyCode] forKey:kTransactionCurrency];
-        NSString *currencyName = [curConfig currencyNameWithCode:[curConfig defaultCurrencyCode]];
-        [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
+        [self.params setValue:[NSDate date] forKey:kTransactionStartDate];
     }
+    [self updateIncomeTypeButtonTitle];
+    [self updateCurrencyButtonTitle];
+    [self updateStartDateButtonTitle];
 }
 
 - (void)didReceiveMemoryWarning
@@ -167,6 +160,15 @@ static NSString *kTransactionStartDate = @"transaction start date";
     [self.view addSubview:startDatePicker];
 }
 
+
+
+- (IBAction)incomeTypeButtonPressed:(UIButton *)sender {
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@"Расход", @"Доход", nil];
+    [actionSheet showInView:self.view];
+}
+
+
 - (BOOL)setupParams {
     
     
@@ -180,6 +182,31 @@ static NSString *kTransactionStartDate = @"transaction start date";
     [self.params setValue:[NSNumber numberWithDouble:self.valueTextField.text.doubleValue] forKey:kTransactionValue];
     
     return YES;
+}
+
+
+- (void)updateStartDateButtonTitle {
+
+    NSString *stringDate = [NSDateFormatter localizedStringFromDate:[self.params objectForKey:kTransactionStartDate]
+                                                          dateStyle:NSDateFormatterLongStyle
+                                                          timeStyle:NSDateFormatterNoStyle];
+    [self.startDateButton setTitle:stringDate forState:UIControlStateNormal];
+}
+
+
+- (void)updateCurrencyButtonTitle {
+
+    NSString *currencyCode = [self.params objectForKey:kTransactionCurrency];
+    NSString *currencyName = [[[CurrencyConfig alloc] init] currencyNameWithCode:currencyCode];
+    [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
+}
+
+
+- (void)updateIncomeTypeButtonTitle {
+
+    BOOL income = [[self.params objectForKey:kTransactionIncomeType] boolValue];
+    NSString *incomeType = (income) ? @"Доход" : @"Расход";
+    [self.incomeTypeButton setTitle:incomeType forState:UIControlStateNormal];
 }
 
 
@@ -216,8 +243,7 @@ static NSString *kTransactionStartDate = @"transaction start date";
 - (void)pickerDidSelectCurrency:(NSString *)currencyCode {
     
     [self.params setValue:currencyCode forKey:kTransactionCurrency];
-    NSString *currencyName = [[[CurrencyConfig alloc] init] currencyNameWithCode:currencyCode];
-    [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
+    [self updateCurrencyButtonTitle];
 }
 
 
@@ -226,9 +252,11 @@ static NSString *kTransactionStartDate = @"transaction start date";
 
 - (void)selectorDidSelectAccount:(NSString *)accountKey {
 
-    Account *account = [Account MR_findFirstByAttribute:accountKey withValue:kAccountKey];
+    Account *account = [Account MR_findFirstByAttribute:@"key" withValue:accountKey];
     [self.params setValue:accountKey forKey:kAccountKey];
+    [self.params setValue:account.currency forKey:kTransactionCurrency];
     [self.accountButton setTitle:account.name forState:UIControlStateNormal];
+    [self updateCurrencyButtonTitle];
 }
 
 
@@ -237,17 +265,26 @@ static NSString *kTransactionStartDate = @"transaction start date";
 
 - (void)startDatePickerDidSelectDate:(NSDate *)startDate {
 
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-    NSString *dateString = [dateFormatter stringFromDate:startDate];
-    [self.startDateButton setTitle:dateString forState:UIControlStateNormal];
-    
     [self.params setValue:startDate forKey:kTransactionStartDate];
+    [self updateStartDateButtonTitle];
 }
 
 - (void)startDatePickerShouldDismiss:(IMDateStartPicker *)picker {
 
     [picker removeFromSuperview];
+}
+
+
+#pragma mark -
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+
+    if (buttonIndex == actionSheet.firstOtherButtonIndex) {
+        [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
+    }
+    else [self.params setValue:[NSNumber numberWithBool:1] forKey:kTransactionIncomeType];
+    [self updateIncomeTypeButtonTitle];
 }
 
 @end

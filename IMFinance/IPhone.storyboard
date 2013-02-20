@@ -547,7 +547,10 @@
         <class className="IMTransactionEditViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IMTransactionEditViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelButtonPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="doneButtonPressed:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="action" name="incomeTypeButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="startDateButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="accountButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="currencyButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="incomeTypeButton" candidateClass="UIButton"/>

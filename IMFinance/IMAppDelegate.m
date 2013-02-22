@@ -84,9 +84,9 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         //заносим базовые категории в базу
-        
+        [[[IMCoreDataManager alloc] init] setupBaseCategories];
     }
-    [[[IMCoreDataManager alloc] init] performSelector:@selector(setupBaseCategories) withObject:nil afterDelay:3];
+//    [[[IMCoreDataManager alloc] init] performSelector:@selector(setupBaseCategories) withObject:nil afterDelay:3];
     
     
 //    //выбрать нужный storyboard в зависимости от типа устройства и экрана

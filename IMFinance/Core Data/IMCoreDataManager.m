@@ -155,12 +155,10 @@ static NSString *kCategoryName = @"categoryName";
 static NSString *kCategoryIcon = @"categoryIconName";
 static NSString *kCategoryIncomeType = @"categoryIncomeType";
 
-- (void)editCategoryWithParams:(NSDictionary *)parameters
-                       success:(void (^)())successBlock
-                       failure:(void(^)())failureBlock {
+- (void)editCategoryWithParams:(NSDictionary *)parameters {
 
     dispatch_async([self background_save_queue], ^{
-        [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
+        [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext){
         
             Category *category;
             
@@ -174,12 +172,9 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
             }
             
             category.name = [parameters objectForKey:kCategoryName];
-//            category.image = UIImagePNGRepresentation([UIImage imageNamed:[parameters objectForKey:kCategoryIcon]]);
+            category.image = UIImagePNGRepresentation([UIImage imageNamed:[parameters objectForKey:kCategoryIcon]]);
             category.incomeType = [parameters objectForKey:kCategoryIncomeType];
-        }
-                          completion:^(BOOL success, NSError *error){
-                              (success) ? successBlock() : failureBlock(error);
-                          }];
+        }];
     });
 
 }
@@ -189,22 +184,15 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
     
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"BaseCategories" ofType:@"plist"];
     NSArray *categories = [NSArray arrayWithContentsOfFile:plistPath];
-//    for (NSDictionary *categoryParams in categories) {
-//        [self setCategoryWithParameters:categoryParams];
-//    }
-    [self setCategoryWithParameters:[categories lastObject]];
+    for (NSDictionary *categoryParams in categories) {
+        [self setCategoryWithParameters:categoryParams];
+    }
 }
 
 
 - (void)setCategoryWithParameters:(NSDictionary *)categoryDict {
     
-    [self editCategoryWithParams:categoryDict
-                         success:^{
-                             NSLog(@"category has been edited with success");
-                         }
-                         failure:^{
-                             NSLog(@"there was an error during edit category");
-                         }];
+    [self editCategoryWithParams:categoryDict];
     NSArray *values = [categoryDict allValues];
     for (id value in values) {
         if ([value isKindOfClass:[NSDictionary class]]) {

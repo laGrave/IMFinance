@@ -11,6 +11,7 @@
 #import "IMCoreDataManager.h"
 #import "Transaction.h"
 #import "Account.h"
+#import "Category.h"
 
 #import "CurrencyConfig.h"
 #import "IMCurrecyPickerViewController.h"
@@ -28,6 +29,7 @@ static NSString *kTransactionIncomeType = @"transaction income type";
 static NSString *kTransactionValue = @"transaction value";
 static NSString *kTransactionCurrency = @"transaction currency";
 static NSString *kTransactionStartDate = @"transaction start date";
+static NSString *kTransactionCategory = @"transaction category";
 static NSString *kAccountKey = @"account key";
 
 
@@ -93,6 +95,7 @@ static NSString *kAccountKey = @"account key";
         [self.params setValue:trans.currency forKey:kTransactionCurrency];
         [self.params setValue:trans.account.key forKey:kAccountKey];
         [self.params setValue:trans.startDate forKey:kTransactionStartDate];
+        [self.params setValue:trans.category forKey:kTransactionCategory];
     }
     else if (self.accountKey) {
         Account *account = [Account MR_findFirstByAttribute:@"key" withValue:self.accountKey];
@@ -102,15 +105,18 @@ static NSString *kAccountKey = @"account key";
         [self.params setValue:account.currency forKey:kTransactionCurrency];
         [self.params setValue:[NSDate date] forKey:kTransactionStartDate];
         [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
+        [self.params setValue:[Category MR_findFirst] forKey:kTransactionCategory];
     }
     else {
         [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
         [self.params setValue:[curConfig defaultCurrencyCode] forKey:kTransactionCurrency];
         [self.params setValue:[NSDate date] forKey:kTransactionStartDate];
+        [self.params setValue:[Category MR_findFirst] forKey:kTransactionCategory];
     }
     [self updateIncomeTypeButtonTitle];
     [self updateCurrencyButtonTitle];
     [self updateStartDateButtonTitle];
+    [self updateCategoryButtonTitle];
 }
 
 - (void)didReceiveMemoryWarning
@@ -222,6 +228,14 @@ static NSString *kAccountKey = @"account key";
 }
 
 
+- (void)updateCategoryButtonTitle {
+
+    Category *category = [self.params objectForKey:kTransactionCategory];
+    NSString *categoryName = NSLocalizedString(category.name, @"");
+    [self.categoryButton setTitle:categoryName forState:UIControlStateNormal];
+}
+
+
 #pragma mark -
 #pragma mark - UITextFieldDelegate protocol implementation
 
@@ -305,6 +319,8 @@ static NSString *kAccountKey = @"account key";
 
 - (void)categoriesPickerDidSelectCategory:(Category *)category {
 
+    [self.params setValue:category forKey:kTransactionCategory];
+    [self updateCategoryButtonTitle];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

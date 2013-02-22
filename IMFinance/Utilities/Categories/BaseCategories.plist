@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>categoryName</key>
-		<string>kDinner</string>
+		<string>Dinner</string>
 		<key>categoryIconName</key>
 		<string></string>
 		<key>categoryIncomeType</key>
@@ -60,7 +60,7 @@
 	</dict>
 	<dict>
 		<key>categoryName</key>
-		<string>kPersonal</string>
+		<string>Personal</string>
 		<key>categoryIconName</key>
 		<string></string>
 		<key>categoryIncomeType</key>
@@ -77,15 +77,23 @@
 	<dict>
 		<key>New item</key>
 		<dict>
-			<key>categoryIncomeType</key>
-			<false/>
-			<key>categoryIconName</key>
-			<string></string>
 			<key>categoryName</key>
 			<string>Fuel</string>
+			<key>categoryIconName</key>
+			<string></string>
+			<key>categoryIncomeType</key>
+			<false/>
 		</dict>
 		<key>categoryName</key>
 		<string>Auto</string>
+		<key>categoryIconName</key>
+		<string></string>
+		<key>categoryIncomeType</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>categoryName</key>
+		<string>Transport</string>
 		<key>categoryIconName</key>
 		<string></string>
 		<key>categoryIncomeType</key>
@@ -105,7 +113,7 @@
 		<key>categoryIconName</key>
 		<string></string>
 		<key>categoryIncomeType</key>
-		<false/>
+		<true/>
 	</dict>
 	<dict>
 		<key>categoryName</key>
@@ -113,15 +121,7 @@
 		<key>categoryIconName</key>
 		<string></string>
 		<key>categoryIncomeType</key>
-		<false/>
-	</dict>
-	<dict>
-		<key>categoryName</key>
-		<string>Transport</string>
-		<key>categoryIconName</key>
-		<string></string>
-		<key>categoryIncomeType</key>
-		<false/>
+		<true/>
 	</dict>
 </array>
 </plist>

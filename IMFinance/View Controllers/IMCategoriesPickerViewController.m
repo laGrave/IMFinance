@@ -27,7 +27,7 @@
         return _fetchedResultsController;
     }
     
-    _fetchedResultsController = [Category MR_fetchAllSortedBy:@"order" ascending:NO withPredicate:nil groupBy:@"incomeType" delegate:self];
+    _fetchedResultsController = [Category MR_fetchAllGroupedBy:@"incomeType" withPredicate:nil sortedBy:@"order" ascending:YES];
     
     return _fetchedResultsController;
 }
@@ -61,6 +61,19 @@
     cell.textLabel.text = NSLocalizedString(category.name, nil);
     
     return cell;
+}
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+
+    switch (section) {
+        case 1:
+            return @"Доходы";
+            break;
+        default:
+            return @"Расходы";
+            break;
+    }
 }
 
 

@@ -1,18 +1,15 @@
 //
-//  Contractor.m
+//  IMCategoriesConfig.h
 //  IMFinance
 //
 //  Created by Игорь Мищенко on 22.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
-#import "Contractor.h"
-#import "Transaction.h"
+#import <Foundation/Foundation.h>
 
+@interface IMCategoriesConfig : NSObject
 
-@implementation Contractor
-
-@dynamic name;
-@dynamic transactions;
++ (void)setupBaseCategories;
 
 @end

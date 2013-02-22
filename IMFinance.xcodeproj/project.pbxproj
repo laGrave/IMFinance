@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A741CC1A898D4B31B347DB75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591F429DE7F4C5AB075756F /* libPods.a */; };
-		B0EF467816D76AC1008A6C78 /* StandartCategoriesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0EF467716D76AC1008A6C78 /* StandartCategoriesList.plist */; };
+		B0EF468816D77706008A6C78 /* BaseCategories.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0EF468716D77706008A6C78 /* BaseCategories.plist */; };
+		B0EF468B16D7772B008A6C78 /* BaseCategories.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0EF468D16D7772B008A6C78 /* BaseCategories.strings */; };
+		B0EF469116D77893008A6C78 /* IMCategoriesConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EF469016D77893008A6C78 /* IMCategoriesConfig.m */; };
 		DC15943616B7E69100672A89 /* IMAccountEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC15943516B7E69100672A89 /* IMAccountEditViewController.m */; };
 		DC36749516B6A56100D26206 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = DC36749416B6A56100D26206 /* Account.m */; };
 		DC8812AF16BFE85200DAE434 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8812AE16BFE85200DAE434 /* libz.dylib */; };
@@ -63,7 +65,11 @@
 
 /* Begin PBXFileReference section */
 		6591F429DE7F4C5AB075756F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0EF467716D76AC1008A6C78 /* StandartCategoriesList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StandartCategoriesList.plist; sourceTree = "<group>"; };
+		B0EF468716D77706008A6C78 /* BaseCategories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BaseCategories.plist; sourceTree = "<group>"; };
+		B0EF468C16D7772B008A6C78 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/BaseCategories.strings; sourceTree = "<group>"; };
+		B0EF468E16D7772D008A6C78 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/BaseCategories.strings; sourceTree = "<group>"; };
+		B0EF468F16D77893008A6C78 /* IMCategoriesConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoriesConfig.h; sourceTree = "<group>"; };
+		B0EF469016D77893008A6C78 /* IMCategoriesConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoriesConfig.m; sourceTree = "<group>"; };
 		B208322CA55F4E3780DE5636 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		DC15943416B7E69100672A89 /* IMAccountEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountEditViewController.h; sourceTree = "<group>"; };
 		DC15943516B7E69100672A89 /* IMAccountEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountEditViewController.m; sourceTree = "<group>"; };
@@ -173,6 +179,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0EF468616D77706008A6C78 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B0EF468716D77706008A6C78 /* BaseCategories.plist */,
+				B0EF468D16D7772B008A6C78 /* BaseCategories.strings */,
+				B0EF468F16D77893008A6C78 /* IMCategoriesConfig.h */,
+				B0EF469016D77893008A6C78 /* IMCategoriesConfig.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		DC15943316B7E66000672A89 /* Accounts */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,10 +427,10 @@
 		DCD726CF16B68833006F5E2D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B0EF468616D77706008A6C78 /* Categories */,
 				DCCFDDEE16C9395E002886E2 /* SwipedTableView */,
 				DC90987E16C4EE7100CF9D00 /* Date */,
 				DCD726D016B68833006F5E2D /* Currency */,
-				B0EF467716D76AC1008A6C78 /* StandartCategoriesList.plist */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -493,7 +510,8 @@
 				DCCFDDD416C8F4BB002886E2 /* IMDateStartPicker.xib in Resources */,
 				DCCFDDD616C8F59A002886E2 /* IMDateIntervalPicker.xib in Resources */,
 				DCCFDDD816C8F665002886E2 /* IMDateEndPicker.xib in Resources */,
-				B0EF467816D76AC1008A6C78 /* StandartCategoriesList.plist in Resources */,
+				B0EF468816D77706008A6C78 /* BaseCategories.plist in Resources */,
+				B0EF468B16D7772B008A6C78 /* BaseCategories.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,12 +572,22 @@
 				DCCFDDE116C91C35002886E2 /* IMDateEndPicker.m in Sources */,
 				DCCFDDF116C93974002886E2 /* IMSwipedTableViewCell.m in Sources */,
 				DCCFDDF416C93B3E002886E2 /* IMAccountSwipedTableView.m in Sources */,
+				B0EF469116D77893008A6C78 /* IMCategoriesConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B0EF468D16D7772B008A6C78 /* BaseCategories.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0EF468C16D7772B008A6C78 /* en */,
+				B0EF468E16D7772D008A6C78 /* ru */,
+			);
+			name = BaseCategories.strings;
+			sourceTree = "<group>";
+		};
 		DCCFDDCF16C4F4E3002886E2 /* DateIntervals.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

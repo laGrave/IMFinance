@@ -1,0 +1,23 @@
+/* 
+  BaseCategories.strings
+  IMFinance
+
+  Created by Игорь Мищенко on 22.02.13.
+  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
+*/
+
+"Dinner" = "Dinner";
+"Internet" = "Internet";
+"Gift" = "Gift";
+"Party" = "Party";
+"Cafe" = "Cafe";
+"Taxi" = "Taxi";
+"Medicine" = "Medicine";
+"Personal" = "Personal";
+"Baby" = "Baby";
+"Auto" = "Auto";
+"Fuel" = "Fuel";
+"ScholarShip" = "ScholarShip";
+"Salary" = "Salary";
+"Trade" = "Trade";
+"Transport" = "Transport";

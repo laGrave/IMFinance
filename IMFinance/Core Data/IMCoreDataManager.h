@@ -34,4 +34,8 @@
                           success:(void (^)())successBlock
                           failure:(void(^)())failureBlock;
 
+- (void)editCategoryWithParams:(NSDictionary *)parameters
+                       success:(void (^)())successBlock
+                       failure:(void(^)())failureBlock;
+
 @end

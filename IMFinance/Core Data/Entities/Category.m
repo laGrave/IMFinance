@@ -2,7 +2,7 @@
 //  Category.m
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 13.02.13.
+//  Created by Игорь Мищенко on 22.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -15,8 +15,10 @@
 
 @dynamic budget;
 @dynamic image;
-@dynamic name;
 @dynamic incomeType;
+@dynamic name;
+@dynamic key;
+@dynamic order;
 @dynamic parent;
 @dynamic subcategories;
 @dynamic transactions;

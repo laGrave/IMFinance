@@ -12,6 +12,7 @@
 
 #import "Account.h"
 #import "Transaction.h"
+#import "Category.h"
 
 static dispatch_queue_t coredata_background_save_queue;
 
@@ -76,7 +77,7 @@ static NSString *kAccountCurrency = @"account currency";
             }
             else {
                 account = [Account MR_createInContext:localContext];
-                account.key = [[[NSDate date] description] MD5];
+                account.key = [@"account" stringByAppendingString:[[[NSDate date] description] MD5]];
             }
             
             account.name = [parameters objectForKey:kAccountName];
@@ -120,7 +121,7 @@ static NSString *kTransactionStartDate = @"transaction start date";
             }
             else {
                 transaction = [Transaction MR_createInContext:localContext];
-                transaction.key = [[[NSDate date] description] MD5];
+                transaction.key = [@"transaction" stringByAppendingString:[[[NSDate date] description] MD5]];
             
                 transaction.startDate = [NSDate date];
             }
@@ -146,6 +147,41 @@ static NSString *kTransactionStartDate = @"transaction start date";
                               (success) ? successBlock() : failureBlock(error);
                           }];
     });
+}
+
+
+static NSString *kCategoryKey = @"category key";
+static NSString *kCategoryName = @"categoryName";
+static NSString *kCategoryIcon = @"categoryIconName";
+static NSString *kCategoryIncomeType = @"categoryIncomeType";
+
+- (void)editCategoryWithParams:(NSDictionary *)parameters
+                       success:(void (^)())successBlock
+                       failure:(void(^)())failureBlock {
+
+    dispatch_async([self background_save_queue], ^{
+        [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
+        
+            Category *category;
+            
+            NSString *key = [parameters objectForKey:kCategoryKey];
+            if (key && key.length) {
+                category = [Category MR_findFirstByAttribute:@"key" withValue:key];
+            }
+            else {
+                category = [Category MR_createInContext:localContext];
+                category.key = [@"category" stringByAppendingString:[[[NSDate date] description] MD5]];
+            }
+            
+            category.name = [parameters objectForKey:kCategoryName];
+            category.image = UIImagePNGRepresentation([UIImage imageNamed:[parameters objectForKey:kCategoryIcon]]);
+            category.incomeType = [parameters objectForKey:kCategoryIncomeType];
+        }
+                          completion:^(BOOL success, NSError *error){
+                              (success) ? successBlock() : failureBlock(error);
+                          }];
+    });
+
 }
 
 @end

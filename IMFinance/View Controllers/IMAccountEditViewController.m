@@ -116,7 +116,6 @@ static NSString *kAccountCurrency = @"account currency";
 
 
 - (BOOL)setupParams {
-
     
     for (UITextField *textField in self.view.subviews) {
         if ([textField isKindOfClass:[UITextField class]]) {

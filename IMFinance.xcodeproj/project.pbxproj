@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A741CC1A898D4B31B347DB75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591F429DE7F4C5AB075756F /* libPods.a */; };
+		B0EF467816D76AC1008A6C78 /* StandartCategoriesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0EF467716D76AC1008A6C78 /* StandartCategoriesList.plist */; };
 		DC15943616B7E69100672A89 /* IMAccountEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC15943516B7E69100672A89 /* IMAccountEditViewController.m */; };
 		DC36749516B6A56100D26206 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = DC36749416B6A56100D26206 /* Account.m */; };
 		DC8812AF16BFE85200DAE434 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8812AE16BFE85200DAE434 /* libz.dylib */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		6591F429DE7F4C5AB075756F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0EF467716D76AC1008A6C78 /* StandartCategoriesList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StandartCategoriesList.plist; sourceTree = "<group>"; };
 		B208322CA55F4E3780DE5636 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		DC15943416B7E69100672A89 /* IMAccountEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountEditViewController.h; sourceTree = "<group>"; };
 		DC15943516B7E69100672A89 /* IMAccountEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountEditViewController.m; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 				DCCFDDEE16C9395E002886E2 /* SwipedTableView */,
 				DC90987E16C4EE7100CF9D00 /* Date */,
 				DCD726D016B68833006F5E2D /* Currency */,
+				B0EF467716D76AC1008A6C78 /* StandartCategoriesList.plist */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				DCCFDDD416C8F4BB002886E2 /* IMDateStartPicker.xib in Resources */,
 				DCCFDDD616C8F59A002886E2 /* IMDateIntervalPicker.xib in Resources */,
 				DCCFDDD816C8F665002886E2 /* IMDateEndPicker.xib in Resources */,
+				B0EF467816D76AC1008A6C78 /* StandartCategoriesList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,36 @@
+/* 
+  Localizible.strings
+  IMFinance
+
+  Created by Игорь Мищенко on 22.02.13.
+  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
+*/
+
+// временные интервалы
+"never" = "Никогда";
+"everyDay" = "Каждый день";
+"everyWeek" = "Каждую неделю";
+"every2Weeks" = "Каждые 2 недели";
+"everyMonth" = "Каждый месяц";
+"every2Month" = "Каждые 2 месяца";
+"every3Months" = "Каждые 3 месяца";
+"every6Months" = "Каждые полгода";
+"everyYear" = "Каждый год";
+"Custom" = "Пользовательский";
+
+// базовые категории
+"Dinner" = "Обед";
+"Internet" = "Интернет";
+"Gift" = "Подарок";
+"Party" = "Вечеринка";
+"Cafe" = "Кафе";
+"Taxi" = "Такси";
+"Medicine" = "Медицина";
+"Personal" = "Персональный";
+"Baby" = "Ребенок";
+"Auto" = "Авто";
+"Fuel" = "Бензин";
+"ScholarShip" = "Стипендия";
+"Salary" = "Зарплата";
+"Trade" = "Торговля";
+"Transport" = "Транспорт";

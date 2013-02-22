@@ -174,7 +174,7 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
             }
             
             category.name = [parameters objectForKey:kCategoryName];
-            category.image = UIImagePNGRepresentation([UIImage imageNamed:[parameters objectForKey:kCategoryIcon]]);
+//            category.image = UIImagePNGRepresentation([UIImage imageNamed:[parameters objectForKey:kCategoryIcon]]);
             category.incomeType = [parameters objectForKey:kCategoryIncomeType];
         }
                           completion:^(BOOL success, NSError *error){
@@ -182,6 +182,35 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
                           }];
     });
 
+}
+
+
+- (void)setupBaseCategories {
+    
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"BaseCategories" ofType:@"plist"];
+    NSArray *categories = [NSArray arrayWithContentsOfFile:plistPath];
+//    for (NSDictionary *categoryParams in categories) {
+//        [self setCategoryWithParameters:categoryParams];
+//    }
+    [self setCategoryWithParameters:[categories lastObject]];
+}
+
+
+- (void)setCategoryWithParameters:(NSDictionary *)categoryDict {
+    
+    [self editCategoryWithParams:categoryDict
+                         success:^{
+                             NSLog(@"category has been edited with success");
+                         }
+                         failure:^{
+                             NSLog(@"there was an error during edit category");
+                         }];
+    NSArray *values = [categoryDict allValues];
+    for (id value in values) {
+        if ([value isKindOfClass:[NSDictionary class]]) {
+            [self setCategoryWithParameters:value];
+        }
+    }
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import "IMAppDelegate.h"
 
+#import "IMCoreDataManager.h"
+
 @implementation IMAppDelegate
 
 -(void)initializeStoryBoardBasedOnScreenSize {
@@ -79,7 +81,12 @@
         NSString *currencyCode = [currentLocale objectForKey:NSLocaleCurrencyCode];
         [[NSUserDefaults standardUserDefaults] setObject:currencyCode forKey:@"default currency code"];
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        //заносим базовые категории в базу
+        
     }
+    [[[IMCoreDataManager alloc] init] performSelector:@selector(setupBaseCategories) withObject:nil afterDelay:3];
     
     
 //    //выбрать нужный storyboard в зависимости от типа устройства и экрана

@@ -120,7 +120,7 @@
     
     if (component == 0) {
         NSString *key = [self.fixedIntervalKeys objectAtIndex:row];
-        NSString *dateInterval = [[NSBundle mainBundle] localizedStringForKey:key value:@"" table:@"DateIntervals"];
+        NSString *dateInterval = NSLocalizedString(key, nil);
         return dateInterval;
     }
     else return [NSString stringWithFormat:@"%@", [self.customIntervalKeys objectAtIndex:row]];

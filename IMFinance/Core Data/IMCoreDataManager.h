@@ -34,8 +34,15 @@
                           success:(void (^)())successBlock
                           failure:(void(^)())failureBlock;
 
+
+/*
+ создание и сохранение новой категории с набором параметров
+ в фоне с параметрами в виде блоков
+ */
 - (void)editCategoryWithParams:(NSDictionary *)parameters
                        success:(void (^)())successBlock
                        failure:(void(^)())failureBlock;
+
+- (void)setupBaseCategories; //занесение в базу стандартных категорий
 
 @end

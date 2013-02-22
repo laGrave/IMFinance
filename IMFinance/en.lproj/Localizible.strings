@@ -1,11 +1,25 @@
 /* 
-  BaseCategories.strings
+  Localizible.strings
   IMFinance
 
   Created by Игорь Мищенко on 22.02.13.
   Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 */
 
+
+// date intervals
+"never" = "Never";
+"everyDay" = "Every day";
+"everyWeek" = "Every week";
+"every2Weeks" = "Every 2 weeks";
+"everyMonth" = "Every month";
+"every2Month" = "Every 2 months";
+"every3Months" = "Every 3 months";
+"every6Months" = "Every 6 months";
+"everyYear" = "Every year";
+"Custom" = "Custom";
+
+// base categories
 "Dinner" = "Dinner";
 "Internet" = "Internet";
 "Gift" = "Gift";
@@ -21,3 +35,4 @@
 "Salary" = "Salary";
 "Trade" = "Trade";
 "Transport" = "Transport";
+

@@ -17,6 +17,8 @@
 
 #import "IMAccountSelectorController.h"
 
+#import "IMCategoriesPickerViewController.h"
+
 #import "IMDateStartPicker.h"
 
 
@@ -29,7 +31,7 @@ static NSString *kTransactionStartDate = @"transaction start date";
 static NSString *kAccountKey = @"account key";
 
 
-@interface IMTransactionEditViewController () <IMCurrecyPickerViewControllerDelegate, UITextFieldDelegate, IMAccountSelectorControllerDelegate, IMDateStartPickerDelegate, UIActionSheetDelegate>
+@interface IMTransactionEditViewController () <IMCurrecyPickerViewControllerDelegate, UITextFieldDelegate, IMAccountSelectorControllerDelegate, IMDateStartPickerDelegate, UIActionSheetDelegate, IMCategoriesPickerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *valueTextField;
@@ -37,6 +39,7 @@ static NSString *kAccountKey = @"account key";
 @property (weak, nonatomic) IBOutlet UIButton *accountButton;
 @property (weak, nonatomic) IBOutlet UIButton *startDateButton;
 @property (weak, nonatomic) IBOutlet UIButton *incomeTypeButton;
+@property (weak, nonatomic) IBOutlet UIButton *categoryButton;
 
 @property (nonatomic, strong) NSDictionary *params;
 
@@ -169,6 +172,15 @@ static NSString *kAccountKey = @"account key";
 }
 
 
+- (IBAction)categoryButtonPressed:(UIButton *)sender {
+    
+//    IMCategoriesPickerViewController *categoryPicker = (IMCategoriesPickerViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"IMCategoriesPickerViewController"];
+    IMCategoriesPickerViewController *categoryPicker = [[IMCategoriesPickerViewController alloc] initWithStyle:UITableViewStylePlain];
+    categoryPicker.delegate = self;
+    [self.navigationController pushViewController:categoryPicker animated:YES];
+}
+
+
 - (BOOL)setupParams {
     
     
@@ -285,6 +297,15 @@ static NSString *kAccountKey = @"account key";
     }
     else [self.params setValue:[NSNumber numberWithBool:1] forKey:kTransactionIncomeType];
     [self updateIncomeTypeButtonTitle];
+}
+
+
+#pragma mark -
+#pragma mark - IMCategoriesPickerDelegate
+
+- (void)categoriesPickerDidSelectCategory:(Category *)category {
+
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

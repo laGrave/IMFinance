@@ -12,10 +12,6 @@
 
 #import "IMCoreDataManager.h"
 
-static NSString *kCategoryKey = @"category key";
-static NSString *kCategoryName = @"categoryName";
-static NSString *kCategoryIcon = @"categoryIconName";
-static NSString *kCategoryIncomeType = @"categoryIncomeType";
 
 @implementation IMCategoriesConfig
 

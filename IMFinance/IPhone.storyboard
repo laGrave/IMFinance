@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xcQ-a0-YtJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xcQ-a0-YtJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -420,6 +420,19 @@
                                     <action selector="incomeTypeButtonPressed:" destination="DeW-Dh-2wg" eventType="touchUpInside" id="UlQ-x2-pQe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gce-Vr-nDx">
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Категория">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="categoryButtonPressed:" destination="DeW-Dh-2wg" eventType="touchUpInside" id="wyM-Wp-BMl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -430,11 +443,14 @@
                             <constraint firstItem="ije-Ph-mv7" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Jv3-fc-Gmc"/>
                             <constraint firstItem="1VA-Am-xgZ" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="20" symbolic="YES" type="default" id="PPe-cp-2bx"/>
                             <constraint firstAttribute="trailing" secondItem="ZSI-XY-nTt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QMb-Uu-BN0"/>
+                            <constraint firstItem="gce-Vr-nDx" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Qg4-Rb-m4C"/>
+                            <constraint firstAttribute="trailing" secondItem="gce-Vr-nDx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UO0-fE-dYG"/>
                             <constraint firstItem="aJH-BB-yH7" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XGG-Kv-eJd"/>
                             <constraint firstItem="ije-Ph-mv7" firstAttribute="top" secondItem="aJH-BB-yH7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Xn1-kK-hEo"/>
                             <constraint firstAttribute="trailing" secondItem="yGX-qx-bFT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ZdP-KA-hY9"/>
                             <constraint firstItem="ZSI-XY-nTt" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="b0i-V8-UCT"/>
                             <constraint firstItem="yGX-qx-bFT" firstAttribute="top" secondItem="ZSI-XY-nTt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gVS-fe-bpR"/>
+                            <constraint firstItem="gce-Vr-nDx" firstAttribute="top" secondItem="ije-Ph-mv7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="j2Q-cE-TxD"/>
                             <constraint firstItem="bYy-5H-R2N" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lSE-jx-V74"/>
                             <constraint firstItem="ZSI-XY-nTt" firstAttribute="top" secondItem="1VA-Am-xgZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ldq-1E-a3M"/>
                             <constraint firstAttribute="trailing" secondItem="aJH-BB-yH7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pOn-Fh-UWG"/>
@@ -457,6 +473,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="accountButton" destination="bYy-5H-R2N" id="enk-wA-f8q"/>
+                        <outlet property="categoryButton" destination="gce-Vr-nDx" id="cGz-8X-BQF"/>
                         <outlet property="currencyButton" destination="yGX-qx-bFT" id="jNG-YB-jkH"/>
                         <outlet property="incomeTypeButton" destination="ije-Ph-mv7" id="o5S-uX-wJd"/>
                         <outlet property="nameTextField" destination="1VA-Am-xgZ" id="PmQ-xu-6ji"/>
@@ -552,6 +569,7 @@
                 <relationship kind="action" name="incomeTypeButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="action" name="startDateButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="accountButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="categoryButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="currencyButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="incomeTypeButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
@@ -578,6 +596,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="s8p-IF-Sys"/>
+        <segue reference="2O9-z5-Ylv"/>
     </inferredMetricsTieBreakers>
 </document>

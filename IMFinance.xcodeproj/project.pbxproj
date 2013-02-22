@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		A741CC1A898D4B31B347DB75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591F429DE7F4C5AB075756F /* libPods.a */; };
 		B0EF468816D77706008A6C78 /* BaseCategories.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0EF468716D77706008A6C78 /* BaseCategories.plist */; };
-		B0EF468B16D7772B008A6C78 /* BaseCategories.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0EF468D16D7772B008A6C78 /* BaseCategories.strings */; };
 		B0EF469116D77893008A6C78 /* IMCategoriesConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EF469016D77893008A6C78 /* IMCategoriesConfig.m */; };
+		B0EF46A616D7A67F008A6C78 /* Localizible.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0EF46A816D7A67F008A6C78 /* Localizible.strings */; };
+		B0EF46AC16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EF46AB16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m */; };
 		DC15943616B7E69100672A89 /* IMAccountEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC15943516B7E69100672A89 /* IMAccountEditViewController.m */; };
 		DC36749516B6A56100D26206 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = DC36749416B6A56100D26206 /* Account.m */; };
 		DC8812AF16BFE85200DAE434 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8812AE16BFE85200DAE434 /* libz.dylib */; };
@@ -23,7 +24,6 @@
 		DC98389B16B7C9D000BE939C /* IMSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389A16B7C9D000BE939C /* IMSummaryViewController.m */; };
 		DC98389F16B7CCBC00BE939C /* IMAccountsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389E16B7CCBC00BE939C /* IMAccountsTableViewController.m */; };
 		DC9838A216B7CCCB00BE939C /* IMTransactionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9838A116B7CCCB00BE939C /* IMTransactionsTableViewController.m */; };
-		DCCFDDCD16C4F4E3002886E2 /* DateIntervals.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCCFDDCF16C4F4E3002886E2 /* DateIntervals.strings */; };
 		DCCFDDD216C4F6B9002886E2 /* DateIntervalKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCCFDDD116C4F6B9002886E2 /* DateIntervalKeys.plist */; };
 		DCCFDDD416C8F4BB002886E2 /* IMDateStartPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCFDDD316C8F4BB002886E2 /* IMDateStartPicker.xib */; };
 		DCCFDDD616C8F59A002886E2 /* IMDateIntervalPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCFDDD516C8F59A002886E2 /* IMDateIntervalPicker.xib */; };
@@ -66,10 +66,12 @@
 /* Begin PBXFileReference section */
 		6591F429DE7F4C5AB075756F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EF468716D77706008A6C78 /* BaseCategories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BaseCategories.plist; sourceTree = "<group>"; };
-		B0EF468C16D7772B008A6C78 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/BaseCategories.strings; sourceTree = "<group>"; };
-		B0EF468E16D7772D008A6C78 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/BaseCategories.strings; sourceTree = "<group>"; };
 		B0EF468F16D77893008A6C78 /* IMCategoriesConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoriesConfig.h; sourceTree = "<group>"; };
 		B0EF469016D77893008A6C78 /* IMCategoriesConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoriesConfig.m; sourceTree = "<group>"; };
+		B0EF46A716D7A67F008A6C78 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizible.strings; sourceTree = "<group>"; };
+		B0EF46A916D7A684008A6C78 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/Localizible.strings; sourceTree = "<group>"; };
+		B0EF46AA16D7A7BD008A6C78 /* IMCategoriesPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoriesPickerViewController.h; sourceTree = "<group>"; };
+		B0EF46AB16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoriesPickerViewController.m; sourceTree = "<group>"; };
 		B208322CA55F4E3780DE5636 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		DC15943416B7E69100672A89 /* IMAccountEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountEditViewController.h; sourceTree = "<group>"; };
 		DC15943516B7E69100672A89 /* IMAccountEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountEditViewController.m; sourceTree = "<group>"; };
@@ -95,8 +97,6 @@
 		DC98389E16B7CCBC00BE939C /* IMAccountsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountsTableViewController.m; sourceTree = "<group>"; };
 		DC9838A016B7CCCB00BE939C /* IMTransactionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTransactionsTableViewController.h; sourceTree = "<group>"; };
 		DC9838A116B7CCCB00BE939C /* IMTransactionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTransactionsTableViewController.m; sourceTree = "<group>"; };
-		DCCFDDCE16C4F4E3002886E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DateIntervals.strings; sourceTree = "<group>"; };
-		DCCFDDD016C4F5BD002886E2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/DateIntervals.strings; sourceTree = "<group>"; };
 		DCCFDDD116C4F6B9002886E2 /* DateIntervalKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DateIntervalKeys.plist; sourceTree = "<group>"; };
 		DCCFDDD316C8F4BB002886E2 /* IMDateStartPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IMDateStartPicker.xib; sourceTree = "<group>"; };
 		DCCFDDD516C8F59A002886E2 /* IMDateIntervalPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IMDateIntervalPicker.xib; sourceTree = "<group>"; };
@@ -183,11 +183,19 @@
 			isa = PBXGroup;
 			children = (
 				B0EF468716D77706008A6C78 /* BaseCategories.plist */,
-				B0EF468D16D7772B008A6C78 /* BaseCategories.strings */,
 				B0EF468F16D77893008A6C78 /* IMCategoriesConfig.h */,
 				B0EF469016D77893008A6C78 /* IMCategoriesConfig.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		B0EF46AD16D7A7C2008A6C78 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B0EF46AA16D7A7BD008A6C78 /* IMCategoriesPickerViewController.h */,
+				B0EF46AB16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		DC15943316B7E66000672A89 /* Accounts */ = {
@@ -226,7 +234,6 @@
 				DCCFDDD716C8F665002886E2 /* IMDateEndPicker.xib */,
 				DCCFDDDF16C91C34002886E2 /* IMDateEndPicker.h */,
 				DCCFDDE016C91C35002886E2 /* IMDateEndPicker.m */,
-				DCCFDDCF16C4F4E3002886E2 /* DateIntervals.strings */,
 				DCCFDDD116C4F6B9002886E2 /* DateIntervalKeys.plist */,
 			);
 			path = Date;
@@ -261,6 +268,7 @@
 				DC98389A16B7C9D000BE939C /* IMSummaryViewController.m */,
 				DC15943316B7E66000672A89 /* Accounts */,
 				DC8812FC16C3BC9100DAE434 /* Transactions */,
+				B0EF46AD16D7A7C2008A6C78 /* Categories */,
 				DC90987B16C4E67900CF9D00 /* TestVC.h */,
 				DC90987C16C4E67900CF9D00 /* TestVC.m */,
 			);
@@ -335,6 +343,7 @@
 				DCD7265616B67B6B006F5E2D /* Default.png */,
 				DCD7265816B67B6B006F5E2D /* Default@2x.png */,
 				DCD7265A16B67B6B006F5E2D /* Default-568h@2x.png */,
+				B0EF46A816D7A67F008A6C78 /* Localizible.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -505,13 +514,12 @@
 				DCD7265B16B67B6B006F5E2D /* Default-568h@2x.png in Resources */,
 				DCD726D416B68833006F5E2D /* Currency.plist in Resources */,
 				DCD726D916B6897A006F5E2D /* IPhone.storyboard in Resources */,
-				DCCFDDCD16C4F4E3002886E2 /* DateIntervals.strings in Resources */,
 				DCCFDDD216C4F6B9002886E2 /* DateIntervalKeys.plist in Resources */,
 				DCCFDDD416C8F4BB002886E2 /* IMDateStartPicker.xib in Resources */,
 				DCCFDDD616C8F59A002886E2 /* IMDateIntervalPicker.xib in Resources */,
 				DCCFDDD816C8F665002886E2 /* IMDateEndPicker.xib in Resources */,
 				B0EF468816D77706008A6C78 /* BaseCategories.plist in Resources */,
-				B0EF468B16D7772B008A6C78 /* BaseCategories.strings in Resources */,
+				B0EF46A616D7A67F008A6C78 /* Localizible.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,28 +581,20 @@
 				DCCFDDF116C93974002886E2 /* IMSwipedTableViewCell.m in Sources */,
 				DCCFDDF416C93B3E002886E2 /* IMAccountSwipedTableView.m in Sources */,
 				B0EF469116D77893008A6C78 /* IMCategoriesConfig.m in Sources */,
+				B0EF46AC16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B0EF468D16D7772B008A6C78 /* BaseCategories.strings */ = {
+		B0EF46A816D7A67F008A6C78 /* Localizible.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B0EF468C16D7772B008A6C78 /* en */,
-				B0EF468E16D7772D008A6C78 /* ru */,
+				B0EF46A716D7A67F008A6C78 /* en */,
+				B0EF46A916D7A684008A6C78 /* ru */,
 			);
-			name = BaseCategories.strings;
-			sourceTree = "<group>";
-		};
-		DCCFDDCF16C4F4E3002886E2 /* DateIntervals.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DCCFDDCE16C4F4E3002886E2 /* en */,
-				DCCFDDD016C4F5BD002886E2 /* ru */,
-			);
-			name = DateIntervals.strings;
+			name = Localizible.strings;
 			sourceTree = "<group>";
 		};
 		DCD7264D16B67B6B006F5E2D /* InfoPlist.strings */ = {

@@ -18,6 +18,9 @@
 
 @interface IMCategoriesPickerViewController : UITableViewController
 
+- (id)initWithIncomeType:(NSNumber *)incomeType delegate:(id <IMCategoriesPickerDelegate>)delegate;
+
 @property (nonatomic, weak) id <IMCategoriesPickerDelegate> delegate;
+
 
 @end

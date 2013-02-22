@@ -10,26 +10,25 @@
 
 #import "Category.h"
 
-@interface IMCategoriesPickerViewController () <NSFetchedResultsControllerDelegate>
+@interface IMCategoriesPickerViewController ()
 
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSArray *categories;
 
 @end
 
 @implementation IMCategoriesPickerViewController
 
 #pragma mark -
-#pragma mark - Getters
+#pragma mark - Controller's lifecycle
 
-- (NSFetchedResultsController *)fetchedResultsController {
-    
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
+- (id)initWithIncomeType:(NSNumber *)incomeType delegate:(id <IMCategoriesPickerDelegate>)delegate {
+
+    self = [super initWithStyle:UITableViewStylePlain];
+    if (self) {
+        self.categories = [Category MR_findByAttribute:@"incomeType" withValue:incomeType];
+        self.delegate = delegate;
     }
-    
-    _fetchedResultsController = [Category MR_fetchAllGroupedBy:@"incomeType" withPredicate:nil sortedBy:@"order" ascending:YES];
-    
-    return _fetchedResultsController;
+    return self;
 }
 
 
@@ -37,14 +36,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return [self.fetchedResultsController.sections count];
+    return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
+    return [self.categories count];
 }
 
 
@@ -56,7 +54,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Category *category = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Category *category = [self.categories objectAtIndex:indexPath.row];
     
     cell.textLabel.text = NSLocalizedString(category.name, nil);
     
@@ -64,24 +62,11 @@
 }
 
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-
-    switch (section) {
-        case 1:
-            return @"Доходы";
-            break;
-        default:
-            return @"Расходы";
-            break;
-    }
-}
-
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    Category *category = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Category *category = [self.categories objectAtIndex:indexPath.row];
     [self.delegate categoriesPickerDidSelectCategory:category];
 }
 

@@ -180,9 +180,7 @@ static NSString *kAccountKey = @"account key";
 
 - (IBAction)categoryButtonPressed:(UIButton *)sender {
     
-//    IMCategoriesPickerViewController *categoryPicker = (IMCategoriesPickerViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"IMCategoriesPickerViewController"];
-    IMCategoriesPickerViewController *categoryPicker = [[IMCategoriesPickerViewController alloc] initWithStyle:UITableViewStylePlain];
-    categoryPicker.delegate = self;
+    IMCategoriesPickerViewController *categoryPicker = [[IMCategoriesPickerViewController alloc] initWithIncomeType:[self.params objectForKey:kTransactionIncomeType] delegate:self];
     [self.navigationController pushViewController:categoryPicker animated:YES];
 }
 

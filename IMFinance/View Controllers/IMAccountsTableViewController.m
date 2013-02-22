@@ -89,7 +89,7 @@
     
     Account *account = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = account.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", account.value];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", account.currentValue];
     
     return cell;
 }

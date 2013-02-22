@@ -2,7 +2,7 @@
 //  Account.h
 //  IMFinance
 //
-//  Created by Игорь Мищенко on 22.02.13.
+//  Created by Игорь Мищенко on 23.02.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -20,7 +20,8 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSDate * startDate;
 @property (nonatomic, retain) NSNumber * type;
-@property (nonatomic, retain) NSNumber * value;
+@property (nonatomic, retain) NSNumber * initialValue;
+@property (nonatomic, retain) NSNumber * currentValue;
 @property (nonatomic, retain) NSSet *transactions;
 @end
 

@@ -55,7 +55,7 @@ static IMCoreDataManager *sharedInstance = nil;
 
 static NSString *kAccountKey = @"account key";
 static NSString *kAccountName = @"account name";
-static NSString *kAccountValue = @"account value";
+static NSString *kAccountInitialValue = @"account initial value";
 static NSString *kAccountCurrency = @"account currency";
 
 /* 
@@ -81,7 +81,7 @@ static NSString *kAccountCurrency = @"account currency";
             }
             
             account.name = [parameters objectForKey:kAccountName];
-            account.value = ([parameters objectForKey:kAccountValue]);
+            account.initialValue = ([parameters objectForKey:kAccountInitialValue]);
             account.currency = [parameters objectForKey:kAccountCurrency];
         }
                           completion:^(BOOL success, NSError *error){

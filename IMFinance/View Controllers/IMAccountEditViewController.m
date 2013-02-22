@@ -16,7 +16,7 @@
 
 static NSString *kAccountKey = @"account key";
 static NSString *kAccountName = @"account name";
-static NSString *kAccountValue = @"account value";
+static NSString *kAccountInitialValue = @"account initial value";
 static NSString *kAccountCurrency = @"account currency";
 
 @interface IMAccountEditViewController () <UITextFieldDelegate, IMCurrecyPickerViewControllerDelegate>
@@ -61,7 +61,7 @@ static NSString *kAccountCurrency = @"account currency";
         
         [self.params setValue:account.key forKey:kAccountKey];
         [self.params setValue:account.name forKey:kAccountName];
-        [self.params setValue:account.value forKey:kAccountValue];
+        [self.params setValue:account.initialValue forKey:kAccountInitialValue];
         
         NSString *currency = account.currency;
         if (currency && currency.length) {
@@ -71,7 +71,7 @@ static NSString *kAccountCurrency = @"account currency";
         
         
         self.nameTextField.text = account.name;
-        self.valueTextField.text = [NSString stringWithFormat:@"%@", account.value];
+        self.valueTextField.text = [NSString stringWithFormat:@"%@", account.initialValue];
     }
     
 }
@@ -125,7 +125,7 @@ static NSString *kAccountCurrency = @"account currency";
     }
     
     [self.params setValue:self.nameTextField.text forKey:kAccountName];
-    [self.params setValue:[NSNumber numberWithDouble:self.valueTextField.text.doubleValue] forKey:kAccountValue];
+    [self.params setValue:[NSNumber numberWithDouble:self.valueTextField.text.doubleValue] forKey:kAccountInitialValue];
     
     return YES;
 }

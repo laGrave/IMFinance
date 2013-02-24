@@ -10,15 +10,6 @@
 
 #import "Category.h"
 
-#import "IMCoreDataManager.h"
-
-static NSString *kCategoryKey = @"category key";
-static NSString *kCategoryName = @"categoryName";
-static NSString *kCategoryOrder = @"categoryOrder";
-static NSString *kCategoryIcon = @"categoryIconName";
-static NSString *kCategoryIncomeType = @"categoryIncomeType";
-//static NSString *kCategoryParent = @"categoryParent";
-
 @interface IMCategoriesTableViewController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;

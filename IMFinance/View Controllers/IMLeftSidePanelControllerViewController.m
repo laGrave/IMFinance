@@ -60,6 +60,9 @@
             storyboardID = @"transactions table view controller";
             break;
         case 3:
+            storyboardID = @"categories table view controller";
+            break;
+        case 4:
             storyboardID = @"test vc";
             break;
         default:

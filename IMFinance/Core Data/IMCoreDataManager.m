@@ -152,6 +152,7 @@ static NSString *kTransactionStartDate = @"transaction start date";
 
 static NSString *kCategoryKey = @"category key";
 static NSString *kCategoryName = @"categoryName";
+static NSString *kCategoryOrder = @"categoryOrder";
 static NSString *kCategoryIcon = @"categoryIconName";
 static NSString *kCategoryIncomeType = @"categoryIncomeType";
 
@@ -172,6 +173,7 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
             }
             
             category.name = [parameters objectForKey:kCategoryName];
+            category.order = [parameters objectForKey:kCategoryOrder];
             category.image = UIImagePNGRepresentation([UIImage imageNamed:[parameters objectForKey:kCategoryIcon]]);
             category.incomeType = [parameters objectForKey:kCategoryIncomeType];
         }];
@@ -192,7 +194,11 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 
 - (void)setCategoryWithParameters:(NSDictionary *)categoryDict {
     
+    static int order = 0;
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:categoryDict];
+    [params setValue:[NSNumber numberWithInt:order] forKey:kCategoryOrder];
     [self editCategoryWithParams:categoryDict];
+    order++;
     NSArray *values = [categoryDict allValues];
     for (id value in values) {
         if ([value isKindOfClass:[NSDictionary class]]) {

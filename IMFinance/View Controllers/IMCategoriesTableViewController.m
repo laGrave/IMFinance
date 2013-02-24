@@ -137,14 +137,24 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
     
     self.changeIsUserDriven = YES;
-    Category *category = [self.fetchedResultsController objectAtIndexPath:fromIndexPath];
-//    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:category.key, kCategoryKey, [NSNumber numberWithInteger:toIndexPath.row], kCategoryOrder, nil];
-//    [[IMCoreDataManager sharedInstance] editCategoryWithParams:dict];
-    [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *localContext){
-        Category *c = [Category MR_findFirstByAttribute:@"key" withValue:category.key inContext:localContext];
-        c.order = [NSNumber numberWithInteger:toIndexPath.row];
-    }];
-//    category.order = [NSNumber numberWithInteger:toIndexPath.row];
+    
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_contextForCurrentThread];
+    
+    NSMutableArray *categories = [[self.fetchedResultsController fetchedObjects] mutableCopy];
+    
+    Category *c = [self.fetchedResultsController objectAtIndexPath:fromIndexPath];
+    
+    [categories removeObject:c];
+    [categories insertObject:c atIndex:toIndexPath.row];
+        
+    int i = 0;
+    for (Category *category in categories) {
+        category.order = [NSNumber numberWithInteger:i];
+        i++;
+    }
+    
+    [context MR_saveToPersistentStoreAndWait];
+    
     self.changeIsUserDriven = NO;
 }
 

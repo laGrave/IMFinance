@@ -10,10 +10,19 @@
 
 #import "Category.h"
 
+#import "IMCoreDataManager.h"
+
+static NSString *kCategoryKey = @"category key";
+static NSString *kCategoryName = @"categoryName";
+static NSString *kCategoryOrder = @"categoryOrder";
+static NSString *kCategoryIcon = @"categoryIconName";
+static NSString *kCategoryIncomeType = @"categoryIncomeType";
+//static NSString *kCategoryParent = @"categoryParent";
 
 @interface IMCategoriesTableViewController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic) BOOL changeIsUserDriven;
 
 @end
 
@@ -42,6 +51,12 @@
     [super viewDidLoad];
  
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSArray *cats = [Category MR_findAllSortedBy:@"order" ascending:YES];
+    for (Category *cat in cats) {
+        NSLog(@"category name: %@", cat.name);
+        NSLog(@"category order:  %@", cat.order);
+    }
 }
 
 
@@ -121,8 +136,16 @@
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
     
+    self.changeIsUserDriven = YES;
     Category *category = [self.fetchedResultsController objectAtIndexPath:fromIndexPath];
-    category.order = [NSNumber numberWithInt:toIndexPath.row];
+//    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:category.key, kCategoryKey, [NSNumber numberWithInteger:toIndexPath.row], kCategoryOrder, nil];
+//    [[IMCoreDataManager sharedInstance] editCategoryWithParams:dict];
+    [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *localContext){
+        Category *c = [Category MR_findFirstByAttribute:@"key" withValue:category.key inContext:localContext];
+        c.order = [NSNumber numberWithInteger:toIndexPath.row];
+    }];
+//    category.order = [NSNumber numberWithInteger:toIndexPath.row];
+    self.changeIsUserDriven = NO;
 }
 
 
@@ -149,12 +172,17 @@
 #pragma mark - NSFetchedResultsControllerDelegate
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    
+    if (self.changeIsUserDriven) return;
+    
     [self.tableView beginUpdates];
 }
 
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
            atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+    
+    if (self.changeIsUserDriven) return;
     
     switch(type) {
         case NSFetchedResultsChangeInsert:
@@ -173,6 +201,8 @@
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
        atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
       newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    if (self.changeIsUserDriven) return;
     
     UITableView *tableView = self.tableView;
     
@@ -204,6 +234,9 @@
 
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    
+    if (self.changeIsUserDriven) return;
+    
     [self.tableView endUpdates];
 }
 

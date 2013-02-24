@@ -39,7 +39,7 @@
  создание и сохранение новой категории с набором параметров
  в фоне с параметрами в виде блоков
  */
-- (void)editTransactionWithParams:(NSDictionary *)parameters;
+- (void)editCategoryWithParams:(NSDictionary *)parameters;
 - (void)setupBaseCategories; //занесение в базу стандартных категорий
 
 @end

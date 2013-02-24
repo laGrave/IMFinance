@@ -155,6 +155,7 @@ static NSString *kCategoryName = @"categoryName";
 static NSString *kCategoryOrder = @"categoryOrder";
 static NSString *kCategoryIcon = @"categoryIconName";
 static NSString *kCategoryIncomeType = @"categoryIncomeType";
+//static NSString *kCategoryParent = @"categoryParent";
 
 - (void)editCategoryWithParams:(NSDictionary *)parameters {
 
@@ -172,10 +173,15 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
                 category.key = [@"category" stringByAppendingString:[[[NSDate date] description] MD5]];
             }
             
-            category.name = [parameters objectForKey:kCategoryName];
-            category.order = [parameters objectForKey:kCategoryOrder];
-            category.image = UIImagePNGRepresentation([UIImage imageNamed:[parameters objectForKey:kCategoryIcon]]);
-            category.incomeType = [parameters objectForKey:kCategoryIncomeType];
+            if ([parameters objectForKey:kCategoryName])
+                category.name = [parameters objectForKey:kCategoryName];
+            if ([parameters objectForKey:kCategoryOrder])
+                category.order = [parameters objectForKey:kCategoryOrder];
+            if ([parameters objectForKey:kCategoryIcon])
+                category.image = UIImagePNGRepresentation([UIImage imageNamed:[parameters objectForKey:kCategoryIcon]]);
+            if ([parameters objectForKey:kCategoryIncomeType]) {
+                category.incomeType = [parameters objectForKey:kCategoryIncomeType];
+            }
         }];
     });
 
@@ -197,7 +203,7 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
     static int order = 0;
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:categoryDict];
     [params setValue:[NSNumber numberWithInt:order] forKey:kCategoryOrder];
-    [self editCategoryWithParams:categoryDict];
+    [self editCategoryWithParams:params];
     order++;
     NSArray *values = [categoryDict allValues];
     for (id value in values) {

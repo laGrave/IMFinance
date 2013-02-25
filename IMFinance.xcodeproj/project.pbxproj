@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A741CC1A898D4B31B347DB75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591F429DE7F4C5AB075756F /* libPods.a */; };
 		B06D4D7616D91573006190E4 /* IMCategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06D4D7516D91573006190E4 /* IMCategoriesTableViewController.m */; };
+		B0D51D9D16DA8C0A00938799 /* IMCategoryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D51D9C16DA8C0A00938799 /* IMCategoryEditViewController.m */; };
 		B0EF468816D77706008A6C78 /* BaseCategories.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0EF468716D77706008A6C78 /* BaseCategories.plist */; };
 		B0EF469116D77893008A6C78 /* IMCategoriesConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EF469016D77893008A6C78 /* IMCategoriesConfig.m */; };
 		B0EF46A616D7A67F008A6C78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0EF46A816D7A67F008A6C78 /* Localizable.strings */; };
@@ -68,6 +69,8 @@
 		6591F429DE7F4C5AB075756F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06D4D7416D91573006190E4 /* IMCategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoriesTableViewController.h; sourceTree = "<group>"; };
 		B06D4D7516D91573006190E4 /* IMCategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoriesTableViewController.m; sourceTree = "<group>"; };
+		B0D51D9B16DA8C0A00938799 /* IMCategoryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoryEditViewController.h; sourceTree = "<group>"; };
+		B0D51D9C16DA8C0A00938799 /* IMCategoryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoryEditViewController.m; sourceTree = "<group>"; };
 		B0EF468716D77706008A6C78 /* BaseCategories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BaseCategories.plist; sourceTree = "<group>"; };
 		B0EF468F16D77893008A6C78 /* IMCategoriesConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoriesConfig.h; sourceTree = "<group>"; };
 		B0EF469016D77893008A6C78 /* IMCategoriesConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoriesConfig.m; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 			children = (
 				B06D4D7416D91573006190E4 /* IMCategoriesTableViewController.h */,
 				B06D4D7516D91573006190E4 /* IMCategoriesTableViewController.m */,
+				B0D51D9B16DA8C0A00938799 /* IMCategoryEditViewController.h */,
+				B0D51D9C16DA8C0A00938799 /* IMCategoryEditViewController.m */,
 				B0EF46AA16D7A7BD008A6C78 /* IMCategoriesPickerViewController.h */,
 				B0EF46AB16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m */,
 			);
@@ -588,6 +593,7 @@
 				B0EF469116D77893008A6C78 /* IMCategoriesConfig.m in Sources */,
 				B0EF46AC16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m in Sources */,
 				B06D4D7616D91573006190E4 /* IMCategoriesTableViewController.m in Sources */,
+				B0D51D9D16DA8C0A00938799 /* IMCategoryEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

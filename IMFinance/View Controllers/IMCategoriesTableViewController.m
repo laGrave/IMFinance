@@ -10,6 +10,8 @@
 
 #import "Category.h"
 
+#import "IMCategoryEditViewController.h"
+
 @interface IMCategoriesTableViewController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
@@ -59,6 +61,31 @@
     self.fetchedResultsController = nil;
     [self.tableView reloadData];
 }
+
+
+#pragma mark -
+#pragma mark - Instance methods
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+
+    [super setEditing:editing animated:animated];
+    
+    if (editing) {
+        UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                                          target:self
+                                                                                          action:@selector(addBarButtonItemPressed:)];
+        self.navigationItem.leftBarButtonItem = addBarButtonItem;
+    }
+}
+
+
+- (void)addBarButtonItemPressed:(UIBarButtonItem *)barButtonItem {
+
+    IMCategoryEditViewController *categoryEdit = [self.storyboard instantiateViewControllerWithIdentifier:@"IMCategoryEditViewController"];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:categoryEdit];
+    [self presentViewController:navVC animated:YES completion:NULL];
+}
+
 
 #pragma mark - Table view data source
 

@@ -105,13 +105,15 @@ static NSString *kAccountKey = @"account key";
         [self.params setValue:account.currency forKey:kTransactionCurrency];
         [self.params setValue:[NSDate date] forKey:kTransactionStartDate];
         [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
-        [self.params setValue:[Category MR_findFirst] forKey:kTransactionCategory];
+        [self.params setValue:[Category MR_findFirstByAttribute:@"incomeType"
+                                                      withValue:[self.params objectForKey:kTransactionIncomeType]] forKey:kTransactionCategory];
     }
     else {
         [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
         [self.params setValue:[curConfig defaultCurrencyCode] forKey:kTransactionCurrency];
         [self.params setValue:[NSDate date] forKey:kTransactionStartDate];
-        [self.params setValue:[Category MR_findFirst] forKey:kTransactionCategory];
+        [self.params setValue:[Category MR_findFirstByAttribute:@"incomeType"
+                                                      withValue:[self.params objectForKey:kTransactionIncomeType]] forKey:kTransactionCategory];
     }
     [self updateIncomeTypeButtonTitle];
     [self updateCurrencyButtonTitle];
@@ -312,6 +314,8 @@ static NSString *kAccountKey = @"account key";
         [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
     }
     else [self.params setValue:[NSNumber numberWithBool:1] forKey:kTransactionIncomeType];
+    
+    [self.params setValue:[Category MR_findFirstByAttribute:@"incomeType" withValue:[self.params objectForKey:kTransactionIncomeType]] forKey:kTransactionCategory];
     [self updateIncomeTypeButtonTitle];
 }
 

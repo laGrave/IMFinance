@@ -25,7 +25,7 @@
 
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        self.categories = [Category MR_findByAttribute:@"incomeType" withValue:incomeType];
+        self.categories = [Category MR_findByAttribute:@"incomeType" withValue:incomeType andOrderBy:@"order" ascending:YES];
         self.delegate = delegate;
     }
     return self;

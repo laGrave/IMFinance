@@ -149,11 +149,23 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        //удаляем данную категорию из базы и производим пересортировку оставшихся
+        
         Category *categoryToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
         [categoryToDelete MR_deleteEntity];
         
-        //        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        NSManagedObjectContext *context = [NSManagedObjectContext MR_contextForCurrentThread];
+        
+        NSMutableArray *categories = [[self.fetchedResultsController fetchedObjects] mutableCopy];
+        
+        int i = 0;
+        for (Category *category in categories) {
+            category.order = [NSNumber numberWithInteger:i];
+            i++;
+        }
+        
+        
+        [context MR_saveToPersistentStoreAndWait];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

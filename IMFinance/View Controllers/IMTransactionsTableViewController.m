@@ -9,8 +9,10 @@
 #import "IMTransactionsTableViewController.h"
 
 #import "Transaction.h"
+#import "Category.h"
 
 #import "IMTransactionEditViewController.h"
+#import "IMTransactionCell.h"
 
 @interface IMTransactionsTableViewController () <NSFetchedResultsControllerDelegate>
 
@@ -96,16 +98,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
     Transaction *trans = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = trans.name;
+    
+    static NSString *CellIdentifier = @"Cell";
+    static NSString *DetailedCellIdentifier = @"DetailedCell";
+    NSString *identifier = ([trans.name length]) ? DetailedCellIdentifier : CellIdentifier;
+    IMTransactionCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    
+    if ([trans.name length]) {
+        cell.textLabel.text = trans.name;
+        cell.detailedTextLabel.text = NSLocalizedString(trans.category.name, @"");
+    }
+    else cell.textLabel.text = NSLocalizedString(trans.category.name, @"");
     
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
     [numberFormatter setCurrencyCode:trans.currency];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [numberFormatter stringFromNumber:trans.value]];
+    [numberFormatter setRoundingMode:NSNumberFormatterRoundCeiling];
+    cell.priceLabel.text = [NSString stringWithFormat:@"%@", [numberFormatter stringFromNumber:trans.value]];
     
     return cell;
 }

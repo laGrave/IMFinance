@@ -100,6 +100,7 @@ static NSString *kTransactionName = @"transaction name";
 static NSString *kTransactionValue = @"transaction value";
 static NSString *kTransactionCurrency = @"transaction currency";
 static NSString *kTransactionStartDate = @"transaction start date";
+static NSString *kTransactionCategory = @"transaction category";
 
 /*
  создание и сохранение новой транзакции с набором параметров
@@ -138,6 +139,12 @@ static NSString *kTransactionStartDate = @"transaction start date";
             transaction.value = [parameters objectForKey:kTransactionValue];
             transaction.currency = [parameters objectForKey:kTransactionCurrency];
             transaction.account = account;
+            if ([parameters objectForKey:kTransactionCategory]) {
+                Category *category = [Category MR_findFirstByAttribute:@"key"
+                                                             withValue:[[parameters objectForKey:kTransactionCategory] key]
+                                                             inContext:localContext];
+                transaction.category = category;
+            }
             
             NSDate *startDate = [parameters objectForKey:kTransactionStartDate];
             if (startDate) transaction.startDate = startDate;
@@ -211,22 +218,6 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
     for (id value in [params allValues]) {
         if ([value isKindOfClass:[NSDictionary class]]) {
             [self parseCategoryWithParams:value];
-        }
-    }
-}
-
-
-- (void)setCategoryWithParameters:(NSDictionary *)categoryDict {
-    
-    static int order = 0;
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:categoryDict];
-    [params setValue:[NSNumber numberWithInt:order] forKey:kCategoryOrder];
-    [self editCategoryWithParams:params];
-    order++;
-    NSArray *values = [categoryDict allValues];
-    for (id value in values) {
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            [self setCategoryWithParameters:value];
         }
     }
 }

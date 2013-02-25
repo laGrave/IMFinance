@@ -195,7 +195,11 @@ static NSString *kAccountKey = @"account key";
     }
     
     [self.params setValue:self.nameTextField.text forKey:kTransactionName];
-    [self.params setValue:[NSNumber numberWithDouble:self.valueTextField.text.doubleValue] forKey:kTransactionValue];
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [formatter setLocale:[NSLocale autoupdatingCurrentLocale]];
+    
+    [self.params setValue:[formatter numberFromString:self.valueTextField.text] forKey:kTransactionValue];
     
     return YES;
 }

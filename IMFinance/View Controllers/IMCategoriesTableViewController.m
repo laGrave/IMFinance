@@ -8,9 +8,12 @@
 
 #import "IMCategoriesTableViewController.h"
 
+#import <UIViewController+JASidePanel.h>
+
 #import "Category.h"
 
 #import "IMCategoryEditViewController.h"
+#import "IMSidePanelController.h"
 
 @interface IMCategoriesTableViewController () <NSFetchedResultsControllerDelegate>
 
@@ -76,7 +79,11 @@
         UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                           target:self
                                                                                           action:@selector(addBarButtonItemPressed:)];
-        self.navigationItem.leftBarButtonItem = addBarButtonItem;
+        [self.navigationItem setLeftBarButtonItem:addBarButtonItem];
+    }
+    else {
+        IMSidePanelController *panelController = (IMSidePanelController *)self.sidePanelController;
+        [self.navigationItem setLeftBarButtonItem:[panelController leftButtonForCenterPanel]];
     }
 }
 

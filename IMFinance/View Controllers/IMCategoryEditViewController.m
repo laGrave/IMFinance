@@ -106,8 +106,9 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
         
         [self.params setValue:[NSNumber numberWithBool:incomeType] forKey:kCategoryIncomeType];
         
-        NSArray *categories = [Category MR_findByAttribute:@"incomeType" withValue:[self.params objectForKey:kCategoryIncomeType]];
-        [self.params setValue:[NSNumber numberWithInteger:categories.count] forKey:kCategoryOrder];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"incomeType == %@", [self.params objectForKey:kCategoryIncomeType]];
+        NSNumber *order = [Category MR_numberOfEntitiesWithPredicate:predicate];
+        [self.params setValue:order forKey:kCategoryOrder];
         
         [[IMCoreDataManager sharedInstance] editCategoryWithParams:self.params];
         

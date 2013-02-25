@@ -26,6 +26,7 @@
 		DC98389B16B7C9D000BE939C /* IMSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389A16B7C9D000BE939C /* IMSummaryViewController.m */; };
 		DC98389F16B7CCBC00BE939C /* IMAccountsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389E16B7CCBC00BE939C /* IMAccountsTableViewController.m */; };
 		DC9838A216B7CCCB00BE939C /* IMTransactionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9838A116B7CCCB00BE939C /* IMTransactionsTableViewController.m */; };
+		DC999AB316DB7DA800B05612 /* IMTransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC999AB216DB7DA800B05612 /* IMTransactionCell.m */; };
 		DCCFDDD216C4F6B9002886E2 /* DateIntervalKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCCFDDD116C4F6B9002886E2 /* DateIntervalKeys.plist */; };
 		DCCFDDD416C8F4BB002886E2 /* IMDateStartPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCFDDD316C8F4BB002886E2 /* IMDateStartPicker.xib */; };
 		DCCFDDD616C8F59A002886E2 /* IMDateIntervalPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCFDDD516C8F59A002886E2 /* IMDateIntervalPicker.xib */; };
@@ -103,6 +104,8 @@
 		DC98389E16B7CCBC00BE939C /* IMAccountsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountsTableViewController.m; sourceTree = "<group>"; };
 		DC9838A016B7CCCB00BE939C /* IMTransactionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTransactionsTableViewController.h; sourceTree = "<group>"; };
 		DC9838A116B7CCCB00BE939C /* IMTransactionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTransactionsTableViewController.m; sourceTree = "<group>"; };
+		DC999AB116DB7DA800B05612 /* IMTransactionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTransactionCell.h; sourceTree = "<group>"; };
+		DC999AB216DB7DA800B05612 /* IMTransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTransactionCell.m; sourceTree = "<group>"; };
 		DCCFDDD116C4F6B9002886E2 /* DateIntervalKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DateIntervalKeys.plist; sourceTree = "<group>"; };
 		DCCFDDD316C8F4BB002886E2 /* IMDateStartPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IMDateStartPicker.xib; sourceTree = "<group>"; };
 		DCCFDDD516C8F59A002886E2 /* IMDateIntervalPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IMDateIntervalPicker.xib; sourceTree = "<group>"; };
@@ -285,6 +288,15 @@
 			name = Center;
 			sourceTree = "<group>";
 		};
+		DC999AB016DB7D8900B05612 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC999AB116DB7DA800B05612 /* IMTransactionCell.h */,
+				DC999AB216DB7DA800B05612 /* IMTransactionCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DCCFDDEE16C9395E002886E2 /* SwipedTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +345,7 @@
 			children = (
 				DCD7266116B67C80006F5E2D /* Core Data */,
 				DC98389116B7C84C00BE939C /* View Controllers */,
+				DC999AB016DB7D8900B05612 /* Views */,
 				DCD726AD16B68806006F5E2D /* Libraries */,
 				DCD726CF16B68833006F5E2D /* Utilities */,
 				DCD7265316B67B6B006F5E2D /* IMAppDelegate.h */,
@@ -594,6 +607,7 @@
 				B0EF46AC16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m in Sources */,
 				B06D4D7616D91573006190E4 /* IMCategoriesTableViewController.m in Sources */,
 				B0D51D9D16DA8C0A00938799 /* IMCategoryEditViewController.m in Sources */,
+				DC999AB316DB7DA800B05612 /* IMTransactionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

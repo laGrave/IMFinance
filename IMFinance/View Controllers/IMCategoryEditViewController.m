@@ -10,6 +10,8 @@
 
 #import "Category.h"
 
+#import "IMCoreDataManager.h"
+
 static NSString *kCategoryKey = @"category key";
 static NSString *kCategoryName = @"categoryName";
 static NSString *kCategoryOrder = @"categoryOrder";
@@ -20,6 +22,9 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 @interface IMCategoryEditViewController () <UITextFieldDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary *params;
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @end
 
@@ -48,6 +53,10 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
     [self.params setValue:category.name forKey:kCategoryName];
     [self.params setValue:category.order forKey:kCategoryOrder];
     [self.params setValue:category.incomeType forKey:kCategoryIncomeType];
+    
+    [self.nameTextField setText:NSLocalizedString(category.name, @"")];
+    NSInteger selectedIndex = (category.incomeType.boolValue) ? 1 : 0;
+    [self.segmentedControl setSelectedSegmentIndex:selectedIndex];
 }
 
 
@@ -58,6 +67,8 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.nameTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,11 +81,47 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 #pragma mark -
 #pragma mark - Instance methods
 
-- (void)setupParams {
-
-//    [self.params setValue:<#(id)#> forKey:<#(NSString *)#>]
+- (IBAction)cancelButtonPressed:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
+- (IBAction)doneButtonPressed:(id)sender {
+    
+    if (self.nameTextField.text.length) {
+        NSString *localizedName = NSLocalizedString([self.params objectForKey:kCategoryName], @"");
+        if (![localizedName isEqualToString:self.nameTextField.text]) {
+            [self.params setValue:self.nameTextField.text forKey:kCategoryName];
+        }
+        
+        BOOL incomeType = NO;
+        switch (self.segmentedControl.selectedSegmentIndex) {
+            case 1:
+                incomeType =  YES;
+                break;
+            default:
+                incomeType = NO;
+                break;
+        }
+        
+        [self.params setValue:[NSNumber numberWithBool:incomeType] forKey:kCategoryIncomeType];
+        
+        NSArray *categories = [Category MR_findByAttribute:@"incomeType" withValue:[self.params objectForKey:kCategoryIncomeType]];
+        [self.params setValue:[NSNumber numberWithInteger:categories.count] forKey:kCategoryOrder];
+        
+        [[IMCoreDataManager sharedInstance] editCategoryWithParams:self.params];
+        
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Внимание"
+                                                        message:@"Пожалуйста, введите название категории."
+                                                       delegate:nil 
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+}
 
 #pragma mark -
 #pragma mark - UITextFieldDelegate protocol implementation
@@ -82,23 +129,6 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     
     [textField resignFirstResponder];
-    return YES;
-}
-
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-    
-    if ([textField.text isEqualToString:@"0"]) {
-        textField.text = @"";
-    }
-}
-
-
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-    
-    if (!textField.text.length) {
-        textField.text = @"0";
-    }
     return YES;
 }
 

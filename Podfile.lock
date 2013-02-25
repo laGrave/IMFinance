@@ -1,11 +1,9 @@
 
-PODS: 
-- JASidePanels (1.2.1)
-- MagicalRecord (2.1)
-- NSHash (1.0.1)
-- TBXML (1.5)
-
-COCOAPODS: 0.16.3
+SPEC CHECKSUMS: 
+  TBXML: a2d5ec403183438f15f7697c756a809ed34e0c0b
+  MagicalRecord: aedbebe987d02d1215718a904c93d7965e48e398
+  JASidePanels: e37a175f06d5e228733daf276b31e2b2f6fade5f
+  NSHash: 08e81b655e7d2e3d9b872c192e52f77b76694918
 
 DEPENDENCIES: 
 - JASidePanels
@@ -13,8 +11,10 @@ DEPENDENCIES:
 - NSHash (~> 1.0.1)
 - TBXML (~> 1.5)
 
-SPEC CHECKSUMS: 
-  TBXML: a2d5ec403183438f15f7697c756a809ed34e0c0b
-  NSHash: 08e81b655e7d2e3d9b872c192e52f77b76694918
-  JASidePanels: e37a175f06d5e228733daf276b31e2b2f6fade5f
-  MagicalRecord: aedbebe987d02d1215718a904c93d7965e48e398
+PODS: 
+- JASidePanels (1.2.1)
+- MagicalRecord (2.1)
+- NSHash (1.0.1)
+- TBXML (1.5)
+
+COCOAPODS: 0.16.3

@@ -38,7 +38,7 @@
     }
     else predicate = nil;
     
-    _fetchedResultsController = [Transaction MR_fetchAllSortedBy:@"startDate" ascending:NO withPredicate:predicate groupBy:nil delegate:self];
+    _fetchedResultsController = [Transaction MR_fetchAllSortedBy:@"startDate" ascending:NO withPredicate:predicate groupBy:@"startDate" delegate:self];
     
     return _fetchedResultsController;
 }
@@ -120,12 +120,21 @@
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    Transaction *trans = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:[NSLocale autoupdatingCurrentLocale]];
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    [dateFormatter setDateStyle:NSDateFormatterFullStyle];
+    return [dateFormatter stringFromDate:trans.startDate];
+}
+
 
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // Return NO if you do not want the specified item to be editable.
-    return NO;
+    return YES;
 }
 
 

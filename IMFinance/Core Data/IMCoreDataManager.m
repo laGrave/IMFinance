@@ -14,6 +14,8 @@
 #import "Transaction.h"
 #import "Category.h"
 
+#import "NSDate+Utilities.h"
+
 static dispatch_queue_t coredata_background_save_queue;
 
 @implementation IMCoreDataManager
@@ -147,7 +149,9 @@ static NSString *kTransactionCategory = @"transaction category";
             }
             
             NSDate *startDate = [parameters objectForKey:kTransactionStartDate];
-            if (startDate) transaction.startDate = startDate;
+            if (startDate) {
+                transaction.startDate = [startDate dateWithOutTime];
+            }
             
         }
                           completion:^(BOOL success, NSError *error){
@@ -156,6 +160,9 @@ static NSString *kTransactionCategory = @"transaction category";
     });
 }
 
+
+#pragma mark -
+#pragma mark - Categories
 
 static NSString *kCategoryKey = @"category key";
 static NSString *kCategoryName = @"categoryName";

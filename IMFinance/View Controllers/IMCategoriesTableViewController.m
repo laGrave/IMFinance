@@ -49,6 +49,8 @@
     for (Category *cat in cats) {
         NSLog(@"category name: %@", cat.name);
         NSLog(@"category order:  %@", cat.order);
+        NSString *income = (cat.incomeType.boolValue) ? @"Доход" : @"Расход";
+        NSLog(@"%@", income);
     }
 }
 

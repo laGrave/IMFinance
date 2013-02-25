@@ -191,9 +191,27 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 - (void)setupBaseCategories {
     
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"BaseCategories" ofType:@"plist"];
-    NSArray *categories = [NSArray arrayWithContentsOfFile:plistPath];
-    for (NSDictionary *categoryParams in categories) {
-        [self setCategoryWithParameters:categoryParams];
+    NSArray *allCategories = [NSArray arrayWithContentsOfFile:plistPath];
+    
+    for (NSDictionary *categoryParams in allCategories) {
+        [self parseCategoryWithParams:categoryParams];
+    }
+}
+
+
+- (void)parseCategoryWithParams:(NSDictionary *)params {
+
+    NSMutableDictionary *categoryParams = [NSMutableDictionary dictionaryWithDictionary:params];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"incomeType == %@", [params objectForKey:kCategoryIncomeType]];
+    NSNumber *order = [Category MR_numberOfEntitiesWithPredicate:predicate];
+    [categoryParams setValue:order forKey:kCategoryOrder];
+    
+    [self editCategoryWithParams:categoryParams];
+    
+    for (id value in [params allValues]) {
+        if ([value isKindOfClass:[NSDictionary class]]) {
+            [self parseCategoryWithParams:value];
+        }
     }
 }
 

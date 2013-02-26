@@ -210,7 +210,7 @@ static NSString *kAccountKey = @"account key";
 - (void)updateStartDateButtonTitle {
 
     NSString *stringDate = [NSDateFormatter localizedStringFromDate:[self.params objectForKey:kTransactionStartDate]
-                                                          dateStyle:NSDateFormatterLongStyle
+                                                          dateStyle:NSDateFormatterMediumStyle
                                                           timeStyle:NSDateFormatterNoStyle];
     [self.startDateButton setTitle:stringDate forState:UIControlStateNormal];
 }

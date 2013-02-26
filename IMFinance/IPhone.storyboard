@@ -574,6 +574,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYy-5H-R2N">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="UXD-Xc-nGB"/>
+                                    <constraint firstAttribute="height" constant="34" id="fqN-ig-5UK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Счет">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -587,6 +591,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJH-BB-yH7">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="RZm-6h-x2p"/>
+                                    <constraint firstAttribute="width" constant="130" id="qfN-GM-bNG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Дата">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -613,6 +621,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gce-Vr-nDx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="ERf-Ba-JXl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Категория">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -628,27 +639,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1VA-Am-xgZ" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3td-yB-8ls"/>
-                            <constraint firstItem="aJH-BB-yH7" firstAttribute="top" secondItem="bYy-5H-R2N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5ow-dv-C7r"/>
-                            <constraint firstAttribute="trailing" secondItem="ije-Ph-mv7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6z3-rR-lNH"/>
-                            <constraint firstItem="bYy-5H-R2N" firstAttribute="top" secondItem="yGX-qx-bFT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7wv-uT-Sq4"/>
-                            <constraint firstItem="ije-Ph-mv7" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Jv3-fc-Gmc"/>
-                            <constraint firstItem="1VA-Am-xgZ" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="20" symbolic="YES" type="default" id="PPe-cp-2bx"/>
-                            <constraint firstAttribute="trailing" secondItem="ZSI-XY-nTt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QMb-Uu-BN0"/>
-                            <constraint firstItem="gce-Vr-nDx" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Qg4-Rb-m4C"/>
-                            <constraint firstAttribute="trailing" secondItem="gce-Vr-nDx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UO0-fE-dYG"/>
+                            <constraint firstAttribute="trailing" secondItem="1VA-Am-xgZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3h5-LZ-YdV"/>
+                            <constraint firstItem="aJH-BB-yH7" firstAttribute="trailing" secondItem="ZSI-XY-nTt" secondAttribute="trailing" type="default" id="499-xm-zkM"/>
+                            <constraint firstAttribute="trailing" secondItem="bYy-5H-R2N" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5DZ-Ev-qA2"/>
+                            <constraint firstAttribute="trailing" secondItem="ije-Ph-mv7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5p2-r6-b7O"/>
+                            <constraint firstItem="ZSI-XY-nTt" firstAttribute="top" secondItem="ije-Ph-mv7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CwP-OE-DTv"/>
+                            <constraint firstItem="bYy-5H-R2N" firstAttribute="leading" secondItem="ije-Ph-mv7" secondAttribute="leading" type="default" id="FPI-A4-wt4"/>
+                            <constraint firstItem="gce-Vr-nDx" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="GUp-EO-slr"/>
+                            <constraint firstItem="aJH-BB-yH7" firstAttribute="top" secondItem="1VA-Am-xgZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="JMU-7i-ewB"/>
+                            <constraint firstItem="1VA-Am-xgZ" firstAttribute="top" secondItem="ZSI-XY-nTt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SLy-Lk-8lf"/>
+                            <constraint firstItem="yGX-qx-bFT" firstAttribute="top" secondItem="1VA-Am-xgZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Unp-OR-m3d"/>
+                            <constraint firstItem="aJH-BB-yH7" firstAttribute="bottom" secondItem="yGX-qx-bFT" secondAttribute="bottom" type="default" id="VsK-vp-HC6"/>
                             <constraint firstItem="aJH-BB-yH7" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XGG-Kv-eJd"/>
-                            <constraint firstItem="ije-Ph-mv7" firstAttribute="top" secondItem="aJH-BB-yH7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Xn1-kK-hEo"/>
-                            <constraint firstAttribute="trailing" secondItem="yGX-qx-bFT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ZdP-KA-hY9"/>
                             <constraint firstItem="ZSI-XY-nTt" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="b0i-V8-UCT"/>
-                            <constraint firstItem="yGX-qx-bFT" firstAttribute="top" secondItem="ZSI-XY-nTt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gVS-fe-bpR"/>
-                            <constraint firstItem="gce-Vr-nDx" firstAttribute="top" secondItem="ije-Ph-mv7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="j2Q-cE-TxD"/>
-                            <constraint firstItem="bYy-5H-R2N" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lSE-jx-V74"/>
-                            <constraint firstItem="ZSI-XY-nTt" firstAttribute="top" secondItem="1VA-Am-xgZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ldq-1E-a3M"/>
-                            <constraint firstAttribute="trailing" secondItem="aJH-BB-yH7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pOn-Fh-UWG"/>
-                            <constraint firstAttribute="trailing" secondItem="1VA-Am-xgZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="peI-p6-kHM"/>
-                            <constraint firstItem="yGX-qx-bFT" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tMi-xj-yu4"/>
-                            <constraint firstAttribute="trailing" secondItem="bYy-5H-R2N" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="yYc-g8-Yac"/>
+                            <constraint firstItem="ZSI-XY-nTt" firstAttribute="trailing" secondItem="gce-Vr-nDx" secondAttribute="trailing" type="default" id="d0d-9O-fWQ"/>
+                            <constraint firstItem="ZSI-XY-nTt" firstAttribute="top" secondItem="gce-Vr-nDx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="egV-ew-OLQ"/>
+                            <constraint firstItem="gce-Vr-nDx" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gdb-3l-xTy"/>
+                            <constraint firstAttribute="trailing" secondItem="yGX-qx-bFT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ght-Ab-b8l"/>
+                            <constraint firstItem="aJH-BB-yH7" firstAttribute="baseline" secondItem="yGX-qx-bFT" secondAttribute="baseline" type="default" id="jo7-aM-p9y"/>
+                            <constraint firstItem="1VA-Am-xgZ" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pmt-op-yRI"/>
+                            <constraint firstItem="yGX-qx-bFT" firstAttribute="leading" secondItem="bYy-5H-R2N" secondAttribute="leading" type="default" id="smU-hb-uRt"/>
+                            <constraint firstItem="1VA-Am-xgZ" firstAttribute="top" secondItem="bYy-5H-R2N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="x7a-kj-bRo"/>
+                            <constraint firstItem="ije-Ph-mv7" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="20" symbolic="YES" type="default" id="yzi-v7-XI8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hN1-2D-XoL">
@@ -730,6 +742,77 @@
         <image name="Default-568h@2x.png" width="640" height="1136"/>
         <image name="Default.png" width="320" height="480"/>
     </resources>
+    <classes>
+        <class className="IMAccountEditViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMAccountEditViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="currencyButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="valueTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="IMAccountSelectorController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMAccountSelectorController.h"/>
+        </class>
+        <class className="IMAccountsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMAccountsTableViewController.h"/>
+        </class>
+        <class className="IMCategoriesTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMCategoriesTableViewController.h"/>
+        </class>
+        <class className="IMCategoryEditViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMCategoryEditViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="IMCurrecyPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMCurrecyPickerViewController.h"/>
+        </class>
+        <class className="IMLeftSidePanelControllerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMLeftSidePanelControllerViewController.h"/>
+        </class>
+        <class className="IMSidePanelController" superclassName="JASidePanelController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMSidePanelController.h"/>
+        </class>
+        <class className="IMSummaryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMSummaryViewController.h"/>
+        </class>
+        <class className="IMTransactionCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMTransactionCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="detailedTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="priceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="IMTransactionEditViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMTransactionEditViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="accountButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="categoryButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="currencyButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="incomeTypeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="startDateButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="valueTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="IMTransactionsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMTransactionsTableViewController.h"/>
+        </class>
+        <class className="JASidePanelController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JASidePanelController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TestVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TestVC.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

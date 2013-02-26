@@ -86,11 +86,12 @@
         //заносим базовые категории в базу
         [[[IMCoreDataManager alloc] init] setupBaseCategories];
     }
-//    [[[IMCoreDataManager alloc] init] performSelector:@selector(setupBaseCategories) withObject:nil afterDelay:3];
-    
-    
-//    //выбрать нужный storyboard в зависимости от типа устройства и экрана
-//    [self initializeStoryBoardBasedOnScreenSize];
+
+    #define TESTING 1
+    #ifdef TESTING
+        [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    #endif
+    [TestFlight takeOff:@"5301ecd8-bd1c-486f-a91d-0f66de86836d"];
     
     return YES;
 }

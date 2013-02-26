@@ -142,10 +142,9 @@ static NSString *kTransactionCategory = @"transaction category";
             transaction.currency = [parameters objectForKey:kTransactionCurrency];
             transaction.account = account;
             if ([parameters objectForKey:kTransactionCategory]) {
-                Category *category = [Category MR_findFirstByAttribute:@"key"
-                                                             withValue:[[parameters objectForKey:kTransactionCategory] key]
-                                                             inContext:localContext];
-                transaction.category = category;
+                Category *category = [parameters objectForKey:kTransactionCategory];
+                Category *categoryInLocalContext = [category MR_inContext:localContext];
+                transaction.category = categoryInLocalContext;
             }
             
             NSDate *startDate = [parameters objectForKey:kTransactionStartDate];

@@ -59,6 +59,7 @@ static NSString *kAccountKey = @"account key";
 static NSString *kAccountName = @"account name";
 static NSString *kAccountInitialValue = @"account initial value";
 static NSString *kAccountCurrency = @"account currency";
+static NSString *kAccountType = @"account type";
 
 /* 
 создание и сохранение нового счета с набором параметров
@@ -85,6 +86,7 @@ static NSString *kAccountCurrency = @"account currency";
             account.name = [parameters objectForKey:kAccountName];
             account.initialValue = ([parameters objectForKey:kAccountInitialValue]);
             account.currency = [parameters objectForKey:kAccountCurrency];
+            account.type = [parameters objectForKey:kAccountType];
         }
                           completion:^(BOOL success, NSError *error){
                               (success) ? successBlock() : failureBlock(error);

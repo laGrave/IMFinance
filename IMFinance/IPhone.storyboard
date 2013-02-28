@@ -203,15 +203,23 @@
                                     <segue destination="hPT-mb-9iN" kind="push" identifier="select currency" id="s8p-IF-Sys"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKN-tr-Qgx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="4iR-8O-XB9"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AKN-tr-Qgx" firstAttribute="leading" secondItem="gz6-gl-1hQ" secondAttribute="leading" type="default" id="5jI-f6-xtT"/>
                             <constraint firstAttribute="trailing" secondItem="Vba-PD-eCP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6AK-Yl-SSF"/>
                             <constraint firstItem="5vf-fu-B2U" firstAttribute="top" secondItem="Vba-PD-eCP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7ac-SF-mkl"/>
                             <constraint firstItem="5vf-fu-B2U" firstAttribute="leading" secondItem="gz6-gl-1hQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8NL-Et-zOZ"/>
+                            <constraint firstItem="AKN-tr-Qgx" firstAttribute="bottom" secondItem="gz6-gl-1hQ" secondAttribute="bottom" type="default" id="DbZ-iM-xhI"/>
                             <constraint firstItem="Vba-PD-eCP" firstAttribute="top" secondItem="gz6-gl-1hQ" secondAttribute="top" constant="20" symbolic="YES" type="default" id="FnS-nI-DBi"/>
                             <constraint firstItem="Af4-O5-EH9" firstAttribute="leading" secondItem="gz6-gl-1hQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R3u-TN-KQq"/>
                             <constraint firstItem="Vba-PD-eCP" firstAttribute="leading" secondItem="gz6-gl-1hQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="UOc-Xx-xgK"/>
+                            <constraint firstItem="AKN-tr-Qgx" firstAttribute="trailing" secondItem="gz6-gl-1hQ" secondAttribute="trailing" type="default" id="eOo-8J-D9Z"/>
                             <constraint firstAttribute="trailing" secondItem="Af4-O5-EH9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="j63-vq-pTy"/>
                             <constraint firstItem="Af4-O5-EH9" firstAttribute="top" secondItem="5vf-fu-B2U" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nhi-kj-Iex"/>
                             <constraint firstAttribute="trailing" secondItem="5vf-fu-B2U" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="p3Y-zG-Pz9"/>
@@ -230,6 +238,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="accountTypePicker" destination="AKN-tr-Qgx" id="zcv-Xd-pZh"/>
                         <outlet property="currencyButton" destination="Af4-O5-EH9" id="qZB-Ib-P9r"/>
                         <outlet property="nameTextField" destination="Vba-PD-eCP" id="0QP-Yh-YMm"/>
                         <outlet property="valueTextField" destination="5vf-fu-B2U" id="26M-pW-baJ"/>
@@ -576,7 +585,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYy-5H-R2N">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="UXD-Xc-nGB"/>
-                                    <constraint firstAttribute="height" constant="34" id="fqN-ig-5UK"/>
+                                    <constraint firstAttribute="height" constant="34" type="user" id="fqN-ig-5UK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Счет">
@@ -622,7 +631,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gce-Vr-nDx">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="ERf-Ba-JXl"/>
+                                    <constraint firstAttribute="height" constant="34" type="user" id="ERf-Ba-JXl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Категория">
@@ -639,6 +648,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="yGX-qx-bFT" firstAttribute="top" secondItem="aJH-BB-yH7" secondAttribute="top" type="default" id="1p7-PG-Ymp"/>
                             <constraint firstAttribute="trailing" secondItem="1VA-Am-xgZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3h5-LZ-YdV"/>
                             <constraint firstItem="aJH-BB-yH7" firstAttribute="trailing" secondItem="ZSI-XY-nTt" secondAttribute="trailing" type="default" id="499-xm-zkM"/>
                             <constraint firstAttribute="trailing" secondItem="bYy-5H-R2N" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5DZ-Ev-qA2"/>
@@ -646,21 +656,19 @@
                             <constraint firstItem="ZSI-XY-nTt" firstAttribute="top" secondItem="ije-Ph-mv7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CwP-OE-DTv"/>
                             <constraint firstItem="bYy-5H-R2N" firstAttribute="leading" secondItem="ije-Ph-mv7" secondAttribute="leading" type="default" id="FPI-A4-wt4"/>
                             <constraint firstItem="gce-Vr-nDx" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="GUp-EO-slr"/>
-                            <constraint firstItem="aJH-BB-yH7" firstAttribute="top" secondItem="1VA-Am-xgZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="JMU-7i-ewB"/>
-                            <constraint firstItem="1VA-Am-xgZ" firstAttribute="top" secondItem="ZSI-XY-nTt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SLy-Lk-8lf"/>
-                            <constraint firstItem="yGX-qx-bFT" firstAttribute="top" secondItem="1VA-Am-xgZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Unp-OR-m3d"/>
+                            <constraint firstItem="1VA-Am-xgZ" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="100" type="user" id="VKz-7A-xc7"/>
                             <constraint firstItem="aJH-BB-yH7" firstAttribute="bottom" secondItem="yGX-qx-bFT" secondAttribute="bottom" type="default" id="VsK-vp-HC6"/>
                             <constraint firstItem="aJH-BB-yH7" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XGG-Kv-eJd"/>
+                            <constraint firstItem="bYy-5H-R2N" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="58" type="user" id="Xh1-Kt-M94"/>
                             <constraint firstItem="ZSI-XY-nTt" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="b0i-V8-UCT"/>
+                            <constraint firstItem="ZSI-XY-nTt" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="62" type="user" id="cSM-TN-4s7"/>
                             <constraint firstItem="ZSI-XY-nTt" firstAttribute="trailing" secondItem="gce-Vr-nDx" secondAttribute="trailing" type="default" id="d0d-9O-fWQ"/>
-                            <constraint firstItem="ZSI-XY-nTt" firstAttribute="top" secondItem="gce-Vr-nDx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="egV-ew-OLQ"/>
-                            <constraint firstItem="gce-Vr-nDx" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gdb-3l-xTy"/>
+                            <constraint firstItem="gce-Vr-nDx" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="20" symbolic="YES" type="user" id="gdb-3l-xTy"/>
                             <constraint firstAttribute="trailing" secondItem="yGX-qx-bFT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ght-Ab-b8l"/>
-                            <constraint firstItem="aJH-BB-yH7" firstAttribute="baseline" secondItem="yGX-qx-bFT" secondAttribute="baseline" type="default" id="jo7-aM-p9y"/>
                             <constraint firstItem="1VA-Am-xgZ" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pmt-op-yRI"/>
                             <constraint firstItem="yGX-qx-bFT" firstAttribute="leading" secondItem="bYy-5H-R2N" secondAttribute="leading" type="default" id="smU-hb-uRt"/>
-                            <constraint firstItem="1VA-Am-xgZ" firstAttribute="top" secondItem="bYy-5H-R2N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="x7a-kj-bRo"/>
                             <constraint firstItem="ije-Ph-mv7" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="20" symbolic="YES" type="default" id="yzi-v7-XI8"/>
+                            <constraint firstItem="aJH-BB-yH7" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="138" type="user" id="zyt-i5-F0D"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hN1-2D-XoL">
@@ -746,6 +754,7 @@
         <class className="IMAccountEditViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IMAccountEditViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="accountTypePicker" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="currencyButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="valueTextField" candidateClass="UITextField"/>
@@ -791,6 +800,11 @@
         <class className="IMTransactionEditViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IMTransactionEditViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelButtonPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="categoryButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="doneButtonPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="incomeTypeButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="startDateButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="accountButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="categoryButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="currencyButton" candidateClass="UIButton"/>

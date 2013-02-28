@@ -36,3 +36,13 @@
 "Trade" = "Trade";
 "Transport" = "Transport";
 
+// account types
+"cash" = "Cash";
+"credit card" = "Credit card";
+"debit card" = "Debit card";
+"property" = "Property";
+"investments" = "Investments";
+"assets" = "Assets";
+"e-money" = "E-Money";
+"liabilities" = "Liabilities";
+

@@ -28,6 +28,8 @@
 		DC9838A216B7CCCB00BE939C /* IMTransactionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9838A116B7CCCB00BE939C /* IMTransactionsTableViewController.m */; };
 		DC999AB316DB7DA800B05612 /* IMTransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC999AB216DB7DA800B05612 /* IMTransactionCell.m */; };
 		DC999AB616DB992C00B05612 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DC999AB516DB992C00B05612 /* NSDate+Utilities.m */; };
+		DCB52F1916DF41A7008799E9 /* AccountTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCB52F1816DF41A7008799E9 /* AccountTypes.plist */; };
+		DCB52F1C16DF4893008799E9 /* IMAccountTypeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB52F1B16DF4893008799E9 /* IMAccountTypeConfig.m */; };
 		DCCFDDD216C4F6B9002886E2 /* DateIntervalKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCCFDDD116C4F6B9002886E2 /* DateIntervalKeys.plist */; };
 		DCCFDDD416C8F4BB002886E2 /* IMDateStartPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCFDDD316C8F4BB002886E2 /* IMDateStartPicker.xib */; };
 		DCCFDDD616C8F59A002886E2 /* IMDateIntervalPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCFDDD516C8F59A002886E2 /* IMDateIntervalPicker.xib */; };
@@ -109,6 +111,9 @@
 		DC999AB216DB7DA800B05612 /* IMTransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTransactionCell.m; sourceTree = "<group>"; };
 		DC999AB416DB992C00B05612 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		DC999AB516DB992C00B05612 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		DCB52F1816DF41A7008799E9 /* AccountTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AccountTypes.plist; sourceTree = "<group>"; };
+		DCB52F1A16DF4893008799E9 /* IMAccountTypeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountTypeConfig.h; sourceTree = "<group>"; };
+		DCB52F1B16DF4893008799E9 /* IMAccountTypeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountTypeConfig.m; sourceTree = "<group>"; };
 		DCCFDDD116C4F6B9002886E2 /* DateIntervalKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DateIntervalKeys.plist; sourceTree = "<group>"; };
 		DCCFDDD316C8F4BB002886E2 /* IMDateStartPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IMDateStartPicker.xib; sourceTree = "<group>"; };
 		DCCFDDD516C8F59A002886E2 /* IMDateIntervalPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IMDateIntervalPicker.xib; sourceTree = "<group>"; };
@@ -302,6 +307,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DCB52F1716DF4152008799E9 /* AccountType */ = {
+			isa = PBXGroup;
+			children = (
+				DCB52F1816DF41A7008799E9 /* AccountTypes.plist */,
+				DCB52F1A16DF4893008799E9 /* IMAccountTypeConfig.h */,
+				DCB52F1B16DF4893008799E9 /* IMAccountTypeConfig.m */,
+			);
+			path = AccountType;
+			sourceTree = "<group>";
+		};
 		DCCFDDEE16C9395E002886E2 /* SwipedTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,6 +479,7 @@
 		DCD726CF16B68833006F5E2D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DCB52F1716DF4152008799E9 /* AccountType */,
 				B0EF468616D77706008A6C78 /* Categories */,
 				DCCFDDEE16C9395E002886E2 /* SwipedTableView */,
 				DC90987E16C4EE7100CF9D00 /* Date */,
@@ -548,6 +564,7 @@
 				DCCFDDD816C8F665002886E2 /* IMDateEndPicker.xib in Resources */,
 				B0EF468816D77706008A6C78 /* BaseCategories.plist in Resources */,
 				B0EF46A616D7A67F008A6C78 /* Localizable.strings in Resources */,
+				DCB52F1916DF41A7008799E9 /* AccountTypes.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +631,7 @@
 				B0D51D9D16DA8C0A00938799 /* IMCategoryEditViewController.m in Sources */,
 				DC999AB316DB7DA800B05612 /* IMTransactionCell.m in Sources */,
 				DC999AB616DB992C00B05612 /* NSDate+Utilities.m in Sources */,
+				DCB52F1C16DF4893008799E9 /* IMAccountTypeConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,6 +36,10 @@
     if (self.accountKey && self.accountKey.length) {
         predicate = [NSPredicate predicateWithFormat:@"account.key like %@", self.accountKey];
     }
+    else if (self.category) {
+        Category *category = [self.category MR_inThreadContext];
+        predicate = [NSPredicate predicateWithFormat:@"category == %@", category];
+    }
     else predicate = nil;
     
     _fetchedResultsController = [Transaction MR_fetchAllSortedBy:@"startDate" ascending:NO withPredicate:predicate groupBy:@"startDate" delegate:self];

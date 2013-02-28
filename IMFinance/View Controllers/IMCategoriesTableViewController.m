@@ -14,6 +14,7 @@
 
 #import "IMCategoryEditViewController.h"
 #import "IMSidePanelController.h"
+#import "IMTransactionsTableViewController.h"
 
 @interface IMCategoriesTableViewController () <NSFetchedResultsControllerDelegate>
 
@@ -213,7 +214,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-
+    Category *c = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    IMTransactionsTableViewController *transactionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"transactions table view controller"];
+    transactionsVC.category = c;
+    [self.navigationController pushViewController:transactionsVC animated:YES];
 }
 
 

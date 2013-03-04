@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.cocoapods.OCCalendar-0.0.3</string>
+	<key>CFBundleName</key>
+	<string>OCCalendar 0.0.3 Documentation</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	
+	
+	<key>DocSetDescription</key>
+	<string>OCCalendar is a very simple component for iPhone/iPad that provides a &apos;Popover&apos; date picker controller. It is very easy to add to your project, and is 100% CoreGraphics code, so it uses no images, and is resolution independent. I realize that I need to cut down the size for iPhone a bit more. I originally wrote it just for iPad, and my paths and sizing are all just slightly too wide for the iPhone. I&apos;ll fix it when I get a chance.</string>
+	
+	<key>DocSetFeedName</key>
+	<string>OCCalendar 0.0.3 Documentation</string>
+	
+	<key>DocSetMinimumXcodeVersion</key>
+	<string>3.0</string>
+	
+	<key>DashDocSetFamily</key>
+	<string>appledoc</string>
+	<key>DocSetPublisherIdentifier</key>
+	<string>org.cocoapods.documentation</string>
+	<key>DocSetPublisherName</key>
+	<string>Oliver Clark Rickard</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Oliver Clark Rickard</string>
+</dict>
+</plist>

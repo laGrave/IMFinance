@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/igormishchenko/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.KNSemiModalViewController-0.2.docset
+Time: 2013-02-28 13:50:15 +0000

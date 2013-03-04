@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>OCCalendar 0.0.3 Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">OCCalendar 0.0.3 </a></h1>
+				<a id="developerHome" href="index.html">Oliver Clark Rickard</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">OCCalendar 0.0.3 Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main">
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">OCCalendar 0.0.3 Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1>OCCalendarController</h1>
+
+<h2>Introduction</h2>
+
+<p>OCCalendar is a very simple component for iPhone/iPad that provides a &ldquo;Popover&rdquo; date picker controller.  It is very easy to add to your project, and is 100% CoreGraphics code, so it uses no images, and is resolution independent.  I realize that I need to cut down the size for iPhone a bit more.  I originally wrote it just for iPad, and my paths and sizing are all just slightly too wide for the iPhone.  I&rsquo;ll fix it when I get a chance.</p>
+
+<p>!<a href="https://github.com/ocrickard/OCCalendar/raw/master/demo.png">Screenshot</a></p>
+
+<h2>License</h2>
+
+<p>OCCalendar is granted under the BSD license, for use with or without attribution.  Have fun!</p>
+
+<h2>Usage</h2>
+
+<p>Drag the following files into your project:</p>
+
+<ul>
+<li><a href="Classes/OCCalendarViewController.html">OCCalendarViewController</a>.h</li>
+<li><a href="Classes/OCCalendarViewController.html">OCCalendarViewController</a>.m</li>
+<li><a href="Classes/OCCalendarView.html">OCCalendarView</a>.h</li>
+<li><a href="Classes/OCCalendarView.html">OCCalendarView</a>.m</li>
+<li><a href="Classes/OCSelectionView.html">OCSelectionView</a>.h</li>
+<li><a href="Classes/OCSelectionView.html">OCSelectionView</a>.m</li>
+<li><a href="Classes/OCDaysView.html">OCDaysView</a>.h</li>
+<li><a href="Classes/OCDaysView.html">OCDaysView</a>.m</li>
+</ul>
+
+
+<p>Then implement the <a href="Protocols/OCCalendarDelegate.html">OCCalendarDelegate</a> protocol in the class you wish to call from.  The only method in this protocol specifies a way for the calendar to report back the beginning and ending ranges of dates.  These are returnes as NSDate objects for convenience.  In the demo app, we do the following:</p>
+
+<p>```
+ &ndash; (void)completedWithStartDate:(NSDate <em>)startDate endDate:(NSDate </em>)endDate {</p>
+
+<pre><code>NSDateFormatter *df = [[NSDateFormatter alloc] init];
+[df setDateStyle:NSDateFormatterShortStyle];
+
+[self showToolTip:[NSString stringWithFormat:@"%@ - %@", [df stringFromDate:startDate], [df stringFromDate:endDate]]];
+
+calVC.delegate = nil;
+[calVC release];
+calVC = nil;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Now, you should be able to show the calendar by alloc'ing and init'ing it, then adding to your view.</p>
+
+<p>```
+//Here&rsquo;s where the magic happens</p>
+
+<pre><code>calVC = [[OCCalendarViewController alloc] initAtPoint:CGPointMake(150, 50) inView:self.view];
+calVC.delegate = self;
+[self.view addSubview:calVC.view]; 
+</code></pre>
+
+<p>```</p>
+
+<h2>Customization</h2>
+
+<p>You can customize the look and feel of the controller by tweaking the CoreGraphics rendering code.  I realize that this is not very pretty at the moment, but I&rsquo;ll eventually refactor it to make sure it&rsquo;s all neat and tidy.  You can change the placement of the little arrow to either the right or left side of the popover by changing the &ldquo;arrowPosition&rdquo; enum in the initializer.</p>
+
+<p><code>
+[[OCCalendarViewController alloc] initAtPoint:insertPoint inView:self.view arrowPosition:OCArrowPositionRight] //Right position
+[[OCCalendarViewController alloc] initAtPoint:insertPoint inView:self.view arrowPosition:OCArrowPositionCenter] //Center position
+[[OCCalendarViewController alloc] initAtPoint:insertPoint inView:self.view arrowPosition:OCArrowPositionLeft] //Left position
+</code></p>
+						
+						
+					</div>
+					
+                        
+                    
+					
+					
+					<div class="index-column">
+						<h2 class="index-title">Class References</h2>
+						<ul>
+							
+							<li><a href="Classes/OCCalendarView.html">OCCalendarView</a></li>
+							
+							<li><a href="Classes/OCCalendarViewController.html">OCCalendarViewController</a></li>
+							
+							<li><a href="Classes/OCDaysView.html">OCDaysView</a></li>
+							
+							<li><a href="Classes/OCSelectionView.html">OCSelectionView</a></li>
+							
+						</ul>
+					</div>
+					
+					
+						
+					<div class="index-column">
+						
+						<h2 class="index-title">Protocol References</h2>
+						<ul>
+							
+							<li><a href="Protocols/OCCalendarDelegate.html">OCCalendarDelegate</a></li>
+							
+						</ul>
+						
+						
+					</div>
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Oliver Clark Rickard. All rights reserved. (Last updated: 2013-02-28)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>

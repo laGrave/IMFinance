@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIViewController+KNSemiModal.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIViewController(KNSemiModal)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIViewController+KNSemiModal.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIViewController(KNSemiModal)/presentSemiViewController:withOptions:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIViewController+KNSemiModal.h</DeclaredIn>			
+			
+			<Declaration>- (void)presentSemiViewController:(UIViewController *)vc withOptions:(NSDictionary *)options</Declaration>
+			
+			
+			<Anchor>//api/name/presentSemiViewController:withOptions:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIViewController(KNSemiModal)/presentSemiView:withOptions:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIViewController+KNSemiModal.h</DeclaredIn>			
+			
+			<Declaration>- (void)presentSemiView:(UIView *)view withOptions:(NSDictionary *)options</Declaration>
+			
+			
+			<Anchor>//api/name/presentSemiView:withOptions:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIViewController(KNSemiModal)/presentSemiViewController:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIViewController+KNSemiModal.h</DeclaredIn>			
+			
+			<Declaration>- (void)presentSemiViewController:(UIViewController *)vc</Declaration>
+			
+			
+			<Anchor>//api/name/presentSemiViewController:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIViewController(KNSemiModal)/presentSemiView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIViewController+KNSemiModal.h</DeclaredIn>			
+			
+			<Declaration>- (void)presentSemiView:(UIView *)vc</Declaration>
+			
+			
+			<Anchor>//api/name/presentSemiView:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIViewController(KNSemiModal)/dismissSemiModalView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIViewController+KNSemiModal.h</DeclaredIn>			
+			
+			<Declaration>- (void)dismissSemiModalView</Declaration>
+			
+			
+			<Anchor>//api/name/dismissSemiModalView</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIViewController(KNSemiModal)/resizeSemiView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIViewController+KNSemiModal.h</DeclaredIn>			
+			
+			<Declaration>- (void)resizeSemiView:(CGSize)newSize</Declaration>
+			
+			
+			<Anchor>//api/name/resizeSemiView:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIViewController(KNSemiModal)/dismissSemiModalViewWithCompletion:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIViewController+KNSemiModal.h</DeclaredIn>			
+			
+			<Declaration>- (void)dismissSemiModalViewWithCompletion:(void ( ^ ) ( void ))completion</Declaration>
+			
+			
+			<Anchor>//api/name/dismissSemiModalViewWithCompletion:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

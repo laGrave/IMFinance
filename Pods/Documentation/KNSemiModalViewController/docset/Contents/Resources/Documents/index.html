@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>KNSemiModalViewController 0.2 Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">KNSemiModalViewController 0.2 </a></h1>
+				<a id="developerHome" href="index.html">Kent Nguyen</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KNSemiModalViewController 0.2 Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main">
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KNSemiModalViewController 0.2 Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h2>UIViewController+KNSemiModal Category</h2>
+
+<p>UIViewController+KNSemiModal is an effort to make a replica of <strong>semi-modal view with pushed-back stacked animation</strong> found in the beautiful <a href="http://itunes.apple.com/us/app/national-parks-by-national/id518426085?mt=8">Park Guides by National Geographic</a> app. You can see this original semi-modal view below.</p>
+
+<p>This library (ARC) is designed as a Category to UIViewController so you don&rsquo;t have to subclass and you can simply drop in any project and it will just work!</p>
+
+<p><em>Original screenshot</em></p>
+
+<p><img src="[https://github.com/kentnguyen/KNSemiModalViewController/blob/master/Docs/original.png?raw=true](https://github.com/kentnguyen/KNSemiModalViewController/blob/master/Docs/original.png?raw=true)" /> . <img src="[https://github.com/kentnguyen/KNSemiModalViewController/blob/master/Docs/original2.png?raw=true](https://github.com/kentnguyen/KNSemiModalViewController/blob/master/Docs/original2.png?raw=true)" /></p>
+
+<p><em>Replica (view demo video to see the beautiful animation)</em></p>
+
+<p><img src="[https://github.com/kentnguyen/KNSemiModalViewController/blob/master/Docs/ss1.png?raw=true](https://github.com/kentnguyen/KNSemiModalViewController/blob/master/Docs/ss1.png?raw=true)" /> . <img src="[https://github.com/kentnguyen/KNSemiModalViewController/blob/master/Docs/ss2.png?raw=true](https://github.com/kentnguyen/KNSemiModalViewController/blob/master/Docs/ss2.png?raw=true)" /></p>
+
+<h3>Demo</h3>
+
+<p>Download a demo clip <a href="https://github.com/kentnguyen/KNSemiModalViewController/blob/master/Docs/KNSemiModalDemo.mov?raw=true">here</a> (1.3MB, .mov)</p>
+
+<h3>Features</h3>
+
+<ul>
+<li>Works with bare UIViewController</li>
+<li>Works with UIViewController contained inside UINavigationController</li>
+<li>Works with UIViewController contained inside UINavigationController, contained inside UITabbarController</li>
+<li>Auto handling of modal frame size</li>
+<li>Auto handling of touch area for dismissal</li>
+<li>Resizable after presenting so that keyboard related interactions are possible</li>
+<li>Easy to understand and very small code base, only 2 files</li>
+<li>Trivial to implement as subclass</li>
+<li>Landscape support (not during presentation)</li>
+<li>Only use basic CAAnimation, should work fine with SDK 4.x up.</li>
+</ul>
+
+
+<h3>Optional parameters</h3>
+
+<p>Currently supports configuring the following (by <a href="http://twitter.com/yangmeyer">@yangmeyer</a>):</p>
+
+<ul>
+<li>animation duration</li>
+<li>parent alpha</li>
+<li>optional push-back</li>
+<li>shadow opacity</li>
+</ul>
+
+
+<p>Easily extend this to anything you would want to make configurable. Feel free to submit pull requests.</p>
+
+<h3>Installation / How to use</h3>
+
+<ul>
+<li><code>#import "UIViewController+KNSemiModal.h"</code> in your ViewController</li>
+<li>Call <code>[self presentSemiModalView:myView]</code></li>
+</ul>
+
+
+<p>Read my <a href="http://bit.ly/IK7UVV">blog post</a> for detailed usage.</p>
+
+<h3>License</h3>
+
+<p>UIViewController+KNSemiModal is licensed under MIT License
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &ldquo;Software&rdquo;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED &ldquo;AS IS&rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+						
+						
+					</div>
+					
+                        
+                    
+					
+					
+					
+						
+					<div class="index-column">
+						
+						
+						<h2 class="index-title">Category References</h2>
+						<ul>
+							
+							<li><a href="Categories/UIView+FindUIViewController.html">UIView(FindUIViewController)</a></li>
+							
+							<li><a href="Categories/UIViewController+KNSemiModal.html">UIViewController(KNSemiModal)</a></li>
+							
+						</ul>
+						
+					</div>
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Kent Nguyen. All rights reserved. (Last updated: 2013-02-28)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>

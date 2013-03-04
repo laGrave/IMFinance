@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/OCCalendarViewController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/OCCalendarViewController</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCCalendarViewController.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OCCalendarViewController/setDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCCalendarViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;OCCalendarDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/OCCalendarViewController/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCCalendarViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;OCCalendarDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OCCalendarViewController/initAtPoint:inView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCCalendarViewController.h</DeclaredIn>			
+			
+			<Declaration>- (id)initAtPoint:(CGPoint)point inView:(UIView *)v</Declaration>
+			
+			
+			<Anchor>//api/name/initAtPoint:inView:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OCCalendarViewController/initAtPoint:inView:arrowPosition:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCCalendarViewController.h</DeclaredIn>			
+			
+			<Declaration>- (id)initAtPoint:(CGPoint)point inView:(UIView *)v arrowPosition:(OCArrowPosition)ap</Declaration>
+			
+			
+			<Anchor>//api/name/initAtPoint:inView:arrowPosition:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

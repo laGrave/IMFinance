@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/OCSelectionView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/OCSelectionView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCSelectionView.h</DeclaredIn>
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OCSelectionView/resetSelection</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCSelectionView.h</DeclaredIn>			
+			
+			<Declaration>- (void)resetSelection</Declaration>
+			
+			
+			<Anchor>//api/name/resetSelection</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OCSelectionView/startPoint</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCSelectionView.h</DeclaredIn>			
+			
+			<Declaration>- (CGPoint)startPoint</Declaration>
+			
+			
+			<Anchor>//api/name/startPoint</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OCSelectionView/endPoint</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCSelectionView.h</DeclaredIn>			
+			
+			<Declaration>- (CGPoint)endPoint</Declaration>
+			
+			
+			<Anchor>//api/name/endPoint</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

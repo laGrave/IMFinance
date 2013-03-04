@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIView+FindUIViewController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIView(FindUIViewController)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIViewController+KNSemiModal.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIView(FindUIViewController)/containingViewController</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIViewController+KNSemiModal.h</DeclaredIn>			
+			
+			<Declaration>- (UIViewController *)containingViewController</Declaration>
+			
+			
+			<Anchor>//api/name/containingViewController</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIView(FindUIViewController)/traverseResponderChainForUIViewController</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIViewController+KNSemiModal.h</DeclaredIn>			
+			
+			<Declaration>- (id)traverseResponderChainForUIViewController</Declaration>
+			
+			
+			<Anchor>//api/name/traverseResponderChainForUIViewController</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

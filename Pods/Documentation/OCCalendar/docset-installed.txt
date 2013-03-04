@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/igormishchenko/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.OCCalendar-0.0.3.docset
+Time: 2013-02-28 13:38:06 +0000

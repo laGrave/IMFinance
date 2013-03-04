@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/OCCalendarView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/OCCalendarView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCCalendarView.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OCCalendarView/initAtPoint:withFrame:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCCalendarView.h</DeclaredIn>			
+			
+			<Declaration>- (id)initAtPoint:(CGPoint)p withFrame:(CGRect)frame</Declaration>
+			
+			
+			<Anchor>//api/name/initAtPoint:withFrame:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OCCalendarView/initAtPoint:withFrame:arrowPosition:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCCalendarView.h</DeclaredIn>			
+			
+			<Declaration>- (id)initAtPoint:(CGPoint)p withFrame:(CGRect)frame arrowPosition:(OCArrowPosition)arrowPos</Declaration>
+			
+			
+			<Anchor>//api/name/initAtPoint:withFrame:arrowPosition:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OCCalendarView/setArrowPosition:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCCalendarView.h</DeclaredIn>			
+			
+			<Declaration>- (void)setArrowPosition:(OCArrowPosition)pos</Declaration>
+			
+			
+			<Anchor>//api/name/setArrowPosition:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OCCalendarView/getStartDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCCalendarView.h</DeclaredIn>			
+			
+			<Declaration>- (NSDate *)getStartDate</Declaration>
+			
+			
+			<Anchor>//api/name/getStartDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OCCalendarView/getEndDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OCCalendarView.h</DeclaredIn>			
+			
+			<Declaration>- (NSDate *)getEndDate</Declaration>
+			
+			
+			<Anchor>//api/name/getEndDate</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

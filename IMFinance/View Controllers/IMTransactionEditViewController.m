@@ -332,7 +332,9 @@ static NSString *kAccountKey = @"account key";
     else [self.params setValue:[NSNumber numberWithBool:1] forKey:kTransactionIncomeType];
     
     [self.params setValue:[Category MR_findFirstByAttribute:@"incomeType" withValue:[self.params objectForKey:kTransactionIncomeType]] forKey:kTransactionCategory];
+
     [self updateIncomeTypeButtonTitle];
+    [self updateCategoryButtonTitle];
 }
 
 

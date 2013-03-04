@@ -8,7 +8,7 @@
 
 #import "IMAccountsTableViewController.h"
 
-#import "Account.h"
+#import "Account+Extensions.h"
 
 #import "IMAccountEditViewController.h"
 #import "IMTransactionsTableViewController.h"

@@ -10,11 +10,8 @@
 
 #import "IMAppDelegate.h"
 
-#import <ABCalendarPicker/ABCalendarPicker.h>
-
 int main(int argc, char *argv[])
 {
-    [ABCalendarPicker class];
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([IMAppDelegate class]));
     }

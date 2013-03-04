@@ -84,7 +84,6 @@ static NSString *kAccountType = @"account type";
             }
             
             account.name = [parameters objectForKey:kAccountName];
-            account.initialValue = ([parameters objectForKey:kAccountInitialValue]);
             account.currency = [parameters objectForKey:kAccountCurrency];
             account.type = [parameters objectForKey:kAccountType];
         }

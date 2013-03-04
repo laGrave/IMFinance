@@ -1,18 +1,15 @@
 //
-//  Contractor.m
+//  Account+Extensions.h
 //  IMFinance
 //
 //  Created by Igor Mishchenko on 04.03.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
-#import "Contractor.h"
-#import "Transaction.h"
+#import "Account.h"
 
+@interface Account (Extensions)
 
-@implementation Contractor
-
-@dynamic name;
-@dynamic transactions;
+@property (nonatomic, readonly) NSNumber * value;
 
 @end

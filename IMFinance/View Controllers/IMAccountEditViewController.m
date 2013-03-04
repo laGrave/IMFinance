@@ -68,7 +68,6 @@ static NSString *kAccountType = @"account type";
         
         [self.params setValue:account.key forKey:kAccountKey];
         [self.params setValue:account.name forKey:kAccountName];
-        [self.params setValue:account.initialValue forKey:kAccountInitialValue];
         [self.params setValue:account.type forKey:kAccountType];
         [self.accountTypePicker selectRow:account.type.integerValue inComponent:0 animated:NO];
         
@@ -80,7 +79,6 @@ static NSString *kAccountType = @"account type";
         
         
         self.nameTextField.text = account.name;
-        self.valueTextField.text = [NSString stringWithFormat:@"%@", account.initialValue];
     }
     
 }

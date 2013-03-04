@@ -168,7 +168,15 @@ static NSString *kAccountKey = @"account key";
     
     IMDateStartPicker *startDatePicker = [[IMDateStartPicker alloc] initWithDate:[self.params valueForKey:kTransactionStartDate]
                                                                         delegate:self];
+    __block CGRect rect = startDatePicker.frame;
+    rect.origin.y = self.view.bounds.size.height;
+    startDatePicker.frame = rect;
     [self.view addSubview:startDatePicker];
+    [UIView animateWithDuration:0.4
+                     animations:^{
+                         rect.origin.y -= rect.size.height;
+                         startDatePicker.frame = rect;
+                     }];
 }
 
 
@@ -301,7 +309,15 @@ static NSString *kAccountKey = @"account key";
 
 - (void)startDatePickerShouldDismiss:(IMDateStartPicker *)picker {
 
-    [picker removeFromSuperview];
+    [UIView animateWithDuration:0.4
+                     animations:^{
+                         CGRect rect = picker.frame;
+                         rect.origin.y = self.view.bounds.size.height;
+                         picker.frame = rect;
+                     }
+                     completion:^(BOOL finished){
+                         [picker removeFromSuperview];
+                     }];
 }
 
 

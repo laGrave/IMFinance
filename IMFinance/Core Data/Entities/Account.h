@@ -2,7 +2,7 @@
 //  Account.h
 //  IMFinance
 //
-//  Created by Игорь Мищенко on 23.02.13.
+//  Created by Igor Mishchenko on 04.03.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -14,14 +14,15 @@
 @interface Account : NSManagedObject
 
 @property (nonatomic, retain) NSString * currency;
+@property (nonatomic, retain) NSNumber * currentValue;
 @property (nonatomic, retain) NSData * image;
+@property (nonatomic, retain) NSNumber * initialValue;
 @property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) NSNumber * limit;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSDate * startDate;
 @property (nonatomic, retain) NSNumber * type;
-@property (nonatomic, retain) NSNumber * initialValue;
-@property (nonatomic, retain) NSNumber * currentValue;
+@property (nonatomic, readonly) NSNumber * value;
 @property (nonatomic, retain) NSSet *transactions;
 @end
 

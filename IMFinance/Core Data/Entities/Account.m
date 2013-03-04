@@ -2,7 +2,7 @@
 //  Account.m
 //  IMFinance
 //
-//  Created by Игорь Мищенко on 23.02.13.
+//  Created by Igor Mishchenko on 04.03.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -13,26 +13,29 @@
 @implementation Account
 
 @dynamic currency;
+@dynamic currentValue;
 @dynamic image;
+@dynamic initialValue;
 @dynamic key;
 @dynamic limit;
 @dynamic name;
 @dynamic startDate;
 @dynamic type;
-@dynamic initialValue;
-@dynamic currentValue;
 @dynamic transactions;
 
-- (NSNumber *)currentValue {
+- (NSNumber *)value {
 
+    double value = 0;
     NSArray *transactions = [Transaction MR_findByAttribute:@"account" withValue:self];
-    double curVal = [self.initialValue doubleValue];
-    for (Transaction *trans in transactions) {
-        double transValue = [trans.value doubleValue];
-        double transMult = (trans.incomeType.boolValue) ? 1 : -1;
-        curVal += transValue * transMult;
+    
+    for (Transaction *tr in transactions) {
+        double transactionValue = [tr.value doubleValue];
+        double fee = [tr.fee doubleValue];
+        double mult = ([tr.incomeType boolValue]) ? 1 : -1;
+        value += transactionValue * mult - fee;
     }
-    return [NSNumber numberWithDouble:curVal];
+    
+    return [NSNumber numberWithDouble:value];
 }
 
 @end

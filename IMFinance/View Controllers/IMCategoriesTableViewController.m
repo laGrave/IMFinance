@@ -208,7 +208,12 @@
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     
-
+    Category *c = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    IMCategoryEditViewController *categoryEditVC = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([IMCategoryEditViewController class])];
+    [categoryEditVC setCategory:c];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:categoryEditVC];
+    [self presentViewController:navVC animated:YES completion:NULL];
 }
 
 

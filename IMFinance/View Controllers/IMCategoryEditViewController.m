@@ -45,22 +45,6 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 
 
 #pragma mark -
-#pragma mark - Setters
-
-- (void)setCategory:(Category *)category {
-
-    [self.params setValue:category.key forKey:kCategoryKey];
-    [self.params setValue:category.name forKey:kCategoryName];
-    [self.params setValue:category.order forKey:kCategoryOrder];
-    [self.params setValue:category.incomeType forKey:kCategoryIncomeType];
-    
-    [self.nameTextField setText:NSLocalizedString(category.name, @"")];
-    NSInteger selectedIndex = (category.incomeType.boolValue) ? 1 : 0;
-    [self.segmentedControl setSelectedSegmentIndex:selectedIndex];
-}
-
-
-#pragma mark -
 #pragma mark - View Controller lifecycle
 
 - (void)viewDidLoad {
@@ -69,6 +53,21 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 	// Do any additional setup after loading the view.
     
     self.nameTextField.delegate = self;
+    
+    if (self.category) {
+//        Category *c = [self.category MR_inThreadContext];
+        Category *c = self.category;
+        [self.params setValue:c.key forKey:kCategoryKey];
+        [self.params setValue:c.name forKey:kCategoryName];
+        [self.params setValue:c.order forKey:kCategoryOrder];
+        [self.params setValue:c.incomeType forKey:kCategoryIncomeType];
+        
+        [self.nameTextField setText:NSLocalizedString(c.name, @"")];
+        NSInteger selectedIndex = (c.incomeType.boolValue) ? 1 : 0;
+        [self.segmentedControl setSelectedSegmentIndex:selectedIndex];
+        
+        [self setCategory:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -104,12 +103,19 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
                 break;
         }
         
-        [self.params setValue:[NSNumber numberWithBool:incomeType] forKey:kCategoryIncomeType];
+        NSNumber *type = [NSNumber numberWithBool:incomeType];
+        if (type != [self.params valueForKey:kCategoryIncomeType] || ![self.params valueForKey:kCategoryOrder]) {
+            [self.params setValue:type forKey:kCategoryIncomeType];
+            
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"incomeType == %@", [self.params objectForKey:kCategoryIncomeType]];
+            NSNumber *order = [Category MR_numberOfEntitiesWithPredicate:predicate];
+            [self.params setValue:order forKey:kCategoryOrder];
+
+        }
+
         
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"incomeType == %@", [self.params objectForKey:kCategoryIncomeType]];
-        NSNumber *order = [Category MR_numberOfEntitiesWithPredicate:predicate];
-        [self.params setValue:order forKey:kCategoryOrder];
         
+                
         [[IMCoreDataManager sharedInstance] editCategoryWithParams:self.params];
         
         [self dismissViewControllerAnimated:YES completion:NULL];

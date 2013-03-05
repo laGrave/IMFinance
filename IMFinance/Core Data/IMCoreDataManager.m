@@ -173,14 +173,14 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 
 - (void)editCategoryWithParams:(NSDictionary *)parameters {
 
-    dispatch_async([self background_save_queue], ^{
-        [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext){
+//    dispatch_async([self background_save_queue], ^{
+        [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *localContext){
         
             Category *category;
             
             NSString *key = [parameters objectForKey:kCategoryKey];
             if (key && key.length) {
-                category = [Category MR_findFirstByAttribute:@"key" withValue:key];
+                category = [Category MR_findFirstByAttribute:@"key" withValue:key inContext:localContext];
             }
             else {
                 category = [Category MR_createInContext:localContext];
@@ -189,15 +189,26 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
             
             if ([parameters objectForKey:kCategoryName])
                 category.name = [parameters objectForKey:kCategoryName];
+            
+            NSNumber *incomeType;
+            if ([parameters objectForKey:kCategoryIncomeType]) {
+                incomeType = [parameters objectForKey:kCategoryIncomeType];
+            }
+            else incomeType = [NSNumber numberWithBool:NO];
+            category.incomeType = incomeType;
+            
             if ([parameters objectForKey:kCategoryOrder])
                 category.order = [parameters objectForKey:kCategoryOrder];
+            else {
+                NSPredicate *predicate = [NSPredicate predicateWithFormat:@"incomeType == %@", incomeType];
+                NSNumber *order = [Category MR_numberOfEntitiesWithPredicate:predicate inContext:localContext];
+                category.order = order;
+            }
+            
             if ([parameters objectForKey:kCategoryIcon])
                 category.image = UIImagePNGRepresentation([UIImage imageNamed:[parameters objectForKey:kCategoryIcon]]);
-            if ([parameters objectForKey:kCategoryIncomeType]) {
-                category.incomeType = [parameters objectForKey:kCategoryIncomeType];
-            }
         }];
-    });
+//    });
 
 }
 
@@ -214,19 +225,14 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 
 
 - (void)parseCategoryWithParams:(NSDictionary *)params {
-
-    NSMutableDictionary *categoryParams = [NSMutableDictionary dictionaryWithDictionary:params];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"incomeType == %@", [params objectForKey:kCategoryIncomeType]];
-    NSNumber *order = [Category MR_numberOfEntitiesWithPredicate:predicate];
-    [categoryParams setValue:order forKey:kCategoryOrder];
+        
+    [self editCategoryWithParams:params];
     
-    [self editCategoryWithParams:categoryParams];
-    
-    for (id value in [params allValues]) {
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            [self parseCategoryWithParams:value];
-        }
-    }
+//    for (id value in [params allValues]) {
+//        if ([value isKindOfClass:[NSDictionary class]]) {
+//            [self parseCategoryWithParams:value];
+//        }
+//    }
 }
 
 @end

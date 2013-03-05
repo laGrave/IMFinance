@@ -75,15 +75,14 @@
 		<false/>
 	</dict>
 	<dict>
-		<key>New item</key>
-		<dict>
-			<key>categoryName</key>
-			<string>Fuel</string>
-			<key>categoryIconName</key>
-			<string></string>
-			<key>categoryIncomeType</key>
-			<false/>
-		</dict>
+		<key>categoryName</key>
+		<string>Transport</string>
+		<key>categoryIconName</key>
+		<string></string>
+		<key>categoryIncomeType</key>
+		<false/>
+	</dict>
+	<dict>
 		<key>categoryName</key>
 		<string>Auto</string>
 		<key>categoryIconName</key>
@@ -93,7 +92,7 @@
 	</dict>
 	<dict>
 		<key>categoryName</key>
-		<string>Transport</string>
+		<string>Fuel</string>
 		<key>categoryIconName</key>
 		<string></string>
 		<key>categoryIncomeType</key>

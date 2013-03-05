@@ -12,6 +12,6 @@
 
 @interface IMCategoryEditViewController : UIViewController
 
-@property (nonatomic, weak) Category *category;
+@property (nonatomic, strong) Category *category;
 
 @end

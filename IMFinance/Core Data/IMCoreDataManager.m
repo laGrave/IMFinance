@@ -201,8 +201,14 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
                 category.order = [parameters objectForKey:kCategoryOrder];
             else {
                 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"incomeType == %@", incomeType];
-                NSNumber *order = [Category MR_numberOfEntitiesWithPredicate:predicate inContext:localContext];
-                category.order = order;
+                NSInteger order = [[Category MR_numberOfEntitiesWithPredicate:predicate inContext:localContext] integerValue] - 1;
+                NSNumber *orderNumber = [NSNumber numberWithInteger:order];
+                category.order = orderNumber;
+                NSString *income = ([incomeType integerValue] == 0) ? @"Расход" : @"Доход";
+                NSLog(@"\n");
+                NSLog(@"income type: %@", income);
+                NSLog(@"order: %@", orderNumber);
+                NSLog(@"\n");
             }
             
             if ([parameters objectForKey:kCategoryIcon])

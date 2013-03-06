@@ -34,7 +34,19 @@
         return _fetchedResultsController;
     }
     
-    _fetchedResultsController = [Category MR_fetchAllGroupedBy:@"incomeType" withPredicate:nil sortedBy:@"order" ascending:YES delegate:self];
+//    _fetchedResultsController = [Category MR_fetchAllGroupedBy:@"incomeType" withPredicate:nil sortedBy:@"order" ascending:YES delegate:self];
+//    _fetchedResultsController = [Category MR_fetchAllSortedBy:@"order" ascending:YES withPredicate:nil groupBy:@"incomeType" delegate:nil];
+    
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Category"];
+    [request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+    
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:@"order" cacheName:nil];
+    
+    NSError *error;
+    [_fetchedResultsController performFetch:&error];
     
     return _fetchedResultsController;
 }

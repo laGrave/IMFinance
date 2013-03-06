@@ -104,18 +104,18 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
         }
         
         NSNumber *type = [NSNumber numberWithBool:incomeType];
-        if (type != [self.params valueForKey:kCategoryIncomeType] || ![self.params valueForKey:kCategoryOrder]) {
-            [self.params setValue:type forKey:kCategoryIncomeType];
-            
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"incomeType == %@", [self.params objectForKey:kCategoryIncomeType]];
-            NSNumber *order = [Category MR_numberOfEntitiesWithPredicate:predicate];
-            [self.params setValue:order forKey:kCategoryOrder];
+//        if (type != [self.params valueForKey:kCategoryIncomeType] || ![self.params valueForKey:kCategoryOrder]) {
+//            [self.params setValue:type forKey:kCategoryIncomeType];
+//            
+//            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"incomeType == %@", [self.params objectForKey:kCategoryIncomeType]];
+//            NSInteger order = [[Category MR_numberOfEntitiesWithPredicate:predicate] integerValue] - 1;
+//            NSNumber *orderNumber = [NSNumber numberWithInteger:order];
+//            [self.params setValue:orderNumber forKey:kCategoryOrder];
+//
+//        }
+        if (type != [self.params valueForKey:kCategoryIncomeType])
+            [self.params removeObjectForKey:kCategoryOrder];
 
-        }
-
-        
-        
-                
         [[IMCoreDataManager sharedInstance] editCategoryWithParams:self.params];
         
         [self dismissViewControllerAnimated:YES completion:NULL];

@@ -42,7 +42,10 @@
     }
     else predicate = nil;
     
-    _fetchedResultsController = [Transaction MR_fetchAllSortedBy:@"startDate" ascending:NO withPredicate:predicate groupBy:@"startDate" delegate:self];
+    NSPredicate *aPredicate = [NSPredicate predicateWithFormat:@"hidden == %@", [NSNumber numberWithBool:NO]];
+    aPredicate = (predicate) ? [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:aPredicate, predicate, nil]] : aPredicate;
+    
+    _fetchedResultsController = [Transaction MR_fetchAllSortedBy:@"startDate" ascending:NO withPredicate:aPredicate groupBy:@"startDate" delegate:self];
     
     return _fetchedResultsController;
 }

@@ -34,20 +34,8 @@
         return _fetchedResultsController;
     }
     
-//    _fetchedResultsController = [Category MR_fetchAllGroupedBy:@"incomeType" withPredicate:nil sortedBy:@"order,incomeType" ascending:YES delegate:self];
-    _fetchedResultsController = [Category MR_fetchAllSortedBy:@"incomeType,order" ascending:YES withPredicate:nil groupBy:@"incomeType" delegate:self];
-    
-//    NSSortDescriptor *sortDescriptor1 = [NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES];
-//    NSSortDescriptor *sortDescriptor2 = [NSSortDescriptor sortDescriptorWithKey:@"incomeType" ascending:YES];
-//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Category"];
-//    [request setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor2, sortDescriptor1, nil]];
-//    
-//    NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
-//    
-//    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:@"incomeType" cacheName:nil];
-//    
-//    NSError *error;
-//    [_fetchedResultsController performFetch:&error];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"system != %@", [NSNumber numberWithBool:YES]];
+    _fetchedResultsController = [Category MR_fetchAllSortedBy:@"incomeType,order" ascending:YES withPredicate:predicate groupBy:@"incomeType" delegate:self];
     
     return _fetchedResultsController;
 }

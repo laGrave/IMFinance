@@ -2,7 +2,7 @@
 //  Transaction.h
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 04.03.13.
+//  Created by Igor Mishchenko on 07.03.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -23,6 +23,7 @@
 @property (nonatomic, retain) NSNumber * repeatInterval;
 @property (nonatomic, retain) NSDate * startDate;
 @property (nonatomic, retain) NSNumber * value;
+@property (nonatomic, retain) NSNumber * hidden;
 @property (nonatomic, retain) Account *account;
 @property (nonatomic, retain) Category *category;
 @property (nonatomic, retain) Contractor *contractor;

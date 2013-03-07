@@ -81,15 +81,35 @@ static NSString *kAccountType = @"account type";
             }
             else {
                 account = [Account MR_createInContext:localContext];
-                account.key = [@"account" stringByAppendingString:[[[NSDate date] description] MD5]];
+                key = [@"account" stringByAppendingString:[[[NSDate date] description] MD5]];
+                account.key = key;
             }
+            [parameters setValue:key forKey:kAccountKey];
             
             account.name = [parameters objectForKey:kAccountName];
             account.currency = [parameters objectForKey:kAccountCurrency];
             account.type = [parameters objectForKey:kAccountType];
         }
                           completion:^(BOOL success, NSError *error){
-                              (success) ? successBlock() : failureBlock(error);
+                              if (success) {
+                                  NSNumber *initialValue = [parameters objectForKey:kAccountInitialValue];
+                                  if (initialValue) {
+                                      //скрытая транзакция для задания начального значения счета
+                                      NSMutableDictionary *transParams = [[NSMutableDictionary alloc] init];
+                                      [transParams setValue:initialValue forKey:kTransactionValue];
+                                      [transParams setValue:[NSNumber numberWithBool:YES] forKey:kTransactionHidden];
+                                      [transParams setValue:[parameters objectForKey:kAccountKey] forKey:kAccountKey];
+                                      [transParams setValue:[parameters objectForKey:kAccountCurrency] forKey:kTransactionCurrency];
+                                      [transParams setValue:@"sys" forKey:kTransactionName];
+                                      [transParams setValue:[NSNumber numberWithBool:YES] forKey:kTransactionIncomeType];
+                                      Category *category = [Category MR_findFirstByAttribute:@"system" withValue:[NSNumber numberWithBool:YES]];
+                                      [transParams setValue:category forKey:kTransactionCategory];
+                                      [transParams setValue:[NSDate date] forKey:kTransactionStartDate];
+                                      [self editTransactionWithParams:transParams success:nil failure:nil];
+                                  }
+                                  successBlock();
+                              }
+                              else failureBlock(error);
                           }];
     });
 }
@@ -106,6 +126,7 @@ static NSString *kTransactionValue = @"transaction value";
 static NSString *kTransactionCurrency = @"transaction currency";
 static NSString *kTransactionStartDate = @"transaction start date";
 static NSString *kTransactionCategory = @"transaction category";
+static NSString *kTransactionHidden = @"transaction hidden";
 
 /*
  создание и сохранение новой транзакции с набором параметров
@@ -150,6 +171,11 @@ static NSString *kTransactionCategory = @"transaction category";
                 transaction.category = categoryInLocalContext;
             }
             
+            if ([parameters objectForKey:kTransactionHidden]) {
+                transaction.hidden = [parameters objectForKey:kTransactionHidden];
+            }
+            else transaction.hidden = [NSNumber numberWithBool:NO];
+            
             NSDate *startDate = [parameters objectForKey:kTransactionStartDate];
             if (startDate) {
                 transaction.startDate = [startDate dateWithOutTime];
@@ -157,7 +183,13 @@ static NSString *kTransactionCategory = @"transaction category";
             
         }
                           completion:^(BOOL success, NSError *error){
-                              (success) ? successBlock() : failureBlock(error);
+                              if (success) {
+                                  if (successBlock) {
+                                      successBlock();
+                                  }
+                              }
+                              else if (failureBlock)
+                                  failureBlock();
                           }];
     });
 }
@@ -172,6 +204,7 @@ static NSString *kCategoryName = @"categoryName";
 static NSString *kCategoryOrder = @"categoryOrder";
 static NSString *kCategoryIcon = @"categoryIconName";
 static NSString *kCategoryIncomeType = @"categoryIncomeType";
+static NSString *kCategorySystem = @"categorySystem";
 //static NSString *kCategoryParent = @"categoryParent";
 
 - (void)editCategoryWithParams:(NSDictionary *)parameters {
@@ -209,7 +242,7 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
             if ([parameters objectForKey:kCategoryOrder])
                 category.order = [parameters objectForKey:kCategoryOrder];
             else {
-                NSPredicate *predicate = [NSPredicate predicateWithFormat:@"incomeType == %@", incomeType];
+                NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(incomeType == %@) AND (system != %@)", incomeType, [NSNumber numberWithBool:YES]];
                 NSInteger order = [[Category MR_numberOfEntitiesWithPredicate:predicate inContext:localContext] integerValue] - 1;
                 NSNumber *orderNumber = [NSNumber numberWithInteger:order];
                 category.order = orderNumber;
@@ -219,6 +252,11 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
                 NSLog(@"order: %@", orderNumber);
                 NSLog(@"\n");
             }
+            
+            if ([parameters objectForKey:kCategorySystem]) {
+                category.system = [parameters valueForKey:kCategorySystem];
+            }
+            else category.system = [NSNumber numberWithBool:NO];
             
             if ([parameters objectForKey:kCategoryIcon])
                 category.image = UIImagePNGRepresentation([UIImage imageNamed:[parameters objectForKey:kCategoryIcon]]);
@@ -232,6 +270,19 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
     
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"BaseCategories" ofType:@"plist"];
     NSArray *allCategories = [NSArray arrayWithContentsOfFile:plistPath];
+    
+    //setup system category
+    NSMutableDictionary *systemCategoryParams = [[NSMutableDictionary alloc] init];
+    [systemCategoryParams setValue:@"sys" forKey:kCategoryName];
+    [systemCategoryParams setValue:[NSNumber numberWithInteger:0] forKey:kCategoryOrder];
+    [systemCategoryParams setValue:[NSNumber numberWithBool:YES] forKey:kCategorySystem];
+    //income type
+    [systemCategoryParams setValue:[NSNumber numberWithBool:YES] forKey:kCategoryIncomeType];
+    [self editCategoryWithParams:systemCategoryParams];
+    //outcome type
+    [systemCategoryParams setValue:[NSNumber numberWithBool:NO] forKey:kCategoryIncomeType];
+    [self editCategoryWithParams:systemCategoryParams];
+    
     
     for (NSDictionary *categoryParams in allCategories) {
         [self editCategoryWithParams:categoryParams];

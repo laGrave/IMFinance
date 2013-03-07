@@ -2,7 +2,7 @@
 //  Category.h
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 04.03.13.
+//  Created by Igor Mishchenko on 07.03.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -19,6 +19,7 @@
 @property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * order;
+@property (nonatomic, retain) NSNumber * system;
 @property (nonatomic, retain) Category *parent;
 @property (nonatomic, retain) NSSet *subcategories;
 @property (nonatomic, retain) NSSet *transactions;

@@ -12,6 +12,7 @@
 
 #import "IMCoreDataManager.h"
 
+static NSString *kCategory = @"category";
 static NSString *kCategoryKey = @"category key";
 static NSString *kCategoryName = @"categoryName";
 static NSString *kCategoryOrder = @"categoryOrder";
@@ -55,8 +56,8 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
     self.nameTextField.delegate = self;
     
     if (self.category) {
-//        Category *c = [self.category MR_inThreadContext];
-        Category *c = self.category;
+        Category *c = [self.category MR_inThreadContext];
+        [self.params setValue:c forKey:kCategory];
         [self.params setValue:c.key forKey:kCategoryKey];
         [self.params setValue:c.name forKey:kCategoryName];
         [self.params setValue:c.order forKey:kCategoryOrder];
@@ -104,17 +105,11 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
         }
         
         NSNumber *type = [NSNumber numberWithBool:incomeType];
-//        if (type != [self.params valueForKey:kCategoryIncomeType] || ![self.params valueForKey:kCategoryOrder]) {
-//            [self.params setValue:type forKey:kCategoryIncomeType];
-//            
-//            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"incomeType == %@", [self.params objectForKey:kCategoryIncomeType]];
-//            NSInteger order = [[Category MR_numberOfEntitiesWithPredicate:predicate] integerValue] - 1;
-//            NSNumber *orderNumber = [NSNumber numberWithInteger:order];
-//            [self.params setValue:orderNumber forKey:kCategoryOrder];
-//
-//        }
-        if (type != [self.params valueForKey:kCategoryIncomeType])
+
+        if (incomeType != [[self.params valueForKey:kCategoryIncomeType] boolValue])
             [self.params removeObjectForKey:kCategoryOrder];
+        
+        [self.params setValue:type forKey:kCategoryIncomeType];
 
         [[IMCoreDataManager sharedInstance] editCategoryWithParams:self.params];
         

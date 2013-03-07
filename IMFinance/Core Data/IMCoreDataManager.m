@@ -55,6 +55,7 @@ static IMCoreDataManager *sharedInstance = nil;
 #pragma mark -
 #pragma mark Core Data - Accounts
 
+static NSString *kAccount = @"account";
 static NSString *kAccountKey = @"account key";
 static NSString *kAccountName = @"account name";
 static NSString *kAccountInitialValue = @"account initial value";
@@ -97,6 +98,7 @@ static NSString *kAccountType = @"account type";
 #pragma mark -
 #pragma mark Core Data - Transactions
 
+static NSString *kTramsaction = @"transaction";
 static NSString *kTransactionKey = @"transaction key";
 static NSString *kTransactionIncomeType = @"transaction income type";
 static NSString *kTransactionName = @"transaction name";
@@ -164,6 +166,7 @@ static NSString *kTransactionCategory = @"transaction category";
 #pragma mark -
 #pragma mark - Categories
 
+static NSString *kCategory = @"category";
 static NSString *kCategoryKey = @"category key";
 static NSString *kCategoryName = @"categoryName";
 static NSString *kCategoryOrder = @"categoryOrder";
@@ -173,18 +176,24 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 
 - (void)editCategoryWithParams:(NSDictionary *)parameters {
 
-//    dispatch_async([self background_save_queue], ^{
-        [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *localContext){
+    dispatch_async([self background_save_queue], ^{
+        [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext){
         
             Category *category;
             
-            NSString *key = [parameters objectForKey:kCategoryKey];
-            if (key && key.length) {
-                category = [Category MR_findFirstByAttribute:@"key" withValue:key inContext:localContext];
+            if ([parameters objectForKey:kCategory]) {
+                Category *c = [parameters objectForKey:kCategory];
+                category = [c MR_inContext:localContext];
             }
             else {
-                category = [Category MR_createInContext:localContext];
-                category.key = [@"category" stringByAppendingString:[[[NSDate date] description] MD5]];
+                NSString *key = [parameters objectForKey:kCategoryKey];
+                if (key && key.length) {
+                    category = [Category MR_findFirstByAttribute:@"key" withValue:key inContext:localContext];
+                }
+                else {
+                    category = [Category MR_createInContext:localContext];
+                    category.key = [@"category" stringByAppendingString:[[[NSDate date] description] MD5]];
+                }
             }
             
             if ([parameters objectForKey:kCategoryName])
@@ -214,7 +223,7 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
             if ([parameters objectForKey:kCategoryIcon])
                 category.image = UIImagePNGRepresentation([UIImage imageNamed:[parameters objectForKey:kCategoryIcon]]);
         }];
-//    });
+    });
 
 }
 
@@ -225,20 +234,8 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
     NSArray *allCategories = [NSArray arrayWithContentsOfFile:plistPath];
     
     for (NSDictionary *categoryParams in allCategories) {
-        [self parseCategoryWithParams:categoryParams];
+        [self editCategoryWithParams:categoryParams];
     }
-}
-
-
-- (void)parseCategoryWithParams:(NSDictionary *)params {
-        
-    [self editCategoryWithParams:params];
-    
-//    for (id value in [params allValues]) {
-//        if ([value isKindOfClass:[NSDictionary class]]) {
-//            [self parseCategoryWithParams:value];
-//        }
-//    }
 }
 
 @end

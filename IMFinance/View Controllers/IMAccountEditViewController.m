@@ -63,6 +63,8 @@ static NSString *kAccountType = @"account type";
     self.accountTypePicker.delegate = self;
     [self.accountTypePicker reloadAllComponents];
     
+    CurrencyConfig *curConfig = [[CurrencyConfig alloc] init];
+    
     if (self.accountKey) {
         Account *account = [Account MR_findFirstByAttribute:@"key" withValue:self.accountKey];
         
@@ -73,13 +75,17 @@ static NSString *kAccountType = @"account type";
         
         NSString *currency = account.currency;
         if (currency && currency.length) {
-            [self.currencyButton setTitle:[[[CurrencyConfig alloc] init] currencyNameWithCode:currency] forState:UIControlStateNormal];
+            [self.currencyButton setTitle:[curConfig currencyNameWithCode:currency] forState:UIControlStateNormal];
             [self.params setValue:account.currency forKey:kAccountCurrency];
         }
         
         
         self.nameTextField.text = account.name;
     }
+    
+    else [self.params setValue:[curConfig defaultCurrencyCode] forKey:kAccountCurrency];
+    
+    [self updateCurrencyButtonTitle];
     
 }
 
@@ -140,6 +146,14 @@ static NSString *kAccountType = @"account type";
 }
 
 
+- (void)updateCurrencyButtonTitle {
+
+    NSString *currencyCode = [self.params objectForKey:kAccountCurrency];
+    NSString *currencyName = [[[CurrencyConfig alloc] init] currencyNameWithCode:currencyCode];
+    [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
+}
+
+
 #pragma mark -
 #pragma mark - UITextFieldDelegate protocol implementation
 
@@ -173,8 +187,7 @@ static NSString *kAccountType = @"account type";
 - (void)pickerDidSelectCurrency:(NSString *)currencyCode {
 
     [self.params setValue:currencyCode forKey:kAccountCurrency];
-    NSString *currencyName = [[[CurrencyConfig alloc] init] currencyNameWithCode:currencyCode];
-    [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
+    [self updateCurrencyButtonTitle];
 }
 
 

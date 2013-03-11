@@ -123,6 +123,7 @@ static NSString *kTransactionKey = @"transaction key";
 static NSString *kTransactionIncomeType = @"transaction income type";
 static NSString *kTransactionName = @"transaction name";
 static NSString *kTransactionValue = @"transaction value";
+static NSString *kTransactionFee = @"transaction fee";
 static NSString *kTransactionCurrency = @"transaction currency";
 static NSString *kTransactionStartDate = @"transaction start date";
 static NSString *kTransactionCategory = @"transaction category";
@@ -157,24 +158,34 @@ static NSString *kTransactionHidden = @"transaction hidden";
                                                       withValue:[parameters valueForKey:kAccountKey]
                                                       inContext:localContext];
             
+            transaction.account = account;
+            
             NSString *name = [parameters objectForKey:kTransactionName];
             name = (name) ? name : @"";
             
             transaction.name = name;
-            transaction.incomeType = [parameters objectForKey:kTransactionIncomeType];
-            transaction.value = [parameters objectForKey:kTransactionValue];
-            transaction.currency = [parameters objectForKey:kTransactionCurrency];
-            transaction.account = account;
+            
+            if ([parameters objectForKey:kTransactionIncomeType])
+                transaction.incomeType = [parameters objectForKey:kTransactionIncomeType];
+            
+            if ([parameters objectForKey:kTransactionValue])
+                transaction.value = [parameters objectForKey:kTransactionValue];
+            
+            if ([parameters objectForKey:kTransactionFee])
+                transaction.fee = [parameters objectForKey:kTransactionFee];
+            
+            if ([parameters objectForKey:kTransactionCurrency])
+                transaction.currency = [parameters objectForKey:kTransactionCurrency];
+            
             if ([parameters objectForKey:kTransactionCategory]) {
                 Category *category = [parameters objectForKey:kTransactionCategory];
                 Category *categoryInLocalContext = [category MR_inContext:localContext];
                 transaction.category = categoryInLocalContext;
             }
             
-            if ([parameters objectForKey:kTransactionHidden]) {
+            if ([parameters objectForKey:kTransactionHidden])
                 transaction.hidden = [parameters objectForKey:kTransactionHidden];
-            }
-            else transaction.hidden = [NSNumber numberWithBool:NO];
+            
             
             NSDate *startDate = [parameters objectForKey:kTransactionStartDate];
             if (startDate) {
@@ -246,11 +257,6 @@ static NSString *kCategorySystem = @"categorySystem";
                 NSInteger order = [[Category MR_numberOfEntitiesWithPredicate:predicate inContext:localContext] integerValue] - 1;
                 NSNumber *orderNumber = [NSNumber numberWithInteger:order];
                 category.order = orderNumber;
-                NSString *income = ([incomeType integerValue] == 0) ? @"Расход" : @"Доход";
-                NSLog(@"\n");
-                NSLog(@"income type: %@", income);
-                NSLog(@"order: %@", orderNumber);
-                NSLog(@"\n");
             }
             
             if ([parameters objectForKey:kCategorySystem]) {

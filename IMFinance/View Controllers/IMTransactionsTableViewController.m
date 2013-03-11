@@ -10,6 +10,7 @@
 
 #import "Transaction.h"
 #import "Category.h"
+#import "Account.h"
 
 #import "IMTransactionEditViewController.h"
 #import "IMTransactionCell.h"
@@ -33,8 +34,9 @@
     }
     
     NSPredicate *predicate;
-    if (self.accountKey && self.accountKey.length) {
-        predicate = [NSPredicate predicateWithFormat:@"account.key like %@", self.accountKey];
+    if (self.account) {
+        Account *account = [self.account MR_inThreadContext];
+        predicate = [NSPredicate predicateWithFormat:@"account.key like %@", account.key];
     }
     else if (self.category) {
         Category *category = [self.category MR_inThreadContext];
@@ -84,7 +86,7 @@
     if ([segue.identifier isEqualToString:@"edit transaction"] && self.accountKey && self.accountKey.length) {
         UINavigationController *navVC = (UINavigationController *)segue.destinationViewController;
         IMTransactionEditViewController *transactionEditVC = (IMTransactionEditViewController *)[navVC topViewController];
-        transactionEditVC.accountKey = self.accountKey;
+        transactionEditVC.account = self.account;
     }
 }
 
@@ -167,7 +169,7 @@
     
     Transaction *trans = [self.fetchedResultsController objectAtIndexPath:indexPath];
     IMTransactionEditViewController *transEditVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Transaction Edit Controller"];
-    transEditVC.transactionKey = trans.key;
+    transEditVC.transaction = trans;
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:transEditVC];
     [self presentViewController:navVC animated:YES completion:NULL];
     

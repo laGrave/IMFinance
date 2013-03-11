@@ -27,6 +27,7 @@ static NSString *kTransactionKey = @"transaction key";
 static NSString *kTransactionName = @"transaction name";
 static NSString *kTransactionIncomeType = @"transaction income type";
 static NSString *kTransactionValue = @"transaction value";
+static NSString *kTransactionFee = @"transaction fee";
 static NSString *kTransactionCurrency = @"transaction currency";
 static NSString *kTransactionStartDate = @"transaction start date";
 static NSString *kTransactionCategory = @"transaction category";
@@ -37,6 +38,7 @@ static NSString *kAccountKey = @"account key";
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *valueTextField;
+@property (weak, nonatomic) IBOutlet UITextField *feeTextField;
 @property (weak, nonatomic) IBOutlet UIButton *currencyButton;
 @property (weak, nonatomic) IBOutlet UIButton *accountButton;
 @property (weak, nonatomic) IBOutlet UIButton *startDateButton;
@@ -83,22 +85,26 @@ static NSString *kAccountKey = @"account key";
     
     CurrencyConfig *curConfig = [[CurrencyConfig alloc] init];
     
-    if (self.transactionKey) {
-        Transaction *trans = [Transaction MR_findFirstByAttribute:@"key" withValue:self.transactionKey];
+    if (self.transaction) {
+        Transaction *trans = [self.transaction MR_inThreadContext];
         self.nameTextField.text = trans.name;
         self.valueTextField.text = [NSString stringWithFormat:@"%@", trans.value];
+        if ([trans.fee doubleValue] != 0) {
+            self.feeTextField.text = [NSString stringWithFormat:@"%@", trans.fee];
+        }
         
         [self.params setValue:trans.key forKey:kTransactionKey];
         [self.params setValue:trans.name forKey:kTransactionName];
         [self.params setValue:trans.incomeType forKey:kTransactionIncomeType];
         [self.params setValue:trans.value forKey:kTransactionValue];
+        [self.params setValue:trans.fee forKey:kTransactionFee];
         [self.params setValue:trans.currency forKey:kTransactionCurrency];
         [self.params setValue:trans.account.key forKey:kAccountKey];
         [self.params setValue:trans.startDate forKey:kTransactionStartDate];
         [self.params setValue:trans.category forKey:kTransactionCategory];
     }
-    else if (self.accountKey) {
-        Account *account = [Account MR_findFirstByAttribute:@"key" withValue:self.accountKey];
+    else if (self.account) {
+        Account *account = [self.account MR_inThreadContext];
         [self.accountButton setTitle:account.name forState:UIControlStateNormal];
         
         [self.params setValue:self.accountKey forKey:kAccountKey];
@@ -108,7 +114,7 @@ static NSString *kAccountKey = @"account key";
         NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"incomeType == %@", [self.params objectForKey:kTransactionIncomeType]];
         NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"system == NO"];
         NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:predicate1, predicate2, nil]];
-        [self.params setValue:[Category MR_findFirstWithPredicate:predicate] forKey:kTransactionCategory];
+        [self.params setValue:[Category MR_findFirstWithPredicate:predicate sortedBy:@"order" ascending:YES] forKey:kTransactionCategory];
     }
     else {
         [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
@@ -117,7 +123,7 @@ static NSString *kAccountKey = @"account key";
         NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"incomeType == %@", [self.params objectForKey:kTransactionIncomeType]];
         NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"system == NO"];
         NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:predicate1, predicate2, nil]];
-        [self.params setValue:[Category MR_findFirstWithPredicate:predicate] forKey:kTransactionCategory];
+        [self.params setValue:[Category MR_findFirstWithPredicate:predicate sortedBy:@"order" ascending:YES] forKey:kTransactionCategory];
     }
     [self updateIncomeTypeButtonTitle];
     [self updateCurrencyButtonTitle];
@@ -219,11 +225,20 @@ static NSString *kAccountKey = @"account key";
     }
     
     [self.params setValue:self.nameTextField.text forKey:kTransactionName];
+    
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
     [formatter setLocale:[NSLocale autoupdatingCurrentLocale]];
-    
     [self.params setValue:[formatter numberFromString:self.valueTextField.text] forKey:kTransactionValue];
+    
+    if ([self.feeTextField.text length]) {
+        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        [formatter setLocale:[NSLocale autoupdatingCurrentLocale]];
+        
+        [self.params setValue:[formatter numberFromString:self.feeTextField.text] forKey:kTransactionFee];
+    }
+    else [self.params setValue:[NSNumber numberWithDouble:0] forKey:kTransactionFee];
     
     return YES;
 }
@@ -284,6 +299,9 @@ static NSString *kAccountKey = @"account key";
     
     if (textField == self.valueTextField && !textField.text.length) {
         textField.text = @"0";
+    }
+    if (textField == self.feeTextField && [textField.text isEqualToString:@"0"]) {
+        textField.text = @"";
     }
     return YES;
 }

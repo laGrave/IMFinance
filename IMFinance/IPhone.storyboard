@@ -497,7 +497,7 @@
                                     <constraint firstAttribute="height" constant="47" id="XAg-Fv-ua4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -564,11 +564,15 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Название транзакции" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1VA-Am-xgZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Название" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1VA-Am-xgZ">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="Текущее значение" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZSI-XY-nTt">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Комиссия" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZY-Nz-BMc">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
@@ -584,7 +588,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYy-5H-R2N">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="UXD-Xc-nGB"/>
                                     <constraint firstAttribute="height" constant="34" type="user" id="fqN-ig-5UK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
@@ -602,7 +605,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJH-BB-yH7">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="RZm-6h-x2p"/>
-                                    <constraint firstAttribute="width" constant="130" id="qfN-GM-bNG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Дата">
@@ -617,6 +619,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ije-Ph-mv7">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="CBY-8D-hnC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Расход">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -632,6 +637,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gce-Vr-nDx">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" type="user" id="ERf-Ba-JXl"/>
+                                    <constraint firstAttribute="width" constant="130" id="VMF-4t-3rD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Категория">
@@ -649,22 +655,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yGX-qx-bFT" firstAttribute="top" secondItem="aJH-BB-yH7" secondAttribute="top" type="default" id="1p7-PG-Ymp"/>
-                            <constraint firstAttribute="trailing" secondItem="1VA-Am-xgZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3h5-LZ-YdV"/>
-                            <constraint firstItem="aJH-BB-yH7" firstAttribute="trailing" secondItem="ZSI-XY-nTt" secondAttribute="trailing" type="default" id="499-xm-zkM"/>
                             <constraint firstAttribute="trailing" secondItem="bYy-5H-R2N" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5DZ-Ev-qA2"/>
                             <constraint firstAttribute="trailing" secondItem="ije-Ph-mv7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5p2-r6-b7O"/>
                             <constraint firstItem="ZSI-XY-nTt" firstAttribute="top" secondItem="ije-Ph-mv7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CwP-OE-DTv"/>
-                            <constraint firstItem="bYy-5H-R2N" firstAttribute="leading" secondItem="ije-Ph-mv7" secondAttribute="leading" type="default" id="FPI-A4-wt4"/>
                             <constraint firstItem="gce-Vr-nDx" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="GUp-EO-slr"/>
-                            <constraint firstItem="1VA-Am-xgZ" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="100" type="user" id="VKz-7A-xc7"/>
+                            <constraint firstItem="bYy-5H-R2N" firstAttribute="top" secondItem="yZY-Nz-BMc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OhK-mG-7uC"/>
+                            <constraint firstItem="1VA-Am-xgZ" firstAttribute="trailing" secondItem="ZSI-XY-nTt" secondAttribute="trailing" type="default" id="P8g-gO-hFG"/>
+                            <constraint firstItem="yZY-Nz-BMc" firstAttribute="leading" secondItem="bYy-5H-R2N" secondAttribute="leading" type="default" id="P8z-qi-Ug5"/>
+                            <constraint firstAttribute="trailing" secondItem="yZY-Nz-BMc" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rqm-5O-dNp"/>
+                            <constraint firstItem="yZY-Nz-BMc" firstAttribute="leading" secondItem="ije-Ph-mv7" secondAttribute="leading" type="default" id="TEB-bE-qeu"/>
+                            <constraint firstItem="yZY-Nz-BMc" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="60" id="TQa-XJ-V9V"/>
                             <constraint firstItem="aJH-BB-yH7" firstAttribute="bottom" secondItem="yGX-qx-bFT" secondAttribute="bottom" type="default" id="VsK-vp-HC6"/>
                             <constraint firstItem="aJH-BB-yH7" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XGG-Kv-eJd"/>
-                            <constraint firstItem="bYy-5H-R2N" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="58" type="user" id="Xh1-Kt-M94"/>
                             <constraint firstItem="ZSI-XY-nTt" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="b0i-V8-UCT"/>
                             <constraint firstItem="ZSI-XY-nTt" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="62" type="user" id="cSM-TN-4s7"/>
                             <constraint firstItem="ZSI-XY-nTt" firstAttribute="trailing" secondItem="gce-Vr-nDx" secondAttribute="trailing" type="default" id="d0d-9O-fWQ"/>
                             <constraint firstItem="gce-Vr-nDx" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="20" symbolic="YES" type="user" id="gdb-3l-xTy"/>
                             <constraint firstAttribute="trailing" secondItem="yGX-qx-bFT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ght-Ab-b8l"/>
+                            <constraint firstItem="bYy-5H-R2N" firstAttribute="centerY" secondItem="1VA-Am-xgZ" secondAttribute="centerY" type="default" id="iLm-8d-1wF"/>
+                            <constraint firstItem="1VA-Am-xgZ" firstAttribute="trailing" secondItem="aJH-BB-yH7" secondAttribute="trailing" type="default" id="nLk-bY-9dW"/>
                             <constraint firstItem="1VA-Am-xgZ" firstAttribute="leading" secondItem="tGX-n0-z9a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pmt-op-yRI"/>
                             <constraint firstItem="yGX-qx-bFT" firstAttribute="leading" secondItem="bYy-5H-R2N" secondAttribute="leading" type="default" id="smU-hb-uRt"/>
                             <constraint firstItem="ije-Ph-mv7" firstAttribute="top" secondItem="tGX-n0-z9a" secondAttribute="top" constant="20" symbolic="YES" type="default" id="yzi-v7-XI8"/>
@@ -687,6 +696,7 @@
                         <outlet property="accountButton" destination="bYy-5H-R2N" id="enk-wA-f8q"/>
                         <outlet property="categoryButton" destination="gce-Vr-nDx" id="cGz-8X-BQF"/>
                         <outlet property="currencyButton" destination="yGX-qx-bFT" id="jNG-YB-jkH"/>
+                        <outlet property="feeTextField" destination="yZY-Nz-BMc" id="PgC-AE-wCd"/>
                         <outlet property="incomeTypeButton" destination="ije-Ph-mv7" id="o5S-uX-wJd"/>
                         <outlet property="nameTextField" destination="1VA-Am-xgZ" id="PmQ-xu-6ji"/>
                         <outlet property="startDateButton" destination="aJH-BB-yH7" id="wiB-kh-IIs"/>

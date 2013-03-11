@@ -31,7 +31,7 @@ static NSString *kTransactionFee = @"transaction fee";
 static NSString *kTransactionCurrency = @"transaction currency";
 static NSString *kTransactionStartDate = @"transaction start date";
 static NSString *kTransactionCategory = @"transaction category";
-static NSString *kAccountKey = @"account key";
+static NSString *kAccount = @"account";
 
 
 @interface IMTransactionEditViewController () <IMCurrecyPickerViewControllerDelegate, UITextFieldDelegate, IMAccountSelectorControllerDelegate, IMDateStartPickerDelegate, UIActionSheetDelegate, IMCategoriesPickerDelegate>
@@ -99,7 +99,7 @@ static NSString *kAccountKey = @"account key";
         [self.params setValue:trans.value forKey:kTransactionValue];
         [self.params setValue:trans.fee forKey:kTransactionFee];
         [self.params setValue:trans.currency forKey:kTransactionCurrency];
-        [self.params setValue:trans.account.key forKey:kAccountKey];
+        [self.params setValue:trans.account forKey:kAccount];
         [self.params setValue:trans.startDate forKey:kTransactionStartDate];
         [self.params setValue:trans.category forKey:kTransactionCategory];
     }
@@ -107,7 +107,7 @@ static NSString *kAccountKey = @"account key";
         Account *account = [self.account MR_inThreadContext];
         [self.accountButton setTitle:account.name forState:UIControlStateNormal];
         
-        [self.params setValue:self.accountKey forKey:kAccountKey];
+        [self.params setValue:self.account forKey:kAccount];
         [self.params setValue:account.currency forKey:kTransactionCurrency];
         [self.params setValue:[NSDate date] forKey:kTransactionStartDate];
         [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
@@ -214,7 +214,7 @@ static NSString *kAccountKey = @"account key";
         }
     }
     
-    if (![self.params objectForKey:kAccountKey]) {
+    if (![self.params objectForKey:kAccount]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Не выбран счет"
                                                         message:@"Пожалуйста, выберите счет"
                                                        delegate:nil
@@ -320,10 +320,10 @@ static NSString *kAccountKey = @"account key";
 #pragma mark -
 #pragma mark - IMAccountSelectorControllerDelegate protocol implementation
 
-- (void)selectorDidSelectAccount:(NSString *)accountKey {
+- (void)selectorDidSelectAccount:(Account *)anAccount {
 
-    Account *account = [Account MR_findFirstByAttribute:@"key" withValue:accountKey];
-    [self.params setValue:accountKey forKey:kAccountKey];
+    Account *account = [anAccount MR_inThreadContext];
+    [self.params setValue:account forKey:kAccount];
     [self.params setValue:account.currency forKey:kTransactionCurrency];
     [self.accountButton setTitle:account.name forState:UIControlStateNormal];
     [self updateCurrencyButtonTitle];
@@ -363,7 +363,10 @@ static NSString *kAccountKey = @"account key";
     }
     else [self.params setValue:[NSNumber numberWithBool:1] forKey:kTransactionIncomeType];
     
-    [self.params setValue:[Category MR_findFirstByAttribute:@"incomeType" withValue:[self.params objectForKey:kTransactionIncomeType]] forKey:kTransactionCategory];
+    NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"incomeType == %@", [self.params objectForKey:kTransactionIncomeType]];
+    NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"system == NO"];
+    NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:predicate1, predicate2, nil]];
+    [self.params setValue:[Category MR_findFirstWithPredicate:predicate sortedBy:@"order" ascending:YES] forKey:kTransactionCategory];
 
     [self updateIncomeTypeButtonTitle];
     [self updateCategoryButtonTitle];

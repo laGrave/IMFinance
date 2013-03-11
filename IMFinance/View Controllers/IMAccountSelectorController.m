@@ -47,7 +47,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     Account *account = [[Account MR_findAll] objectAtIndex:indexPath.row];
-    [self.delegate selectorDidSelectAccount:account.key];
+    [self.delegate selectorDidSelectAccount:account];
     
     if (self.navigationController) [self.navigationController popViewControllerAnimated:YES];
 }

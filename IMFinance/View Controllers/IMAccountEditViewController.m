@@ -65,8 +65,8 @@ static NSString *kAccountType = @"account type";
     
     CurrencyConfig *curConfig = [[CurrencyConfig alloc] init];
     
-    if (self.accountKey) {
-        Account *account = [Account MR_findFirstByAttribute:@"key" withValue:self.accountKey];
+    if (self.account) {
+        Account *account = [self.account MR_inThreadContext];
         
         [self.params setValue:account.key forKey:kAccountKey];
         [self.params setValue:account.name forKey:kAccountName];

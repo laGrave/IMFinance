@@ -12,7 +12,7 @@
 
 @protocol IMAccountSelectorControllerDelegate <NSObject>
 
-- (void)selectorDidSelectAccount:(NSString *)accountKey;
+- (void)selectorDidSelectAccount:(Account *)account;
 
 @end
 

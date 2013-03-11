@@ -132,7 +132,7 @@
     Account *account = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     IMAccountEditViewController *accountEditVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Account Edit Controller"];
-    accountEditVC.accountKey = account.key;
+    accountEditVC.account = account;
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:accountEditVC];
     [self presentViewController:navVC animated:YES completion:NULL];
 }

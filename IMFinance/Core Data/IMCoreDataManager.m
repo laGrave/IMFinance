@@ -154,11 +154,8 @@ static NSString *kTransactionHidden = @"transaction hidden";
                 transaction.startDate = [NSDate date];
             }
             
-            Account *account = [Account MR_findFirstByAttribute:@"key"
-                                                      withValue:[parameters valueForKey:kAccountKey]
-                                                      inContext:localContext];
-            
-            transaction.account = account;
+            Account *account = [parameters objectForKey:kAccount];
+            transaction.account = [account MR_inContext:localContext];
             
             NSString *name = [parameters objectForKey:kTransactionName];
             name = (name) ? name : @"";
@@ -200,7 +197,7 @@ static NSString *kTransactionHidden = @"transaction hidden";
                                   }
                               }
                               else if (failureBlock)
-                                  failureBlock();
+                                  failureBlock(error);
                           }];
     });
 }

@@ -83,7 +83,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
-    if ([segue.identifier isEqualToString:@"edit transaction"] && self.accountKey && self.accountKey.length) {
+    if ([segue.identifier isEqualToString:@"edit transaction"] && self.account) {
         UINavigationController *navVC = (UINavigationController *)segue.destinationViewController;
         IMTransactionEditViewController *transactionEditVC = (IMTransactionEditViewController *)[navVC topViewController];
         transactionEditVC.account = self.account;

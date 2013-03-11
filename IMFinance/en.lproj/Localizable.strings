@@ -6,6 +6,7 @@
   Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 */
 
+"Cancel" = "Cancel";
 
 // date intervals
 "never" = "Never";

@@ -105,15 +105,19 @@ static NSString *kAccountKey = @"account key";
         [self.params setValue:account.currency forKey:kTransactionCurrency];
         [self.params setValue:[NSDate date] forKey:kTransactionStartDate];
         [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
-        [self.params setValue:[Category MR_findFirstByAttribute:@"incomeType"
-                                                      withValue:[self.params objectForKey:kTransactionIncomeType]] forKey:kTransactionCategory];
+        NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"incomeType == %@", [self.params objectForKey:kTransactionIncomeType]];
+        NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"system == NO"];
+        NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:predicate1, predicate2, nil]];
+        [self.params setValue:[Category MR_findFirstWithPredicate:predicate] forKey:kTransactionCategory];
     }
     else {
         [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
         [self.params setValue:[curConfig defaultCurrencyCode] forKey:kTransactionCurrency];
         [self.params setValue:[NSDate date] forKey:kTransactionStartDate];
-        [self.params setValue:[Category MR_findFirstByAttribute:@"incomeType"
-                                                      withValue:[self.params objectForKey:kTransactionIncomeType]] forKey:kTransactionCategory];
+        NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"incomeType == %@", [self.params objectForKey:kTransactionIncomeType]];
+        NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"system == NO"];
+        NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:predicate1, predicate2, nil]];
+        [self.params setValue:[Category MR_findFirstWithPredicate:predicate] forKey:kTransactionCategory];
     }
     [self updateIncomeTypeButtonTitle];
     [self updateCurrencyButtonTitle];
@@ -202,6 +206,16 @@ static NSString *kAccountKey = @"account key";
         if ([textField isKindOfClass:[UITextField class]]) {
             [textField resignFirstResponder];
         }
+    }
+    
+    if (![self.params objectForKey:kAccountKey]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Не выбран счет"
+                                                        message:@"Пожалуйста, выберите счет"
+                                                       delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"Cancel", NULL)
+                                              otherButtonTitles:nil];
+        [alert show];
+        return NO;
     }
     
     [self.params setValue:self.nameTextField.text forKey:kTransactionName];

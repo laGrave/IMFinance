@@ -25,7 +25,11 @@
 
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        self.categories = [Category MR_findByAttribute:@"incomeType" withValue:incomeType andOrderBy:@"order" ascending:YES];
+//        self.categories = [Category MR_findByAttribute:@"incomeType" withValue:incomeType andOrderBy:@"order" ascending:YES];
+        NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"incomeType == %@", incomeType];
+        NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"system == NO"];
+        NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:predicate1, predicate2, nil]];
+        self.categories = [Category MR_findAllSortedBy:@"order" ascending:YES withPredicate:predicate];
         self.delegate = delegate;
     }
     return self;

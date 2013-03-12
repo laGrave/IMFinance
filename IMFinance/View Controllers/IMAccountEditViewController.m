@@ -16,7 +16,7 @@
 #import "IMCurrecyPickerViewController.h"
 #import "CurrencyConfig.h"
 
-static NSString *kAccountKey = @"account key";
+static NSString *kAccount = @"account";
 static NSString *kAccountName = @"account name";
 static NSString *kAccountInitialValue = @"account initial value";
 static NSString *kAccountCurrency = @"account currency";
@@ -68,7 +68,7 @@ static NSString *kAccountType = @"account type";
     if (self.account) {
         Account *account = [self.account MR_inThreadContext];
         
-        [self.params setValue:account.key forKey:kAccountKey];
+        [self.params setValue:account forKey:kAccount];
         [self.params setValue:account.name forKey:kAccountName];
         [self.params setValue:account.type forKey:kAccountType];
         [self.accountTypePicker selectRow:account.type.integerValue inComponent:0 animated:NO];

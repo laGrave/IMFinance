@@ -21,7 +21,7 @@
  создание и сохранение нового счета с набором параметров
  в фоне с параметрами в виде блоков
  */
-- (void)editAccountWithParams:(NSDictionary *)parameters
+- (void)editAccountWithParams:(NSMutableDictionary *)parameters
                       success:(void (^)())successBlock
                       failure:(void (^)(NSError *error))failureBlock;
 

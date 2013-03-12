@@ -66,25 +66,23 @@ static NSString *kAccountType = @"account type";
 создание и сохранение нового счета с набором параметров
 в фоне с параметрами в виде блоков
 */
-- (void)editAccountWithParams:(NSDictionary *)parameters
+- (void)editAccountWithParams:(NSMutableDictionary *)parameters
                       success:(void (^)())successBlock
                       failure:(void (^)(NSError *))failureBlock {
     
     dispatch_async([self background_save_queue], ^{
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
-            Account *account;
+
+            Account *account = [parameters objectForKey:kAccount];
             
-            NSString *key = [parameters valueForKey:kAccountKey];
-            
-            if (key && key.length) {
-                account = [Account MR_findFirstByAttribute:@"key" withValue:key inContext:localContext];
+            if (account) {
+                account = [account MR_inContext:localContext];
             }
             else {
                 account = [Account MR_createInContext:localContext];
-                key = [@"account" stringByAppendingString:[[[NSDate date] description] MD5]];
-                account.key = key;
             }
-            [parameters setValue:key forKey:kAccountKey];
+
+            [parameters setValue:account forKey:kAccount];
             
             account.name = [parameters objectForKey:kAccountName];
             account.currency = [parameters objectForKey:kAccountCurrency];
@@ -98,7 +96,7 @@ static NSString *kAccountType = @"account type";
                                       NSMutableDictionary *transParams = [[NSMutableDictionary alloc] init];
                                       [transParams setValue:initialValue forKey:kTransactionValue];
                                       [transParams setValue:[NSNumber numberWithBool:YES] forKey:kTransactionHidden];
-                                      [transParams setValue:[parameters objectForKey:kAccountKey] forKey:kAccountKey];
+                                      [transParams setValue:[parameters objectForKey:kAccount] forKey:kAccount];
                                       [transParams setValue:[parameters objectForKey:kAccountCurrency] forKey:kTransactionCurrency];
                                       [transParams setValue:@"sys" forKey:kTransactionName];
                                       [transParams setValue:[NSNumber numberWithBool:YES] forKey:kTransactionIncomeType];
@@ -119,7 +117,6 @@ static NSString *kAccountType = @"account type";
 #pragma mark Core Data - Transactions
 
 static NSString *kTramsaction = @"transaction";
-static NSString *kTransactionKey = @"transaction key";
 static NSString *kTransactionIncomeType = @"transaction income type";
 static NSString *kTransactionName = @"transaction name";
 static NSString *kTransactionValue = @"transaction value";
@@ -140,17 +137,13 @@ static NSString *kTransactionHidden = @"transaction hidden";
     dispatch_async([self background_save_queue], ^{
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
             
-            Transaction *transaction;
+            Transaction *transaction = [parameters objectForKey:kTramsaction];
             
-            NSString *key = [parameters valueForKey:kTransactionKey];
-            
-            if (key && key.length) {
-                transaction = [Transaction MR_findFirstByAttribute:@"key" withValue:key inContext:localContext];
+            if (transaction) {
+                transaction = [transaction MR_inContext:localContext];
             }
             else {
                 transaction = [Transaction MR_createInContext:localContext];
-                transaction.key = [@"transaction" stringByAppendingString:[[[NSDate date] description] MD5]];
-            
                 transaction.startDate = [NSDate date];
             }
             
@@ -271,8 +264,6 @@ static NSString *kCategorySystem = @"categorySystem";
 
 - (void)setupBaseCategories {
     
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"BaseCategories" ofType:@"plist"];
-    NSArray *allCategories = [NSArray arrayWithContentsOfFile:plistPath];
     
     //setup system category
     NSMutableDictionary *systemCategoryParams = [[NSMutableDictionary alloc] init];
@@ -286,6 +277,8 @@ static NSString *kCategorySystem = @"categorySystem";
     [systemCategoryParams setValue:[NSNumber numberWithBool:NO] forKey:kCategoryIncomeType];
     [self editCategoryWithParams:systemCategoryParams];
     
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"BaseCategories" ofType:@"plist"];
+    NSArray *allCategories = [NSArray arrayWithContentsOfFile:plistPath];
     
     for (NSDictionary *categoryParams in allCategories) {
         [self editCategoryWithParams:categoryParams];

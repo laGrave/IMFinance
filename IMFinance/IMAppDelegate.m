@@ -9,6 +9,7 @@
 #import "IMAppDelegate.h"
 
 #import "IMCoreDataManager.h"
+#import "Category.h"
 
 @implementation IMAppDelegate
 
@@ -82,10 +83,11 @@
         [[NSUserDefaults standardUserDefaults] setObject:currencyCode forKey:@"default currency code"];
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        
-        //заносим базовые категории в базу
-        [[[IMCoreDataManager alloc] init] setupBaseCategories];
     }
+    
+    //заносим базовые категории в базу
+    if ([[Category MR_numberOfEntities] integerValue] == 0)
+        [[[IMCoreDataManager alloc] init] setupBaseCategories];
 
     #define TESTING 1
     #ifdef TESTING

@@ -23,7 +23,7 @@
 #import "IMDateStartPicker.h"
 
 
-static NSString *kTransactionKey = @"transaction key";
+static NSString *kTramsaction = @"transaction";
 static NSString *kTransactionName = @"transaction name";
 static NSString *kTransactionIncomeType = @"transaction income type";
 static NSString *kTransactionValue = @"transaction value";
@@ -93,7 +93,7 @@ static NSString *kAccount = @"account";
             self.feeTextField.text = [NSString stringWithFormat:@"%@", trans.fee];
         }
         
-        [self.params setValue:trans.key forKey:kTransactionKey];
+        [self.params setValue:trans forKey:kTramsaction];
         [self.params setValue:trans.name forKey:kTransactionName];
         [self.params setValue:trans.incomeType forKey:kTransactionIncomeType];
         [self.params setValue:trans.value forKey:kTransactionValue];
@@ -107,7 +107,7 @@ static NSString *kAccount = @"account";
         Account *account = [self.account MR_inThreadContext];
         [self.accountButton setTitle:account.name forState:UIControlStateNormal];
         
-        [self.params setValue:self.account forKey:kAccount];
+        [self.params setValue:account forKey:kAccount];
         [self.params setValue:account.currency forKey:kTransactionCurrency];
         [self.params setValue:[NSDate date] forKey:kTransactionStartDate];
         [self.params setValue:[NSNumber numberWithBool:0] forKey:kTransactionIncomeType];
@@ -169,7 +169,10 @@ static NSString *kAccount = @"account";
     if ([self setupParams]) {
         [[IMCoreDataManager sharedInstance] editTransactionWithParams:self.params
                                                               success:^{[self dismissViewControllerAnimated:YES completion:NULL];}
-                                                              failure:^(NSError *error){NSLog(@"%@", error.userInfo);}];
+                                                              failure:^(NSError *error){
+                                                                  NSLog(@"%@", error.userInfo);
+                                                                  [self dismissViewControllerAnimated:YES completion:NULL];
+                                                              }];
     }
     else NSLog(@"заполните все поля!");
 }

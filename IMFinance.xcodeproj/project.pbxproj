@@ -637,7 +637,6 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/IMFinance/Libraries/ABCalendarPicker\"",
 					"\"$(SRCROOT)/IMFinance/Libraries\"",
 					"\"$(SRCROOT)/IMFinance\"",
 				);
@@ -655,7 +654,6 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/IMFinance/Libraries/ABCalendarPicker\"",
 					"\"$(SRCROOT)/IMFinance/Libraries\"",
 					"\"$(SRCROOT)/IMFinance\"",
 				);

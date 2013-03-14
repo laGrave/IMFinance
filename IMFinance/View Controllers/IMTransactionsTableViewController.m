@@ -36,7 +36,7 @@
     NSPredicate *predicate;
     if (self.account) {
         Account *account = [self.account MR_inThreadContext];
-        predicate = [NSPredicate predicateWithFormat:@"account.key like %@", account.key];
+        predicate = [NSPredicate predicateWithFormat:@"account == %@", account];
     }
     else if (self.category) {
         Category *category = [self.category MR_inThreadContext];
@@ -109,9 +109,10 @@
     
     Transaction *trans = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    static NSString *CellIdentifier = @"Cell";
-    static NSString *DetailedCellIdentifier = @"DetailedCell";
-    NSString *identifier = ([trans.name length]) ? DetailedCellIdentifier : CellIdentifier;
+    static NSString *Cell = @"Cell";
+    NSString *Detailed = (trans.name.length) ? @"Detailed" : @"";
+    NSString *Fee = (trans.fee.doubleValue != 0) ? @"WithFee" : @"";
+    NSString *identifier = [NSString stringWithFormat:@"%@%@%@", Detailed, Cell, Fee];
     IMTransactionCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     
     if ([trans.name length]) {
@@ -125,6 +126,7 @@
     [numberFormatter setCurrencyCode:trans.currency];
     [numberFormatter setRoundingMode:NSNumberFormatterRoundCeiling];
     cell.priceLabel.text = [NSString stringWithFormat:@"%@", [numberFormatter stringFromNumber:trans.value]];
+    cell.feeLabel.text = [NSString stringWithFormat:@"%@", [numberFormatter stringFromNumber:trans.fee]];
     
     return cell;
 }

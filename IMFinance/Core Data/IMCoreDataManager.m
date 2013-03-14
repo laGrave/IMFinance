@@ -10,7 +10,7 @@
 
 #import <NSHash/NSString+NSHash.h>
 
-#import "Account.h"
+#import "Account+Extensions.h"
 #import "Transaction.h"
 #import "Category.h"
 
@@ -66,7 +66,7 @@ static NSString *kAccountType = @"account type";
 создание и сохранение нового счета с набором параметров
 в фоне с параметрами в виде блоков
 */
-- (void)editAccountWithParams:(NSMutableDictionary *)parameters
+- (void)editAccountWithParams:(NSDictionary *)parameters
                       success:(void (^)())successBlock
                       failure:(void (^)(NSError *))failureBlock {
     
@@ -84,32 +84,54 @@ static NSString *kAccountType = @"account type";
 
             [parameters setValue:account forKey:kAccount];
             
+            account.modDate = [NSDate date];
+            
             account.name = [parameters objectForKey:kAccountName];
             account.currency = [parameters objectForKey:kAccountCurrency];
             account.type = [parameters objectForKey:kAccountType];
         }
                           completion:^(BOOL success, NSError *error){
                               if (success) {
-                                  NSNumber *initialValue = [parameters objectForKey:kAccountInitialValue];
-                                  if (initialValue) {
-                                      //скрытая транзакция для задания начального значения счета
-                                      NSMutableDictionary *transParams = [[NSMutableDictionary alloc] init];
-                                      [transParams setValue:initialValue forKey:kTransactionValue];
-                                      [transParams setValue:[NSNumber numberWithBool:YES] forKey:kTransactionHidden];
-                                      [transParams setValue:[parameters objectForKey:kAccount] forKey:kAccount];
-                                      [transParams setValue:[parameters objectForKey:kAccountCurrency] forKey:kTransactionCurrency];
-                                      [transParams setValue:@"sys" forKey:kTransactionName];
-                                      [transParams setValue:[NSNumber numberWithBool:YES] forKey:kTransactionIncomeType];
-                                      Category *category = [Category MR_findFirstByAttribute:@"system" withValue:[NSNumber numberWithBool:YES]];
-                                      [transParams setValue:category forKey:kTransactionCategory];
-                                      [transParams setValue:[NSDate date] forKey:kTransactionStartDate];
-                                      [self editTransactionWithParams:transParams success:nil failure:nil];
-                                  }
+                                  [self correctTransaction:parameters];
                                   successBlock();
                               }
-                              else failureBlock(error);
+                              else {
+                                  failureBlock(error);
+                              }
                           }];
     });
+}
+
+- (void)correctTransaction:(NSDictionary *)parameters {
+
+    NSNumber *initialValue = [parameters objectForKey:kAccountInitialValue];
+    if (initialValue) {
+        //скрытая транзакция для корректировки текущего значения счета
+        Account *account = [[parameters objectForKey:kAccount] MR_inThreadContext];
+        double dif = initialValue.doubleValue - account.value.doubleValue;
+        if (dif != 0) {
+            BOOL income = (dif > 0) ? YES : NO;
+            NSMutableDictionary *transParams = [[NSMutableDictionary alloc] init];
+            [transParams setValue:[NSNumber numberWithDouble:dif] forKey:kTransactionValue];
+            [transParams setValue:[parameters objectForKey:kAccount] forKey:kAccount];
+            [transParams setValue:[parameters objectForKey:kAccountCurrency] forKey:kTransactionCurrency];
+            [transParams setValue:[NSNumber numberWithBool:income] forKey:kTransactionIncomeType];
+            Category *category = [Category MR_findFirstByAttribute:@"system" withValue:[NSNumber numberWithBool:YES]];
+            [transParams setValue:category forKey:kTransactionCategory];
+            [transParams setValue:[NSDate date] forKey:kTransactionStartDate];
+            
+            if (account.transactions.count) {
+                [transParams setValue:NSLocalizedString(@"Balance correction", NULL) forKey:kTransactionName];
+                [transParams setValue:[NSNumber numberWithBool:NO] forKey:kTransactionHidden];
+            }
+            else {
+                [transParams setValue:@"syscorrect" forKey:kTransactionName];
+                [transParams setValue:[NSNumber numberWithBool:YES] forKey:kTransactionHidden];
+            }
+            
+            [self editTransactionWithParams:transParams success:nil failure:nil];
+        }
+    }
 }
 
 
@@ -181,6 +203,8 @@ static NSString *kTransactionHidden = @"transaction hidden";
             if (startDate) {
                 transaction.startDate = [startDate dateWithOutTime];
             }
+            
+            transaction.modDate = [NSDate date];
             
         }
                           completion:^(BOOL success, NSError *error){

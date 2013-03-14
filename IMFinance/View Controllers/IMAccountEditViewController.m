@@ -9,7 +9,7 @@
 #import "IMAccountEditViewController.h"
 
 #import "IMCoreDataManager.h"
-#import "Account.h"
+#import "Account+Extensions.h"
 
 #import "IMAccountTypeConfig.h"
 
@@ -81,6 +81,7 @@ static NSString *kAccountType = @"account type";
         
         
         self.nameTextField.text = account.name;
+        self.valueTextField.text = [NSString stringWithFormat:@"%@", account.value];
     }
     
     else [self.params setValue:[curConfig defaultCurrencyCode] forKey:kAccountCurrency];

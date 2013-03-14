@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailedTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *feeLabel;
 
 @end

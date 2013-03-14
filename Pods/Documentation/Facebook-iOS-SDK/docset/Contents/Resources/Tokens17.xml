@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBInsights.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBInsights</TokenIdentifier>
+			<Abstract type="html">@class FBInsights</Abstract>
+			<DeclaredIn>FBInsights.h</DeclaredIn>
+			
+			<NodeRef refid="17"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBInsights/appVersion</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBInsights.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)appVersion</Declaration>
+			
+			
+			<Anchor>//api/name/appVersion</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBInsights/setAppVersion:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBInsights.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setAppVersion:(NSString *)appVersion</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>appVersion</Name>
+					<Abstract type="html">The version identifier of the iOS app that events are being logged through.
+Enables analysis and breakdown of logged events by app version.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setAppVersion:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBInsights/logPurchase:currency:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBInsights.h</DeclaredIn>			
+			
+			<Declaration>+ (void)logPurchase:(double)purchaseAmount currency:(NSString *)currency</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>purchaseAmount</Name>
+					<Abstract type="html">Purchase amount to be logged, as expressed in the specified currency.</Abstract>
+				</Parameter><Parameter>
+					<Name>currency</Name>
+					<Abstract type="html">Currency, is denoted as, e.g. &quot;USD&quot;, &quot;EUR&quot;, &quot;GBP&quot;.  See ISO-4217 for
+specific values.  One reference for these is http://en.wikipedia.org/wiki/ISO_4217.
+
+@discussion              This event immediately triggers a flush of the FBInsights event queue, unless the flushBehavior is set
+to FBInsightsFlushBehaviorExplicitOnly.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/logPurchase:currency:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBInsights/logPurchase:currency:parameters:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBInsights.h</DeclaredIn>			
+			
+			<Declaration>+ (void)logPurchase:(double)purchaseAmount currency:(NSString *)currency parameters:(NSDictionary *)parameters</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>purchaseAmount</Name>
+					<Abstract type="html">Purchase amount to be logged, as expressed in the specified currency.</Abstract>
+				</Parameter><Parameter>
+					<Name>currency</Name>
+					<Abstract type="html">Currency, is denoted as, e.g. &quot;USD&quot;, &quot;EUR&quot;, &quot;GBP&quot;.  See ISO-4217 for
+specific values.  One reference for these is http://en.wikipedia.org/wiki/ISO_4217.</Abstract>
+				</Parameter><Parameter>
+					<Name>parameters</Name>
+					<Abstract type="html">Arbitrary parameter dictionary of characteristics. The keys to this dictionary must
+be NSString&apos;s, and the values are expected to be NSString or NSNumber.  Limitations on the number of
+parameters and name construction are given in the FBInsights documentation.
+
+@discussion              This event immediately triggers a flush of the FBInsights event queue, unless the flushBehavior is set
+to FBInsightsFlushBehaviorExplicitOnly.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/logPurchase:currency:parameters:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBInsights/logPurchase:currency:parameters:session:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBInsights.h</DeclaredIn>			
+			
+			<Declaration>+ (void)logPurchase:(double)purchaseAmount currency:(NSString *)currency parameters:(NSDictionary *)parameters session:(FBSession *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>purchaseAmount</Name>
+					<Abstract type="html">Purchase amount to be logged, as expressed in the specified currency.</Abstract>
+				</Parameter><Parameter>
+					<Name>currency</Name>
+					<Abstract type="html">Currency, is denoted as, e.g. &quot;USD&quot;, &quot;EUR&quot;, &quot;GBP&quot;.  See ISO-4217 for
+specific values.  One reference for these is http://en.wikipedia.org/wiki/ISO_4217.</Abstract>
+				</Parameter><Parameter>
+					<Name>parameters</Name>
+					<Abstract type="html">Arbitrary parameter dictionary of characteristics. The keys to this dictionary must
+be NSString&apos;s, and the values are expected to be NSString or NSNumber.  Limitations on the number of
+parameters and name construction are given in the FBInsights documentation.</Abstract>
+				</Parameter><Parameter>
+					<Name>session</Name>
+					<Abstract type="html">FBSession to direct the event logging to, and thus be logged with whatever user (if any)
+is associated with that FBSession.  A value of nil will use [FBSession activeSession].
+
+@discussion            This event immediately triggers a flush of the FBInsights event queue, unless the flushBehavior is set
+to FBInsightsFlushBehaviorExplicitOnly.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/logPurchase:currency:parameters:session:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBInsights/logConversionPixel:valueOfPixel:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBInsights.h</DeclaredIn>			
+			
+			<Declaration>+ (void)logConversionPixel:(NSString *)pixelID valueOfPixel:(double)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>pixelID</Name>
+					<Abstract type="html">Numeric ID for the conversion pixel to be logged.  See https://www.facebook.com/help/435189689870514 to learn how to create
+a conversion pixel.</Abstract>
+				</Parameter><Parameter>
+					<Name>value</Name>
+					<Abstract type="html">Value of what the logging of this pixel is worth to you.  The currency that this is expressed in doesn&apos;t matter, so long as it is consistent across all logging for this pixel.
+
+@discussion          This event immediately triggers a flush of the FBInsights event queue, unless the flushBehavior is set
+to FBInsightsFlushBehaviorExplicitOnly.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/logConversionPixel:valueOfPixel:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBInsights/logConversionPixel:valueOfPixel:session:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBInsights.h</DeclaredIn>			
+			
+			<Declaration>+ (void)logConversionPixel:(NSString *)pixelID valueOfPixel:(double)value session:(FBSession *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>pixelID</Name>
+					<Abstract type="html">Numeric ID for the conversion pixel to be logged.  See https://www.facebook.com/help/435189689870514 to learn how to create
+a conversion pixel.</Abstract>
+				</Parameter><Parameter>
+					<Name>value</Name>
+					<Abstract type="html">Value of what the logging of this pixel is worth to you.  The currency that this is expressed in doesn&apos;t matter, so long as it is consistent across all logging for this pixel.</Abstract>
+				</Parameter><Parameter>
+					<Name>session</Name>
+					<Abstract type="html">FBSession to direct the event logging to, and thus be logged with whatever user (if any)
+is associated with that FBSession.  A value of nil will use [FBSession activeSession].
+
+@discussion          This event immediately triggers a flush of the FBInsights event queue, unless the flushBehavior is set
+to FBInsightsFlushBehaviorExplicitOnly.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/logConversionPixel:valueOfPixel:session:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBInsights/flushBehavior</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBInsights.h</DeclaredIn>			
+			
+			<Declaration>+ (FBInsightsFlushBehavior)flushBehavior</Declaration>
+			
+			
+			<Anchor>//api/name/flushBehavior</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBInsights/setFlushBehavior:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBInsights.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setFlushBehavior:(FBInsightsFlushBehavior)flushBehavior</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>flushBehavior</Name>
+					<Abstract type="html">The desired FBInsightsFlushBehavior to be used.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setFlushBehavior:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBInsights/flush</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBInsights.h</DeclaredIn>			
+			
+			<Declaration>+ (void)flush</Declaration>
+			
+			
+			<Anchor>//api/name/flush</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBInsights/logImplicitEvent:valueToSum:parameters:session:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBInsights+Internal.h</DeclaredIn>			
+			
+			<Declaration>+ (void)logImplicitEvent:(NSString *)eventName valueToSum:(double)valueToSum parameters:(NSDictionary *)parameters session:(FBSession *)session</Declaration>
+			
+			
+			<Anchor>//api/name/logImplicitEvent:valueToSum:parameters:session:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

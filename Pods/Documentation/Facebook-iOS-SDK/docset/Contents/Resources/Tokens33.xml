@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBSessionInsightsState.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBSessionInsightsState</TokenIdentifier>
+			<Abstract type="html">Internal class that holds all the state associated with FBInsights for a particular FBSession.  An
+instance of this lives on FBSession.</Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>
+			
+			<NodeRef refid="33"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionInsightsState/setAccumulatedEvents:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, retain) NSMutableArray *accumulatedEvents</Declaration>
+			
+			
+			<Anchor>//api/name/accumulatedEvents</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSessionInsightsState/accumulatedEvents</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, retain) NSMutableArray *accumulatedEvents</Declaration>
+			
+			
+			<Anchor>//api/name/accumulatedEvents</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionInsightsState/setInFlightEvents:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, retain) NSMutableArray *inFlightEvents</Declaration>
+			
+			
+			<Anchor>//api/name/inFlightEvents</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSessionInsightsState/inFlightEvents</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, retain) NSMutableArray *inFlightEvents</Declaration>
+			
+			
+			<Anchor>//api/name/inFlightEvents</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionInsightsState/setNumSkippedEventsDueToFullBuffer:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>@property (readwrite) int numSkippedEventsDueToFullBuffer</Declaration>
+			
+			
+			<Anchor>//api/name/numSkippedEventsDueToFullBuffer</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSessionInsightsState/numSkippedEventsDueToFullBuffer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>@property (readwrite) int numSkippedEventsDueToFullBuffer</Declaration>
+			
+			
+			<Anchor>//api/name/numSkippedEventsDueToFullBuffer</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionInsightsState/setNumAbandonedDueToSessionChange:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>@property (readwrite) int numAbandonedDueToSessionChange</Declaration>
+			
+			
+			<Anchor>//api/name/numAbandonedDueToSessionChange</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSessionInsightsState/numAbandonedDueToSessionChange</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>@property (readwrite) int numAbandonedDueToSessionChange</Declaration>
+			
+			
+			<Anchor>//api/name/numAbandonedDueToSessionChange</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionInsightsState/setRequestInFlight:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>@property (readwrite) BOOL requestInFlight</Declaration>
+			
+			
+			<Anchor>//api/name/requestInFlight</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSessionInsightsState/requestInFlight</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>@property (readwrite) BOOL requestInFlight</Declaration>
+			
+			
+			<Anchor>//api/name/requestInFlight</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionInsightsState/addEvent:isImplicit:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>- (void)addEvent:(NSDictionary *)eventDictionary isImplicit:(BOOL)isImplicit</Declaration>
+			
+			
+			<Anchor>//api/name/addEvent:isImplicit:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionInsightsState/jsonEncodeInFlightEvents:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)jsonEncodeInFlightEvents:(BOOL)includeImplicitEvents</Declaration>
+			
+			
+			<Anchor>//api/name/jsonEncodeInFlightEvents:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionInsightsState/getAccumulatedEventCount</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>- (int)getAccumulatedEventCount</Declaration>
+			
+			
+			<Anchor>//api/name/getAccumulatedEventCount</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionInsightsState/abandonEvents</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>- (void)abandonEvents</Declaration>
+			
+			
+			<Anchor>//api/name/abandonEvents</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionInsightsState/clearInFlightAndStats</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionInsightsState.h</DeclaredIn>			
+			
+			<Declaration>- (void)clearInFlightAndStats</Declaration>
+			
+			
+			<Anchor>//api/name/clearInFlightAndStats</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

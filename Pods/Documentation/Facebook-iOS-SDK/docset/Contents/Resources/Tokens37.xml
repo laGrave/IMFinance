@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBSystemAccountStoreAdapter.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBSystemAccountStoreAdapter</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSystemAccountStoreAdapter.h</DeclaredIn>
+			
+			<NodeRef refid="37"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSystemAccountStoreAdapter/requestAccessToFacebookAccountStore:handler:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSystemAccountStoreAdapter.h</DeclaredIn>			
+			
+			<Declaration>- (void)requestAccessToFacebookAccountStore:(FBSession *)session handler:(FBRequestAccessToAccountsHandler)handler</Declaration>
+			
+			
+			<Anchor>//api/name/requestAccessToFacebookAccountStore:handler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSystemAccountStoreAdapter/requestAccessToFacebookAccountStore:defaultAudience:isReauthorize:appID:session:handler:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSystemAccountStoreAdapter.h</DeclaredIn>			
+			
+			<Declaration>- (void)requestAccessToFacebookAccountStore:(NSArray *)permissions defaultAudience:(FBSessionDefaultAudience)defaultAudience isReauthorize:(BOOL)isReauthorize appID:(NSString *)appID session:(FBSession *)session handler:(FBRequestAccessToAccountsHandler)handler</Declaration>
+			
+			
+			<Anchor>//api/name/requestAccessToFacebookAccountStore:defaultAudience:isReauthorize:appID:session:handler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSystemAccountStoreAdapter/renewSystemAuthorization:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSystemAccountStoreAdapter.h</DeclaredIn>			
+			
+			<Declaration>- (void)renewSystemAuthorization:(void ( ^ ) ( ACAccountCredentialRenewResult result , NSError *error ))handler</Declaration>
+			
+			
+			<Anchor>//api/name/renewSystemAuthorization:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSystemAccountStoreAdapter/sharedInstance</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSystemAccountStoreAdapter.h</DeclaredIn>			
+			
+			<Declaration>+ (FBSystemAccountStoreAdapter *)sharedInstance</Declaration>
+			
+			
+			<Anchor>//api/name/sharedInstance</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSystemAccountStoreAdapter/setSharedInstance:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSystemAccountStoreAdapter.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setSharedInstance:(FBSystemAccountStoreAdapter *)instance</Declaration>
+			
+			
+			<Anchor>//api/name/setSharedInstance:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSystemAccountStoreAdapter/setForceBlockingRenew:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSystemAccountStoreAdapter.h</DeclaredIn>			
+			
+			<Declaration>@property (assign) BOOL forceBlockingRenew</Declaration>
+			
+			
+			<Anchor>//api/name/forceBlockingRenew</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSystemAccountStoreAdapter/forceBlockingRenew</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSystemAccountStoreAdapter.h</DeclaredIn>			
+			
+			<Declaration>@property (assign) BOOL forceBlockingRenew</Declaration>
+			
+			
+			<Anchor>//api/name/forceBlockingRenew</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSystemAccountStoreAdapter/setCanRequestAccessWithoutUI:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSystemAccountStoreAdapter.h</DeclaredIn>			
+			
+			<Declaration>@property (assign, readonly) BOOL canRequestAccessWithoutUI</Declaration>
+			
+			
+			<Anchor>//api/name/canRequestAccessWithoutUI</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSystemAccountStoreAdapter/canRequestAccessWithoutUI</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSystemAccountStoreAdapter.h</DeclaredIn>			
+			
+			<Declaration>@property (assign, readonly) BOOL canRequestAccessWithoutUI</Declaration>
+			
+			
+			<Anchor>//api/name/canRequestAccessWithoutUI</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

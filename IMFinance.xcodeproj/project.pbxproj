@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		A741CC1A898D4B31B347DB75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591F429DE7F4C5AB075756F /* libPods.a */; };
 		B06D4D7616D91573006190E4 /* IMCategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06D4D7516D91573006190E4 /* IMCategoriesTableViewController.m */; };
+		B0BEC76B16F24703008D33EC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC76A16F24703008D33EC /* AudioToolbox.framework */; };
+		B0BEC76D16F2470D008D33EC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC76C16F2470D008D33EC /* CFNetwork.framework */; };
+		B0BEC76F16F2471B008D33EC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC76E16F2471B008D33EC /* CoreLocation.framework */; };
+		B0BEC77316F2474B008D33EC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC77216F2474B008D33EC /* MobileCoreServices.framework */; };
+		B0BEC77516F2475C008D33EC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC77416F2475C008D33EC /* Security.framework */; };
+		B0BEC77716F24764008D33EC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC77616F24764008D33EC /* StoreKit.framework */; };
+		B0BEC77916F24770008D33EC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC77816F24770008D33EC /* SystemConfiguration.framework */; };
+		B0BEC77F16F24B5E008D33EC /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC77016F24741008D33EC /* libz.1.1.3.dylib */; };
 		B0D51D9D16DA8C0A00938799 /* IMCategoryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D51D9C16DA8C0A00938799 /* IMCategoryEditViewController.m */; };
 		B0EF468816D77706008A6C78 /* BaseCategories.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0EF468716D77706008A6C78 /* BaseCategories.plist */; };
 		B0EF46A616D7A67F008A6C78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0EF46A816D7A67F008A6C78 /* Localizable.strings */; };
@@ -37,8 +45,6 @@
 		DCCFDDDB16C8F7E1002886E2 /* IMDateIntervalPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCFDDDA16C8F7E1002886E2 /* IMDateIntervalPicker.m */; };
 		DCCFDDDE16C913C3002886E2 /* IMDateStartPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCFDDDD16C913C3002886E2 /* IMDateStartPicker.m */; };
 		DCCFDDE116C91C35002886E2 /* IMDateEndPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCFDDE016C91C35002886E2 /* IMDateEndPicker.m */; };
-		DCCFDDF116C93974002886E2 /* IMSwipedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCFDDF016C93974002886E2 /* IMSwipedTableViewCell.m */; };
-		DCCFDDF416C93B3E002886E2 /* IMAccountSwipedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCFDDF316C93B3E002886E2 /* IMAccountSwipedTableView.m */; };
 		DCD7264516B67B6A006F5E2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD7264416B67B6A006F5E2D /* UIKit.framework */; };
 		DCD7264716B67B6A006F5E2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD7264616B67B6A006F5E2D /* Foundation.framework */; };
 		DCD7264916B67B6A006F5E2D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD7264816B67B6A006F5E2D /* CoreGraphics.framework */; };
@@ -64,6 +70,14 @@
 		6591F429DE7F4C5AB075756F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06D4D7416D91573006190E4 /* IMCategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoriesTableViewController.h; sourceTree = "<group>"; };
 		B06D4D7516D91573006190E4 /* IMCategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoriesTableViewController.m; sourceTree = "<group>"; };
+		B0BEC76A16F24703008D33EC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B0BEC76C16F2470D008D33EC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B0BEC76E16F2471B008D33EC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B0BEC77016F24741008D33EC /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		B0BEC77216F2474B008D33EC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B0BEC77416F2475C008D33EC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B0BEC77616F24764008D33EC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B0BEC77816F24770008D33EC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B0D51D9B16DA8C0A00938799 /* IMCategoryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoryEditViewController.h; sourceTree = "<group>"; };
 		B0D51D9C16DA8C0A00938799 /* IMCategoryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoryEditViewController.m; sourceTree = "<group>"; };
 		B0EF468716D77706008A6C78 /* BaseCategories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BaseCategories.plist; sourceTree = "<group>"; };
@@ -115,10 +129,6 @@
 		DCCFDDDD16C913C3002886E2 /* IMDateStartPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMDateStartPicker.m; sourceTree = "<group>"; };
 		DCCFDDDF16C91C34002886E2 /* IMDateEndPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMDateEndPicker.h; sourceTree = "<group>"; };
 		DCCFDDE016C91C35002886E2 /* IMDateEndPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMDateEndPicker.m; sourceTree = "<group>"; };
-		DCCFDDEF16C93974002886E2 /* IMSwipedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSwipedTableViewCell.h; sourceTree = "<group>"; };
-		DCCFDDF016C93974002886E2 /* IMSwipedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSwipedTableViewCell.m; sourceTree = "<group>"; };
-		DCCFDDF216C93B3E002886E2 /* IMAccountSwipedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountSwipedTableView.h; sourceTree = "<group>"; };
-		DCCFDDF316C93B3E002886E2 /* IMAccountSwipedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountSwipedTableView.m; sourceTree = "<group>"; };
 		DCD7264116B67B6A006F5E2D /* IMFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD7264416B67B6A006F5E2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DCD7264616B67B6A006F5E2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -154,6 +164,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BEC77F16F24B5E008D33EC /* libz.1.1.3.dylib in Frameworks */,
+				B0BEC77916F24770008D33EC /* SystemConfiguration.framework in Frameworks */,
+				B0BEC77716F24764008D33EC /* StoreKit.framework in Frameworks */,
+				B0BEC77516F2475C008D33EC /* Security.framework in Frameworks */,
+				B0BEC77316F2474B008D33EC /* MobileCoreServices.framework in Frameworks */,
+				B0BEC76F16F2471B008D33EC /* CoreLocation.framework in Frameworks */,
+				B0BEC76D16F2470D008D33EC /* CFNetwork.framework in Frameworks */,
+				B0BEC76B16F24703008D33EC /* AudioToolbox.framework in Frameworks */,
 				DC8812AF16BFE85200DAE434 /* libz.dylib in Frameworks */,
 				DCD726AC16B687D4006F5E2D /* QuartzCore.framework in Frameworks */,
 				DCD7267516B67CC3006F5E2D /* CoreData.framework in Frameworks */,
@@ -286,17 +304,6 @@
 			path = AccountType;
 			sourceTree = "<group>";
 		};
-		DCCFDDEE16C9395E002886E2 /* SwipedTableView */ = {
-			isa = PBXGroup;
-			children = (
-				DCCFDDEF16C93974002886E2 /* IMSwipedTableViewCell.h */,
-				DCCFDDF016C93974002886E2 /* IMSwipedTableViewCell.m */,
-				DCCFDDF216C93B3E002886E2 /* IMAccountSwipedTableView.h */,
-				DCCFDDF316C93B3E002886E2 /* IMAccountSwipedTableView.m */,
-			);
-			path = SwipedTableView;
-			sourceTree = "<group>";
-		};
 		DCD7263816B67B6A006F5E2D = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +325,14 @@
 		DCD7264316B67B6A006F5E2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0BEC77816F24770008D33EC /* SystemConfiguration.framework */,
+				B0BEC77616F24764008D33EC /* StoreKit.framework */,
+				B0BEC77416F2475C008D33EC /* Security.framework */,
+				B0BEC77216F2474B008D33EC /* MobileCoreServices.framework */,
+				B0BEC77016F24741008D33EC /* libz.1.1.3.dylib */,
+				B0BEC76E16F2471B008D33EC /* CoreLocation.framework */,
+				B0BEC76C16F2470D008D33EC /* CFNetwork.framework */,
+				B0BEC76A16F24703008D33EC /* AudioToolbox.framework */,
 				DC8812AE16BFE85200DAE434 /* libz.dylib */,
 				DCD726AB16B687D4006F5E2D /* QuartzCore.framework */,
 				DCD7267416B67CC3006F5E2D /* CoreData.framework */,
@@ -335,7 +350,6 @@
 				DCD7266116B67C80006F5E2D /* Core Data */,
 				DC98389116B7C84C00BE939C /* View Controllers */,
 				DC999AB016DB7D8900B05612 /* Views */,
-				DCD726AD16B68806006F5E2D /* Libraries */,
 				DCD726CF16B68833006F5E2D /* Utilities */,
 				DCD7265316B67B6B006F5E2D /* IMAppDelegate.h */,
 				DCD7265416B67B6B006F5E2D /* IMAppDelegate.m */,
@@ -388,19 +402,11 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		DCD726AD16B68806006F5E2D /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
 		DCD726CF16B68833006F5E2D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				DCB52F1716DF4152008799E9 /* AccountType */,
 				B0EF468616D77706008A6C78 /* Categories */,
-				DCCFDDEE16C9395E002886E2 /* SwipedTableView */,
 				DC90987E16C4EE7100CF9D00 /* Date */,
 				DCD726D016B68833006F5E2D /* Currency */,
 			);
@@ -533,8 +539,6 @@
 				DCCFDDDB16C8F7E1002886E2 /* IMDateIntervalPicker.m in Sources */,
 				DCCFDDDE16C913C3002886E2 /* IMDateStartPicker.m in Sources */,
 				DCCFDDE116C91C35002886E2 /* IMDateEndPicker.m in Sources */,
-				DCCFDDF116C93974002886E2 /* IMSwipedTableViewCell.m in Sources */,
-				DCCFDDF416C93B3E002886E2 /* IMAccountSwipedTableView.m in Sources */,
 				B0EF46AC16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m in Sources */,
 				B06D4D7616D91573006190E4 /* IMCategoriesTableViewController.m in Sources */,
 				B0D51D9D16DA8C0A00938799 /* IMCategoryEditViewController.m in Sources */,
@@ -634,6 +638,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IMFinance/Libraries/ABCalendarPicker\"",
+					"\"$(SRCROOT)/IMFinance/Libraries\"",
+					"\"$(SRCROOT)/IMFinance\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IMFinance/IMFinance-Prefix.pch";
@@ -650,6 +656,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IMFinance/Libraries/ABCalendarPicker\"",
+					"\"$(SRCROOT)/IMFinance/Libraries\"",
+					"\"$(SRCROOT)/IMFinance\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IMFinance/IMFinance-Prefix.pch";

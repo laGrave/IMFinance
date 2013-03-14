@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBUserSettingsViewController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBUserSettingsViewController</TokenIdentifier>
+			<Abstract type="html">@class FBUserSettingsViewController</Abstract>
+			<DeclaredIn>FBUserSettingsViewController.h</DeclaredIn>
+			
+			<NodeRef refid="40"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBUserSettingsViewController/setPermissions:</TokenIdentifier>
+			<Abstract type="html">@abstract
+The permissions to request if the user logs in via this view.</Abstract>
+			<DeclaredIn>FBUserSettingsViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSArray *permissions</Declaration>
+			
+			
+			<Anchor>//api/name/permissions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBUserSettingsViewController/permissions</TokenIdentifier>
+			<Abstract type="html">@abstract
+The permissions to request if the user logs in via this view.</Abstract>
+			<DeclaredIn>FBUserSettingsViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSArray *permissions</Declaration>
+			
+			
+			<Anchor>//api/name/permissions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBUserSettingsViewController/setReadPermissions:</TokenIdentifier>
+			<Abstract type="html">@abstract
+The read permissions to request if the user logs in via this view.</Abstract>
+			<DeclaredIn>FBUserSettingsViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSArray *readPermissions</Declaration>
+			
+			
+			<Anchor>//api/name/readPermissions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBUserSettingsViewController/readPermissions</TokenIdentifier>
+			<Abstract type="html">@abstract
+The read permissions to request if the user logs in via this view.</Abstract>
+			<DeclaredIn>FBUserSettingsViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSArray *readPermissions</Declaration>
+			
+			
+			<Anchor>//api/name/readPermissions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBUserSettingsViewController/setPublishPermissions:</TokenIdentifier>
+			<Abstract type="html">@abstract
+The publish permissions to request if the user logs in via this view.</Abstract>
+			<DeclaredIn>FBUserSettingsViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSArray *publishPermissions</Declaration>
+			
+			
+			<Anchor>//api/name/publishPermissions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBUserSettingsViewController/publishPermissions</TokenIdentifier>
+			<Abstract type="html">@abstract
+The publish permissions to request if the user logs in via this view.</Abstract>
+			<DeclaredIn>FBUserSettingsViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSArray *publishPermissions</Declaration>
+			
+			
+			<Anchor>//api/name/publishPermissions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBUserSettingsViewController/setDefaultAudience:</TokenIdentifier>
+			<Abstract type="html">@abstract
+The default audience to use, if publish permissions are requested at login time.</Abstract>
+			<DeclaredIn>FBUserSettingsViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) FBSessionDefaultAudience defaultAudience</Declaration>
+			
+			
+			<Anchor>//api/name/defaultAudience</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBUserSettingsViewController/defaultAudience</TokenIdentifier>
+			<Abstract type="html">@abstract
+The default audience to use, if publish permissions are requested at login time.</Abstract>
+			<DeclaredIn>FBUserSettingsViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) FBSessionDefaultAudience defaultAudience</Declaration>
+			
+			
+			<Anchor>//api/name/defaultAudience</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

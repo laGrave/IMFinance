@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/laGrave/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.Facebook-iOS-SDK-3.2.0.docset
+Time: 2013-03-14 18:21:39 +0000

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBAccessTokenData.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBAccessTokenData</TokenIdentifier>
+			<Abstract type="html">@class FBAccessTokenData</Abstract>
+			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBAccessTokenData/createTokenFromFacebookURL:appID:urlSchemeSuffix:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
+			
+			<Declaration>+ (FBAccessTokenData *)createTokenFromFacebookURL:(NSURL *)url appID:(NSString *)appID urlSchemeSuffix:(NSString *)urlSchemeSuffix</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>url</Name>
+					<Abstract type="html">The url provided.</Abstract>
+				</Parameter><Parameter>
+					<Name>appID</Name>
+					<Abstract type="html">needed in order to verify URL format.</Abstract>
+				</Parameter><Parameter>
+					<Name>urlSchemeSuffix</Name>
+					<Abstract type="html">needed in order to verify URL format.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/createTokenFromFacebookURL:appID:urlSchemeSuffix:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBAccessTokenData/createTokenFromDictionary:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
+			
+			<Declaration>+ (FBAccessTokenData *)createTokenFromDictionary:(NSDictionary *)dictionary</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dictionary</Name>
+					<Abstract type="html">the dictionary with FBSessionTokenCachingStrategy keys.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/createTokenFromDictionary:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBAccessTokenData/createTokenFromString:permissions:expirationDate:loginType:refreshDate:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
+			
+			<Declaration>+ (FBAccessTokenData *)createTokenFromString:(NSString *)accessToken permissions:(NSArray *)permissions expirationDate:(NSDate *)expirationDate loginType:(FBSessionLoginType)loginType refreshDate:(NSDate *)refreshDate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>accessToken</Name>
+					<Abstract type="html">The token string. If nil or empty, this method will return nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>permissions</Name>
+					<Abstract type="html">The permissions set. A value of nil indicates basic permissions.</Abstract>
+				</Parameter><Parameter>
+					<Name>expirationDate</Name>
+					<Abstract type="html">The expiration date. A value of nil defaults to [NSDate distantFuture].</Abstract>
+				</Parameter><Parameter>
+					<Name>loginType</Name>
+					<Abstract type="html">The login source of the token.</Abstract>
+				</Parameter><Parameter>
+					<Name>refreshDate</Name>
+					<Abstract type="html">The date that token was last refreshed. A value of nil defaults to [NSDate date].</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/createTokenFromString:permissions:expirationDate:loginType:refreshDate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/dictionary</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
+			
+			<Declaration>- (NSMutableDictionary *)dictionary</Declaration>
+			
+			
+			<Anchor>//api/name/dictionary</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/isEqualToAccessTokenData:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isEqualToAccessTokenData:(FBAccessTokenData *)accessTokenData</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>accessTokenData</Name>
+					<Abstract type="html">the data to compare to the receiver.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/isEqualToAccessTokenData:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/setAccessToken:</TokenIdentifier>
+			<Abstract type="html">@abstract returns the access token NSString.</Abstract>
+			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, copy) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBAccessTokenData/accessToken</TokenIdentifier>
+			<Abstract type="html">@abstract returns the access token NSString.</Abstract>
+			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, copy) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/setPermissions:</TokenIdentifier>
+			<Abstract type="html">@abstract returns the permissions associated with the access token.</Abstract>
+			<DeclaredIn>FBAccessTokenData+Internal.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, copy) NSArray *permissions</Declaration>
+			
+			
+			<Anchor>//api/name/permissions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBAccessTokenData/permissions</TokenIdentifier>
+			<Abstract type="html">@abstract returns the permissions associated with the access token.</Abstract>
+			<DeclaredIn>FBAccessTokenData+Internal.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, copy) NSArray *permissions</Declaration>
+			
+			
+			<Anchor>//api/name/permissions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/setExpirationDate:</TokenIdentifier>
+			<Abstract type="html">@abstract returns the expiration date of the access token.</Abstract>
+			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, copy) NSDate *expirationDate</Declaration>
+			
+			
+			<Anchor>//api/name/expirationDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBAccessTokenData/expirationDate</TokenIdentifier>
+			<Abstract type="html">@abstract returns the expiration date of the access token.</Abstract>
+			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, copy) NSDate *expirationDate</Declaration>
+			
+			
+			<Anchor>//api/name/expirationDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/setLoginType:</TokenIdentifier>
+			<Abstract type="html">@abstract returns the login type associated with the token.</Abstract>
+			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) FBSessionLoginType loginType</Declaration>
+			
+			
+			<Anchor>//api/name/loginType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBAccessTokenData/loginType</TokenIdentifier>
+			<Abstract type="html">@abstract returns the login type associated with the token.</Abstract>
+			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) FBSessionLoginType loginType</Declaration>
+			
+			
+			<Anchor>//api/name/loginType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/setRefreshDate:</TokenIdentifier>
+			<Abstract type="html">@abstract returns the date the token was last refreshed.</Abstract>
+			<DeclaredIn>FBAccessTokenData+Internal.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, copy) NSDate *refreshDate</Declaration>
+			
+			
+			<Anchor>//api/name/refreshDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBAccessTokenData/refreshDate</TokenIdentifier>
+			<Abstract type="html">@abstract returns the date the token was last refreshed.</Abstract>
+			<DeclaredIn>FBAccessTokenData+Internal.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, copy) NSDate *refreshDate</Declaration>
+			
+			
+			<Anchor>//api/name/refreshDate</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

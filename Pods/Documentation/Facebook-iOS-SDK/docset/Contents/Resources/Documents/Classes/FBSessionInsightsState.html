@@ -1,0 +1,492 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>FBSessionInsightsState Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Facebook-iOS-SDK 3.2.0 </a></h1>
+				<a id="developerHome" href="../index.html">Facebook</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">FBSessionInsightsState Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/accumulatedEvents">&nbsp;&nbsp;&nbsp;&nbsp;accumulatedEvents</option>
+	
+	<option value="//api/name/inFlightEvents">&nbsp;&nbsp;&nbsp;&nbsp;inFlightEvents</option>
+	
+	<option value="//api/name/numAbandonedDueToSessionChange">&nbsp;&nbsp;&nbsp;&nbsp;numAbandonedDueToSessionChange</option>
+	
+	<option value="//api/name/numSkippedEventsDueToFullBuffer">&nbsp;&nbsp;&nbsp;&nbsp;numSkippedEventsDueToFullBuffer</option>
+	
+	<option value="//api/name/requestInFlight">&nbsp;&nbsp;&nbsp;&nbsp;requestInFlight</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/abandonEvents">&nbsp;&nbsp;&nbsp;&nbsp;- abandonEvents</option>
+	
+	<option value="//api/name/addEvent:isImplicit:">&nbsp;&nbsp;&nbsp;&nbsp;- addEvent:isImplicit:</option>
+	
+	<option value="//api/name/clearInFlightAndStats">&nbsp;&nbsp;&nbsp;&nbsp;- clearInFlightAndStats</option>
+	
+	<option value="//api/name/getAccumulatedEventCount">&nbsp;&nbsp;&nbsp;&nbsp;- getAccumulatedEventCount</option>
+	
+	<option value="//api/name/jsonEncodeInFlightEvents:">&nbsp;&nbsp;&nbsp;&nbsp;- jsonEncodeInFlightEvents:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/accumulatedEvents">accumulatedEvents</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/inFlightEvents">inFlightEvents</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numAbandonedDueToSessionChange">numAbandonedDueToSessionChange</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numSkippedEventsDueToFullBuffer">numSkippedEventsDueToFullBuffer</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestInFlight">requestInFlight</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/abandonEvents">abandonEvents</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addEvent:isImplicit:">addEvent:isImplicit:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearInFlightAndStats">clearInFlightAndStats</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getAccumulatedEventCount">getAccumulatedEventCount</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/jsonEncodeInFlightEvents:">jsonEncodeInFlightEvents:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="FBSessionInsightsState Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">FBSessionInsightsState Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">FBSessionInsightsState.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Internal class that holds all the state associated with <a href="../Classes/FBInsights.html">FBInsights</a> for a particular <a href="../Classes/FBSession.html">FBSession</a>.  An
+instance of this lives on <a href="../Classes/FBSession.html">FBSession</a>.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/accumulatedEvents">&nbsp;&nbsp;accumulatedEvents</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/inFlightEvents">&nbsp;&nbsp;inFlightEvents</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numSkippedEventsDueToFullBuffer">&nbsp;&nbsp;numSkippedEventsDueToFullBuffer</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numAbandonedDueToSessionChange">&nbsp;&nbsp;numAbandonedDueToSessionChange</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestInFlight">&nbsp;&nbsp;requestInFlight</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addEvent:isImplicit:">&ndash;&nbsp;addEvent:isImplicit:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/jsonEncodeInFlightEvents:">&ndash;&nbsp;jsonEncodeInFlightEvents:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getAccumulatedEventCount">&ndash;&nbsp;getAccumulatedEventCount</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/abandonEvents">&ndash;&nbsp;abandonEvents</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clearInFlightAndStats">&ndash;&nbsp;clearInFlightAndStats</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/accumulatedEvents" title="accumulatedEvents"></a>
+	<h3 class="subsubtitle method-title">accumulatedEvents</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, retain) NSMutableArray *accumulatedEvents</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/inFlightEvents" title="inFlightEvents"></a>
+	<h3 class="subsubtitle method-title">inFlightEvents</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, retain) NSMutableArray *inFlightEvents</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numAbandonedDueToSessionChange" title="numAbandonedDueToSessionChange"></a>
+	<h3 class="subsubtitle method-title">numAbandonedDueToSessionChange</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (readwrite) int numAbandonedDueToSessionChange</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numSkippedEventsDueToFullBuffer" title="numSkippedEventsDueToFullBuffer"></a>
+	<h3 class="subsubtitle method-title">numSkippedEventsDueToFullBuffer</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (readwrite) int numSkippedEventsDueToFullBuffer</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestInFlight" title="requestInFlight"></a>
+	<h3 class="subsubtitle method-title">requestInFlight</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (readwrite) BOOL requestInFlight</code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/abandonEvents" title="abandonEvents"></a>
+	<h3 class="subsubtitle method-title">abandonEvents</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)abandonEvents</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addEvent:isImplicit:" title="addEvent:isImplicit:"></a>
+	<h3 class="subsubtitle method-title">addEvent:isImplicit:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)addEvent:(NSDictionary *)<em>eventDictionary</em> isImplicit:(BOOL)<em>isImplicit</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/clearInFlightAndStats" title="clearInFlightAndStats"></a>
+	<h3 class="subsubtitle method-title">clearInFlightAndStats</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)clearInFlightAndStats</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getAccumulatedEventCount" title="getAccumulatedEventCount"></a>
+	<h3 class="subsubtitle method-title">getAccumulatedEventCount</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (int)getAccumulatedEventCount</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/jsonEncodeInFlightEvents:" title="jsonEncodeInFlightEvents:"></a>
+	<h3 class="subsubtitle method-title">jsonEncodeInFlightEvents:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)jsonEncodeInFlightEvents:(BOOL)<em>includeImplicitEvents</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-14)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

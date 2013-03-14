@@ -1,0 +1,441 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>NSError(FBError) Category Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Facebook-iOS-SDK 3.2.0 </a></h1>
+				<a id="developerHome" href="../index.html">Facebook</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">NSError(FBError) Category Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/fberrorCategory">&nbsp;&nbsp;&nbsp;&nbsp;fberrorCategory</option>
+	
+	<option value="//api/name/fberrorShouldNotifyUser">&nbsp;&nbsp;&nbsp;&nbsp;fberrorShouldNotifyUser</option>
+	
+	<option value="//api/name/fberrorUserMessage">&nbsp;&nbsp;&nbsp;&nbsp;fberrorUserMessage</option>
+	
+	
+	
+	
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fberrorCategory">fberrorCategory</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fberrorShouldNotifyUser">fberrorShouldNotifyUser</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fberrorUserMessage">fberrorUserMessage</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="NSError(FBError) Category Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">NSError(FBError) Category Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">NSError+FBError.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@category NSError(FBError)</p>
+
+<p>@abstract
+Adds additional properties to NSError to provide more information for <a href="../Classes/Facebook.html">Facebook</a> related errors.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fberrorCategory">&nbsp;&nbsp;fberrorCategory</a></code>
+		<span class="tooltip"><p>@abstract
+Categorizes the error, if it is <a href="../Classes/Facebook.html">Facebook</a> related, to simplify application mitigation behavior</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fberrorShouldNotifyUser">&nbsp;&nbsp;fberrorShouldNotifyUser</a></code>
+		<span class="tooltip"><p>@abstract
+If YES indicates that a user action is required in order to successfully continue with the facebook operation</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fberrorUserMessage">&nbsp;&nbsp;fberrorUserMessage</a></code>
+		<span class="tooltip"><p>@abstract
+A message suitable for display to the user, describing a user action necessary to enable <a href="../Classes/Facebook.html">Facebook</a> functionality.
+Not all <a href="../Classes/Facebook.html">Facebook</a> errors yield a message suitable for user display; however in all cases where
+<a href="#//api/name/fberrorShouldNotifyUser">fberrorShouldNotifyUser</a> is YES, this property returns a localizable message suitable for display.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/fberrorCategory" title="fberrorCategory"></a>
+	<h3 class="subsubtitle method-title">fberrorCategory</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Categorizes the error, if it is <a href="../Classes/Facebook.html">Facebook</a> related, to simplify application mitigation behavior</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) FBErrorCategory fberrorCategory</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Categorizes the error, if it is Facebook related, to simplify application mitigation behavior</p>
+
+<p>@discussion
+In general, in response to an error connecting to Facebook, an application should, retry the
+operation, request permissions, reconnect the application, or prompt the user to take an action.
+The error category can be used to understand the class of error received from Facebook.  For more infomation on this
+see <a href="https://developers.facebook.com/docs/reference/api/errors/">https://developers.facebook.com/docs/reference/api/errors/</a></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSError+FBError.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fberrorShouldNotifyUser" title="fberrorShouldNotifyUser"></a>
+	<h3 class="subsubtitle method-title">fberrorShouldNotifyUser</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+If YES indicates that a user action is required in order to successfully continue with the facebook operation</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) BOOL fberrorShouldNotifyUser</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+If YES indicates that a user action is required in order to successfully continue with the facebook operation</p>
+
+<p>@discussion
+In general if fberrorShouldNotifyUser is NO, then the application has a straightforward mitigation, such as
+retry the operation or request permissions from the user, etc. In some cases it is necessary for the user to
+take an action before the application continues to attempt a Facebook connection. For more infomation on this
+see <a href="https://developers.facebook.com/docs/reference/api/errors/">https://developers.facebook.com/docs/reference/api/errors/</a></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSError+FBError.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fberrorUserMessage" title="fberrorUserMessage"></a>
+	<h3 class="subsubtitle method-title">fberrorUserMessage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+A message suitable for display to the user, describing a user action necessary to enable <a href="../Classes/Facebook.html">Facebook</a> functionality.
+Not all <a href="../Classes/Facebook.html">Facebook</a> errors yield a message suitable for user display; however in all cases where
+<a href="#//api/name/fberrorShouldNotifyUser">fberrorShouldNotifyUser</a> is YES, this property returns a localizable message suitable for display.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, copy) NSString *fberrorUserMessage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+A message suitable for display to the user, describing a user action necessary to enable <a href="../Classes/Facebook.html">Facebook</a> functionality.
+Not all <a href="../Classes/Facebook.html">Facebook</a> errors yield a message suitable for user display; however in all cases where
+<a href="#//api/name/fberrorShouldNotifyUser">fberrorShouldNotifyUser</a> is YES, this property returns a localizable message suitable for display.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSError+FBError.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-14)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

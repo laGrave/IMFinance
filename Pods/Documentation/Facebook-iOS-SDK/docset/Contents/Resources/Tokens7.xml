@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBErrorUtility.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBErrorUtility</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBErrorUtility.h</DeclaredIn>
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBErrorUtility/fberrorCategoryFromError:code:subcode:returningUserMessage:andShouldNotifyUser:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBErrorUtility.h</DeclaredIn>			
+			
+			<Declaration>+ (FBErrorCategory)fberrorCategoryFromError:(NSError *)error code:(int)code subcode:(int)subcode returningUserMessage:(NSString **)puserMessage andShouldNotifyUser:(BOOL *)pshouldNotifyUser</Declaration>
+			
+			
+			<Anchor>//api/name/fberrorCategoryFromError:code:subcode:returningUserMessage:andShouldNotifyUser:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBErrorUtility/fberrorGetCodeValueForError:index:code:subcode:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBErrorUtility.h</DeclaredIn>			
+			
+			<Declaration>+ (void)fberrorGetCodeValueForError:(NSError *)error index:(int)index code:(int *)pcode subcode:(int *)psubcode</Declaration>
+			
+			
+			<Anchor>//api/name/fberrorGetCodeValueForError:index:code:subcode:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBErrorUtility/fberrorForSystemPasswordChange:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBErrorUtility.h</DeclaredIn>			
+			
+			<Declaration>+ (NSError *)fberrorForSystemPasswordChange:(NSError *)innerError</Declaration>
+			
+			
+			<Anchor>//api/name/fberrorForSystemPasswordChange:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBErrorUtility/fberrorForRetry:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBErrorUtility.h</DeclaredIn>			
+			
+			<Declaration>+ (NSError *)fberrorForRetry:(NSError *)innerError</Declaration>
+			
+			
+			<Anchor>//api/name/fberrorForRetry:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

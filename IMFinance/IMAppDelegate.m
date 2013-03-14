@@ -8,6 +8,8 @@
 
 #import "IMAppDelegate.h"
 
+#import <Parse/Parse.h>
+
 #import "IMCoreDataManager.h"
 #import "Category.h"
 
@@ -73,6 +75,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [MagicalRecord setupCoreDataStack];
+    
+    [Parse setApplicationId:@"pIpS2OPgLbzbt6M0DmQ5A2RFk0VjCL8kRMsvTlPl"
+                  clientKey:@"CcPTCbuGwdJwlxK47H1Xuf8Wu4UVKQs4cdhWiYix"];
     
     //при первом запуске валюту по умолчанию на основании локали телефона
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],@"firstLaunch",nil]];

@@ -1,0 +1,3143 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>FBSession Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Facebook-iOS-SDK 3.2.0 </a></h1>
+				<a id="developerHome" href="../index.html">Facebook</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">FBSession Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/accessToken">&nbsp;&nbsp;&nbsp;&nbsp;accessToken</option>
+	
+	<option value="//api/name/accessTokenData">&nbsp;&nbsp;&nbsp;&nbsp;accessTokenData</option>
+	
+	<option value="//api/name/appID">&nbsp;&nbsp;&nbsp;&nbsp;appID</option>
+	
+	<option value="//api/name/expirationDate">&nbsp;&nbsp;&nbsp;&nbsp;expirationDate</option>
+	
+	<option value="//api/name/initializedPermissions">&nbsp;&nbsp;&nbsp;&nbsp;initializedPermissions</option>
+	
+	<option value="//api/name/insightsState">&nbsp;&nbsp;&nbsp;&nbsp;insightsState</option>
+	
+	<option value="//api/name/isOpen">&nbsp;&nbsp;&nbsp;&nbsp;isOpen</option>
+	
+	<option value="//api/name/lastRequestedSystemAudience">&nbsp;&nbsp;&nbsp;&nbsp;lastRequestedSystemAudience</option>
+	
+	<option value="//api/name/loginType">&nbsp;&nbsp;&nbsp;&nbsp;loginType</option>
+	
+	<option value="//api/name/permissions">&nbsp;&nbsp;&nbsp;&nbsp;permissions</option>
+	
+	<option value="//api/name/state">&nbsp;&nbsp;&nbsp;&nbsp;state</option>
+	
+	<option value="//api/name/urlSchemeSuffix">&nbsp;&nbsp;&nbsp;&nbsp;urlSchemeSuffix</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/activeSession">&nbsp;&nbsp;&nbsp;&nbsp;+ activeSession</option>
+	
+	<option value="//api/name/activeSessionIfOpen">&nbsp;&nbsp;&nbsp;&nbsp;+ activeSessionIfOpen</option>
+	
+	<option value="//api/name/defaultAppID">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultAppID</option>
+	
+	<option value="//api/name/defaultUrlSchemeSuffix">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultUrlSchemeSuffix</option>
+	
+	<option value="//api/name/deleteFacebookCookies">&nbsp;&nbsp;&nbsp;&nbsp;+ deleteFacebookCookies</option>
+	
+	<option value="//api/name/openActiveSessionWithAllowLoginUI:">&nbsp;&nbsp;&nbsp;&nbsp;+ openActiveSessionWithAllowLoginUI:</option>
+	
+	<option value="//api/name/openActiveSessionWithPermissions:allowLoginUI:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;+ openActiveSessionWithPermissions:allowLoginUI:completionHandler:</option>
+	
+	<option value="//api/name/openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;+ openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:</option>
+	
+	<option value="//api/name/openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;+ openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:</option>
+	
+	<option value="//api/name/renewSystemCredentials:">&nbsp;&nbsp;&nbsp;&nbsp;+ renewSystemCredentials:</option>
+	
+	<option value="//api/name/setActiveSession:">&nbsp;&nbsp;&nbsp;&nbsp;+ setActiveSession:</option>
+	
+	<option value="//api/name/setDefaultAppID:">&nbsp;&nbsp;&nbsp;&nbsp;+ setDefaultAppID:</option>
+	
+	<option value="//api/name/setDefaultUrlSchemeSuffix:">&nbsp;&nbsp;&nbsp;&nbsp;+ setDefaultUrlSchemeSuffix:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/authorizeWithPermissions:behavior:defaultAudience:isReauthorize:">&nbsp;&nbsp;&nbsp;&nbsp;- authorizeWithPermissions:behavior:defaultAudience:isReauthorize:</option>
+	
+	<option value="//api/name/clearAffinitizedThread">&nbsp;&nbsp;&nbsp;&nbsp;- clearAffinitizedThread</option>
+	
+	<option value="//api/name/close">&nbsp;&nbsp;&nbsp;&nbsp;- close</option>
+	
+	<option value="//api/name/closeAndClearTokenInformation">&nbsp;&nbsp;&nbsp;&nbsp;- closeAndClearTokenInformation</option>
+	
+	<option value="//api/name/closeAndClearTokenInformation:">&nbsp;&nbsp;&nbsp;&nbsp;- closeAndClearTokenInformation:</option>
+	
+	<option value="//api/name/errorLoginFailedWithReason:errorCode:innerError:">&nbsp;&nbsp;&nbsp;&nbsp;- errorLoginFailedWithReason:errorCode:innerError:</option>
+	
+	<option value="//api/name/handleDidBecomeActive">&nbsp;&nbsp;&nbsp;&nbsp;- handleDidBecomeActive</option>
+	
+	<option value="//api/name/handleOpenURL:">&nbsp;&nbsp;&nbsp;&nbsp;- handleOpenURL:</option>
+	
+	<option value="//api/name/handleReauthorize:accessToken:">&nbsp;&nbsp;&nbsp;&nbsp;- handleReauthorize:accessToken:</option>
+	
+	<option value="//api/name/init">&nbsp;&nbsp;&nbsp;&nbsp;- init</option>
+	
+	<option value="//api/name/initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:</option>
+	
+	<option value="//api/name/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:</option>
+	
+	<option value="//api/name/initWithPermissions:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithPermissions:</option>
+	
+	<option value="//api/name/openFromAccessTokenData:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- openFromAccessTokenData:completionHandler:</option>
+	
+	<option value="//api/name/openWithBehavior:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- openWithBehavior:completionHandler:</option>
+	
+	<option value="//api/name/openWithCompletionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- openWithCompletionHandler:</option>
+	
+	<option value="//api/name/reauthorizeWithPermissions:behavior:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- reauthorizeWithPermissions:behavior:completionHandler:</option>
+	
+	<option value="//api/name/reauthorizeWithPublishPermissions:defaultAudience:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- reauthorizeWithPublishPermissions:defaultAudience:completionHandler:</option>
+	
+	<option value="//api/name/reauthorizeWithReadPermissions:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- reauthorizeWithReadPermissions:completionHandler:</option>
+	
+	<option value="//api/name/refreshAccessToken:expirationDate:">&nbsp;&nbsp;&nbsp;&nbsp;- refreshAccessToken:expirationDate:</option>
+	
+	<option value="//api/name/requestNewPublishPermissions:defaultAudience:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- requestNewPublishPermissions:defaultAudience:completionHandler:</option>
+	
+	<option value="//api/name/requestNewReadPermissions:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- requestNewReadPermissions:completionHandler:</option>
+	
+	<option value="//api/name/shouldExtendAccessToken">&nbsp;&nbsp;&nbsp;&nbsp;- shouldExtendAccessToken</option>
+	
+	<option value="//api/name/transitionAndCallHandlerWithState:error:token:expirationDate:shouldCache:loginType:">&nbsp;&nbsp;&nbsp;&nbsp;- transitionAndCallHandlerWithState:error:token:expirationDate:shouldCache:loginType:</option>
+	
+	<option value="//api/name/transitionToState:andUpdateToken:andExpirationDate:shouldCache:loginType:">&nbsp;&nbsp;&nbsp;&nbsp;- transitionToState:andUpdateToken:andExpirationDate:shouldCache:loginType:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Internal Methods">Internal Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Protected Methods">Protected Methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/accessToken">accessToken</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/accessTokenData">accessTokenData</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/appID">appID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/expirationDate">expirationDate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initializedPermissions">initializedPermissions</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/insightsState">insightsState</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isOpen">isOpen</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lastRequestedSystemAudience">lastRequestedSystemAudience</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loginType">loginType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/permissions">permissions</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/state">state</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/urlSchemeSuffix">urlSchemeSuffix</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/activeSession">activeSession</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/activeSessionIfOpen">activeSessionIfOpen</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultAppID">defaultAppID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultUrlSchemeSuffix">defaultUrlSchemeSuffix</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deleteFacebookCookies">deleteFacebookCookies</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openActiveSessionWithAllowLoginUI:">openActiveSessionWithAllowLoginUI:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openActiveSessionWithPermissions:allowLoginUI:completionHandler:">openActiveSessionWithPermissions:allowLoginUI:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:">openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:">openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/renewSystemCredentials:">renewSystemCredentials:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setActiveSession:">setActiveSession:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultAppID:">setDefaultAppID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultUrlSchemeSuffix:">setDefaultUrlSchemeSuffix:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/authorizeWithPermissions:behavior:defaultAudience:isReauthorize:">authorizeWithPermissions:behavior:defaultAudience:isReauthorize:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearAffinitizedThread">clearAffinitizedThread</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/close">close</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/closeAndClearTokenInformation">closeAndClearTokenInformation</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/closeAndClearTokenInformation:">closeAndClearTokenInformation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/errorLoginFailedWithReason:errorCode:innerError:">errorLoginFailedWithReason:errorCode:innerError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleDidBecomeActive">handleDidBecomeActive</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleOpenURL:">handleOpenURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleReauthorize:accessToken:">handleReauthorize:accessToken:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/init">init</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:">initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:">initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithPermissions:">initWithPermissions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openFromAccessTokenData:completionHandler:">openFromAccessTokenData:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openWithBehavior:completionHandler:">openWithBehavior:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openWithCompletionHandler:">openWithCompletionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reauthorizeWithPermissions:behavior:completionHandler:">reauthorizeWithPermissions:behavior:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reauthorizeWithPublishPermissions:defaultAudience:completionHandler:">reauthorizeWithPublishPermissions:defaultAudience:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reauthorizeWithReadPermissions:completionHandler:">reauthorizeWithReadPermissions:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/refreshAccessToken:expirationDate:">refreshAccessToken:expirationDate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestNewPublishPermissions:defaultAudience:completionHandler:">requestNewPublishPermissions:defaultAudience:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestNewReadPermissions:completionHandler:">requestNewReadPermissions:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldExtendAccessToken">shouldExtendAccessToken</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/transitionAndCallHandlerWithState:error:token:expirationDate:shouldCache:loginType:">transitionAndCallHandlerWithState:error:token:expirationDate:shouldCache:loginType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/transitionToState:andUpdateToken:andExpirationDate:shouldCache:loginType:">transitionToState:andUpdateToken:andExpirationDate:shouldCache:loginType:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="FBSession Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">FBSession Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">FBSession.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@class FBSession</p>
+
+<p>@abstract
+The <code>FBSession</code> object is used to authenticate a user and manage the user&rsquo;s session. After
+initializing a <code>FBSession</code> object the <a href="../Classes/Facebook.html">Facebook</a> App ID and desired <a href="#//api/name/permissions">permissions</a> are stored.
+Opening the session will initiate the authentication flow after which a valid user session
+should be available and subsequently cached. Closing the session can optionally clear the
+cache.</p>
+
+<p>If an  <a href="../Classes/FBRequest.html">FBRequest</a> request requires user authorization then an <code>FBSession</code> object should be used.</p>
+
+<p>@discussion
+Instances of the <code>FBSession</code> class provide notification of <a href="#//api/name/state">state</a> changes in the following ways:</p>
+
+<ol>
+<li><p>Callers of certain <code>FBSession</code> methods may provide a block that will be called
+back in the course of <a href="#//api/name/state">state</a> transitions for the session (e.g. login or session closed).</p></li>
+<li><p>The object supports Key-Value Observing (KVO) for property changes.</p></li>
+</ol>
+
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithPermissions:">&ndash;&nbsp;initWithPermissions:</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:">&ndash;&nbsp;initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:">&ndash;&nbsp;initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isOpen">&nbsp;&nbsp;isOpen</a></code>
+		<span class="tooltip"><p>@abstract Indicates whether the session is open and ready for use.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/state">&nbsp;&nbsp;state</a></code>
+		<span class="tooltip"><p>@abstract Detailed session state</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/appID">&nbsp;&nbsp;appID</a></code>
+		<span class="tooltip"><p>@abstract Identifies the <a href="../Classes/Facebook.html">Facebook</a> app which the session object represents.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/urlSchemeSuffix">&nbsp;&nbsp;urlSchemeSuffix</a></code>
+		<span class="tooltip"><p>@abstract Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single <a href="../Classes/Facebook.html">Facebook</a> app ID.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/accessToken">&nbsp;&nbsp;accessToken</a></code>
+		<span class="tooltip"><p>@abstract The access token for the session object.</p>
+
+<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
+</code></pre></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/expirationDate">&nbsp;&nbsp;expirationDate</a></code>
+		<span class="tooltip"><p>@abstract The expiration date of the access token for the session object.</p>
+
+<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
+</code></pre></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/permissions">&nbsp;&nbsp;permissions</a></code>
+		<span class="tooltip"><p>@abstract The permissions granted to the access token during the authentication flow.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loginType">&nbsp;&nbsp;loginType</a></code>
+		<span class="tooltip"><p>@abstract Specifies the login type used to authenticate the user.</p>
+
+<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
+</code></pre></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/accessTokenData">&nbsp;&nbsp;accessTokenData</a></code>
+		<span class="tooltip"><p>@abstract Gets the <a href="../Classes/FBAccessTokenData.html">FBAccessTokenData</a> for the session</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openWithCompletionHandler:">&ndash;&nbsp;openWithCompletionHandler:</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openWithBehavior:completionHandler:">&ndash;&nbsp;openWithBehavior:completionHandler:</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openFromAccessTokenData:completionHandler:">&ndash;&nbsp;openFromAccessTokenData:completionHandler:</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/close">&ndash;&nbsp;close</a></code>
+		<span class="tooltip"><p>@abstract
+Closes the local in-memory session object, but does not clear the persisted token cache.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/closeAndClearTokenInformation">&ndash;&nbsp;closeAndClearTokenInformation</a></code>
+		<span class="tooltip"><p>@abstract
+Closes the in-memory session, and clears any persisted cache related to the session.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reauthorizeWithPermissions:behavior:completionHandler:">&ndash;&nbsp;reauthorizeWithPermissions:behavior:completionHandler:</a></code>
+		<span class="tooltip"><p>@abstract
+Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reauthorizeWithReadPermissions:completionHandler:">&ndash;&nbsp;reauthorizeWithReadPermissions:completionHandler:</a></code>
+		<span class="tooltip"><p>@abstract
+Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reauthorizeWithPublishPermissions:defaultAudience:completionHandler:">&ndash;&nbsp;reauthorizeWithPublishPermissions:defaultAudience:completionHandler:</a></code>
+		<span class="tooltip"><p>@abstract
+Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestNewReadPermissions:completionHandler:">&ndash;&nbsp;requestNewReadPermissions:completionHandler:</a></code>
+		<span class="tooltip"><p>@abstract
+Requests new or additional read <a href="#//api/name/permissions">permissions</a> for the session.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestNewPublishPermissions:defaultAudience:completionHandler:">&ndash;&nbsp;requestNewPublishPermissions:defaultAudience:completionHandler:</a></code>
+		<span class="tooltip"><p>@abstract
+Requests new or additional write <a href="#//api/name/permissions">permissions</a> for the session.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/handleOpenURL:">&ndash;&nbsp;handleOpenURL:</a></code>
+		<span class="tooltip"><p>@abstract
+A helper method that is used to provide an implementation for
+[UIApplicationDelegate application:openURL:sourceApplication:annotation:]. It should be invoked during
+the <a href="../Classes/Facebook.html">Facebook</a> Login flow and will update the session information based on the incoming URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/handleDidBecomeActive">&ndash;&nbsp;handleDidBecomeActive</a></code>
+		<span class="tooltip"><p>@abstract
+A helper method that is used to provide an implementation for
+[UIApplicationDelegate applicationDidBecomeActive:] to properly resolve session <a href="#//api/name/state">state</a> for
+the <a href="../Classes/Facebook.html">Facebook</a> Login flow, specifically to support app-switch login.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openActiveSessionWithAllowLoginUI:">+&nbsp;openActiveSessionWithAllowLoginUI:</a></code>
+		<span class="tooltip"><p>@abstract
+This is the simplest method for opening a session with <a href="../Classes/Facebook.html">Facebook</a>. Using sessionOpen logs on a user,
+and sets the static <a href="#//api/name/activeSession">activeSession</a> which becomes the default session object for any <a href="../Classes/Facebook.html">Facebook</a> UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openActiveSessionWithPermissions:allowLoginUI:completionHandler:">+&nbsp;openActiveSessionWithPermissions:allowLoginUI:completionHandler:</a></code>
+		<span class="tooltip"><p>@abstract
+This is a simple method for opening a session with <a href="../Classes/Facebook.html">Facebook</a>. Using sessionOpen logs on a user,
+and sets the static <a href="#//api/name/activeSession">activeSession</a> which becomes the default session object for any <a href="../Classes/Facebook.html">Facebook</a> UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:">+&nbsp;openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:</a></code>
+		<span class="tooltip"><p>@abstract
+This is a simple method for opening a session with <a href="../Classes/Facebook.html">Facebook</a>. Using sessionOpen logs on a user,
+and sets the static <a href="#//api/name/activeSession">activeSession</a> which becomes the default session object for any <a href="../Classes/Facebook.html">Facebook</a> UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:">+&nbsp;openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:</a></code>
+		<span class="tooltip"><p>@abstract
+This is a simple method for opening a session with <a href="../Classes/Facebook.html">Facebook</a>. Using sessionOpen logs on a user,
+and sets the static <a href="#//api/name/activeSession">activeSession</a> which becomes the default session object for any <a href="../Classes/Facebook.html">Facebook</a> UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/activeSession">+&nbsp;activeSession</a></code>
+		<span class="tooltip"><p>@abstract
+An application may get or set the current active session. Certain high-level components in the SDK
+will use the activeSession to set default session (e.g. <a href="../Classes/FBLoginView.html"><code>FBLoginView</code></a>, <a href="../Classes/FBFriendPickerViewController.html"><code>FBFriendPickerViewController</code></a>)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setActiveSession:">+&nbsp;setActiveSession:</a></code>
+		<span class="tooltip"><p>@abstract
+An application may get or set the current active session. Certain high-level components in the SDK
+will use the <a href="#//api/name/activeSession">activeSession</a> to set default session (e.g. <a href="../Classes/FBLoginView.html"><code>FBLoginView</code></a>, <a href="../Classes/FBFriendPickerViewController.html"><code>FBFriendPickerViewController</code></a>)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultAppID:">+&nbsp;setDefaultAppID:</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultAppID">+&nbsp;defaultAppID</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultUrlSchemeSuffix:">+&nbsp;setDefaultUrlSchemeSuffix:</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultUrlSchemeSuffix">+&nbsp;defaultUrlSchemeSuffix</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/renewSystemCredentials:">+&nbsp;renewSystemCredentials:</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Internal Methods" name="task_Internal Methods"></a>
+						<h3 class="subsubtitle task-title">Internal Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lastRequestedSystemAudience">&nbsp;&nbsp;lastRequestedSystemAudience</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/insightsState">&nbsp;&nbsp;insightsState</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/refreshAccessToken:expirationDate:">&ndash;&nbsp;refreshAccessToken:expirationDate:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shouldExtendAccessToken">&ndash;&nbsp;shouldExtendAccessToken</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/closeAndClearTokenInformation:">&ndash;&nbsp;closeAndClearTokenInformation:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clearAffinitizedThread">&ndash;&nbsp;clearAffinitizedThread</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/activeSessionIfOpen">+&nbsp;activeSessionIfOpen</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deleteFacebookCookies">+&nbsp;deleteFacebookCookies</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/errorLoginFailedWithReason:errorCode:innerError:">&ndash;&nbsp;errorLoginFailedWithReason:errorCode:innerError:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Protected Methods" name="task_Protected Methods"></a>
+						<h3 class="subsubtitle task-title">Protected Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initializedPermissions">&nbsp;&nbsp;initializedPermissions</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/transitionToState:andUpdateToken:andExpirationDate:shouldCache:loginType:">&ndash;&nbsp;transitionToState:andUpdateToken:andExpirationDate:shouldCache:loginType:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/transitionAndCallHandlerWithState:error:token:expirationDate:shouldCache:loginType:">&ndash;&nbsp;transitionAndCallHandlerWithState:error:token:expirationDate:shouldCache:loginType:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/authorizeWithPermissions:behavior:defaultAudience:isReauthorize:">&ndash;&nbsp;authorizeWithPermissions:behavior:defaultAudience:isReauthorize:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/handleReauthorize:accessToken:">&ndash;&nbsp;handleReauthorize:accessToken:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/accessToken" title="accessToken"></a>
+	<h3 class="subsubtitle method-title">accessToken</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract The access token for the session object.</p>
+
+<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
+</code></pre>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, copy) NSString *accessToken</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract The access token for the session object.</p>
+
+<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/accessTokenData" title="accessTokenData"></a>
+	<h3 class="subsubtitle method-title">accessTokenData</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract Gets the <a href="../Classes/FBAccessTokenData.html">FBAccessTokenData</a> for the session</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, copy) FBAccessTokenData *accessTokenData</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract Gets the <a href="../Classes/FBAccessTokenData.html">FBAccessTokenData</a> for the session</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/appID" title="appID"></a>
+	<h3 class="subsubtitle method-title">appID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract Identifies the <a href="../Classes/Facebook.html">Facebook</a> app which the session object represents.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, copy) NSString *appID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract Identifies the <a href="../Classes/Facebook.html">Facebook</a> app which the session object represents.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/expirationDate" title="expirationDate"></a>
+	<h3 class="subsubtitle method-title">expirationDate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract The expiration date of the access token for the session object.</p>
+
+<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
+</code></pre>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, copy) NSDate *expirationDate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract The expiration date of the access token for the session object.</p>
+
+<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initializedPermissions" title="initializedPermissions"></a>
+	<h3 class="subsubtitle method-title">initializedPermissions</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, copy) NSArray *initializedPermissions</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/insightsState" title="insightsState"></a>
+	<h3 class="subsubtitle method-title">insightsState</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, retain) FBSessionInsightsState *insightsState</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isOpen" title="isOpen"></a>
+	<h3 class="subsubtitle method-title">isOpen</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract Indicates whether the session is open and ready for use.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) BOOL isOpen</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract Indicates whether the session is open and ready for use.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lastRequestedSystemAudience" title="lastRequestedSystemAudience"></a>
+	<h3 class="subsubtitle method-title">lastRequestedSystemAudience</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) FBSessionDefaultAudience lastRequestedSystemAudience</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loginType" title="loginType"></a>
+	<h3 class="subsubtitle method-title">loginType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract Specifies the login type used to authenticate the user.</p>
+
+<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
+</code></pre>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) FBSessionLoginType loginType</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract Specifies the login type used to authenticate the user.</p>
+
+<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/permissions" title="permissions"></a>
+	<h3 class="subsubtitle method-title">permissions</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract The permissions granted to the access token during the authentication flow.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, copy) NSArray *permissions</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract The permissions granted to the access token during the authentication flow.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/state" title="state"></a>
+	<h3 class="subsubtitle method-title">state</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract Detailed session state</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) FBSessionState state</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract Detailed session state</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/urlSchemeSuffix" title="urlSchemeSuffix"></a>
+	<h3 class="subsubtitle method-title">urlSchemeSuffix</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single <a href="../Classes/Facebook.html">Facebook</a> app ID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, copy) NSString *urlSchemeSuffix</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single <a href="../Classes/Facebook.html">Facebook</a> app ID.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/activeSession" title="activeSession"></a>
+	<h3 class="subsubtitle method-title">activeSession</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+An application may get or set the current active session. Certain high-level components in the SDK
+will use the activeSession to set default session (e.g. <a href="../Classes/FBLoginView.html"><code>FBLoginView</code></a>, <a href="../Classes/FBFriendPickerViewController.html"><code>FBFriendPickerViewController</code></a>)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (FBSession *)activeSession</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+An application may get or set the current active session. Certain high-level components in the SDK
+will use the activeSession to set default session (e.g. <a href="../Classes/FBLoginView.html"><code>FBLoginView</code></a>, <a href="../Classes/FBFriendPickerViewController.html"><code>FBFriendPickerViewController</code></a>)</p>
+
+<p>@discussion
+If sessionOpen* is called, the resulting <code>FBSession</code> object also becomes the activeSession. If another
+session was active at the time, it is closed automatically. If activeSession is called when no session
+is active, a session object is instatiated and returned; in this case open must be called on the session
+in order for it to be useable for communication with <a href="../Classes/Facebook.html">Facebook</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/activeSessionIfOpen" title="activeSessionIfOpen"></a>
+	<h3 class="subsubtitle method-title">activeSessionIfOpen</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>+ (FBSession *)activeSessionIfOpen</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultAppID" title="defaultAppID"></a>
+	<h3 class="subsubtitle method-title">defaultAppID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)defaultAppID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract Get the default <a href="../Classes/Facebook.html">Facebook</a> App ID to use for sessions. If not explicitly
+set, the default will be read from the application&rsquo;s plist. The app ID may be
+overridden on a per session basis.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultUrlSchemeSuffix" title="defaultUrlSchemeSuffix"></a>
+	<h3 class="subsubtitle method-title">defaultUrlSchemeSuffix</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)defaultUrlSchemeSuffix</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract Get the default url scheme suffix used for sessions.  If not
+explicitly set, the default will be read from the application&rsquo;s plist. The
+url scheme suffix may be overridden on a per session basis.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deleteFacebookCookies" title="deleteFacebookCookies"></a>
+	<h3 class="subsubtitle method-title">deleteFacebookCookies</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>+ (void)deleteFacebookCookies</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openActiveSessionWithAllowLoginUI:" title="openActiveSessionWithAllowLoginUI:"></a>
+	<h3 class="subsubtitle method-title">openActiveSessionWithAllowLoginUI:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+This is the simplest method for opening a session with <a href="../Classes/Facebook.html">Facebook</a>. Using sessionOpen logs on a user,
+and sets the static <a href="#//api/name/activeSession">activeSession</a> which becomes the default session object for any <a href="../Classes/Facebook.html">Facebook</a> UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)openActiveSessionWithAllowLoginUI:(BOOL)<em>allowLoginUI</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowLoginUI</em></dt>
+			<dd><p>Sometimes it is useful to attempt to open a session, but only if
+no login UI will be required to accomplish the operation. For example, at application startup it may not
+be disirable to transition to login UI for the user, and yet an open session is desired so long as a cached
+token can be used to open the session. Passing NO to this argument, assures the method will not present UI
+to the user in order to open the session.</p>
+
+<p>@discussion
+Returns YES if the session was opened synchronously without presenting UI to the user. This occurs
+when there is a cached token available from a previous run of the application. If NO is returned, this indicates
+that the session was not immediately opened, via cache. However, if YES was passed as allowLoginUI, then it is
+possible that the user will login, and the session will become open asynchronously. The primary use for
+this return value is to switch-on facebook capabilities in your UX upon startup, in the case were the session
+is opened via cache.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+This is the simplest method for opening a session with <a href="../Classes/Facebook.html">Facebook</a>. Using sessionOpen logs on a user,
+and sets the static <a href="#//api/name/activeSession">activeSession</a> which becomes the default session object for any <a href="../Classes/Facebook.html">Facebook</a> UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p>
+
+<p>Note, if there is not a cached token available, this method will present UI to the user in order to
+open the session via explicit login by the user.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openActiveSessionWithPermissions:allowLoginUI:completionHandler:" title="openActiveSessionWithPermissions:allowLoginUI:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">openActiveSessionWithPermissions:allowLoginUI:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+This is a simple method for opening a session with <a href="../Classes/Facebook.html">Facebook</a>. Using sessionOpen logs on a user,
+and sets the static <a href="#//api/name/activeSession">activeSession</a> which becomes the default session object for any <a href="../Classes/Facebook.html">Facebook</a> UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)openActiveSessionWithPermissions:(NSArray *)<em>permissions</em> allowLoginUI:(BOOL)<em>allowLoginUI</em> completionHandler:(FBSessionStateHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>permissions</em></dt>
+			<dd><p>An array of strings representing the <a href="#//api/name/permissions">permissions</a> to request during the
+authentication flow. A value of nil indicates basic <a href="#//api/name/permissions">permissions</a>. A nil value specifies
+default <a href="#//api/name/permissions">permissions</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowLoginUI</em></dt>
+			<dd><p>Sometimes it is useful to attempt to open a session, but only if
+no login UI will be required to accomplish the operation. For example, at application startup it may not
+be desirable to transition to login UI for the user, and yet an open session is desired so long as a cached
+token can be used to open the session. Passing NO to this argument, assures the method will not present UI
+to the user in order to open the session.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>Many applications will benefit from notification when a session becomes invalid
+or undergoes other <a href="#//api/name/state">state</a> transitions. If a block is provided, the FBSession
+object will call the block each time the session changes <a href="#//api/name/state">state</a>.</p>
+
+<p>@discussion
+Returns true if the session was opened synchronously without presenting UI to the user. This occurs
+when there is a cached token available from a previous run of the application. If NO is returned, this indicates
+that the session was not immediately opened, via cache. However, if YES was passed as allowLoginUI, then it is
+possible that the user will login, and the session will become open asynchronously. The primary use for
+this return value is to switch-on facebook capabilities in your UX upon startup, in the case were the session
+is opened via cache.</p>
+
+<p>It is required that initial <a href="#//api/name/permissions">permissions</a> requests represent read-only <a href="#//api/name/permissions">permissions</a> only. If publish
+<a href="#//api/name/permissions">permissions</a> are needed, you may use reauthorizeWithPermissions to specify additional <a href="#//api/name/permissions">permissions</a> as
+well as an audience. Use of this method will result in a legacy fast-app-switch <a href="../Classes/Facebook.html">Facebook</a> Login due to
+the requirement to seperate read and publish <a href="#//api/name/permissions">permissions</a> for newer applications. Methods and properties
+that specify <a href="#//api/name/permissions">permissions</a> without a read or publish qualification are deprecated; use of a read-qualified
+or publish-qualified alternative is preferred.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+This is a simple method for opening a session with <a href="../Classes/Facebook.html">Facebook</a>. Using sessionOpen logs on a user,
+and sets the static <a href="#//api/name/activeSession">activeSession</a> which becomes the default session object for any <a href="../Classes/Facebook.html">Facebook</a> UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:" title="openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+This is a simple method for opening a session with <a href="../Classes/Facebook.html">Facebook</a>. Using sessionOpen logs on a user,
+and sets the static <a href="#//api/name/activeSession">activeSession</a> which becomes the default session object for any <a href="../Classes/Facebook.html">Facebook</a> UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)openActiveSessionWithPublishPermissions:(NSArray *)<em>publishPermissions</em> defaultAudience:(FBSessionDefaultAudience)<em>defaultAudience</em> allowLoginUI:(BOOL)<em>allowLoginUI</em> completionHandler:(FBSessionStateHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>publishPermissions</em></dt>
+			<dd><p>An array of strings representing the publish <a href="#//api/name/permissions">permissions</a> to request during the
+authentication flow.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>defaultAudience</em></dt>
+			<dd><p>Anytime an app publishes on behalf of a user, the post must have an audience (e.g. me, my friends, etc.)
+The default audience is used to notify the user of the cieling that the user agrees to grant to the app for the provided <a href="#//api/name/permissions">permissions</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowLoginUI</em></dt>
+			<dd><p>Sometimes it is useful to attempt to open a session, but only if
+no login UI will be required to accomplish the operation. For example, at application startup it may not
+be desirable to transition to login UI for the user, and yet an open session is desired so long as a cached
+token can be used to open the session. Passing NO to this argument, assures the method will not present UI
+to the user in order to open the session.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>Many applications will benefit from notification when a session becomes invalid
+or undergoes other <a href="#//api/name/state">state</a> transitions. If a block is provided, the FBSession
+object will call the block each time the session changes <a href="#//api/name/state">state</a>.</p>
+
+<p>@discussion
+Returns true if the session was opened synchronously without presenting UI to the user. This occurs
+when there is a cached token available from a previous run of the application. If NO is returned, this indicates
+that the session was not immediately opened, via cache. However, if YES was passed as allowLoginUI, then it is
+possible that the user will login, and the session will become open asynchronously. The primary use for
+this return value is to switch-on facebook capabilities in your UX upon startup, in the case were the session
+is opened via cache.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+This is a simple method for opening a session with <a href="../Classes/Facebook.html">Facebook</a>. Using sessionOpen logs on a user,
+and sets the static <a href="#//api/name/activeSession">activeSession</a> which becomes the default session object for any <a href="../Classes/Facebook.html">Facebook</a> UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:" title="openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+This is a simple method for opening a session with <a href="../Classes/Facebook.html">Facebook</a>. Using sessionOpen logs on a user,
+and sets the static <a href="#//api/name/activeSession">activeSession</a> which becomes the default session object for any <a href="../Classes/Facebook.html">Facebook</a> UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)openActiveSessionWithReadPermissions:(NSArray *)<em>readPermissions</em> allowLoginUI:(BOOL)<em>allowLoginUI</em> completionHandler:(FBSessionStateHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>readPermissions</em></dt>
+			<dd><p>An array of strings representing the read <a href="#//api/name/permissions">permissions</a> to request during the
+authentication flow. A value of nil indicates basic <a href="#//api/name/permissions">permissions</a>. It is not allowed to pass publish
+<a href="#//api/name/permissions">permissions</a> to this method.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowLoginUI</em></dt>
+			<dd><p>Sometimes it is useful to attempt to open a session, but only if
+no login UI will be required to accomplish the operation. For example, at application startup it may not
+be desirable to transition to login UI for the user, and yet an open session is desired so long as a cached
+token can be used to open the session. Passing NO to this argument, assures the method will not present UI
+to the user in order to open the session.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>Many applications will benefit from notification when a session becomes invalid
+or undergoes other <a href="#//api/name/state">state</a> transitions. If a block is provided, the FBSession
+object will call the block each time the session changes <a href="#//api/name/state">state</a>.</p>
+
+<p>@discussion
+Returns true if the session was opened synchronously without presenting UI to the user. This occurs
+when there is a cached token available from a previous run of the application. If NO is returned, this indicates
+that the session was not immediately opened, via cache. However, if YES was passed as allowLoginUI, then it is
+possible that the user will login, and the session will become open asynchronously. The primary use for
+this return value is to switch-on facebook capabilities in your UX upon startup, in the case were the session
+is opened via cache.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+This is a simple method for opening a session with <a href="../Classes/Facebook.html">Facebook</a>. Using sessionOpen logs on a user,
+and sets the static <a href="#//api/name/activeSession">activeSession</a> which becomes the default session object for any <a href="../Classes/Facebook.html">Facebook</a> UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/renewSystemCredentials:" title="renewSystemCredentials:"></a>
+	<h3 class="subsubtitle method-title">renewSystemCredentials:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)renewSystemCredentials:(FBSessionRenewSystemCredentialsHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>The completion handler to call when the renewal is completed. The handler will be
+invoked on the main thread.</p>
+
+<p>@discussion This can be used to explicitly renew account credentials on iOS 6 devices and is provided
+as a convenience wrapper around <code>[ACAccountStore renewCredentialsForAccount:completion]</code>. Note the
+method will not issue the renewal call if the the <a href="../Classes/Facebook.html">Facebook</a> account has not been set on the device, or
+if access had not been granted to the account (though the handler wil receive an error).</p>
+
+<p>This is safe to call (and will surface an error to the handler) on versions of iOS before 6 or if the user
+logged in via Safari or <a href="../Classes/Facebook.html">Facebook</a> SSO.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract Issues an asychronous renewCredentialsForAccount call to the device <a href="../Classes/Facebook.html">Facebook</a> account store.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setActiveSession:" title="setActiveSession:"></a>
+	<h3 class="subsubtitle method-title">setActiveSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+An application may get or set the current active session. Certain high-level components in the SDK
+will use the <a href="#//api/name/activeSession">activeSession</a> to set default session (e.g. <a href="../Classes/FBLoginView.html"><code>FBLoginView</code></a>, <a href="../Classes/FBFriendPickerViewController.html"><code>FBFriendPickerViewController</code></a>)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (FBSession *)setActiveSession:(FBSession *)<em>session</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>session</em></dt>
+			<dd><p>The FBSession object to become the active session</p>
+
+<p>@discussion
+If an application prefers the flexibilility of directly instantiating a session object, an active
+session can be set directly.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+An application may get or set the current active session. Certain high-level components in the SDK
+will use the <a href="#//api/name/activeSession">activeSession</a> to set default session (e.g. <a href="../Classes/FBLoginView.html"><code>FBLoginView</code></a>, <a href="../Classes/FBFriendPickerViewController.html"><code>FBFriendPickerViewController</code></a>)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDefaultAppID:" title="setDefaultAppID:"></a>
+	<h3 class="subsubtitle method-title">setDefaultAppID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setDefaultAppID:(NSString *)<em>appID</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>appID</em></dt>
+			<dd><p>The default <a href="../Classes/Facebook.html">Facebook</a> App ID to use for <FBSession> methods.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract Set the default <a href="../Classes/Facebook.html">Facebook</a> App ID to use for sessions. The app ID may be
+overridden on a per session basis.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDefaultUrlSchemeSuffix:" title="setDefaultUrlSchemeSuffix:"></a>
+	<h3 class="subsubtitle method-title">setDefaultUrlSchemeSuffix:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setDefaultUrlSchemeSuffix:(NSString *)<em>urlSchemeSuffix</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>urlSchemeSuffix</em></dt>
+			<dd><p>The default url scheme suffix to use for <FBSession> methods.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract Set the default url scheme suffix to use for sessions. The url
+scheme suffix may be overridden on a per session basis.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/authorizeWithPermissions:behavior:defaultAudience:isReauthorize:" title="authorizeWithPermissions:behavior:defaultAudience:isReauthorize:"></a>
+	<h3 class="subsubtitle method-title">authorizeWithPermissions:behavior:defaultAudience:isReauthorize:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)authorizeWithPermissions:(NSArray *)<em>permissions</em> behavior:(FBSessionLoginBehavior)<em>behavior</em> defaultAudience:(FBSessionDefaultAudience)<em>audience</em> isReauthorize:(BOOL)<em>isReauthorize</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/clearAffinitizedThread" title="clearAffinitizedThread"></a>
+	<h3 class="subsubtitle method-title">clearAffinitizedThread</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)clearAffinitizedThread</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/close" title="close"></a>
+	<h3 class="subsubtitle method-title">close</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Closes the local in-memory session object, but does not clear the persisted token cache.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)close</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Closes the local in-memory session object, but does not clear the persisted token cache.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/closeAndClearTokenInformation" title="closeAndClearTokenInformation"></a>
+	<h3 class="subsubtitle method-title">closeAndClearTokenInformation</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Closes the in-memory session, and clears any persisted cache related to the session.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)closeAndClearTokenInformation</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Closes the in-memory session, and clears any persisted cache related to the session.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/closeAndClearTokenInformation:" title="closeAndClearTokenInformation:"></a>
+	<h3 class="subsubtitle method-title">closeAndClearTokenInformation:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)closeAndClearTokenInformation:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/errorLoginFailedWithReason:errorCode:innerError:" title="errorLoginFailedWithReason:errorCode:innerError:"></a>
+	<h3 class="subsubtitle method-title">errorLoginFailedWithReason:errorCode:innerError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (NSError *)errorLoginFailedWithReason:(NSString *)<em>errorReason</em> errorCode:(NSString *)<em>errorCode</em> innerError:(NSError *)<em>innerError</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/handleDidBecomeActive" title="handleDidBecomeActive"></a>
+	<h3 class="subsubtitle method-title">handleDidBecomeActive</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+A helper method that is used to provide an implementation for
+[UIApplicationDelegate applicationDidBecomeActive:] to properly resolve session <a href="#//api/name/state">state</a> for
+the <a href="../Classes/Facebook.html">Facebook</a> Login flow, specifically to support app-switch login.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)handleDidBecomeActive</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+A helper method that is used to provide an implementation for
+[UIApplicationDelegate applicationDidBecomeActive:] to properly resolve session <a href="#//api/name/state">state</a> for
+the <a href="../Classes/Facebook.html">Facebook</a> Login flow, specifically to support app-switch login.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/handleOpenURL:" title="handleOpenURL:"></a>
+	<h3 class="subsubtitle method-title">handleOpenURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+A helper method that is used to provide an implementation for
+[UIApplicationDelegate application:openURL:sourceApplication:annotation:]. It should be invoked during
+the <a href="../Classes/Facebook.html">Facebook</a> Login flow and will update the session information based on the incoming URL.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)handleOpenURL:(NSURL *)<em>url</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The URL as passed to [UIApplicationDelegate application:openURL:sourceApplication:annotation:].</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+A helper method that is used to provide an implementation for
+[UIApplicationDelegate application:openURL:sourceApplication:annotation:]. It should be invoked during
+the <a href="../Classes/Facebook.html">Facebook</a> Login flow and will update the session information based on the incoming URL.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/handleReauthorize:accessToken:" title="handleReauthorize:accessToken:"></a>
+	<h3 class="subsubtitle method-title">handleReauthorize:accessToken:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)handleReauthorize:(NSDictionary *)<em>parameters</em> accessToken:(NSString *)<em>accessToken</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="subsubtitle method-title">init</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)init</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract
+Returns a newly initialized <a href="../Classes/Facebook.html">Facebook</a> session with default values for the parameters
+to <a href="#//api/name/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:">initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:" title="initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:"></a>
+	<h3 class="subsubtitle method-title">initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithAppID:(NSString *)<em>appID</em> permissions:(NSArray *)<em>permissions</em> defaultAudience:(FBSessionDefaultAudience)<em>defaultAudience</em> urlSchemeSuffix:(NSString *)<em>urlSchemeSuffix</em> tokenCacheStrategy:(FBSessionTokenCachingStrategy *)<em>tokenCachingStrategy</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>appID</em></dt>
+			<dd><p>The Facebook App ID for the session. If nil is passed in the default App ID will be obtained from a call to <a href="#//api/name/defaultAppID">[FBSession defaultAppID]</a>. The default is nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>permissions</em></dt>
+			<dd><p>An array of strings representing the <a href="#//api/name/permissions">permissions</a> to request during the
+authentication flow. A value of nil indicates basic <a href="#//api/name/permissions">permissions</a>. The default is nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>defaultAudience</em></dt>
+			<dd><p>Most applications use FBSessionDefaultAudienceNone here, only specifying an audience when using reauthorize to request publish <a href="#//api/name/permissions">permissions</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>urlSchemeSuffix</em></dt>
+			<dd><p>The URL Scheme Suffix to be used in scenarious where multiple iOS apps use one <a href="../Classes/Facebook.html">Facebook</a> App ID. A value of nil indicates that this information should be pulled from the plist. The default is nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tokenCachingStrategy</em></dt>
+			<dd><p>Specifies a key name to use for cached token information in NSUserDefaults, nil
+indicates a default value of @&ldquo;FBAccessTokenInformationKey&rdquo;.</p>
+
+<p>@discussion
+It is required that any single permission request request (including initial log in) represent read-only <a href="#//api/name/permissions">permissions</a>
+or publish <a href="#//api/name/permissions">permissions</a> only; not both. The <a href="#//api/name/permissions">permissions</a> passed here should reflect this requirement. If publish <a href="#//api/name/permissions">permissions</a>
+are used, then the audience must also be specified.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract
+Following are the descriptions of the arguments along with their
+defaults when ommitted.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:" title="initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:"></a>
+	<h3 class="subsubtitle method-title">initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithAppID:(NSString *)<em>appID</em> permissions:(NSArray *)<em>permissions</em> urlSchemeSuffix:(NSString *)<em>urlSchemeSuffix</em> tokenCacheStrategy:(FBSessionTokenCachingStrategy *)<em>tokenCachingStrategy</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>appID</em></dt>
+			<dd><p>The Facebook App ID for the session. If nil is passed in the default App ID will be obtained from a call to <a href="#//api/name/defaultAppID">[FBSession defaultAppID]</a>. The default is nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>permissions</em></dt>
+			<dd><p>An array of strings representing the <a href="#//api/name/permissions">permissions</a> to request during the
+authentication flow. A value of nil indicates basic <a href="#//api/name/permissions">permissions</a>. The default is nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>urlSchemeSuffix</em></dt>
+			<dd><p>The URL Scheme Suffix to be used in scenarious where multiple iOS apps use one <a href="../Classes/Facebook.html">Facebook</a> App ID. A value of nil indicates that this information should be pulled from the plist. The default is nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tokenCachingStrategy</em></dt>
+			<dd><p>Specifies a key name to use for cached token information in NSUserDefaults, nil
+indicates a default value of @&ldquo;FBAccessTokenInformationKey&rdquo;.</p>
+
+<p>@discussion
+It is required that any single permission request request (including initial log in) represent read-only <a href="#//api/name/permissions">permissions</a>
+or publish <a href="#//api/name/permissions">permissions</a> only; not both. The <a href="#//api/name/permissions">permissions</a> passed here should reflect this requirement.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract
+Following are the descriptions of the arguments along with their
+defaults when ommitted.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithPermissions:" title="initWithPermissions:"></a>
+	<h3 class="subsubtitle method-title">initWithPermissions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithPermissions:(NSArray *)<em>permissions</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>permissions</em></dt>
+			<dd><p>An array of strings representing the <a href="#//api/name/permissions">permissions</a> to request during the
+authentication flow. A value of nil indicates basic <a href="#//api/name/permissions">permissions</a>. The default is nil.</p>
+
+<p>@discussion
+It is required that any single permission request request (including initial log in) represent read-only <a href="#//api/name/permissions">permissions</a>
+or publish <a href="#//api/name/permissions">permissions</a> only; not both. The <a href="#//api/name/permissions">permissions</a> passed here should reflect this requirement.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract
+Returns a newly initialized <a href="../Classes/Facebook.html">Facebook</a> session with the specified <a href="#//api/name/permissions">permissions</a> and other
+default values for parameters to <a href="#//api/name/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:">initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openFromAccessTokenData:completionHandler:" title="openFromAccessTokenData:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">openFromAccessTokenData:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)openFromAccessTokenData:(FBAccessTokenData *)<em>accessTokenData</em> completionHandler:(FBSessionStateHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>accessTokenData</em></dt>
+			<dd><p>The token data. See <a href="../Classes/FBAccessTokenData.html"><code>FBAccessTokenData</code></a> for construction methods.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A block to call with session <a href="#//api/name/state">state</a> changes. The default is nil.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract Imports an existing access token and opens the session with it.</p>
+
+<p>@discussion
+The method attempts to open the session using an existing access token. No UX will occur. If
+successful, the session with be in an Open <a href="#//api/name/state">state</a> and the method will return YES; otherwise, NO.</p>
+
+<p>The method may be called at most once and must be called after the <code>FBSession</code> is initialized (see below).
+It must be called before the session is closed. Calling the method at an invalid time will result in
+an exception. The open session methods may be passed a block that will be called back when the session
+<a href="#//api/name/state">state</a> changes. The block will be released when the session is closed.</p>
+
+<p>The initialized session must not have already been initialized from a cache (for example, you could use
+the <a href="../Classes/FBSessionTokenCachingStrategy.html#//api/name/nullCacheInstance"><code>[FBSessionTokenCachingStrategy nullCacheInstance]</code></a> instance).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openWithBehavior:completionHandler:" title="openWithBehavior:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">openWithBehavior:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)openWithBehavior:(FBSessionLoginBehavior)<em>behavior</em> completionHandler:(FBSessionStateHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>behavior</em></dt>
+			<dd><p>Controls whether to allow, force, or prohibit <a href="../Classes/Facebook.html">Facebook</a> Login or Inline <a href="../Classes/Facebook.html">Facebook</a> Login. The default
+is to allow <a href="../Classes/Facebook.html">Facebook</a> Login, with fallback to Inline <a href="../Classes/Facebook.html">Facebook</a> Login.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A block to call with session <a href="#//api/name/state">state</a> changes. The default is nil.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract Logs a user on to <a href="../Classes/Facebook.html">Facebook</a>.</p>
+
+<p>@discussion
+A session may not be used with <a href="../Classes/FBRequest.html">FBRequest</a> and other classes in the SDK until it is open. If, prior
+to calling open, the session is in the <FBSessionStateCreatedTokenLoaded> <a href="#//api/name/state">state</a>, then no UX occurs, and
+the session becomes available for use. If the session is in the <FBSessionStateCreated> <a href="#//api/name/state">state</a>, prior
+to calling open, then a call to open causes login UX to occur, either via the <a href="../Classes/Facebook.html">Facebook</a> application
+or via mobile Safari.</p>
+
+<p>The method may be called at most once and must be called after the <code>FBSession</code> is initialized. It must
+be called before the session is closed. Calling the method at an invalid time will result in
+an exception. The open session methods may be passed a block that will be called back when the session
+<a href="#//api/name/state">state</a> changes. The block will be released when the session is closed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openWithCompletionHandler:" title="openWithCompletionHandler:"></a>
+	<h3 class="subsubtitle method-title">openWithCompletionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)openWithCompletionHandler:(FBSessionStateHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A block to call with the <a href="#//api/name/state">state</a> changes. The default is nil.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract Opens a session for the <a href="../Classes/Facebook.html">Facebook</a>.</p>
+
+<p>@discussion
+A session may not be used with <a href="../Classes/FBRequest.html">FBRequest</a> and other classes in the SDK until it is open. If, prior
+to calling open, the session is in the <FBSessionStateCreatedTokenLoaded> <a href="#//api/name/state">state</a>, then no UX occurs, and
+the session becomes available for use. If the session is in the <FBSessionStateCreated> <a href="#//api/name/state">state</a>, prior
+to calling open, then a call to open causes login UX to occur, either via the <a href="../Classes/Facebook.html">Facebook</a> application
+or via mobile Safari.</p>
+
+<p>Open may be called at most once and must be called after the <code>FBSession</code> is initialized. Open must
+be called before the session is closed. Calling an open method at an invalid time will result in
+an exception. The open session methods may be passed a block that will be called back when the session
+<a href="#//api/name/state">state</a> changes. The block will be released when the session is closed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reauthorizeWithPermissions:behavior:completionHandler:" title="reauthorizeWithPermissions:behavior:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">reauthorizeWithPermissions:behavior:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)reauthorizeWithPermissions:(NSArray *)<em>permissions</em> behavior:(FBSessionLoginBehavior)<em>behavior</em> completionHandler:(FBSessionReauthorizeResultHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>permissions</em></dt>
+			<dd><p>An array of strings representing the <a href="#//api/name/permissions">permissions</a> to request during the
+authentication flow. A value of nil indicates basic <a href="#//api/name/permissions">permissions</a>. The default is nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>behavior</em></dt>
+			<dd><p>Controls whether to allow, force, or prohibit <a href="../Classes/Facebook.html">Facebook</a> Login. The default
+is to allow <a href="../Classes/Facebook.html">Facebook</a> Login and fall back to Inline <a href="../Classes/Facebook.html">Facebook</a> Login if needed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A block to call with session <a href="#//api/name/state">state</a> changes. The default is nil.</p>
+
+<p>@discussion Methods and properties that specify <a href="#//api/name/permissions">permissions</a> without a read or publish
+qualification are deprecated; use of a read-qualified or publish-qualified alternative is preferred
+(e.g. reauthorizeWithReadPermissions or reauthorizeWithPublishPermissions)</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reauthorizeWithPublishPermissions:defaultAudience:completionHandler:" title="reauthorizeWithPublishPermissions:defaultAudience:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">reauthorizeWithPublishPermissions:defaultAudience:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)reauthorizeWithPublishPermissions:(NSArray *)<em>writePermissions</em> defaultAudience:(FBSessionDefaultAudience)<em>defaultAudience</em> completionHandler:(FBSessionReauthorizeResultHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>writePermissions</em></dt>
+			<dd><p>An array of strings representing the <a href="#//api/name/permissions">permissions</a> to request during the
+authentication flow.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>defaultAudience</em></dt>
+			<dd><p>Specifies the audience for posts.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A block to call with session state changes. The default is nil.</p>
+
+<p>@discussion This method is a deprecated alias of <a href="#//api/name/requestNewPublishPermissions:defaultAudience:completionHandler:">[FBSession requestNewPublishPermissions:defaultAudience:completionHandler:]</a>.
+Consider using <a href="#//api/name/requestNewPublishPermissions:defaultAudience:completionHandler:">[FBSession requestNewPublishPermissions:defaultAudience:completionHandler:]</a>, which is preferred for readability.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reauthorizeWithReadPermissions:completionHandler:" title="reauthorizeWithReadPermissions:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">reauthorizeWithReadPermissions:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)reauthorizeWithReadPermissions:(NSArray *)<em>readPermissions</em> completionHandler:(FBSessionReauthorizeResultHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>readPermissions</em></dt>
+			<dd><p>An array of strings representing the <a href="#//api/name/permissions">permissions</a> to request during the
+authentication flow. A value of nil indicates basic <a href="#//api/name/permissions">permissions</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A block to call with session state changes. The default is nil.</p>
+
+<p>@discussion This method is a deprecated alias of <a href="#//api/name/requestNewReadPermissions:completionHandler:">[FBSession requestNewReadPermissions:completionHandler:]</a>. Consider
+using <a href="#//api/name/requestNewReadPermissions:completionHandler:">[FBSession requestNewReadPermissions:completionHandler:]</a>, which is preferred for readability.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/refreshAccessToken:expirationDate:" title="refreshAccessToken:expirationDate:"></a>
+	<h3 class="subsubtitle method-title">refreshAccessToken:expirationDate:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)refreshAccessToken:(NSString *)<em>token</em> expirationDate:(NSDate *)<em>expireDate</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestNewPublishPermissions:defaultAudience:completionHandler:" title="requestNewPublishPermissions:defaultAudience:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">requestNewPublishPermissions:defaultAudience:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Requests new or additional write <a href="#//api/name/permissions">permissions</a> for the session.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)requestNewPublishPermissions:(NSArray *)<em>writePermissions</em> defaultAudience:(FBSessionDefaultAudience)<em>defaultAudience</em> completionHandler:(FBSessionRequestPermissionResultHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>writePermissions</em></dt>
+			<dd><p>An array of strings representing the <a href="#//api/name/permissions">permissions</a> to request during the
+authentication flow.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>defaultAudience</em></dt>
+			<dd><p>Specifies the audience for posts.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A block to call with session state changes. The default is nil.</p>
+
+<p>@discussion The handler, if non-nil, is called once the operation has completed or failed. This is in contrast to the
+state completion handler used in <a href="#//api/name/openWithCompletionHandler:">[FBSession openWithCompletionHandler:]</a> (and other <code>open*</code> methods) which is called
+for each state-change for the session.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Requests new or additional write <a href="#//api/name/permissions">permissions</a> for the session.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestNewReadPermissions:completionHandler:" title="requestNewReadPermissions:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">requestNewReadPermissions:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Requests new or additional read <a href="#//api/name/permissions">permissions</a> for the session.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)requestNewReadPermissions:(NSArray *)<em>readPermissions</em> completionHandler:(FBSessionRequestPermissionResultHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>readPermissions</em></dt>
+			<dd><p>An array of strings representing the <a href="#//api/name/permissions">permissions</a> to request during the
+authentication flow. A value of nil indicates basic <a href="#//api/name/permissions">permissions</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A block to call with session state changes. The default is nil.</p>
+
+<p>@discussion The handler, if non-nil, is called once the operation has completed or failed. This is in contrast to the
+state completion handler used in <a href="#//api/name/openWithCompletionHandler:">[FBSession openWithCompletionHandler:]</a> (and other <code>open*</code> methods) which is called
+for each state-change for the session.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Requests new or additional read <a href="#//api/name/permissions">permissions</a> for the session.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shouldExtendAccessToken" title="shouldExtendAccessToken"></a>
+	<h3 class="subsubtitle method-title">shouldExtendAccessToken</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)shouldExtendAccessToken</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/transitionAndCallHandlerWithState:error:token:expirationDate:shouldCache:loginType:" title="transitionAndCallHandlerWithState:error:token:expirationDate:shouldCache:loginType:"></a>
+	<h3 class="subsubtitle method-title">transitionAndCallHandlerWithState:error:token:expirationDate:shouldCache:loginType:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)transitionAndCallHandlerWithState:(FBSessionState)<em>status</em> error:(NSError *)<em>error</em> token:(NSString *)<em>token</em> expirationDate:(NSDate *)<em>date</em> shouldCache:(BOOL)<em>shouldCache</em> loginType:(FBSessionLoginType)<em>loginType</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/transitionToState:andUpdateToken:andExpirationDate:shouldCache:loginType:" title="transitionToState:andUpdateToken:andExpirationDate:shouldCache:loginType:"></a>
+	<h3 class="subsubtitle method-title">transitionToState:andUpdateToken:andExpirationDate:shouldCache:loginType:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)transitionToState:(FBSessionState)<em>state</em> andUpdateToken:(NSString *)<em>token</em> andExpirationDate:(NSDate *)<em>date</em> shouldCache:(BOOL)<em>shouldCache</em> loginType:(FBSessionLoginType)<em>loginType</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-14)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

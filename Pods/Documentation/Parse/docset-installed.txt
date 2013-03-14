@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/laGrave/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.Parse-1.1.33.docset
+Time: 2013-03-14 17:56:26 +0000

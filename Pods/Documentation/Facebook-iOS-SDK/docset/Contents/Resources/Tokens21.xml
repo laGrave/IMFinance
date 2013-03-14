@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBNativeDialogs.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBNativeDialogs</TokenIdentifier>
+			<Abstract type="html">@class FBNativeDialogs</Abstract>
+			<DeclaredIn>FBNativeDialogs.h</DeclaredIn>
+			
+			<NodeRef refid="21"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBNativeDialogs/presentShareDialogModallyFrom:initialText:image:url:handler:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Presents a dialog that allows the user to share a status update that may include
+text, images, or URLs. This dialog is only available on iOS 6.0 and above. The
+current active session returned by [FBSession activeSession] will be used to determine
+whether the dialog will be displayed. If a session is active, it must be open and the
+login method used to authenticate the user must be native iOS 6.0 authentication.
+If no session active, then whether the call succeeds or not will depend on
+whether Facebook integration has been configured.</Abstract>
+			<DeclaredIn>FBNativeDialogs.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)presentShareDialogModallyFrom:(UIViewController *)viewController initialText:(NSString *)initialText image:(UIImage *)image url:(NSURL *)url handler:(FBShareDialogHandler)handler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>viewController</Name>
+					<Abstract type="html">The view controller which will present the dialog.</Abstract>
+				</Parameter><Parameter>
+					<Name>initialText</Name>
+					<Abstract type="html">The text which will initially be populated in the dialog. The user
+will have the opportunity to edit this text before posting it. May be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>image</Name>
+					<Abstract type="html">A UIImage that will be attached to the status update. May be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>url</Name>
+					<Abstract type="html">An NSURL that will be attached to the status update. May be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>handler</Name>
+					<Abstract type="html">A handler that will be called when the dialog is dismissed, or if an error
+occurs. May be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the dialog was presented, NO if not (in the case of a NO result, the handler
+will still be called, with an error indicating the reason the dialog was not displayed)</Abstract></ReturnValue>
+			<Anchor>//api/name/presentShareDialogModallyFrom:initialText:image:url:handler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBNativeDialogs/presentShareDialogModallyFrom:initialText:images:urls:handler:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Presents a dialog that allows the user to share a status update that may include
+text, images, or URLs. This dialog is only available on iOS 6.0 and above. The
+current active session returned by [FBSession activeSession] will be used to determine
+whether the dialog will be displayed. If a session is active, it must be open and the
+login method used to authenticate the user must be native iOS 6.0 authentication.
+If no session active, then whether the call succeeds or not will depend on
+whether Facebook integration has been configured.</Abstract>
+			<DeclaredIn>FBNativeDialogs.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)presentShareDialogModallyFrom:(UIViewController *)viewController initialText:(NSString *)initialText images:(NSArray *)images urls:(NSArray *)urls handler:(FBShareDialogHandler)handler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>viewController</Name>
+					<Abstract type="html">The view controller which will present the dialog.</Abstract>
+				</Parameter><Parameter>
+					<Name>initialText</Name>
+					<Abstract type="html">The text which will initially be populated in the dialog. The user
+will have the opportunity to edit this text before posting it. May be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>images</Name>
+					<Abstract type="html">An array of UIImages that will be attached to the status update. May
+be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>urls</Name>
+					<Abstract type="html">An array of NSURLs that will be attached to the status update. May be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>handler</Name>
+					<Abstract type="html">A handler that will be called when the dialog is dismissed, or if an error
+occurs. May be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the dialog was presented, NO if not (in the case of a NO result, the handler
+will still be called, with an error indicating the reason the dialog was not displayed)</Abstract></ReturnValue>
+			<Anchor>//api/name/presentShareDialogModallyFrom:initialText:images:urls:handler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBNativeDialogs/presentShareDialogModallyFrom:session:initialText:images:urls:handler:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Presents a dialog that allows the user to share a status update that may include
+text, images, or URLs. This dialog is only available on iOS 6.0 and above. An
+FBSession may be specified, or nil may be passed to indicate that the current
+active session should be used. If a session is specified (whether explicitly or by
+virtue of being the active session), it must be open and the login method used to
+authenticate the user must be native iOS 6.0 authentication. If no session is specified
+(and there is no active session), then whether the call succeeds or not will depend on
+whether Facebook integration has been configured.</Abstract>
+			<DeclaredIn>FBNativeDialogs.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)presentShareDialogModallyFrom:(UIViewController *)viewController session:(FBSession *)session initialText:(NSString *)initialText images:(NSArray *)images urls:(NSArray *)urls handler:(FBShareDialogHandler)handler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>viewController</Name>
+					<Abstract type="html">The view controller which will present the dialog.</Abstract>
+				</Parameter><Parameter>
+					<Name>session</Name>
+					<Abstract type="html">The &lt;FBSession&gt; to use to determine whether or not the user has been
+authenticated with iOS native authentication. If nil, then [FBSession activeSession]
+will be checked. See discussion above for the implications of nil or non-nil session.</Abstract>
+				</Parameter><Parameter>
+					<Name>initialText</Name>
+					<Abstract type="html">The text which will initially be populated in the dialog. The user
+will have the opportunity to edit this text before posting it. May be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>images</Name>
+					<Abstract type="html">An array of UIImages that will be attached to the status update. May
+be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>urls</Name>
+					<Abstract type="html">An array of NSURLs that will be attached to the status update. May be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>handler</Name>
+					<Abstract type="html">A handler that will be called when the dialog is dismissed, or if an error
+occurs. May be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the dialog was presented, NO if not (in the case of a NO result, the handler
+will still be called, with an error indicating the reason the dialog was not displayed)</Abstract></ReturnValue>
+			<Anchor>//api/name/presentShareDialogModallyFrom:session:initialText:images:urls:handler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBNativeDialogs/canPresentShareDialogWithSession:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Determines whether a call to presentShareDialogModallyFrom: will successfully present
+a dialog. This is useful for applications that need to modify the available UI controls
+depending on whether the dialog is available on the current platform and for the current
+user.</Abstract>
+			<DeclaredIn>FBNativeDialogs.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)canPresentShareDialogWithSession:(FBSession *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>session</Name>
+					<Abstract type="html">The &lt;FBSession&gt; to use to determine whether or not the user has been
+authenticated with iOS native authentication. If nil, then [FBSession activeSession]
+will be checked. See discussion above for the implications of nil or non-nil session.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the dialog would be presented for the session, and NO if not</Abstract></ReturnValue>
+			<Anchor>//api/name/canPresentShareDialogWithSession:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

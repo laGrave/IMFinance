@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSError+FBError.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSError(FBError)</TokenIdentifier>
+			<Abstract type="html">@category NSError(FBError)</Abstract>
+			<DeclaredIn>NSError+FBError.h</DeclaredIn>
+			
+			<NodeRef refid="45"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSError(FBError)/setFberrorCategory:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Categorizes the error, if it is Facebook related, to simplify application mitigation behavior</Abstract>
+			<DeclaredIn>NSError+FBError.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly) FBErrorCategory fberrorCategory</Declaration>
+			
+			
+			<Anchor>//api/name/fberrorCategory</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSError(FBError)/fberrorCategory</TokenIdentifier>
+			<Abstract type="html">@abstract
+Categorizes the error, if it is Facebook related, to simplify application mitigation behavior</Abstract>
+			<DeclaredIn>NSError+FBError.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly) FBErrorCategory fberrorCategory</Declaration>
+			
+			
+			<Anchor>//api/name/fberrorCategory</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSError(FBError)/setFberrorShouldNotifyUser:</TokenIdentifier>
+			<Abstract type="html">@abstract
+If YES indicates that a user action is required in order to successfully continue with the facebook operation</Abstract>
+			<DeclaredIn>NSError+FBError.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly) BOOL fberrorShouldNotifyUser</Declaration>
+			
+			
+			<Anchor>//api/name/fberrorShouldNotifyUser</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSError(FBError)/fberrorShouldNotifyUser</TokenIdentifier>
+			<Abstract type="html">@abstract
+If YES indicates that a user action is required in order to successfully continue with the facebook operation</Abstract>
+			<DeclaredIn>NSError+FBError.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly) BOOL fberrorShouldNotifyUser</Declaration>
+			
+			
+			<Anchor>//api/name/fberrorShouldNotifyUser</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSError(FBError)/setFberrorUserMessage:</TokenIdentifier>
+			<Abstract type="html">@abstract
+A message suitable for display to the user, describing a user action necessary to enable Facebook functionality.
+Not all Facebook errors yield a message suitable for user display; however in all cases where
+fberrorShouldNotifyUser is YES, this property returns a localizable message suitable for display.</Abstract>
+			<DeclaredIn>NSError+FBError.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSString *fberrorUserMessage</Declaration>
+			
+			
+			<Anchor>//api/name/fberrorUserMessage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSError(FBError)/fberrorUserMessage</TokenIdentifier>
+			<Abstract type="html">@abstract
+A message suitable for display to the user, describing a user action necessary to enable Facebook functionality.
+Not all Facebook errors yield a message suitable for user display; however in all cases where
+fberrorShouldNotifyUser is YES, this property returns a localizable message suitable for display.</Abstract>
+			<DeclaredIn>NSError+FBError.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSString *fberrorUserMessage</Declaration>
+			
+			
+			<Anchor>//api/name/fberrorUserMessage</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

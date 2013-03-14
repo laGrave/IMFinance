@@ -56,7 +56,6 @@ static IMCoreDataManager *sharedInstance = nil;
 #pragma mark Core Data - Accounts
 
 static NSString *kAccount = @"account";
-static NSString *kAccountKey = @"account key";
 static NSString *kAccountName = @"account name";
 static NSString *kAccountInitialValue = @"account initial value";
 static NSString *kAccountCurrency = @"account currency";
@@ -92,7 +91,13 @@ static NSString *kAccountType = @"account type";
         }
                           completion:^(BOOL success, NSError *error){
                               if (success) {
-                                  [self correctTransaction:parameters];
+                                  [self correctTransaction:parameters success:^{
+                                      Account *account = [parameters[kAccount] MR_inThreadContext];
+                                      PFObject *parseAccount = [PFObject objectWithClassName:@"Account"];
+                                      [parseAccount setObject:account.name forKey:@"name"];
+                                      [parseAccount setObject:account.value forKey:@"value"];
+                                      [parseAccount saveInBackground];
+                                  }];
                                   successBlock();
                               }
                               else {
@@ -102,7 +107,7 @@ static NSString *kAccountType = @"account type";
     });
 }
 
-- (void)correctTransaction:(NSDictionary *)parameters {
+- (void)correctTransaction:(NSDictionary *)parameters success:(void (^)())successBlock {
 
     NSNumber *initialValue = [parameters objectForKey:kAccountInitialValue];
     if (initialValue) {
@@ -129,7 +134,7 @@ static NSString *kAccountType = @"account type";
                 [transParams setValue:[NSNumber numberWithBool:YES] forKey:kTransactionHidden];
             }
             
-            [self editTransactionWithParams:transParams success:nil failure:nil];
+            [self editTransactionWithParams:transParams success:successBlock failure:nil];
         }
     }
 }

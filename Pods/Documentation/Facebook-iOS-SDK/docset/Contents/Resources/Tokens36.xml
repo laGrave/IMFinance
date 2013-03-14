@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBSettings.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBSettings</TokenIdentifier>
+			<Abstract type="html">@typedef</Abstract>
+			<DeclaredIn>FBSettings.h</DeclaredIn>
+			
+			<NodeRef refid="36"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/loggingBehavior</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSettings.h</DeclaredIn>			
+			
+			<Declaration>+ (NSSet *)loggingBehavior</Declaration>
+			
+			
+			<Anchor>//api/name/loggingBehavior</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/setLoggingBehavior:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSettings.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setLoggingBehavior:(NSSet *)loggingBehavior</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>loggingBehavior</Name>
+					<Abstract type="html">A set of strings indicating what information should be logged.  If nil is provided, the logging
+behavior is reset to the default set of enabled behaviors.  Set in an empty set in order to disable all logging.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setLoggingBehavior:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/shouldAutoPublishInstall</TokenIdentifier>
+			<Abstract type="html">@abstract Retreive the current auto publish behavior.  Defaults to YES.</Abstract>
+			<DeclaredIn>FBSettings.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)shouldAutoPublishInstall</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAutoPublishInstall</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/setShouldAutoPublishInstall:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSettings.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setShouldAutoPublishInstall:(BOOL)autoPublishInstall</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>autoPublishInstall</Name>
+					<Abstract type="html">If YES, automatically publish the install; if NO, do not.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setShouldAutoPublishInstall:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/publishInstall:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSettings.h</DeclaredIn>			
+			
+			<Declaration>+ (void)publishInstall:(NSString *)appID</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>appID</Name>
+					<Abstract type="html">A specific appID to publish an install for.  If nil, uses [FBSession defaultAppID].</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/publishInstall:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/publishInstall:withHandler:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSettings.h</DeclaredIn>			
+			
+			<Declaration>+ (void)publishInstall:(NSString *)appID withHandler:(FBInstallResponseDataHandler)handler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>appID</Name>
+					<Abstract type="html">A specific appID to publish an install for.  If nil, uses [FBSession defaultAppID].</Abstract>
+				</Parameter><Parameter>
+					<Name>handler</Name>
+					<Abstract type="html">A block to call with the server&apos;s response.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/publishInstall:withHandler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/clientToken</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSettings.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)clientToken</Declaration>
+			
+			
+			<Anchor>//api/name/clientToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/setClientToken:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSettings.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setClientToken:(NSString *)clientToken</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>clientToken</Name>
+					<Abstract type="html">The Facebook App&apos;s &quot;client token&quot;, which, for a given appid can be found in the Security
+section of the Advanced tab of the Facebook App settings found at https://developers.facebook.com/apps/[your-app-id]&gt;</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setClientToken:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/autoPublishInstall:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSettings+Internal.h</DeclaredIn>			
+			
+			<Declaration>+ (void)autoPublishInstall:(NSString *)appID</Declaration>
+			
+			
+			<Anchor>//api/name/autoPublishInstall:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

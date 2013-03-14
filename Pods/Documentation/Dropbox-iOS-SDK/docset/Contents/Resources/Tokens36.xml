@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/DBRestClientDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/DBRestClientDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>
+			
+			<NodeRef refid="36"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadedMetadata:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadedMetadata:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:metadataUnchangedAtPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client metadataUnchangedAtPath:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:metadataUnchangedAtPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadMetadataFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadMetadataFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadMetadataFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadedDeltaEntries:reset:cursor:hasMore:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadedDeltaEntries:(NSArray *)entries reset:(BOOL)shouldReset cursor:(NSString *)cursor hasMore:(BOOL)hasMore</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadedDeltaEntries:reset:cursor:hasMore:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadDeltaFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadDeltaFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadDeltaFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadedAccountInfo:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadedAccountInfo:(DBAccountInfo *)info</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadedAccountInfo:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadAccountInfoFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadAccountInfoFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadAccountInfoFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadedFile:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadedFile:(NSString *)destPath</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadedFile:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadedFile:contentType:metadata:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadedFile:(NSString *)destPath contentType:(NSString *)contentType metadata:(DBMetadata *)metadata</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadedFile:contentType:metadata:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadProgress:forFile:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadProgress:(CGFloat)progress forFile:(NSString *)destPath</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadProgress:forFile:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadFileFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadFileFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadFileFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadedThumbnail:metadata:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadedThumbnail:(NSString *)destPath metadata:(DBMetadata *)metadata</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadedThumbnail:metadata:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadThumbnailFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadThumbnailFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadThumbnailFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:uploadedFile:from:metadata:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client uploadedFile:(NSString *)destPath from:(NSString *)srcPath metadata:(DBMetadata *)metadata</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:uploadedFile:from:metadata:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:uploadProgress:forFile:from:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client uploadProgress:(CGFloat)progress forFile:(NSString *)destPath from:(NSString *)srcPath</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:uploadProgress:forFile:from:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:uploadFileFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client uploadFileFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:uploadFileFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:uploadedFileChunk:newOffset:fromFile:expires:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client uploadedFileChunk:(NSString *)uploadId newOffset:(unsigned long long)offset fromFile:(NSString *)localPath expires:(NSDate *)expiresDate</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:uploadedFileChunk:newOffset:fromFile:expires:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:uploadFileChunkFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client uploadFileChunkFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:uploadFileChunkFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:uploadedFile:fromUploadId:metadata:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client uploadedFile:(NSString *)destPath fromUploadId:(NSString *)uploadId metadata:(DBMetadata *)metadata</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:uploadedFile:fromUploadId:metadata:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:uploadFromUploadIdFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client uploadFromUploadIdFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:uploadFromUploadIdFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:uploadedFile:from:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client uploadedFile:(NSString *)destPath from:(NSString *)srcPath</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:uploadedFile:from:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadedFile:contentType:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadedFile:(NSString *)destPath contentType:(NSString *)contentType</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadedFile:contentType:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadedThumbnail:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadedThumbnail:(NSString *)destPath</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadedThumbnail:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadedRevisions:forFile:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadedRevisions:(NSArray *)revisions forFile:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadedRevisions:forFile:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadRevisionsFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client loadRevisionsFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadRevisionsFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:restoredFile:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client restoredFile:(DBMetadata *)fileMetadata</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:restoredFile:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:restoreFileFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client restoreFileFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:restoreFileFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:createdFolder:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client createdFolder:(DBMetadata *)folder</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:createdFolder:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:createFolderFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client createFolderFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:createFolderFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:deletedPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client deletedPath:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:deletedPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:deletePathFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client deletePathFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:deletePathFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:copiedPath:to:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client copiedPath:(NSString *)fromPath to:(DBMetadata *)to</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:copiedPath:to:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:copyPathFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client copyPathFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:copyPathFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:createdCopyRef:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client createdCopyRef:(NSString *)copyRef</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:createdCopyRef:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:createCopyRefFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client createCopyRefFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:createCopyRefFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:copiedRef:to:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client copiedRef:(NSString *)copyRef to:(DBMetadata *)to</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:copiedRef:to:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:copyFromRefFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client copyFromRefFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:copyFromRefFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:movedPath:to:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client movedPath:(NSString *)from_path to:(DBMetadata *)result</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:movedPath:to:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:movePathFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)client movePathFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:movePathFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadedSearchResults:forPath:keyword:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)restClient loadedSearchResults:(NSArray *)results forPath:(NSString *)path keyword:(NSString *)keyword</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadedSearchResults:forPath:keyword:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:searchFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)restClient searchFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:searchFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadedSharableLink:forFile:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)restClient loadedSharableLink:(NSString *)link forFile:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadedSharableLink:forFile:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadSharableLinkFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)restClient loadSharableLinkFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadSharableLinkFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadedStreamableURL:forFile:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)restClient loadedStreamableURL:(NSURL *)url forFile:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadedStreamableURL:forFile:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBRestClientDelegate/restClient:loadStreamableURLFailedWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restClient:(DBRestClient *)restClient loadStreamableURLFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/restClient:loadStreamableURLFailedWithError:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

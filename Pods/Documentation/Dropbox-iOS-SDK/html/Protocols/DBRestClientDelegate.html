@@ -1,0 +1,1236 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>DBRestClientDelegate Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Dropbox-iOS-SDK 1.3.3 </a></h1>
+				<a id="developerHome" href="../index.html">Dropbox</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">DBRestClientDelegate Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/restClient:copiedPath:to:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:copiedPath:to:</option>
+	
+	<option value="//api/name/restClient:copiedRef:to:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:copiedRef:to:</option>
+	
+	<option value="//api/name/restClient:copyFromRefFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:copyFromRefFailedWithError:</option>
+	
+	<option value="//api/name/restClient:copyPathFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:copyPathFailedWithError:</option>
+	
+	<option value="//api/name/restClient:createCopyRefFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:createCopyRefFailedWithError:</option>
+	
+	<option value="//api/name/restClient:createFolderFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:createFolderFailedWithError:</option>
+	
+	<option value="//api/name/restClient:createdCopyRef:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:createdCopyRef:</option>
+	
+	<option value="//api/name/restClient:createdFolder:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:createdFolder:</option>
+	
+	<option value="//api/name/restClient:deletePathFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:deletePathFailedWithError:</option>
+	
+	<option value="//api/name/restClient:deletedPath:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:deletedPath:</option>
+	
+	<option value="//api/name/restClient:loadAccountInfoFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadAccountInfoFailedWithError:</option>
+	
+	<option value="//api/name/restClient:loadDeltaFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadDeltaFailedWithError:</option>
+	
+	<option value="//api/name/restClient:loadFileFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadFileFailedWithError:</option>
+	
+	<option value="//api/name/restClient:loadMetadataFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadMetadataFailedWithError:</option>
+	
+	<option value="//api/name/restClient:loadProgress:forFile:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadProgress:forFile:</option>
+	
+	<option value="//api/name/restClient:loadRevisionsFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadRevisionsFailedWithError:</option>
+	
+	<option value="//api/name/restClient:loadSharableLinkFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadSharableLinkFailedWithError:</option>
+	
+	<option value="//api/name/restClient:loadStreamableURLFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadStreamableURLFailedWithError:</option>
+	
+	<option value="//api/name/restClient:loadThumbnailFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadThumbnailFailedWithError:</option>
+	
+	<option value="//api/name/restClient:loadedAccountInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadedAccountInfo:</option>
+	
+	<option value="//api/name/restClient:loadedDeltaEntries:reset:cursor:hasMore:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadedDeltaEntries:reset:cursor:hasMore:</option>
+	
+	<option value="//api/name/restClient:loadedFile:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadedFile:</option>
+	
+	<option value="//api/name/restClient:loadedFile:contentType:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadedFile:contentType:</option>
+	
+	<option value="//api/name/restClient:loadedFile:contentType:metadata:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadedFile:contentType:metadata:</option>
+	
+	<option value="//api/name/restClient:loadedMetadata:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadedMetadata:</option>
+	
+	<option value="//api/name/restClient:loadedRevisions:forFile:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadedRevisions:forFile:</option>
+	
+	<option value="//api/name/restClient:loadedSearchResults:forPath:keyword:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadedSearchResults:forPath:keyword:</option>
+	
+	<option value="//api/name/restClient:loadedSharableLink:forFile:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadedSharableLink:forFile:</option>
+	
+	<option value="//api/name/restClient:loadedStreamableURL:forFile:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadedStreamableURL:forFile:</option>
+	
+	<option value="//api/name/restClient:loadedThumbnail:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadedThumbnail:</option>
+	
+	<option value="//api/name/restClient:loadedThumbnail:metadata:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:loadedThumbnail:metadata:</option>
+	
+	<option value="//api/name/restClient:metadataUnchangedAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:metadataUnchangedAtPath:</option>
+	
+	<option value="//api/name/restClient:movePathFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:movePathFailedWithError:</option>
+	
+	<option value="//api/name/restClient:movedPath:to:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:movedPath:to:</option>
+	
+	<option value="//api/name/restClient:restoreFileFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:restoreFileFailedWithError:</option>
+	
+	<option value="//api/name/restClient:restoredFile:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:restoredFile:</option>
+	
+	<option value="//api/name/restClient:searchFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:searchFailedWithError:</option>
+	
+	<option value="//api/name/restClient:uploadFileChunkFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:uploadFileChunkFailedWithError:</option>
+	
+	<option value="//api/name/restClient:uploadFileFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:uploadFileFailedWithError:</option>
+	
+	<option value="//api/name/restClient:uploadFromUploadIdFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:uploadFromUploadIdFailedWithError:</option>
+	
+	<option value="//api/name/restClient:uploadProgress:forFile:from:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:uploadProgress:forFile:from:</option>
+	
+	<option value="//api/name/restClient:uploadedFile:from:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:uploadedFile:from:</option>
+	
+	<option value="//api/name/restClient:uploadedFile:from:metadata:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:uploadedFile:from:metadata:</option>
+	
+	<option value="//api/name/restClient:uploadedFile:fromUploadId:metadata:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:uploadedFile:fromUploadId:metadata:</option>
+	
+	<option value="//api/name/restClient:uploadedFileChunk:newOffset:fromFile:expires:">&nbsp;&nbsp;&nbsp;&nbsp;- restClient:uploadedFileChunk:newOffset:fromFile:expires:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:copiedPath:to:">restClient:copiedPath:to:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:copiedRef:to:">restClient:copiedRef:to:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:copyFromRefFailedWithError:">restClient:copyFromRefFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:copyPathFailedWithError:">restClient:copyPathFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:createCopyRefFailedWithError:">restClient:createCopyRefFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:createFolderFailedWithError:">restClient:createFolderFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:createdCopyRef:">restClient:createdCopyRef:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:createdFolder:">restClient:createdFolder:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:deletePathFailedWithError:">restClient:deletePathFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:deletedPath:">restClient:deletedPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadAccountInfoFailedWithError:">restClient:loadAccountInfoFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadDeltaFailedWithError:">restClient:loadDeltaFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadFileFailedWithError:">restClient:loadFileFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadMetadataFailedWithError:">restClient:loadMetadataFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadProgress:forFile:">restClient:loadProgress:forFile:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadRevisionsFailedWithError:">restClient:loadRevisionsFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadSharableLinkFailedWithError:">restClient:loadSharableLinkFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadStreamableURLFailedWithError:">restClient:loadStreamableURLFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadThumbnailFailedWithError:">restClient:loadThumbnailFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadedAccountInfo:">restClient:loadedAccountInfo:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadedDeltaEntries:reset:cursor:hasMore:">restClient:loadedDeltaEntries:reset:cursor:hasMore:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadedFile:">restClient:loadedFile:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadedFile:contentType:">restClient:loadedFile:contentType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadedFile:contentType:metadata:">restClient:loadedFile:contentType:metadata:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadedMetadata:">restClient:loadedMetadata:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadedRevisions:forFile:">restClient:loadedRevisions:forFile:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadedSearchResults:forPath:keyword:">restClient:loadedSearchResults:forPath:keyword:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadedSharableLink:forFile:">restClient:loadedSharableLink:forFile:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadedStreamableURL:forFile:">restClient:loadedStreamableURL:forFile:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadedThumbnail:">restClient:loadedThumbnail:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:loadedThumbnail:metadata:">restClient:loadedThumbnail:metadata:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:metadataUnchangedAtPath:">restClient:metadataUnchangedAtPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:movePathFailedWithError:">restClient:movePathFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:movedPath:to:">restClient:movedPath:to:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:restoreFileFailedWithError:">restClient:restoreFileFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:restoredFile:">restClient:restoredFile:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:searchFailedWithError:">restClient:searchFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:uploadFileChunkFailedWithError:">restClient:uploadFileChunkFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:uploadFileFailedWithError:">restClient:uploadFileFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:uploadFromUploadIdFailedWithError:">restClient:uploadFromUploadIdFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:uploadProgress:forFile:from:">restClient:uploadProgress:forFile:from:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:uploadedFile:from:">restClient:uploadedFile:from:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:uploadedFile:from:metadata:">restClient:uploadedFile:from:metadata:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:uploadedFile:fromUploadId:metadata:">restClient:uploadedFile:fromUploadId:metadata:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restClient:uploadedFileChunk:newOffset:fromFile:expires:">restClient:uploadedFileChunk:newOffset:fromFile:expires:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="DBRestClientDelegate Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">DBRestClientDelegate Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">DBRestClient.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadedMetadata:">&ndash;&nbsp;restClient:loadedMetadata:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:metadataUnchangedAtPath:">&ndash;&nbsp;restClient:metadataUnchangedAtPath:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadMetadataFailedWithError:">&ndash;&nbsp;restClient:loadMetadataFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadedDeltaEntries:reset:cursor:hasMore:">&ndash;&nbsp;restClient:loadedDeltaEntries:reset:cursor:hasMore:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadDeltaFailedWithError:">&ndash;&nbsp;restClient:loadDeltaFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadedAccountInfo:">&ndash;&nbsp;restClient:loadedAccountInfo:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadAccountInfoFailedWithError:">&ndash;&nbsp;restClient:loadAccountInfoFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadedFile:">&ndash;&nbsp;restClient:loadedFile:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadedFile:contentType:metadata:">&ndash;&nbsp;restClient:loadedFile:contentType:metadata:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadProgress:forFile:">&ndash;&nbsp;restClient:loadProgress:forFile:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadFileFailedWithError:">&ndash;&nbsp;restClient:loadFileFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadedThumbnail:metadata:">&ndash;&nbsp;restClient:loadedThumbnail:metadata:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadThumbnailFailedWithError:">&ndash;&nbsp;restClient:loadThumbnailFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:uploadedFile:from:metadata:">&ndash;&nbsp;restClient:uploadedFile:from:metadata:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:uploadProgress:forFile:from:">&ndash;&nbsp;restClient:uploadProgress:forFile:from:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:uploadFileFailedWithError:">&ndash;&nbsp;restClient:uploadFileFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:uploadedFileChunk:newOffset:fromFile:expires:">&ndash;&nbsp;restClient:uploadedFileChunk:newOffset:fromFile:expires:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:uploadFileChunkFailedWithError:">&ndash;&nbsp;restClient:uploadFileChunkFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:uploadedFile:fromUploadId:metadata:">&ndash;&nbsp;restClient:uploadedFile:fromUploadId:metadata:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:uploadFromUploadIdFailedWithError:">&ndash;&nbsp;restClient:uploadFromUploadIdFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:uploadedFile:from:">&ndash;&nbsp;restClient:uploadedFile:from:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadedFile:contentType:">&ndash;&nbsp;restClient:loadedFile:contentType:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadedThumbnail:">&ndash;&nbsp;restClient:loadedThumbnail:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadedRevisions:forFile:">&ndash;&nbsp;restClient:loadedRevisions:forFile:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadRevisionsFailedWithError:">&ndash;&nbsp;restClient:loadRevisionsFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:restoredFile:">&ndash;&nbsp;restClient:restoredFile:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:restoreFileFailedWithError:">&ndash;&nbsp;restClient:restoreFileFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:createdFolder:">&ndash;&nbsp;restClient:createdFolder:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:createFolderFailedWithError:">&ndash;&nbsp;restClient:createFolderFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:deletedPath:">&ndash;&nbsp;restClient:deletedPath:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:deletePathFailedWithError:">&ndash;&nbsp;restClient:deletePathFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:copiedPath:to:">&ndash;&nbsp;restClient:copiedPath:to:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:copyPathFailedWithError:">&ndash;&nbsp;restClient:copyPathFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:createdCopyRef:">&ndash;&nbsp;restClient:createdCopyRef:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:createCopyRefFailedWithError:">&ndash;&nbsp;restClient:createCopyRefFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:copiedRef:to:">&ndash;&nbsp;restClient:copiedRef:to:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:copyFromRefFailedWithError:">&ndash;&nbsp;restClient:copyFromRefFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:movedPath:to:">&ndash;&nbsp;restClient:movedPath:to:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:movePathFailedWithError:">&ndash;&nbsp;restClient:movePathFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadedSearchResults:forPath:keyword:">&ndash;&nbsp;restClient:loadedSearchResults:forPath:keyword:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:searchFailedWithError:">&ndash;&nbsp;restClient:searchFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadedSharableLink:forFile:">&ndash;&nbsp;restClient:loadedSharableLink:forFile:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadSharableLinkFailedWithError:">&ndash;&nbsp;restClient:loadSharableLinkFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadedStreamableURL:forFile:">&ndash;&nbsp;restClient:loadedStreamableURL:forFile:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restClient:loadStreamableURLFailedWithError:">&ndash;&nbsp;restClient:loadStreamableURLFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:copiedPath:to:" title="restClient:copiedPath:to:"></a>
+	<h3 class="subsubtitle method-title">restClient:copiedPath:to:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> copiedPath:(NSString *)<em>fromPath</em> to:(DBMetadata *)<em>to</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:copiedRef:to:" title="restClient:copiedRef:to:"></a>
+	<h3 class="subsubtitle method-title">restClient:copiedRef:to:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> copiedRef:(NSString *)<em>copyRef</em> to:(DBMetadata *)<em>to</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:copyFromRefFailedWithError:" title="restClient:copyFromRefFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:copyFromRefFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> copyFromRefFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:copyPathFailedWithError:" title="restClient:copyPathFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:copyPathFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> copyPathFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:createCopyRefFailedWithError:" title="restClient:createCopyRefFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:createCopyRefFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> createCopyRefFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:createFolderFailedWithError:" title="restClient:createFolderFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:createFolderFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> createFolderFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:createdCopyRef:" title="restClient:createdCopyRef:"></a>
+	<h3 class="subsubtitle method-title">restClient:createdCopyRef:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> createdCopyRef:(NSString *)<em>copyRef</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:createdFolder:" title="restClient:createdFolder:"></a>
+	<h3 class="subsubtitle method-title">restClient:createdFolder:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> createdFolder:(DBMetadata *)<em>folder</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:deletePathFailedWithError:" title="restClient:deletePathFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:deletePathFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> deletePathFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:deletedPath:" title="restClient:deletedPath:"></a>
+	<h3 class="subsubtitle method-title">restClient:deletedPath:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> deletedPath:(NSString *)<em>path</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadAccountInfoFailedWithError:" title="restClient:loadAccountInfoFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadAccountInfoFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadAccountInfoFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadDeltaFailedWithError:" title="restClient:loadDeltaFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadDeltaFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadDeltaFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadFileFailedWithError:" title="restClient:loadFileFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadFileFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadFileFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadMetadataFailedWithError:" title="restClient:loadMetadataFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadMetadataFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadMetadataFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadProgress:forFile:" title="restClient:loadProgress:forFile:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadProgress:forFile:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadProgress:(CGFloat)<em>progress</em> forFile:(NSString *)<em>destPath</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadRevisionsFailedWithError:" title="restClient:loadRevisionsFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadRevisionsFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadRevisionsFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadSharableLinkFailedWithError:" title="restClient:loadSharableLinkFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadSharableLinkFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>restClient</em> loadSharableLinkFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadStreamableURLFailedWithError:" title="restClient:loadStreamableURLFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadStreamableURLFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>restClient</em> loadStreamableURLFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadThumbnailFailedWithError:" title="restClient:loadThumbnailFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadThumbnailFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadThumbnailFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadedAccountInfo:" title="restClient:loadedAccountInfo:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadedAccountInfo:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadedAccountInfo:(DBAccountInfo *)<em>info</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadedDeltaEntries:reset:cursor:hasMore:" title="restClient:loadedDeltaEntries:reset:cursor:hasMore:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadedDeltaEntries:reset:cursor:hasMore:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadedDeltaEntries:(NSArray *)<em>entries</em> reset:(BOOL)<em>shouldReset</em> cursor:(NSString *)<em>cursor</em> hasMore:(BOOL)<em>hasMore</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadedFile:" title="restClient:loadedFile:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadedFile:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadedFile:(NSString *)<em>destPath</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadedFile:contentType:" title="restClient:loadedFile:contentType:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadedFile:contentType:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadedFile:(NSString *)<em>destPath</em> contentType:(NSString *)<em>contentType</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadedFile:contentType:metadata:" title="restClient:loadedFile:contentType:metadata:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadedFile:contentType:metadata:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadedFile:(NSString *)<em>destPath</em> contentType:(NSString *)<em>contentType</em> metadata:(DBMetadata *)<em>metadata</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadedMetadata:" title="restClient:loadedMetadata:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadedMetadata:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadedMetadata:(DBMetadata *)<em>metadata</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadedRevisions:forFile:" title="restClient:loadedRevisions:forFile:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadedRevisions:forFile:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadedRevisions:(NSArray *)<em>revisions</em> forFile:(NSString *)<em>path</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadedSearchResults:forPath:keyword:" title="restClient:loadedSearchResults:forPath:keyword:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadedSearchResults:forPath:keyword:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>restClient</em> loadedSearchResults:(NSArray *)<em>results</em> forPath:(NSString *)<em>path</em> keyword:(NSString *)<em>keyword</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadedSharableLink:forFile:" title="restClient:loadedSharableLink:forFile:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadedSharableLink:forFile:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>restClient</em> loadedSharableLink:(NSString *)<em>link</em> forFile:(NSString *)<em>path</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadedStreamableURL:forFile:" title="restClient:loadedStreamableURL:forFile:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadedStreamableURL:forFile:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>restClient</em> loadedStreamableURL:(NSURL *)<em>url</em> forFile:(NSString *)<em>path</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadedThumbnail:" title="restClient:loadedThumbnail:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadedThumbnail:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadedThumbnail:(NSString *)<em>destPath</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:loadedThumbnail:metadata:" title="restClient:loadedThumbnail:metadata:"></a>
+	<h3 class="subsubtitle method-title">restClient:loadedThumbnail:metadata:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> loadedThumbnail:(NSString *)<em>destPath</em> metadata:(DBMetadata *)<em>metadata</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:metadataUnchangedAtPath:" title="restClient:metadataUnchangedAtPath:"></a>
+	<h3 class="subsubtitle method-title">restClient:metadataUnchangedAtPath:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> metadataUnchangedAtPath:(NSString *)<em>path</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:movePathFailedWithError:" title="restClient:movePathFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:movePathFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> movePathFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:movedPath:to:" title="restClient:movedPath:to:"></a>
+	<h3 class="subsubtitle method-title">restClient:movedPath:to:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> movedPath:(NSString *)<em>from_path</em> to:(DBMetadata *)<em>result</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:restoreFileFailedWithError:" title="restClient:restoreFileFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:restoreFileFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> restoreFileFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:restoredFile:" title="restClient:restoredFile:"></a>
+	<h3 class="subsubtitle method-title">restClient:restoredFile:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> restoredFile:(DBMetadata *)<em>fileMetadata</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:searchFailedWithError:" title="restClient:searchFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:searchFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>restClient</em> searchFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:uploadFileChunkFailedWithError:" title="restClient:uploadFileChunkFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:uploadFileChunkFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> uploadFileChunkFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:uploadFileFailedWithError:" title="restClient:uploadFileFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:uploadFileFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> uploadFileFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:uploadFromUploadIdFailedWithError:" title="restClient:uploadFromUploadIdFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">restClient:uploadFromUploadIdFailedWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> uploadFromUploadIdFailedWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:uploadProgress:forFile:from:" title="restClient:uploadProgress:forFile:from:"></a>
+	<h3 class="subsubtitle method-title">restClient:uploadProgress:forFile:from:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> uploadProgress:(CGFloat)<em>progress</em> forFile:(NSString *)<em>destPath</em> from:(NSString *)<em>srcPath</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:uploadedFile:from:" title="restClient:uploadedFile:from:"></a>
+	<h3 class="subsubtitle method-title">restClient:uploadedFile:from:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> uploadedFile:(NSString *)<em>destPath</em> from:(NSString *)<em>srcPath</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:uploadedFile:from:metadata:" title="restClient:uploadedFile:from:metadata:"></a>
+	<h3 class="subsubtitle method-title">restClient:uploadedFile:from:metadata:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> uploadedFile:(NSString *)<em>destPath</em> from:(NSString *)<em>srcPath</em> metadata:(DBMetadata *)<em>metadata</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:uploadedFile:fromUploadId:metadata:" title="restClient:uploadedFile:fromUploadId:metadata:"></a>
+	<h3 class="subsubtitle method-title">restClient:uploadedFile:fromUploadId:metadata:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> uploadedFile:(NSString *)<em>destPath</em> fromUploadId:(NSString *)<em>uploadId</em> metadata:(DBMetadata *)<em>metadata</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restClient:uploadedFileChunk:newOffset:fromFile:expires:" title="restClient:uploadedFileChunk:newOffset:fromFile:expires:"></a>
+	<h3 class="subsubtitle method-title">restClient:uploadedFileChunk:newOffset:fromFile:expires:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)restClient:(DBRestClient *)<em>client</em> uploadedFileChunk:(NSString *)<em>uploadId</em> newOffset:(unsigned long long)<em>offset</em> fromFile:(NSString *)<em>localPath</em> expires:(NSDate *)<em>expiresDate</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Dropbox. All rights reserved. (Last updated: 2013-03-14)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

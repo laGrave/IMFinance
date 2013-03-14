@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/MPOAuthAuthenticationMethodOAuthDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/MPOAuthAuthenticationMethodOAuthDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethodOAuth.h</DeclaredIn>
+			
+			<NodeRef refid="39"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthAuthenticationMethodOAuthDelegate/callbackURLForCompletedUserAuthorization</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethodOAuth.h</DeclaredIn>			
+			
+			<Declaration>- (NSURL *)callbackURLForCompletedUserAuthorization</Declaration>
+			
+			
+			<Anchor>//api/name/callbackURLForCompletedUserAuthorization</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthAuthenticationMethodOAuthDelegate/automaticallyRequestAuthenticationFromURL:withCallbackURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethodOAuth.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)automaticallyRequestAuthenticationFromURL:(NSURL *)inAuthURL withCallbackURL:(NSURL *)inCallbackURL</Declaration>
+			
+			
+			<Anchor>//api/name/automaticallyRequestAuthenticationFromURL:withCallbackURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthAuthenticationMethodOAuthDelegate/oauthVerifierForCompletedUserAuthorization</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethodOAuth.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)oauthVerifierForCompletedUserAuthorization</Declaration>
+			
+			
+			<Anchor>//api/name/oauthVerifierForCompletedUserAuthorization</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthAuthenticationMethodOAuthDelegate/authenticationDidFailWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethodOAuth.h</DeclaredIn>			
+			
+			<Declaration>- (void)authenticationDidFailWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/authenticationDidFailWithError:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

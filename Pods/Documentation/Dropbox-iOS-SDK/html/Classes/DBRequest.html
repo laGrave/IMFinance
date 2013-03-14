@@ -1,0 +1,690 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>DBRequest Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Dropbox-iOS-SDK 1.3.3 </a></h1>
+				<a id="developerHome" href="../index.html">Dropbox</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">DBRequest Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/downloadProgress">&nbsp;&nbsp;&nbsp;&nbsp;downloadProgress</option>
+	
+	<option value="//api/name/downloadProgressSelector">&nbsp;&nbsp;&nbsp;&nbsp;downloadProgressSelector</option>
+	
+	<option value="//api/name/error">&nbsp;&nbsp;&nbsp;&nbsp;error</option>
+	
+	<option value="//api/name/failureSelector">&nbsp;&nbsp;&nbsp;&nbsp;failureSelector</option>
+	
+	<option value="//api/name/request">&nbsp;&nbsp;&nbsp;&nbsp;request</option>
+	
+	<option value="//api/name/response">&nbsp;&nbsp;&nbsp;&nbsp;response</option>
+	
+	<option value="//api/name/resultData">&nbsp;&nbsp;&nbsp;&nbsp;resultData</option>
+	
+	<option value="//api/name/resultFilename">&nbsp;&nbsp;&nbsp;&nbsp;resultFilename</option>
+	
+	<option value="//api/name/resultJSON">&nbsp;&nbsp;&nbsp;&nbsp;resultJSON</option>
+	
+	<option value="//api/name/resultString">&nbsp;&nbsp;&nbsp;&nbsp;resultString</option>
+	
+	<option value="//api/name/statusCode">&nbsp;&nbsp;&nbsp;&nbsp;statusCode</option>
+	
+	<option value="//api/name/uploadProgress">&nbsp;&nbsp;&nbsp;&nbsp;uploadProgress</option>
+	
+	<option value="//api/name/uploadProgressSelector">&nbsp;&nbsp;&nbsp;&nbsp;uploadProgressSelector</option>
+	
+	<option value="//api/name/userInfo">&nbsp;&nbsp;&nbsp;&nbsp;userInfo</option>
+	
+	<option value="//api/name/xDropboxMetadataJSON">&nbsp;&nbsp;&nbsp;&nbsp;xDropboxMetadataJSON</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/setNetworkRequestDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ setNetworkRequestDelegate:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/cancel">&nbsp;&nbsp;&nbsp;&nbsp;- cancel</option>
+	
+	<option value="//api/name/initWithURLRequest:andInformTarget:selector:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithURLRequest:andInformTarget:selector:</option>
+	
+	<option value="//api/name/parseResponseAsType:">&nbsp;&nbsp;&nbsp;&nbsp;- parseResponseAsType:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/downloadProgress">downloadProgress</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/downloadProgressSelector">downloadProgressSelector</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/error">error</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/failureSelector">failureSelector</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/request">request</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/response">response</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resultData">resultData</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resultFilename">resultFilename</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resultJSON">resultJSON</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resultString">resultString</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/statusCode">statusCode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/uploadProgress">uploadProgress</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/uploadProgressSelector">uploadProgressSelector</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/userInfo">userInfo</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/xDropboxMetadataJSON">xDropboxMetadataJSON</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setNetworkRequestDelegate:">setNetworkRequestDelegate:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancel">cancel</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithURLRequest:andInformTarget:selector:">initWithURLRequest:andInformTarget:selector:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseResponseAsType:">parseResponseAsType:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="DBRequest Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">DBRequest Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">DBRequest.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setNetworkRequestDelegate:">+&nbsp;setNetworkRequestDelegate:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithURLRequest:andInformTarget:selector:">&ndash;&nbsp;initWithURLRequest:andInformTarget:selector:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseResponseAsType:">&ndash;&nbsp;parseResponseAsType:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/failureSelector">&nbsp;&nbsp;failureSelector</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/downloadProgressSelector">&nbsp;&nbsp;downloadProgressSelector</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/uploadProgressSelector">&nbsp;&nbsp;uploadProgressSelector</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resultFilename">&nbsp;&nbsp;resultFilename</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/userInfo">&nbsp;&nbsp;userInfo</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/request">&nbsp;&nbsp;request</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/response">&nbsp;&nbsp;response</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/xDropboxMetadataJSON">&nbsp;&nbsp;xDropboxMetadataJSON</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/statusCode">&nbsp;&nbsp;statusCode</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/downloadProgress">&nbsp;&nbsp;downloadProgress</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/uploadProgress">&nbsp;&nbsp;uploadProgress</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resultData">&nbsp;&nbsp;resultData</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resultString">&nbsp;&nbsp;resultString</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resultJSON">&nbsp;&nbsp;resultJSON</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/error">&nbsp;&nbsp;error</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/downloadProgress" title="downloadProgress"></a>
+	<h3 class="subsubtitle method-title">downloadProgress</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CGFloat downloadProgress</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/downloadProgressSelector" title="downloadProgressSelector"></a>
+	<h3 class="subsubtitle method-title">downloadProgressSelector</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) SEL downloadProgressSelector</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/error" title="error"></a>
+	<h3 class="subsubtitle method-title">error</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSError *error</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/failureSelector" title="failureSelector"></a>
+	<h3 class="subsubtitle method-title">failureSelector</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) SEL failureSelector</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/request" title="request"></a>
+	<h3 class="subsubtitle method-title">request</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSURLRequest *request</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/response" title="response"></a>
+	<h3 class="subsubtitle method-title">response</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSHTTPURLResponse *response</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resultData" title="resultData"></a>
+	<h3 class="subsubtitle method-title">resultData</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSData *resultData</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resultFilename" title="resultFilename"></a>
+	<h3 class="subsubtitle method-title">resultFilename</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSString *resultFilename</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resultJSON" title="resultJSON"></a>
+	<h3 class="subsubtitle method-title">resultJSON</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSObject *resultJSON</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resultString" title="resultString"></a>
+	<h3 class="subsubtitle method-title">resultString</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *resultString</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/statusCode" title="statusCode"></a>
+	<h3 class="subsubtitle method-title">statusCode</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInteger statusCode</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/uploadProgress" title="uploadProgress"></a>
+	<h3 class="subsubtitle method-title">uploadProgress</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CGFloat uploadProgress</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/uploadProgressSelector" title="uploadProgressSelector"></a>
+	<h3 class="subsubtitle method-title">uploadProgressSelector</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) SEL uploadProgressSelector</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/userInfo" title="userInfo"></a>
+	<h3 class="subsubtitle method-title">userInfo</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSDictionary *userInfo</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/xDropboxMetadataJSON" title="xDropboxMetadataJSON"></a>
+	<h3 class="subsubtitle method-title">xDropboxMetadataJSON</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSDictionary *xDropboxMetadataJSON</code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/setNetworkRequestDelegate:" title="setNetworkRequestDelegate:"></a>
+	<h3 class="subsubtitle method-title">setNetworkRequestDelegate:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>+ (void)setNetworkRequestDelegate:(id&lt;DBNetworkRequestDelegate&gt;)<em>delegate</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cancel" title="cancel"></a>
+	<h3 class="subsubtitle method-title">cancel</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)cancel</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithURLRequest:andInformTarget:selector:" title="initWithURLRequest:andInformTarget:selector:"></a>
+	<h3 class="subsubtitle method-title">initWithURLRequest:andInformTarget:selector:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithURLRequest:(NSURLRequest *)<em>request</em> andInformTarget:(id)<em>target</em> selector:(SEL)<em>selector</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseResponseAsType:" title="parseResponseAsType:"></a>
+	<h3 class="subsubtitle method-title">parseResponseAsType:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (id)parseResponseAsType:(Class)<em>cls</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Dropbox. All rights reserved. (Last updated: 2013-03-14)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

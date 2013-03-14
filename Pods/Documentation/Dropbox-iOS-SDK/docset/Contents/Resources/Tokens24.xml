@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSObject+NSObject_DBJSON.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSObject(NSObject_DBJSON)</TokenIdentifier>
+			<Abstract type="html">Adds JSON generation to Foundation classes
+
+This is a category on NSObject that adds methods for returning JSON representations
+of standard objects to the objects themselves. This means you can call the
+JSONRepresentation method on an NSArray object and it&apos;ll do what you want.</Abstract>
+			<DeclaredIn>NSObject+DBJSON.h</DeclaredIn>
+			
+			<NodeRef refid="24"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(NSObject_DBJSON)/JSONFragment</TokenIdentifier>
+			<Abstract type="html">Returns a string containing the receiver encoded as a JSON fragment.
+
+This method is added as a category on NSObject but is only actually
+supported for the following objects:
+@li NSDictionary
+@li NSArray
+@li NSString
+@li NSNumber (also used for booleans)
+@li NSNull (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Given we bill ourselves as a &quot;strict&quot; JSON library, this method should be removed.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>NSObject+DBJSON.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)JSONFragment</Declaration>
+			
+			
+			<Anchor>//api/name/JSONFragment</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(NSObject_DBJSON)/JSONRepresentation</TokenIdentifier>
+			<Abstract type="html">Returns a string containing the receiver encoded in JSON.
+
+This method is added as a category on NSObject but is only actually
+supported for the following objects:
+@li NSDictionary
+@li NSArray</Abstract>
+			<DeclaredIn>NSObject+DBJSON.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)JSONRepresentation</Declaration>
+			
+			
+			<Anchor>//api/name/JSONRepresentation</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSObject+SBProxyForJson.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSObject(SBProxyForJson)</TokenIdentifier>
+			<Abstract type="html">Allows generation of JSON for otherwise unsupported classes.
+
+If you have a custom class that you want to create a JSON representation for you can implement
+this method in your class. It should return a representation of your object defined
+in terms of objects that can be translated into JSON. For example, a Person
+object might implement it like this:
+
+@code
+- (id)jsonProxyObject {
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+        name, @&quot;name&quot;,
+        phone, @&quot;phone&quot;,
+        email, @&quot;email&quot;,
+        nil];
+}
+@endcode</Abstract>
+			<DeclaredIn>DBJsonWriter.h</DeclaredIn>
+			
+			<NodeRef refid="25"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(SBProxyForJson)/proxyForJson</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBJsonWriter.h</DeclaredIn>			
+			
+			<Declaration>- (id)proxyForJson</Declaration>
+			
+			
+			<Anchor>//api/name/proxyForJson</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

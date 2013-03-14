@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DBRestClient.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DBRestClient</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/initWithSession:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithSession:(DBSession *)session</Declaration>
+			
+			
+			<Anchor>//api/name/initWithSession:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/initWithSession:userId:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithSession:(DBSession *)session userId:(NSString *)userId</Declaration>
+			
+			
+			<Anchor>//api/name/initWithSession:userId:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/cancelAllRequests</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)cancelAllRequests</Declaration>
+			
+			
+			<Anchor>//api/name/cancelAllRequests</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadMetadata:withHash:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadMetadata:(NSString *)path withHash:(NSString *)hash</Declaration>
+			
+			
+			<Anchor>//api/name/loadMetadata:withHash:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadMetadata:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadMetadata:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/loadMetadata:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadMetadata:atRev:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadMetadata:(NSString *)path atRev:(NSString *)rev</Declaration>
+			
+			
+			<Anchor>//api/name/loadMetadata:atRev:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadDelta:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadDelta:(NSString *)cursor</Declaration>
+			
+			
+			<Anchor>//api/name/loadDelta:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadFile:intoPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadFile:(NSString *)path intoPath:(NSString *)destinationPath</Declaration>
+			
+			
+			<Anchor>//api/name/loadFile:intoPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadFile:atRev:intoPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadFile:(NSString *)path atRev:(NSString *)rev intoPath:(NSString *)destPath</Declaration>
+			
+			
+			<Anchor>//api/name/loadFile:atRev:intoPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/cancelFileLoad:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)cancelFileLoad:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/cancelFileLoad:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadThumbnail:ofSize:intoPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadThumbnail:(NSString *)path ofSize:(NSString *)size intoPath:(NSString *)destinationPath</Declaration>
+			
+			
+			<Anchor>//api/name/loadThumbnail:ofSize:intoPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/cancelThumbnailLoad:size:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)cancelThumbnailLoad:(NSString *)path size:(NSString *)size</Declaration>
+			
+			
+			<Anchor>//api/name/cancelThumbnailLoad:size:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/uploadFile:toPath:withParentRev:fromPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)uploadFile:(NSString *)filename toPath:(NSString *)path withParentRev:(NSString *)parentRev fromPath:(NSString *)sourcePath</Declaration>
+			
+			
+			<Anchor>//api/name/uploadFile:toPath:withParentRev:fromPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/cancelFileUpload:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)cancelFileUpload:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/cancelFileUpload:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/uploadFile:toPath:fromPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)uploadFile:(NSString *)filename toPath:(NSString *)path fromPath:(NSString *)sourcePath</Declaration>
+			
+			
+			<Anchor>//api/name/uploadFile:toPath:fromPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/uploadFileChunk:offset:fromPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)uploadFileChunk:(NSString *)uploadId offset:(unsigned long long)offset fromPath:(NSString *)localPath</Declaration>
+			
+			
+			<Anchor>//api/name/uploadFileChunk:offset:fromPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/uploadFile:toPath:withParentRev:fromUploadId:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)uploadFile:(NSString *)filename toPath:(NSString *)parentFolder withParentRev:(NSString *)parentRev fromUploadId:(NSString *)uploadId</Declaration>
+			
+			
+			<Anchor>//api/name/uploadFile:toPath:withParentRev:fromUploadId:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadRevisionsForFile:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadRevisionsForFile:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/loadRevisionsForFile:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadRevisionsForFile:limit:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadRevisionsForFile:(NSString *)path limit:(NSInteger)limit</Declaration>
+			
+			
+			<Anchor>//api/name/loadRevisionsForFile:limit:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/restoreFile:toRev:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)restoreFile:(NSString *)path toRev:(NSString *)rev</Declaration>
+			
+			
+			<Anchor>//api/name/restoreFile:toRev:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/createFolder:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)createFolder:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/createFolder:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/deletePath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)deletePath:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/deletePath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/copyFrom:toPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)copyFrom:(NSString *)fromPath toPath:(NSString *)toPath</Declaration>
+			
+			
+			<Anchor>//api/name/copyFrom:toPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/createCopyRef:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)createCopyRef:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/createCopyRef:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/copyFromRef:toPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)copyFromRef:(NSString *)copyRef toPath:(NSString *)toPath</Declaration>
+			
+			
+			<Anchor>//api/name/copyFromRef:toPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/moveFrom:toPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)moveFrom:(NSString *)fromPath toPath:(NSString *)toPath</Declaration>
+			
+			
+			<Anchor>//api/name/moveFrom:toPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadAccountInfo</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadAccountInfo</Declaration>
+			
+			
+			<Anchor>//api/name/loadAccountInfo</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/searchPath:forKeyword:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)searchPath:(NSString *)path forKeyword:(NSString *)keyword</Declaration>
+			
+			
+			<Anchor>//api/name/searchPath:forKeyword:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadSharableLinkForFile:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadSharableLinkForFile:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/loadSharableLinkForFile:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadSharableLinkForFile:shortUrl:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadSharableLinkForFile:(NSString *)path shortUrl:(BOOL)createShortUrl</Declaration>
+			
+			
+			<Anchor>//api/name/loadSharableLinkForFile:shortUrl:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/loadStreamableURLForFile:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadStreamableURLForFile:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/loadStreamableURLForFile:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/requestCount</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>- (NSUInteger)requestCount</Declaration>
+			
+			
+			<Anchor>//api/name/requestCount</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRestClient/setDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;DBRestClientDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRestClient/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRestClient.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;DBRestClientDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

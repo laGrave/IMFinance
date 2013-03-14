@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSURL+MPURLParameterAdditions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSURL(MPURLParameterAdditions)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSURL+MPURLParameterAdditions.h</DeclaredIn>
+			
+			<NodeRef refid="30"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSURL(MPURLParameterAdditions)/urlByAddingParameters:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSURL+MPURLParameterAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (NSURL *)urlByAddingParameters:(NSArray *)inParameters</Declaration>
+			
+			
+			<Anchor>//api/name/urlByAddingParameters:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSURL(MPURLParameterAdditions)/urlByAddingParameterDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSURL+MPURLParameterAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (NSURL *)urlByAddingParameterDictionary:(NSDictionary *)inParameters</Declaration>
+			
+			
+			<Anchor>//api/name/urlByAddingParameterDictionary:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSURL(MPURLParameterAdditions)/urlByRemovingQuery</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSURL+MPURLParameterAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (NSURL *)urlByRemovingQuery</Declaration>
+			
+			
+			<Anchor>//api/name/urlByRemovingQuery</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSURL(MPURLParameterAdditions)/absoluteNormalizedString</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSURL+MPURLParameterAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)absoluteNormalizedString</Declaration>
+			
+			
+			<Anchor>//api/name/absoluteNormalizedString</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSURL(MPURLParameterAdditions)/domainMatches:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSURL+MPURLParameterAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)domainMatches:(NSString *)inString</Declaration>
+			
+			
+			<Anchor>//api/name/domainMatches:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

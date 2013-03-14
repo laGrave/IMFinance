@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MPURLRequestParameter.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MPURLRequestParameter</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPURLRequestParameter.h</DeclaredIn>
+			
+			<NodeRef refid="22"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPURLRequestParameter/setName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPURLRequestParameter.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, copy) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPURLRequestParameter/name</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPURLRequestParameter.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, copy) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPURLRequestParameter/setValue:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPURLRequestParameter.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, copy) NSString *value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPURLRequestParameter/value</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPURLRequestParameter.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, copy) NSString *value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MPURLRequestParameter/parametersFromString:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPURLRequestParameter.h</DeclaredIn>			
+			
+			<Declaration>+ (NSArray *)parametersFromString:(NSString *)inString</Declaration>
+			
+			
+			<Anchor>//api/name/parametersFromString:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MPURLRequestParameter/parametersFromDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPURLRequestParameter.h</DeclaredIn>			
+			
+			<Declaration>+ (NSArray *)parametersFromDictionary:(NSDictionary *)inDictionary</Declaration>
+			
+			
+			<Anchor>//api/name/parametersFromDictionary:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MPURLRequestParameter/parameterDictionaryFromString:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPURLRequestParameter.h</DeclaredIn>			
+			
+			<Declaration>+ (NSDictionary *)parameterDictionaryFromString:(NSString *)inString</Declaration>
+			
+			
+			<Anchor>//api/name/parameterDictionaryFromString:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MPURLRequestParameter/parameterStringForParameters:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPURLRequestParameter.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)parameterStringForParameters:(NSArray *)inParameters</Declaration>
+			
+			
+			<Anchor>//api/name/parameterStringForParameters:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MPURLRequestParameter/parameterStringForDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPURLRequestParameter.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)parameterStringForDictionary:(NSDictionary *)inParameterDictionary</Declaration>
+			
+			
+			<Anchor>//api/name/parameterStringForDictionary:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPURLRequestParameter/initWithName:andValue:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPURLRequestParameter.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithName:(NSString *)inName andValue:(NSString *)inValue</Declaration>
+			
+			
+			<Anchor>//api/name/initWithName:andValue:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPURLRequestParameter/URLEncodedParameterString</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPURLRequestParameter.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)URLEncodedParameterString</Declaration>
+			
+			
+			<Anchor>//api/name/URLEncodedParameterString</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

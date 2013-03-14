@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DBSession.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DBSession</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DBSession/sharedSession</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>+ (DBSession *)sharedSession</Declaration>
+			
+			
+			<Anchor>//api/name/sharedSession</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DBSession/setSharedSession:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setSharedSession:(DBSession *)session</Declaration>
+			
+			
+			<Anchor>//api/name/setSharedSession:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/initWithAppKey:appSecret:root:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithAppKey:(NSString *)key appSecret:(NSString *)secret root:(NSString *)root</Declaration>
+			
+			
+			<Anchor>//api/name/initWithAppKey:appSecret:root:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/isLinked</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isLinked</Declaration>
+			
+			
+			<Anchor>//api/name/isLinked</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/unlinkAll</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>- (void)unlinkAll</Declaration>
+			
+			
+			<Anchor>//api/name/unlinkAll</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/unlinkUserId:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>- (void)unlinkUserId:(NSString *)userId</Declaration>
+			
+			
+			<Anchor>//api/name/unlinkUserId:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/credentialStoreForUserId:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>- (MPOAuthCredentialConcreteStore *)credentialStoreForUserId:(NSString *)userId</Declaration>
+			
+			
+			<Anchor>//api/name/credentialStoreForUserId:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/updateAccessToken:accessTokenSecret:forUserId:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>- (void)updateAccessToken:(NSString *)token accessTokenSecret:(NSString *)secret forUserId:(NSString *)userId</Declaration>
+			
+			
+			<Anchor>//api/name/updateAccessToken:accessTokenSecret:forUserId:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/setRoot:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *root</Declaration>
+			
+			
+			<Anchor>//api/name/root</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBSession/root</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *root</Declaration>
+			
+			
+			<Anchor>//api/name/root</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/setUserIds:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *userIds</Declaration>
+			
+			
+			<Anchor>//api/name/userIds</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBSession/userIds</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *userIds</Declaration>
+			
+			
+			<Anchor>//api/name/userIds</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/setDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;DBSessionDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBSession/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;DBSessionDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DBSession/parseURLParams:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession+iOS.h</DeclaredIn>			
+			
+			<Declaration>+ (NSDictionary *)parseURLParams:(NSString *)query</Declaration>
+			
+			
+			<Anchor>//api/name/parseURLParams:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/appScheme</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession+iOS.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)appScheme</Declaration>
+			
+			
+			<Anchor>//api/name/appScheme</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/linkFromController:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession+iOS.h</DeclaredIn>			
+			
+			<Declaration>- (void)linkFromController:(UIViewController *)rootController</Declaration>
+			
+			
+			<Anchor>//api/name/linkFromController:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/linkUserId:fromController:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession+iOS.h</DeclaredIn>			
+			
+			<Declaration>- (void)linkUserId:(NSString *)userId fromController:(UIViewController *)rootController</Declaration>
+			
+			
+			<Anchor>//api/name/linkUserId:fromController:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBSession/handleOpenURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBSession+iOS.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)handleOpenURL:(NSURL *)url</Declaration>
+			
+			
+			<Anchor>//api/name/handleOpenURL:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

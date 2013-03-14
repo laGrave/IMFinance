@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DBRequest.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DBRequest</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DBRequest/setNetworkRequestDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setNetworkRequestDelegate:(id&lt;DBNetworkRequestDelegate&gt;)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/setNetworkRequestDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/initWithURLRequest:andInformTarget:selector:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithURLRequest:(NSURLRequest *)request andInformTarget:(id)target selector:(SEL)selector</Declaration>
+			
+			
+			<Anchor>//api/name/initWithURLRequest:andInformTarget:selector:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/cancel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>- (void)cancel</Declaration>
+			
+			
+			<Anchor>//api/name/cancel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/parseResponseAsType:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>- (id)parseResponseAsType:(Class)cls</Declaration>
+			
+			
+			<Anchor>//api/name/parseResponseAsType:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setFailureSelector:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) SEL failureSelector</Declaration>
+			
+			
+			<Anchor>//api/name/failureSelector</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/failureSelector</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) SEL failureSelector</Declaration>
+			
+			
+			<Anchor>//api/name/failureSelector</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setDownloadProgressSelector:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) SEL downloadProgressSelector</Declaration>
+			
+			
+			<Anchor>//api/name/downloadProgressSelector</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/downloadProgressSelector</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) SEL downloadProgressSelector</Declaration>
+			
+			
+			<Anchor>//api/name/downloadProgressSelector</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setUploadProgressSelector:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) SEL uploadProgressSelector</Declaration>
+			
+			
+			<Anchor>//api/name/uploadProgressSelector</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/uploadProgressSelector</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) SEL uploadProgressSelector</Declaration>
+			
+			
+			<Anchor>//api/name/uploadProgressSelector</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setResultFilename:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *resultFilename</Declaration>
+			
+			
+			<Anchor>//api/name/resultFilename</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/resultFilename</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *resultFilename</Declaration>
+			
+			
+			<Anchor>//api/name/resultFilename</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setUserInfo:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSDictionary *userInfo</Declaration>
+			
+			
+			<Anchor>//api/name/userInfo</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/userInfo</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSDictionary *userInfo</Declaration>
+			
+			
+			<Anchor>//api/name/userInfo</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setRequest:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSURLRequest *request</Declaration>
+			
+			
+			<Anchor>//api/name/request</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/request</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSURLRequest *request</Declaration>
+			
+			
+			<Anchor>//api/name/request</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setResponse:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSHTTPURLResponse *response</Declaration>
+			
+			
+			<Anchor>//api/name/response</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/response</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSHTTPURLResponse *response</Declaration>
+			
+			
+			<Anchor>//api/name/response</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setXDropboxMetadataJSON:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *xDropboxMetadataJSON</Declaration>
+			
+			
+			<Anchor>//api/name/xDropboxMetadataJSON</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/xDropboxMetadataJSON</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *xDropboxMetadataJSON</Declaration>
+			
+			
+			<Anchor>//api/name/xDropboxMetadataJSON</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setStatusCode:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger statusCode</Declaration>
+			
+			
+			<Anchor>//api/name/statusCode</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/statusCode</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger statusCode</Declaration>
+			
+			
+			<Anchor>//api/name/statusCode</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setDownloadProgress:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) CGFloat downloadProgress</Declaration>
+			
+			
+			<Anchor>//api/name/downloadProgress</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/downloadProgress</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) CGFloat downloadProgress</Declaration>
+			
+			
+			<Anchor>//api/name/downloadProgress</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setUploadProgress:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) CGFloat uploadProgress</Declaration>
+			
+			
+			<Anchor>//api/name/uploadProgress</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/uploadProgress</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) CGFloat uploadProgress</Declaration>
+			
+			
+			<Anchor>//api/name/uploadProgress</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setResultData:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSData *resultData</Declaration>
+			
+			
+			<Anchor>//api/name/resultData</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/resultData</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSData *resultData</Declaration>
+			
+			
+			<Anchor>//api/name/resultData</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setResultString:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *resultString</Declaration>
+			
+			
+			<Anchor>//api/name/resultString</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/resultString</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *resultString</Declaration>
+			
+			
+			<Anchor>//api/name/resultString</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setResultJSON:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSObject *resultJSON</Declaration>
+			
+			
+			<Anchor>//api/name/resultJSON</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/resultJSON</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSObject *resultJSON</Declaration>
+			
+			
+			<Anchor>//api/name/resultJSON</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBRequest/setError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSError *error</Declaration>
+			
+			
+			<Anchor>//api/name/error</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBRequest/error</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSError *error</Declaration>
+			
+			
+			<Anchor>//api/name/error</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MPOAuthAuthenticationMethod.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MPOAuthAuthenticationMethod</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethod.h</DeclaredIn>
+			
+			<NodeRef refid="15"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAuthenticationMethod/setOauthAPI:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethod.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, assign) MPOAuthAPI *oauthAPI</Declaration>
+			
+			
+			<Anchor>//api/name/oauthAPI</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthAuthenticationMethod/oauthAPI</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethod.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, assign) MPOAuthAPI *oauthAPI</Declaration>
+			
+			
+			<Anchor>//api/name/oauthAPI</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAuthenticationMethod/setOauthGetAccessTokenURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethod.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) NSURL *oauthGetAccessTokenURL</Declaration>
+			
+			
+			<Anchor>//api/name/oauthGetAccessTokenURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthAuthenticationMethod/oauthGetAccessTokenURL</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethod.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) NSURL *oauthGetAccessTokenURL</Declaration>
+			
+			
+			<Anchor>//api/name/oauthGetAccessTokenURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAuthenticationMethod/initWithAPI:forURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethod.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithAPI:(MPOAuthAPI *)inAPI forURL:(NSURL *)inURL</Declaration>
+			
+			
+			<Anchor>//api/name/initWithAPI:forURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAuthenticationMethod/initWithAPI:forURL:withConfiguration:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethod.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithAPI:(MPOAuthAPI *)inAPI forURL:(NSURL *)inURL withConfiguration:(NSDictionary *)inConfig</Declaration>
+			
+			
+			<Anchor>//api/name/initWithAPI:forURL:withConfiguration:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAuthenticationMethod/authenticate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethod.h</DeclaredIn>			
+			
+			<Declaration>- (void)authenticate</Declaration>
+			
+			
+			<Anchor>//api/name/authenticate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAuthenticationMethod/setTokenRefreshInterval:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethod.h</DeclaredIn>			
+			
+			<Declaration>- (void)setTokenRefreshInterval:(NSTimeInterval)inTimeInterval</Declaration>
+			
+			
+			<Anchor>//api/name/setTokenRefreshInterval:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAuthenticationMethod/refreshAccessToken</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAuthenticationMethod.h</DeclaredIn>			
+			
+			<Declaration>- (void)refreshAccessToken</Declaration>
+			
+			
+			<Anchor>//api/name/refreshAccessToken</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

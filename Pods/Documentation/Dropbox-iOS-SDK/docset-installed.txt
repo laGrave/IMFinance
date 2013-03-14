@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/igormishchenko/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.Dropbox-iOS-SDK-1.3.3.docset
+Time: 2013-03-14 11:01:56 +0000

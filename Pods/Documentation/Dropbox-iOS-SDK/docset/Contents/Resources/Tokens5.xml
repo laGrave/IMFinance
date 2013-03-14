@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DBJsonParser.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DBJsonParser</TokenIdentifier>
+			<Abstract type="html">The JSON parser class.
+
+JSON is mapped to Objective-C types in the following way:
+
+@li Null -&gt; NSNull
+@li String -&gt; NSMutableString
+@li Array -&gt; NSMutableArray
+@li Object -&gt; NSMutableDictionary
+@li Boolean -&gt; NSNumber (initialised with -initWithBool:)
+@li Number -&gt; NSDecimalNumber
+
+Since Objective-C doesn&apos;t have a dedicated class for boolean values, these turns into NSNumber
+instances. These are initialised with the -initWithBool: method, and
+round-trip back to JSON properly. (They won&apos;t silently suddenly become 0 or 1; they&apos;ll be
+represented as &apos;true&apos; and &apos;false&apos; again.)
+
+JSON numbers turn into NSDecimalNumber instances,
+as we can thus avoid any loss of precision. (JSON allows ridiculously large numbers.)</Abstract>
+			<DeclaredIn>DBJsonParser.h</DeclaredIn>
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBJsonParser/fragmentWithString:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBJsonParser.h</DeclaredIn>			
+			
+			<Declaration>- (id)fragmentWithString:(id)repr</Declaration>
+			
+			
+			<Anchor>//api/name/fragmentWithString:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

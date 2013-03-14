@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSString+NSString_DBJSON.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSString(NSString_DBJSON)</TokenIdentifier>
+			<Abstract type="html">Adds JSON parsing methods to NSString
+
+This is a category on NSString that adds methods for parsing the target string.</Abstract>
+			<DeclaredIn>NSString+DBJSON.h</DeclaredIn>
+			
+			<NodeRef refid="28"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString(NSString_DBJSON)/JSONFragmentValue</TokenIdentifier>
+			<Abstract type="html">Returns the object represented in the receiver, or nil on error.
+
+Returns a a scalar object represented by the string&apos;s JSON fragment representation. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Given we bill ourselves as a &quot;strict&quot; JSON library, this method should be removed.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>NSString+DBJSON.h</DeclaredIn>			
+			
+			<Declaration>- (id)JSONFragmentValue</Declaration>
+			
+			
+			<Anchor>//api/name/JSONFragmentValue</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString(NSString_DBJSON)/JSONValue</TokenIdentifier>
+			<Abstract type="html">Returns the NSDictionary or NSArray represented by the current string&apos;s JSON representation.
+
+Returns the dictionary or array represented in the receiver, or nil on error.
+
+Returns the NSDictionary or NSArray represented by the current string&apos;s JSON representation.</Abstract>
+			<DeclaredIn>NSString+DBJSON.h</DeclaredIn>			
+			
+			<Declaration>- (id)JSONValue</Declaration>
+			
+			
+			<Anchor>//api/name/JSONValue</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

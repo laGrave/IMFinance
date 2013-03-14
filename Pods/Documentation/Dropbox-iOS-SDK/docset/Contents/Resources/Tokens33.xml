@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/DBJsonParser.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/DBJsonParser</TokenIdentifier>
+			<Abstract type="html">Options for the parser class.
+
+This exists so the DBJSON facade can implement the options in the parser without having to re-declare them.</Abstract>
+			<DeclaredIn>DBJsonParser.h</DeclaredIn>
+			
+			<NodeRef refid="33"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DBJsonParser/objectWithString:</TokenIdentifier>
+			<Abstract type="html">Return the object represented by the given string.
+
+Returns the object represented by the passed-in string or nil on error. The returned object can be
+a string, number, boolean, null, array or dictionary.</Abstract>
+			<DeclaredIn>DBJsonParser.h</DeclaredIn>			
+			
+			<Declaration>- (id)objectWithString:(NSString *)repr</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>repr</Name>
+					<Abstract type="html">the json string to parse</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/objectWithString:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

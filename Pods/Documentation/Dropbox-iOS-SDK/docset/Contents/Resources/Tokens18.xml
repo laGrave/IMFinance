@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MPOAuthCredentialConcreteStore.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MPOAuthCredentialConcreteStore</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>
+			
+			<NodeRef refid="18"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/setBaseURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSURL *baseURL</Declaration>
+			
+			
+			<Anchor>//api/name/baseURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthCredentialConcreteStore/baseURL</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSURL *baseURL</Declaration>
+			
+			
+			<Anchor>//api/name/baseURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/setAuthenticationURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSURL *authenticationURL</Declaration>
+			
+			
+			<Anchor>//api/name/authenticationURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthCredentialConcreteStore/authenticationURL</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSURL *authenticationURL</Declaration>
+			
+			
+			<Anchor>//api/name/authenticationURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/setTokenSecret:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *tokenSecret</Declaration>
+			
+			
+			<Anchor>//api/name/tokenSecret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthCredentialConcreteStore/tokenSecret</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *tokenSecret</Declaration>
+			
+			
+			<Anchor>//api/name/tokenSecret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/setSigningKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *signingKey</Declaration>
+			
+			
+			<Anchor>//api/name/signingKey</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthCredentialConcreteStore/signingKey</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *signingKey</Declaration>
+			
+			
+			<Anchor>//api/name/signingKey</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/setRequestToken:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) NSString *requestToken</Declaration>
+			
+			
+			<Anchor>//api/name/requestToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthCredentialConcreteStore/requestToken</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) NSString *requestToken</Declaration>
+			
+			
+			<Anchor>//api/name/requestToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/setRequestTokenSecret:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) NSString *requestTokenSecret</Declaration>
+			
+			
+			<Anchor>//api/name/requestTokenSecret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthCredentialConcreteStore/requestTokenSecret</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) NSString *requestTokenSecret</Declaration>
+			
+			
+			<Anchor>//api/name/requestTokenSecret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/setAccessToken:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthCredentialConcreteStore/accessToken</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/setAccessTokenSecret:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) NSString *accessTokenSecret</Declaration>
+			
+			
+			<Anchor>//api/name/accessTokenSecret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthCredentialConcreteStore/accessTokenSecret</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) NSString *accessTokenSecret</Declaration>
+			
+			
+			<Anchor>//api/name/accessTokenSecret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/setSessionHandle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) NSString *sessionHandle</Declaration>
+			
+			
+			<Anchor>//api/name/sessionHandle</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthCredentialConcreteStore/sessionHandle</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) NSString *sessionHandle</Declaration>
+			
+			
+			<Anchor>//api/name/sessionHandle</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/initWithCredentials:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithCredentials:(NSDictionary *)inCredential</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCredentials:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/initWithCredentials:forBaseURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithCredentials:(NSDictionary *)inCredentials forBaseURL:(NSURL *)inBaseURL</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCredentials:forBaseURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/initWithCredentials:forBaseURL:withAuthenticationURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithCredentials:(NSDictionary *)inCredentials forBaseURL:(NSURL *)inBaseURL withAuthenticationURL:(NSURL *)inAuthenticationURL</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCredentials:forBaseURL:withAuthenticationURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/setCredential:withName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>- (void)setCredential:(id)inCredential withName:(NSString *)inName</Declaration>
+			
+			
+			<Anchor>//api/name/setCredential:withName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/removeCredentialNamed:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeCredentialNamed:(NSString *)inName</Declaration>
+			
+			
+			<Anchor>//api/name/removeCredentialNamed:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/addToKeychainUsingName:andValue:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore+KeychainAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (void)addToKeychainUsingName:(NSString *)inName andValue:(NSString *)inValue</Declaration>
+			
+			
+			<Anchor>//api/name/addToKeychainUsingName:andValue:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/findValueFromKeychainUsingName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore+KeychainAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)findValueFromKeychainUsingName:(NSString *)inName</Declaration>
+			
+			
+			<Anchor>//api/name/findValueFromKeychainUsingName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthCredentialConcreteStore/removeValueFromKeychainUsingName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialConcreteStore+KeychainAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeValueFromKeychainUsingName:(NSString *)inName</Declaration>
+			
+			
+			<Anchor>//api/name/removeValueFromKeychainUsingName:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DBJSON.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DBJSON</TokenIdentifier>
+			<Abstract type="html">Facade for DBJsonWriter/DBJsonParser.
+
+Requests are forwarded to instances of DBJsonWriter and DBJsonParser.</Abstract>
+			<DeclaredIn>DBJSON.h</DeclaredIn>
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBJSON/fragmentWithString:error:</TokenIdentifier>
+			<Abstract type="html">Return the fragment represented by the given string</Abstract>
+			<DeclaredIn>DBJSON.h</DeclaredIn>			
+			
+			<Declaration>- (id)fragmentWithString:(NSString *)jsonrep error:(NSError **)error</Declaration>
+			
+			
+			<Anchor>//api/name/fragmentWithString:error:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBJSON/objectWithString:error:</TokenIdentifier>
+			<Abstract type="html">Return the object represented by the given string</Abstract>
+			<DeclaredIn>DBJSON.h</DeclaredIn>			
+			
+			<Declaration>- (id)objectWithString:(NSString *)jsonrep error:(NSError **)error</Declaration>
+			
+			
+			<Anchor>//api/name/objectWithString:error:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBJSON/objectWithString:allowScalar:error:</TokenIdentifier>
+			<Abstract type="html">Parse the string and return the represented object (or scalar)</Abstract>
+			<DeclaredIn>DBJSON.h</DeclaredIn>			
+			
+			<Declaration>- (id)objectWithString:(id)value allowScalar:(BOOL)x error:(NSError **)error</Declaration>
+			
+			
+			<Anchor>//api/name/objectWithString:allowScalar:error:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBJSON/stringWithObject:error:</TokenIdentifier>
+			<Abstract type="html">Return JSON representation of an array  or dictionary</Abstract>
+			<DeclaredIn>DBJSON.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)stringWithObject:(id)value error:(NSError **)error</Declaration>
+			
+			
+			<Anchor>//api/name/stringWithObject:error:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBJSON/stringWithFragment:error:</TokenIdentifier>
+			<Abstract type="html">Return JSON representation of any legal JSON value</Abstract>
+			<DeclaredIn>DBJSON.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)stringWithFragment:(id)value error:(NSError **)error</Declaration>
+			
+			
+			<Anchor>//api/name/stringWithFragment:error:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBJSON/stringWithObject:allowScalar:error:</TokenIdentifier>
+			<Abstract type="html">Return JSON representation (or fragment) for the given object</Abstract>
+			<DeclaredIn>DBJSON.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)stringWithObject:(id)value allowScalar:(BOOL)x error:(NSError **)error</Declaration>
+			
+			
+			<Anchor>//api/name/stringWithObject:allowScalar:error:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

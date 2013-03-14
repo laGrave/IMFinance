@@ -1,0 +1,634 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>DBSession Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Dropbox-iOS-SDK 1.3.3 </a></h1>
+				<a id="developerHome" href="../index.html">Dropbox</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">DBSession Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/root">&nbsp;&nbsp;&nbsp;&nbsp;root</option>
+	
+	<option value="//api/name/userIds">&nbsp;&nbsp;&nbsp;&nbsp;userIds</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/parseURLParams:">&nbsp;&nbsp;&nbsp;&nbsp;+ parseURLParams:</option>
+	
+	<option value="//api/name/setSharedSession:">&nbsp;&nbsp;&nbsp;&nbsp;+ setSharedSession:</option>
+	
+	<option value="//api/name/sharedSession">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedSession</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/appScheme">&nbsp;&nbsp;&nbsp;&nbsp;- appScheme</option>
+	
+	<option value="//api/name/credentialStoreForUserId:">&nbsp;&nbsp;&nbsp;&nbsp;- credentialStoreForUserId:</option>
+	
+	<option value="//api/name/handleOpenURL:">&nbsp;&nbsp;&nbsp;&nbsp;- handleOpenURL:</option>
+	
+	<option value="//api/name/initWithAppKey:appSecret:root:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAppKey:appSecret:root:</option>
+	
+	<option value="//api/name/isLinked">&nbsp;&nbsp;&nbsp;&nbsp;- isLinked</option>
+	
+	<option value="//api/name/linkFromController:">&nbsp;&nbsp;&nbsp;&nbsp;- linkFromController:</option>
+	
+	<option value="//api/name/linkUserId:fromController:">&nbsp;&nbsp;&nbsp;&nbsp;- linkUserId:fromController:</option>
+	
+	<option value="//api/name/unlinkAll">&nbsp;&nbsp;&nbsp;&nbsp;- unlinkAll</option>
+	
+	<option value="//api/name/unlinkUserId:">&nbsp;&nbsp;&nbsp;&nbsp;- unlinkUserId:</option>
+	
+	<option value="//api/name/updateAccessToken:accessTokenSecret:forUserId:">&nbsp;&nbsp;&nbsp;&nbsp;- updateAccessToken:accessTokenSecret:forUserId:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_iOS Methods">iOS Methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/root">root</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/userIds">userIds</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseURLParams:">parseURLParams:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setSharedSession:">setSharedSession:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedSession">sharedSession</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/appScheme">appScheme</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/credentialStoreForUserId:">credentialStoreForUserId:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleOpenURL:">handleOpenURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAppKey:appSecret:root:">initWithAppKey:appSecret:root:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isLinked">isLinked</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linkFromController:">linkFromController:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linkUserId:fromController:">linkUserId:fromController:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unlinkAll">unlinkAll</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unlinkUserId:">unlinkUserId:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateAccessToken:accessTokenSecret:forUserId:">updateAccessToken:accessTokenSecret:forUserId:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="DBSession Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">DBSession Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">DBSession.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sharedSession">+&nbsp;sharedSession</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setSharedSession:">+&nbsp;setSharedSession:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithAppKey:appSecret:root:">&ndash;&nbsp;initWithAppKey:appSecret:root:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isLinked">&ndash;&nbsp;isLinked</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unlinkAll">&ndash;&nbsp;unlinkAll</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unlinkUserId:">&ndash;&nbsp;unlinkUserId:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/credentialStoreForUserId:">&ndash;&nbsp;credentialStoreForUserId:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateAccessToken:accessTokenSecret:forUserId:">&ndash;&nbsp;updateAccessToken:accessTokenSecret:forUserId:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/root">&nbsp;&nbsp;root</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/userIds">&nbsp;&nbsp;userIds</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="iOS Methods" name="task_iOS Methods"></a>
+						<h3 class="subsubtitle task-title">iOS Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseURLParams:">+&nbsp;parseURLParams:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/appScheme">&ndash;&nbsp;appScheme</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/linkFromController:">&ndash;&nbsp;linkFromController:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/linkUserId:fromController:">&ndash;&nbsp;linkUserId:fromController:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/handleOpenURL:">&ndash;&nbsp;handleOpenURL:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;DBSessionDelegate&gt; delegate</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/root" title="root"></a>
+	<h3 class="subsubtitle method-title">root</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *root</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/userIds" title="userIds"></a>
+	<h3 class="subsubtitle method-title">userIds</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *userIds</code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/parseURLParams:" title="parseURLParams:"></a>
+	<h3 class="subsubtitle method-title">parseURLParams:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>+ (NSDictionary *)parseURLParams:(NSString *)<em>query</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setSharedSession:" title="setSharedSession:"></a>
+	<h3 class="subsubtitle method-title">setSharedSession:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>+ (void)setSharedSession:(DBSession *)<em>session</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sharedSession" title="sharedSession"></a>
+	<h3 class="subsubtitle method-title">sharedSession</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>+ (DBSession *)sharedSession</code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/appScheme" title="appScheme"></a>
+	<h3 class="subsubtitle method-title">appScheme</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)appScheme</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/credentialStoreForUserId:" title="credentialStoreForUserId:"></a>
+	<h3 class="subsubtitle method-title">credentialStoreForUserId:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (MPOAuthCredentialConcreteStore *)credentialStoreForUserId:(NSString *)<em>userId</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/handleOpenURL:" title="handleOpenURL:"></a>
+	<h3 class="subsubtitle method-title">handleOpenURL:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)handleOpenURL:(NSURL *)<em>url</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithAppKey:appSecret:root:" title="initWithAppKey:appSecret:root:"></a>
+	<h3 class="subsubtitle method-title">initWithAppKey:appSecret:root:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithAppKey:(NSString *)<em>key</em> appSecret:(NSString *)<em>secret</em> root:(NSString *)<em>root</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isLinked" title="isLinked"></a>
+	<h3 class="subsubtitle method-title">isLinked</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isLinked</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/linkFromController:" title="linkFromController:"></a>
+	<h3 class="subsubtitle method-title">linkFromController:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)linkFromController:(UIViewController *)<em>rootController</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/linkUserId:fromController:" title="linkUserId:fromController:"></a>
+	<h3 class="subsubtitle method-title">linkUserId:fromController:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)linkUserId:(NSString *)<em>userId</em> fromController:(UIViewController *)<em>rootController</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unlinkAll" title="unlinkAll"></a>
+	<h3 class="subsubtitle method-title">unlinkAll</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)unlinkAll</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unlinkUserId:" title="unlinkUserId:"></a>
+	<h3 class="subsubtitle method-title">unlinkUserId:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)unlinkUserId:(NSString *)<em>userId</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateAccessToken:accessTokenSecret:forUserId:" title="updateAccessToken:accessTokenSecret:forUserId:"></a>
+	<h3 class="subsubtitle method-title">updateAccessToken:accessTokenSecret:forUserId:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)updateAccessToken:(NSString *)<em>token</em> accessTokenSecret:(NSString *)<em>secret</em> forUserId:(NSString *)<em>userId</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Dropbox. All rights reserved. (Last updated: 2013-03-14)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

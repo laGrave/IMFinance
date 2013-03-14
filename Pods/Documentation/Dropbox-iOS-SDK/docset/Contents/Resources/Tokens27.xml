@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSString+MPURLEscapingAdditions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSString(MPURLEscapingAdditions)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSString+URLEscapingAdditions.h</DeclaredIn>
+			
+			<NodeRef refid="27"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString(MPURLEscapingAdditions)/isIPAddress</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSString+URLEscapingAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isIPAddress</Declaration>
+			
+			
+			<Anchor>//api/name/isIPAddress</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString(MPURLEscapingAdditions)/stringByAddingURIPercentEscapesUsingEncoding:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSString+URLEscapingAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)stringByAddingURIPercentEscapesUsingEncoding:(NSStringEncoding)inEncoding</Declaration>
+			
+			
+			<Anchor>//api/name/stringByAddingURIPercentEscapesUsingEncoding:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

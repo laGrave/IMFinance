@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MPOAuthAPI.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MPOAuthAPI</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>
+			
+			<NodeRef refid="13"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/setCredentials:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) id&lt;MPOAuthCredentialStore,MPOAuthParameterFactory&gt; credentials</Declaration>
+			
+			
+			<Anchor>//api/name/credentials</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthAPI/credentials</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) id&lt;MPOAuthCredentialStore,MPOAuthParameterFactory&gt; credentials</Declaration>
+			
+			
+			<Anchor>//api/name/credentials</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/setBaseURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSURL *baseURL</Declaration>
+			
+			
+			<Anchor>//api/name/baseURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthAPI/baseURL</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSURL *baseURL</Declaration>
+			
+			
+			<Anchor>//api/name/baseURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/setAuthenticationURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSURL *authenticationURL</Declaration>
+			
+			
+			<Anchor>//api/name/authenticationURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthAPI/authenticationURL</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSURL *authenticationURL</Declaration>
+			
+			
+			<Anchor>//api/name/authenticationURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/setAuthenticationMethod:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) MPOAuthAuthenticationMethod *authenticationMethod</Declaration>
+			
+			
+			<Anchor>//api/name/authenticationMethod</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthAPI/authenticationMethod</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, retain) MPOAuthAuthenticationMethod *authenticationMethod</Declaration>
+			
+			
+			<Anchor>//api/name/authenticationMethod</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/setSignatureScheme:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, assign) MPOAuthSignatureScheme signatureScheme</Declaration>
+			
+			
+			<Anchor>//api/name/signatureScheme</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthAPI/signatureScheme</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, assign) MPOAuthSignatureScheme signatureScheme</Declaration>
+			
+			
+			<Anchor>//api/name/signatureScheme</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/setAuthenticationState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, assign) MPOAuthAuthenticationState authenticationState</Declaration>
+			
+			
+			<Anchor>//api/name/authenticationState</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthAPI/authenticationState</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, assign) MPOAuthAuthenticationState authenticationState</Declaration>
+			
+			
+			<Anchor>//api/name/authenticationState</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/initWithCredentials:andBaseURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithCredentials:(NSDictionary *)inCredentials andBaseURL:(NSURL *)inURL</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCredentials:andBaseURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/initWithCredentials:authenticationURL:andBaseURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithCredentials:(NSDictionary *)inCredentials authenticationURL:(NSURL *)inAuthURL andBaseURL:(NSURL *)inBaseURL</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCredentials:authenticationURL:andBaseURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/initWithCredentials:authenticationURL:andBaseURL:autoStart:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithCredentials:(NSDictionary *)inCredentials authenticationURL:(NSURL *)inAuthURL andBaseURL:(NSURL *)inBaseURL autoStart:(BOOL)aFlag</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCredentials:authenticationURL:andBaseURL:autoStart:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/authenticate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (void)authenticate</Declaration>
+			
+			
+			<Anchor>//api/name/authenticate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/isAuthenticated</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isAuthenticated</Declaration>
+			
+			
+			<Anchor>//api/name/isAuthenticated</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/performMethod:withTarget:andAction:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (void)performMethod:(NSString *)inMethod withTarget:(id)inTarget andAction:(SEL)inAction</Declaration>
+			
+			
+			<Anchor>//api/name/performMethod:withTarget:andAction:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/performMethod:atURL:withParameters:withTarget:andAction:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (void)performMethod:(NSString *)inMethod atURL:(NSURL *)inURL withParameters:(NSArray *)inParameters withTarget:(id)inTarget andAction:(SEL)inAction</Declaration>
+			
+			
+			<Anchor>//api/name/performMethod:atURL:withParameters:withTarget:andAction:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/performPOSTMethod:atURL:withParameters:withTarget:andAction:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (void)performPOSTMethod:(NSString *)inMethod atURL:(NSURL *)inURL withParameters:(NSArray *)inParameters withTarget:(id)inTarget andAction:(SEL)inAction</Declaration>
+			
+			
+			<Anchor>//api/name/performPOSTMethod:atURL:withParameters:withTarget:andAction:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/performURLRequest:withTarget:andAction:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (void)performURLRequest:(NSURLRequest *)inRequest withTarget:(id)inTarget andAction:(SEL)inAction</Declaration>
+			
+			
+			<Anchor>//api/name/performURLRequest:withTarget:andAction:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/dataForMethod:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (NSData *)dataForMethod:(NSString *)inMethod</Declaration>
+			
+			
+			<Anchor>//api/name/dataForMethod:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/dataForMethod:withParameters:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (NSData *)dataForMethod:(NSString *)inMethod withParameters:(NSArray *)inParameters</Declaration>
+			
+			
+			<Anchor>//api/name/dataForMethod:withParameters:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/dataForURL:andMethod:withParameters:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (NSData *)dataForURL:(NSURL *)inURL andMethod:(NSString *)inMethod withParameters:(NSArray *)inParameters</Declaration>
+			
+			
+			<Anchor>//api/name/dataForURL:andMethod:withParameters:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/credentialNamed:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (id)credentialNamed:(NSString *)inCredentialName</Declaration>
+			
+			
+			<Anchor>//api/name/credentialNamed:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/setCredential:withName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (void)setCredential:(id)inCredential withName:(NSString *)inName</Declaration>
+			
+			
+			<Anchor>//api/name/setCredential:withName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/removeCredentialNamed:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeCredentialNamed:(NSString *)inName</Declaration>
+			
+			
+			<Anchor>//api/name/removeCredentialNamed:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthAPI/discardCredentials</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthAPI.h</DeclaredIn>			
+			
+			<Declaration>- (void)discardCredentials</Declaration>
+			
+			
+			<Anchor>//api/name/discardCredentials</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

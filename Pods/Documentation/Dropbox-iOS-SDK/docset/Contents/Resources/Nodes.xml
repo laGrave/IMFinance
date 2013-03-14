@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>Dropbox-iOS-SDK 1.3.3</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
+						<NodeRef refid="8"/>
+						<NodeRef refid="9"/>
+						<NodeRef refid="10"/>
+						<NodeRef refid="11"/>
+						<NodeRef refid="12"/>
+						<NodeRef refid="13"/>
+						<NodeRef refid="14"/>
+						<NodeRef refid="15"/>
+						<NodeRef refid="16"/>
+						<NodeRef refid="17"/>
+						<NodeRef refid="18"/>
+						<NodeRef refid="19"/>
+						<NodeRef refid="20"/>
+						<NodeRef refid="21"/>
+						<NodeRef refid="22"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Categories</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="23"/>
+						<NodeRef refid="24"/>
+						<NodeRef refid="25"/>
+						<NodeRef refid="26"/>
+						<NodeRef refid="27"/>
+						<NodeRef refid="28"/>
+						<NodeRef refid="29"/>
+						<NodeRef refid="30"/>
+						<NodeRef refid="31"/>
+						<NodeRef refid="32"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Protocols</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="33"/>
+						<NodeRef refid="34"/>
+						<NodeRef refid="35"/>
+						<NodeRef refid="36"/>
+						<NodeRef refid="37"/>
+						<NodeRef refid="38"/>
+						<NodeRef refid="39"/>
+						<NodeRef refid="40"/>
+						<NodeRef refid="41"/>
+						
+					</Subnodes>
+				</Node>
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1">
+			<Name>DBAccountInfo</Name>
+			<Path>Classes/DBAccountInfo.html</Path>
+		</Node>
+		<Node id="2">
+			<Name>DBDeltaEntry</Name>
+			<Path>Classes/DBDeltaEntry.html</Path>
+		</Node>
+		<Node id="3">
+			<Name>DBJSON</Name>
+			<Path>Classes/DBJSON.html</Path>
+		</Node>
+		<Node id="4">
+			<Name>DBJsonBase</Name>
+			<Path>Classes/DBJsonBase.html</Path>
+		</Node>
+		<Node id="5">
+			<Name>DBJsonParser</Name>
+			<Path>Classes/DBJsonParser.html</Path>
+		</Node>
+		<Node id="6">
+			<Name>DBJsonWriter</Name>
+			<Path>Classes/DBJsonWriter.html</Path>
+		</Node>
+		<Node id="7">
+			<Name>DBMetadata</Name>
+			<Path>Classes/DBMetadata.html</Path>
+		</Node>
+		<Node id="8">
+			<Name>DBQuota</Name>
+			<Path>Classes/DBQuota.html</Path>
+		</Node>
+		<Node id="9">
+			<Name>DBRequest</Name>
+			<Path>Classes/DBRequest.html</Path>
+		</Node>
+		<Node id="10">
+			<Name>DBRestClient</Name>
+			<Path>Classes/DBRestClient.html</Path>
+		</Node>
+		<Node id="11">
+			<Name>DBSession</Name>
+			<Path>Classes/DBSession.html</Path>
+		</Node>
+		<Node id="12">
+			<Name>DB_FIX_CATEGORY_BUG</Name>
+			<Path>Classes/DB_FIX_CATEGORY_BUG.html</Path>
+		</Node>
+		<Node id="13">
+			<Name>MPOAuthAPI</Name>
+			<Path>Classes/MPOAuthAPI.html</Path>
+		</Node>
+		<Node id="14">
+			<Name>MPOAuthAPIRequestLoader</Name>
+			<Path>Classes/MPOAuthAPIRequestLoader.html</Path>
+		</Node>
+		<Node id="15">
+			<Name>MPOAuthAuthenticationMethod</Name>
+			<Path>Classes/MPOAuthAuthenticationMethod.html</Path>
+		</Node>
+		<Node id="16">
+			<Name>MPOAuthAuthenticationMethodOAuth</Name>
+			<Path>Classes/MPOAuthAuthenticationMethodOAuth.html</Path>
+		</Node>
+		<Node id="17">
+			<Name>MPOAuthConnection</Name>
+			<Path>Classes/MPOAuthConnection.html</Path>
+		</Node>
+		<Node id="18">
+			<Name>MPOAuthCredentialConcreteStore</Name>
+			<Path>Classes/MPOAuthCredentialConcreteStore.html</Path>
+		</Node>
+		<Node id="19">
+			<Name>MPOAuthSignatureParameter</Name>
+			<Path>Classes/MPOAuthSignatureParameter.html</Path>
+		</Node>
+		<Node id="20">
+			<Name>MPOAuthURLRequest</Name>
+			<Path>Classes/MPOAuthURLRequest.html</Path>
+		</Node>
+		<Node id="21">
+			<Name>MPOAuthURLResponse</Name>
+			<Path>Classes/MPOAuthURLResponse.html</Path>
+		</Node>
+		<Node id="22">
+			<Name>MPURLRequestParameter</Name>
+			<Path>Classes/MPURLRequestParameter.html</Path>
+		</Node>
+		
+		<Node id="23">
+			<Name>NSDictionary(Dropbox)</Name>
+			<Path>Categories/NSDictionary+Dropbox.html</Path>
+		</Node>
+		<Node id="24">
+			<Name>NSObject(NSObject_DBJSON)</Name>
+			<Path>Categories/NSObject+NSObject_DBJSON.html</Path>
+		</Node>
+		<Node id="25">
+			<Name>NSObject(SBProxyForJson)</Name>
+			<Path>Categories/NSObject+SBProxyForJson.html</Path>
+		</Node>
+		<Node id="26">
+			<Name>NSString(Dropbox)</Name>
+			<Path>Categories/NSString+Dropbox.html</Path>
+		</Node>
+		<Node id="27">
+			<Name>NSString(MPURLEscapingAdditions)</Name>
+			<Path>Categories/NSString+MPURLEscapingAdditions.html</Path>
+		</Node>
+		<Node id="28">
+			<Name>NSString(NSString_DBJSON)</Name>
+			<Path>Categories/NSString+NSString_DBJSON.html</Path>
+		</Node>
+		<Node id="29">
+			<Name>NSURL(MPURLEscapingAdditions)</Name>
+			<Path>Categories/NSURL+MPURLEscapingAdditions.html</Path>
+		</Node>
+		<Node id="30">
+			<Name>NSURL(MPURLParameterAdditions)</Name>
+			<Path>Categories/NSURL+MPURLParameterAdditions.html</Path>
+		</Node>
+		<Node id="31">
+			<Name>NSURLResponse(EncodingAdditions)</Name>
+			<Path>Categories/NSURLResponse+EncodingAdditions.html</Path>
+		</Node>
+		<Node id="32">
+			<Name>UIAlertView(Dropbox)</Name>
+			<Path>Categories/UIAlertView+Dropbox.html</Path>
+		</Node>
+		
+		<Node id="33">
+			<Name>DBJsonParser</Name>
+			<Path>Protocols/DBJsonParser.html</Path>
+		</Node>
+		<Node id="34">
+			<Name>DBJsonWriter</Name>
+			<Path>Protocols/DBJsonWriter.html</Path>
+		</Node>
+		<Node id="35">
+			<Name>DBNetworkRequestDelegate</Name>
+			<Path>Protocols/DBNetworkRequestDelegate.html</Path>
+		</Node>
+		<Node id="36">
+			<Name>DBRestClientDelegate</Name>
+			<Path>Protocols/DBRestClientDelegate.html</Path>
+		</Node>
+		<Node id="37">
+			<Name>DBSessionDelegate</Name>
+			<Path>Protocols/DBSessionDelegate.html</Path>
+		</Node>
+		<Node id="38">
+			<Name>MPOAuthAPIInternalClient</Name>
+			<Path>Protocols/MPOAuthAPIInternalClient.html</Path>
+		</Node>
+		<Node id="39">
+			<Name>MPOAuthAuthenticationMethodOAuthDelegate</Name>
+			<Path>Protocols/MPOAuthAuthenticationMethodOAuthDelegate.html</Path>
+		</Node>
+		<Node id="40">
+			<Name>MPOAuthCredentialStore</Name>
+			<Path>Protocols/MPOAuthCredentialStore.html</Path>
+		</Node>
+		<Node id="41">
+			<Name>MPOAuthParameterFactory</Name>
+			<Path>Protocols/MPOAuthParameterFactory.html</Path>
+		</Node>
+		
+	</Library>
+</DocSetNodes>

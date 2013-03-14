@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DBDeltaEntry.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DBDeltaEntry</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBDeltaEntry.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBDeltaEntry/initWithArray:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBDeltaEntry.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithArray:(NSArray *)array</Declaration>
+			
+			
+			<Anchor>//api/name/initWithArray:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBDeltaEntry/setLowercasePath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBDeltaEntry.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *lowercasePath</Declaration>
+			
+			
+			<Anchor>//api/name/lowercasePath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBDeltaEntry/lowercasePath</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBDeltaEntry.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *lowercasePath</Declaration>
+			
+			
+			<Anchor>//api/name/lowercasePath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBDeltaEntry/setMetadata:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBDeltaEntry.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) DBMetadata *metadata</Declaration>
+			
+			
+			<Anchor>//api/name/metadata</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBDeltaEntry/metadata</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBDeltaEntry.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) DBMetadata *metadata</Declaration>
+			
+			
+			<Anchor>//api/name/metadata</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

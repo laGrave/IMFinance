@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/MPOAuthCredentialStore.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/MPOAuthCredentialStore</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>
+			
+			<NodeRef refid="40"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthCredentialStore/setConsumerKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *consumerKey</Declaration>
+			
+			
+			<Anchor>//api/name/consumerKey</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/MPOAuthCredentialStore/consumerKey</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *consumerKey</Declaration>
+			
+			
+			<Anchor>//api/name/consumerKey</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthCredentialStore/setConsumerSecret:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *consumerSecret</Declaration>
+			
+			
+			<Anchor>//api/name/consumerSecret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/MPOAuthCredentialStore/consumerSecret</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *consumerSecret</Declaration>
+			
+			
+			<Anchor>//api/name/consumerSecret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthCredentialStore/setUsername:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *username</Declaration>
+			
+			
+			<Anchor>//api/name/username</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/MPOAuthCredentialStore/username</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *username</Declaration>
+			
+			
+			<Anchor>//api/name/username</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthCredentialStore/setPassword:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *password</Declaration>
+			
+			
+			<Anchor>//api/name/password</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/MPOAuthCredentialStore/password</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *password</Declaration>
+			
+			
+			<Anchor>//api/name/password</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthCredentialStore/setRequestToken:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSString *requestToken</Declaration>
+			
+			
+			<Anchor>//api/name/requestToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/MPOAuthCredentialStore/requestToken</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSString *requestToken</Declaration>
+			
+			
+			<Anchor>//api/name/requestToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthCredentialStore/setRequestTokenSecret:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSString *requestTokenSecret</Declaration>
+			
+			
+			<Anchor>//api/name/requestTokenSecret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/MPOAuthCredentialStore/requestTokenSecret</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSString *requestTokenSecret</Declaration>
+			
+			
+			<Anchor>//api/name/requestTokenSecret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthCredentialStore/setAccessToken:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/MPOAuthCredentialStore/accessToken</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthCredentialStore/setAccessTokenSecret:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSString *accessTokenSecret</Declaration>
+			
+			
+			<Anchor>//api/name/accessTokenSecret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/MPOAuthCredentialStore/accessTokenSecret</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSString *accessTokenSecret</Declaration>
+			
+			
+			<Anchor>//api/name/accessTokenSecret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthCredentialStore/credentialNamed:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)credentialNamed:(NSString *)inCredentialName</Declaration>
+			
+			
+			<Anchor>//api/name/credentialNamed:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MPOAuthCredentialStore/discardOAuthCredentials</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthCredentialStore.h</DeclaredIn>			
+			
+			<Declaration>- (void)discardOAuthCredentials</Declaration>
+			
+			
+			<Anchor>//api/name/discardOAuthCredentials</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

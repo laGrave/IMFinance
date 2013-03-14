@@ -124,9 +124,13 @@
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
     [numberFormatter setCurrencyCode:trans.currency];
-    [numberFormatter setRoundingMode:NSNumberFormatterRoundCeiling];
-    cell.priceLabel.text = [NSString stringWithFormat:@"%@", [numberFormatter stringFromNumber:trans.value]];
-    cell.feeLabel.text = [NSString stringWithFormat:@"%@", [numberFormatter stringFromNumber:trans.fee]];
+    [numberFormatter setMinimumFractionDigits:0];
+    [numberFormatter setMaximumFractionDigits:2];
+    cell.priceLabel.text = [numberFormatter stringFromNumber:trans.value];
+    cell.feeLabel.text = [numberFormatter stringFromNumber:trans.fee];
+    
+    UIColor *priceLabelColor = ([trans.incomeType boolValue]) ? [UIColor greenColor] : [UIColor redColor];
+    [cell.priceLabel setTextColor:priceLabelColor];
     
     return cell;
 }

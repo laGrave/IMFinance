@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DBMetadata.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DBMetadata</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/initWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/initWithDictionary:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setThumbnailExists:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL thumbnailExists</Declaration>
+			
+			
+			<Anchor>//api/name/thumbnailExists</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/thumbnailExists</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL thumbnailExists</Declaration>
+			
+			
+			<Anchor>//api/name/thumbnailExists</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setTotalBytes:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) long long totalBytes</Declaration>
+			
+			
+			<Anchor>//api/name/totalBytes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/totalBytes</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) long long totalBytes</Declaration>
+			
+			
+			<Anchor>//api/name/totalBytes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setLastModifiedDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSDate *lastModifiedDate</Declaration>
+			
+			
+			<Anchor>//api/name/lastModifiedDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/lastModifiedDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSDate *lastModifiedDate</Declaration>
+			
+			
+			<Anchor>//api/name/lastModifiedDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setClientMtime:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSDate *clientMtime</Declaration>
+			
+			
+			<Anchor>//api/name/clientMtime</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/clientMtime</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSDate *clientMtime</Declaration>
+			
+			
+			<Anchor>//api/name/clientMtime</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/path</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setIsDirectory:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isDirectory</Declaration>
+			
+			
+			<Anchor>//api/name/isDirectory</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/isDirectory</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isDirectory</Declaration>
+			
+			
+			<Anchor>//api/name/isDirectory</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setContents:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *contents</Declaration>
+			
+			
+			<Anchor>//api/name/contents</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/contents</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *contents</Declaration>
+			
+			
+			<Anchor>//api/name/contents</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setHash:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *hash</Declaration>
+			
+			
+			<Anchor>//api/name/hash</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/hash</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *hash</Declaration>
+			
+			
+			<Anchor>//api/name/hash</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setHumanReadableSize:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *humanReadableSize</Declaration>
+			
+			
+			<Anchor>//api/name/humanReadableSize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/humanReadableSize</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *humanReadableSize</Declaration>
+			
+			
+			<Anchor>//api/name/humanReadableSize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setRoot:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *root</Declaration>
+			
+			
+			<Anchor>//api/name/root</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/root</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *root</Declaration>
+			
+			
+			<Anchor>//api/name/root</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setIcon:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *icon</Declaration>
+			
+			
+			<Anchor>//api/name/icon</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/icon</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *icon</Declaration>
+			
+			
+			<Anchor>//api/name/icon</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setRevision:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) long long revision</Declaration>
+			
+			
+			<Anchor>//api/name/revision</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/revision</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) long long revision</Declaration>
+			
+			
+			<Anchor>//api/name/revision</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setRev:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *rev</Declaration>
+			
+			
+			<Anchor>//api/name/rev</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/rev</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *rev</Declaration>
+			
+			
+			<Anchor>//api/name/rev</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setIsDeleted:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isDeleted</Declaration>
+			
+			
+			<Anchor>//api/name/isDeleted</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/isDeleted</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isDeleted</Declaration>
+			
+			
+			<Anchor>//api/name/isDeleted</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBMetadata/setFilename:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *filename</Declaration>
+			
+			
+			<Anchor>//api/name/filename</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBMetadata/filename</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBMetadata.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *filename</Declaration>
+			
+			
+			<Anchor>//api/name/filename</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

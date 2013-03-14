@@ -91,7 +91,13 @@
     
     Account *account = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = account.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", account.value];
+    
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    [numberFormatter setCurrencyCode:account.currency];
+    [numberFormatter setMinimumFractionDigits:0];
+    [numberFormatter setMaximumFractionDigits:2];
+    cell.detailTextLabel.text = [numberFormatter stringFromNumber:account.value];
     
     return cell;
 }

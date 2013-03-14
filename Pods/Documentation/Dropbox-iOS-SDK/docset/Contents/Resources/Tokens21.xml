@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MPOAuthURLResponse.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MPOAuthURLResponse</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthURLResponse.h</DeclaredIn>
+			
+			<NodeRef refid="21"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthURLResponse/setUrlResponse:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthURLResponse.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSURLResponse *urlResponse</Declaration>
+			
+			
+			<Anchor>//api/name/urlResponse</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthURLResponse/urlResponse</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthURLResponse.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSURLResponse *urlResponse</Declaration>
+			
+			
+			<Anchor>//api/name/urlResponse</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthURLResponse/setOauthParameters:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthURLResponse.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSDictionary *oauthParameters</Declaration>
+			
+			
+			<Anchor>//api/name/oauthParameters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthURLResponse/oauthParameters</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthURLResponse.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSDictionary *oauthParameters</Declaration>
+			
+			
+			<Anchor>//api/name/oauthParameters</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

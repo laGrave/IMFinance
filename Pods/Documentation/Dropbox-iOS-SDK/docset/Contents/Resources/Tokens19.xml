@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MPOAuthSignatureParameter.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MPOAuthSignatureParameter</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthSignatureParameter.h</DeclaredIn>
+			
+			<NodeRef refid="19"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MPOAuthSignatureParameter/signatureBaseStringUsingParameterString:forRequest:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthSignatureParameter.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)signatureBaseStringUsingParameterString:(NSString *)inParameterString forRequest:(MPOAuthURLRequest *)inRequest</Declaration>
+			
+			
+			<Anchor>//api/name/signatureBaseStringUsingParameterString:forRequest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MPOAuthSignatureParameter/HMAC_SHA1SignatureForText:usingSecret:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthSignatureParameter.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)HMAC_SHA1SignatureForText:(NSString *)inText usingSecret:(NSString *)inSecret</Declaration>
+			
+			
+			<Anchor>//api/name/HMAC_SHA1SignatureForText:usingSecret:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthSignatureParameter/initWithText:andSecret:forRequest:usingMethod:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthSignatureParameter.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithText:(NSString *)inText andSecret:(NSString *)inSecret forRequest:(MPOAuthURLRequest *)inRequest usingMethod:(NSString *)inMethod</Declaration>
+			
+			
+			<Anchor>//api/name/initWithText:andSecret:forRequest:usingMethod:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

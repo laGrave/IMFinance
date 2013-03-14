@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DBAccountInfo.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DBAccountInfo</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBAccountInfo.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBAccountInfo/initWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBAccountInfo.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/initWithDictionary:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBAccountInfo/setCountry:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBAccountInfo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *country</Declaration>
+			
+			
+			<Anchor>//api/name/country</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBAccountInfo/country</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBAccountInfo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *country</Declaration>
+			
+			
+			<Anchor>//api/name/country</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBAccountInfo/setDisplayName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBAccountInfo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *displayName</Declaration>
+			
+			
+			<Anchor>//api/name/displayName</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBAccountInfo/displayName</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBAccountInfo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *displayName</Declaration>
+			
+			
+			<Anchor>//api/name/displayName</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBAccountInfo/setQuota:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBAccountInfo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) DBQuota *quota</Declaration>
+			
+			
+			<Anchor>//api/name/quota</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBAccountInfo/quota</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBAccountInfo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) DBQuota *quota</Declaration>
+			
+			
+			<Anchor>//api/name/quota</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBAccountInfo/setUserId:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBAccountInfo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *userId</Declaration>
+			
+			
+			<Anchor>//api/name/userId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBAccountInfo/userId</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBAccountInfo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *userId</Declaration>
+			
+			
+			<Anchor>//api/name/userId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DBAccountInfo/setReferralLink:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBAccountInfo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *referralLink</Declaration>
+			
+			
+			<Anchor>//api/name/referralLink</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DBAccountInfo/referralLink</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DBAccountInfo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *referralLink</Declaration>
+			
+			
+			<Anchor>//api/name/referralLink</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

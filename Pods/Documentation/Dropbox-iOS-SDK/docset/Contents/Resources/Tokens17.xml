@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MPOAuthConnection.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MPOAuthConnection</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthConnection.h</DeclaredIn>
+			
+			<NodeRef refid="17"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthConnection/setCredentials:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthConnection.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) id&lt;MPOAuthCredentialStore,MPOAuthParameterFactory&gt; credentials</Declaration>
+			
+			
+			<Anchor>//api/name/credentials</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MPOAuthConnection/credentials</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthConnection.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) id&lt;MPOAuthCredentialStore,MPOAuthParameterFactory&gt; credentials</Declaration>
+			
+			
+			<Anchor>//api/name/credentials</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MPOAuthConnection/connectionWithRequest:delegate:credentials:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthConnection.h</DeclaredIn>			
+			
+			<Declaration>+ (MPOAuthConnection *)connectionWithRequest:(MPOAuthURLRequest *)inRequest delegate:(id)inDelegate credentials:(NSObject&lt;MPOAuthCredentialStore,MPOAuthParameterFactory&gt; *)inCredentials</Declaration>
+			
+			
+			<Anchor>//api/name/connectionWithRequest:delegate:credentials:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MPOAuthConnection/sendSynchronousRequest:usingCredentials:returningResponse:error:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthConnection.h</DeclaredIn>			
+			
+			<Declaration>+ (NSData *)sendSynchronousRequest:(MPOAuthURLRequest *)inRequest usingCredentials:(NSObject&lt;MPOAuthCredentialStore,MPOAuthParameterFactory&gt; *)inCredentials returningResponse:(MPOAuthURLResponse **)outResponse error:(NSError **)inError</Declaration>
+			
+			
+			<Anchor>//api/name/sendSynchronousRequest:usingCredentials:returningResponse:error:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MPOAuthConnection/initWithRequest:delegate:credentials:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MPOAuthConnection.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithRequest:(MPOAuthURLRequest *)inRequest delegate:(id)inDelegate credentials:(NSObject&lt;MPOAuthCredentialStore,MPOAuthParameterFactory&gt; *)inCredentials</Declaration>
+			
+			
+			<Anchor>//api/name/initWithRequest:delegate:credentials:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

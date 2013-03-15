@@ -121,9 +121,15 @@ static NSString *kAccountType = @"account type";
     }
     
     if ([self setupParams]) {
-        [[IMCoreDataManager sharedInstance] editAccountWithParams:self.params
-                                                          success:^{[self dismissViewControllerAnimated:YES completion:NULL];}
-                                                          failure:^(NSError *error){;}];
+//        [[[IMCoreDataManager sharedInstance] editAccountWithParams:self.params
+//                                                          success:^{[self dismissViewControllerAnimated:YES completion:NULL];}
+//                                                          failure:^(NSError *error){;}]];
+        
+        PFObject *account = [PFObject objectWithClassName:@"Account"];
+        [account setObject:[self.params objectForKey:kAccountName] forKey:@"name"];
+        [account saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+            [self dismissViewControllerAnimated:YES completion:NULL];
+        }];
     }
     else NSLog(@"заполните все поля!");
 }

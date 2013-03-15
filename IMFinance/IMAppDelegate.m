@@ -80,9 +80,11 @@
     
     [Parse setApplicationId:kParseAppId
                   clientKey:kParseClientKey];
-    [PFACL setDefaultACL:[PFACL ACL] withAccessForCurrentUser:YES];
-    
-    [FTASyncHandler sharedInstance];
+    [PFUser enableAutomaticUser];
+    PFACL *defaultACL = [PFACL ACL];
+    // Optionally enable public read access by default.
+    [defaultACL setPublicReadAccess:YES];
+    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
     //при первом запуске валюту по умолчанию на основании локали телефона
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],@"firstLaunch",nil]];

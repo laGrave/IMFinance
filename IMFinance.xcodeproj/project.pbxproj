@@ -286,12 +286,12 @@
 		B049486C16F2757200E96FB1 /* Accounts */ = {
 			isa = PBXGroup;
 			children = (
+				B0925DE816F26620003FFC1F /* IMAccountsTableViewController.h */,
+				B0925DE916F26620003FFC1F /* IMAccountsTableViewController.m */,
 				B0925DE416F26620003FFC1F /* IMAccountEditViewController.h */,
 				B0925DE516F26620003FFC1F /* IMAccountEditViewController.m */,
 				B0925DE616F26620003FFC1F /* IMAccountSelectorController.h */,
 				B0925DE716F26620003FFC1F /* IMAccountSelectorController.m */,
-				B0925DE816F26620003FFC1F /* IMAccountsTableViewController.h */,
-				B0925DE916F26620003FFC1F /* IMAccountsTableViewController.m */,
 			);
 			name = Accounts;
 			sourceTree = "<group>";

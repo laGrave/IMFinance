@@ -26,15 +26,11 @@
 		B049485216F26CAC00E96FB1 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = B049483E16F26CAC00E96FB1 /* Account.m */; };
 		B049485316F26CAC00E96FB1 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B049484016F26CAC00E96FB1 /* Category.m */; };
 		B049485416F26CAC00E96FB1 /* Contractor.m in Sources */ = {isa = PBXBuildFile; fileRef = B049484216F26CAC00E96FB1 /* Contractor.m */; };
-		B049485516F26CAC00E96FB1 /* FTASyncParent.m in Sources */ = {isa = PBXBuildFile; fileRef = B049484416F26CAC00E96FB1 /* FTASyncParent.m */; };
 		B049485616F26CAC00E96FB1 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = B049484616F26CAC00E96FB1 /* Transaction.m */; };
 		B049485716F26CAC00E96FB1 /* _Account.m in Sources */ = {isa = PBXBuildFile; fileRef = B049484916F26CAC00E96FB1 /* _Account.m */; };
 		B049485816F26CAC00E96FB1 /* _Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B049484B16F26CAC00E96FB1 /* _Category.m */; };
 		B049485916F26CAC00E96FB1 /* _Contractor.m in Sources */ = {isa = PBXBuildFile; fileRef = B049484D16F26CAC00E96FB1 /* _Contractor.m */; };
-		B049485A16F26CAC00E96FB1 /* _FTASyncParent.m in Sources */ = {isa = PBXBuildFile; fileRef = B049484F16F26CAC00E96FB1 /* _FTASyncParent.m */; };
 		B049485B16F26CAC00E96FB1 /* _Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = B049485116F26CAC00E96FB1 /* _Transaction.m */; };
-		B049486516F26DC100E96FB1 /* FTAParseSync.m in Sources */ = {isa = PBXBuildFile; fileRef = B049485F16F26DC100E96FB1 /* FTAParseSync.m */; };
-		B049486616F26DC100E96FB1 /* FTASyncHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B049486216F26DC100E96FB1 /* FTASyncHandler.m */; };
 		B0925E0516F26620003FFC1F /* IMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DE016F26620003FFC1F /* IMCoreDataManager.m */; };
 		B0925E0716F26620003FFC1F /* IMAccountEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DE516F26620003FFC1F /* IMAccountEditViewController.m */; };
 		B0925E0816F26620003FFC1F /* IMAccountSelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DE716F26620003FFC1F /* IMAccountSelectorController.m */; };
@@ -98,8 +94,6 @@
 		B049484016F26CAC00E96FB1 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		B049484116F26CAC00E96FB1 /* Contractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contractor.h; sourceTree = "<group>"; };
 		B049484216F26CAC00E96FB1 /* Contractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contractor.m; sourceTree = "<group>"; };
-		B049484316F26CAC00E96FB1 /* FTASyncParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTASyncParent.h; sourceTree = "<group>"; };
-		B049484416F26CAC00E96FB1 /* FTASyncParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTASyncParent.m; sourceTree = "<group>"; };
 		B049484516F26CAC00E96FB1 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		B049484616F26CAC00E96FB1 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		B049484816F26CAC00E96FB1 /* _Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Account.h; sourceTree = "<group>"; };
@@ -108,16 +102,8 @@
 		B049484B16F26CAC00E96FB1 /* _Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Category.m; sourceTree = "<group>"; };
 		B049484C16F26CAC00E96FB1 /* _Contractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Contractor.h; sourceTree = "<group>"; };
 		B049484D16F26CAC00E96FB1 /* _Contractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Contractor.m; sourceTree = "<group>"; };
-		B049484E16F26CAC00E96FB1 /* _FTASyncParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FTASyncParent.h; sourceTree = "<group>"; };
-		B049484F16F26CAC00E96FB1 /* _FTASyncParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FTASyncParent.m; sourceTree = "<group>"; };
 		B049485016F26CAC00E96FB1 /* _Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Transaction.h; sourceTree = "<group>"; };
 		B049485116F26CAC00E96FB1 /* _Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Transaction.m; sourceTree = "<group>"; };
-		B049485E16F26DC100E96FB1 /* FTAParseSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAParseSync.h; sourceTree = "<group>"; };
-		B049485F16F26DC100E96FB1 /* FTAParseSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAParseSync.m; sourceTree = "<group>"; };
-		B049486016F26DC100E96FB1 /* FTASync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTASync.h; sourceTree = "<group>"; };
-		B049486116F26DC100E96FB1 /* FTASyncHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTASyncHandler.h; sourceTree = "<group>"; };
-		B049486216F26DC100E96FB1 /* FTASyncHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTASyncHandler.m; sourceTree = "<group>"; };
-		B049486916F2721600E96FB1 /* ParseKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseKeys.h; sourceTree = "<group>"; };
 		B0925DDF16F26620003FFC1F /* IMCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCoreDataManager.h; sourceTree = "<group>"; };
 		B0925DE016F26620003FFC1F /* IMCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCoreDataManager.m; sourceTree = "<group>"; };
 		B0925DE416F26620003FFC1F /* IMAccountEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountEditViewController.h; sourceTree = "<group>"; };
@@ -237,8 +223,6 @@
 				B049484016F26CAC00E96FB1 /* Category.m */,
 				B049484116F26CAC00E96FB1 /* Contractor.h */,
 				B049484216F26CAC00E96FB1 /* Contractor.m */,
-				B049484316F26CAC00E96FB1 /* FTASyncParent.h */,
-				B049484416F26CAC00E96FB1 /* FTASyncParent.m */,
 				B049484516F26CAC00E96FB1 /* Transaction.h */,
 				B049484616F26CAC00E96FB1 /* Transaction.m */,
 			);
@@ -254,33 +238,10 @@
 				B049484B16F26CAC00E96FB1 /* _Category.m */,
 				B049484C16F26CAC00E96FB1 /* _Contractor.h */,
 				B049484D16F26CAC00E96FB1 /* _Contractor.m */,
-				B049484E16F26CAC00E96FB1 /* _FTASyncParent.h */,
-				B049484F16F26CAC00E96FB1 /* _FTASyncParent.m */,
 				B049485016F26CAC00E96FB1 /* _Transaction.h */,
 				B049485116F26CAC00E96FB1 /* _Transaction.m */,
 			);
 			path = Machine;
-			sourceTree = "<group>";
-		};
-		B049485C16F26DC100E96FB1 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				B049485D16F26DC100E96FB1 /* FTASync */,
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
-		B049485D16F26DC100E96FB1 /* FTASync */ = {
-			isa = PBXGroup;
-			children = (
-				B049486916F2721600E96FB1 /* ParseKeys.h */,
-				B049485E16F26DC100E96FB1 /* FTAParseSync.h */,
-				B049485F16F26DC100E96FB1 /* FTAParseSync.m */,
-				B049486016F26DC100E96FB1 /* FTASync.h */,
-				B049486116F26DC100E96FB1 /* FTASyncHandler.h */,
-				B049486216F26DC100E96FB1 /* FTASyncHandler.m */,
-			);
-			path = FTASync;
 			sourceTree = "<group>";
 		};
 		B049486C16F2757200E96FB1 /* Accounts */ = {
@@ -299,12 +260,12 @@
 		B049486D16F2757E00E96FB1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				B0925DEA16F26620003FFC1F /* IMCategoriesPickerViewController.h */,
-				B0925DEB16F26620003FFC1F /* IMCategoriesPickerViewController.m */,
 				B0925DEC16F26620003FFC1F /* IMCategoriesTableViewController.h */,
 				B0925DED16F26620003FFC1F /* IMCategoriesTableViewController.m */,
 				B0925DEE16F26620003FFC1F /* IMCategoryEditViewController.h */,
 				B0925DEF16F26620003FFC1F /* IMCategoryEditViewController.m */,
+				B0925DEA16F26620003FFC1F /* IMCategoriesPickerViewController.h */,
+				B0925DEB16F26620003FFC1F /* IMCategoriesPickerViewController.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -456,7 +417,6 @@
 				B0925DD316F26620003FFC1F /* CoreData */,
 				B0925DE316F26620003FFC1F /* ViewControllers */,
 				DC999AB016DB7D8900B05612 /* Views */,
-				B049485C16F26DC100E96FB1 /* Libraries */,
 				DCD726CF16B68833006F5E2D /* Utilities */,
 				DCD7265316B67B6B006F5E2D /* IMAppDelegate.h */,
 				DCD7265416B67B6B006F5E2D /* IMAppDelegate.m */,
@@ -639,15 +599,11 @@
 				B049485216F26CAC00E96FB1 /* Account.m in Sources */,
 				B049485316F26CAC00E96FB1 /* Category.m in Sources */,
 				B049485416F26CAC00E96FB1 /* Contractor.m in Sources */,
-				B049485516F26CAC00E96FB1 /* FTASyncParent.m in Sources */,
 				B049485616F26CAC00E96FB1 /* Transaction.m in Sources */,
 				B049485716F26CAC00E96FB1 /* _Account.m in Sources */,
 				B049485816F26CAC00E96FB1 /* _Category.m in Sources */,
 				B049485916F26CAC00E96FB1 /* _Contractor.m in Sources */,
-				B049485A16F26CAC00E96FB1 /* _FTASyncParent.m in Sources */,
 				B049485B16F26CAC00E96FB1 /* _Transaction.m in Sources */,
-				B049486516F26DC100E96FB1 /* FTAParseSync.m in Sources */,
-				B049486616F26DC100E96FB1 /* FTASyncHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

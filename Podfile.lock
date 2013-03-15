@@ -1,32 +1,29 @@
 
-COCOAPODS: 0.16.3
-
 SPEC CHECKSUMS: 
-  TestFlightSDK: f638b08651a37af099e40c47241fc58fd3cb1a66
+  MagicalRecord: aedbebe987d02d1215718a904c93d7965e48e398
   TBXML: 905fef0b8e4bb73a36306e6aa6fe76fc3d598cf5
   NSHash: 08e81b655e7d2e3d9b872c192e52f77b76694918
-  Parse: 2b58049596988cdfc9c64fd7e7c45af3e966d20e
-  NPReachability: 20281bf45f6124421a43668d2c7a61d1ecba8cf2
-  Facebook-iOS-SDK: a9893c9ad7cf2ce35cb6297e2859eaee654bd6b0
-  MagicalRecord: aedbebe987d02d1215718a904c93d7965e48e398
   JASidePanels: e37a175f06d5e228733daf276b31e2b2f6fade5f
+  Facebook-iOS-SDK: a9893c9ad7cf2ce35cb6297e2859eaee654bd6b0
+  TestFlightSDK: f638b08651a37af099e40c47241fc58fd3cb1a66
+  Parse: 2b58049596988cdfc9c64fd7e7c45af3e966d20e
 
-DEPENDENCIES: 
-- Facebook-iOS-SDK (~> 3.2.0)
-- JASidePanels
-- MagicalRecord (~> 2.1)
-- NPReachability (~> 0.1.0)
-- NSHash (~> 1.0.1)
-- Parse (~> 1.1.33)
-- TBXML (~> 1.5)
-- TestFlightSDK (~> 1.2.3.beta1)
+COCOAPODS: 0.16.3
 
 PODS: 
 - Facebook-iOS-SDK (3.2.0)
 - JASidePanels (1.2.1)
 - MagicalRecord (2.1)
-- NPReachability (0.1.0)
 - NSHash (1.0.1)
 - Parse (1.1.33)
 - TBXML (1.5)
 - TestFlightSDK (1.2.3.beta1)
+
+DEPENDENCIES: 
+- Facebook-iOS-SDK (~> 3.2.0)
+- JASidePanels
+- MagicalRecord (~> 2.1)
+- NSHash (~> 1.0.1)
+- Parse (~> 1.1.33)
+- TBXML (~> 1.5)
+- TestFlightSDK (~> 1.2.3.beta1)

@@ -8,7 +8,7 @@
 
 #import "IMSummaryViewController.h"
 
-@interface IMSummaryViewController ()
+@interface IMSummaryViewController () <PFLogInViewControllerDelegate>
 
 @end
 
@@ -34,5 +34,29 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark -
+#pragma mark - Instance methods
+
+- (IBAction)loginButtonPressed:(UIBarButtonItem *)sender {
+    
+    PFLogInViewController *loginVC = [[PFLogInViewController alloc] init];
+    loginVC.delegate = self;
+    [self presentViewController:loginVC animated:YES completion:NULL];
+}
+
+
+#pragma mark -
+#pragma mark - PFLogInViewControllerDelegate
+
+- (void)logInViewController:(PFLogInViewController *)controller
+               didLogInUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 
 @end

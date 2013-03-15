@@ -10,53 +10,44 @@
 
 #import <UIViewController+JASidePanel.h>
 
-#import "Category.h"
-
 #import "IMCategoryEditViewController.h"
 #import "IMSidePanelController.h"
 #import "IMTransactionsTableViewController.h"
 
-@interface IMCategoriesTableViewController () <NSFetchedResultsControllerDelegate>
+@interface IMCategoriesTableViewController ()
 
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic) BOOL changeIsUserDriven;
+
+@property (nonatomic, strong) NSMutableDictionary *sections;
+@property (nonatomic, strong) NSMutableDictionary *sectionToTypeMap;
 
 @end
 
 @implementation IMCategoriesTableViewController
 
-#pragma mark -
-#pragma mark - Getters
-
-- (NSFetchedResultsController *)fetchedResultsController {
-    
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"system != %@", [NSNumber numberWithBool:YES]];
-    _fetchedResultsController = [Category MR_fetchAllSortedBy:@"incomeType,order" ascending:YES withPredicate:predicate groupBy:@"incomeType" delegate:self];
-    
-    return _fetchedResultsController;
-}
-
 
 #pragma mark -
 #pragma mark - View Controller lifecycle
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.className = @"Category";
+        self.pullToRefreshEnabled = YES;
+        self.paginationEnabled = NO;
+        self.sections = [NSMutableDictionary dictionary];
+        self.sectionToTypeMap = [NSMutableDictionary dictionary];
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
  
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    NSArray *cats = [Category MR_findAllSortedBy:@"order" ascending:YES];
-    for (Category *cat in cats) {
-        NSLog(@"category name: %@", cat.name);
-        NSLog(@"category order:  %@", cat.order);
-        NSString *income = (cat.incomeType.boolValue) ? @"Доход" : @"Расход";
-        NSLog(@"%@", income);
-    }
 }
 
 
@@ -64,17 +55,10 @@
     
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    
-    self.fetchedResultsController = nil;
-    [self.tableView reloadData];
 }
 
-
-#pragma mark -
-#pragma mark - Instance methods
-
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
-
+    
     [super setEditing:editing animated:animated];
     
     if (editing) {
@@ -91,51 +75,112 @@
 
 
 - (void)addBarButtonItemPressed:(UIBarButtonItem *)barButtonItem {
-
+    
     IMCategoryEditViewController *categoryEdit = [self.storyboard instantiateViewControllerWithIdentifier:@"IMCategoryEditViewController"];
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:categoryEdit];
     [self presentViewController:navVC animated:YES completion:NULL];
 }
 
 
-#pragma mark - Table view data source
+- (PFQuery *)queryForTable {
+    PFQuery *query = [PFQuery queryWithClassName:self.className];
+    
+    // If Pull To Refresh is enabled, query against the network by default.
+    if (self.pullToRefreshEnabled) {
+        query.cachePolicy = kPFCachePolicyNetworkOnly;
+    }
+    
+    // If no objects are loaded in memory, we look to the cache first to fill the table
+    // and then subsequently do a query against the network.
+    if (self.objects.count == 0) {
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    }
+    
+    // Order by type
+    [query orderByAscending:@"type"];
+    [query addAscendingOrder:@"order"];
+    return query;
+}
+
+
+- (NSString *)typeForSection:(NSInteger)section {
+    return [self.sectionToTypeMap objectForKey:[NSNumber numberWithInt:section]];
+}
+
+- (void)objectsDidLoad:(NSError *)error {
+    [super objectsDidLoad:error];
+    
+    // This method is called every time objects are loaded from Parse via the PFQuery
+    
+    [self.sections removeAllObjects];
+    [self.sectionToTypeMap removeAllObjects];
+    
+    NSInteger section = 0;
+    NSInteger rowIndex = 0;
+    for (PFObject *object in self.objects) {
+        NSString *type = [NSString stringWithFormat:@"%@", [object objectForKey:@"type"]];
+        NSMutableArray *objectsInSection = [self.sections objectForKey:type];
+        if (!objectsInSection) {
+            objectsInSection = [NSMutableArray array];
+            
+            // this is the first time we see this sportType - increment the section index
+            [self.sectionToTypeMap setObject:type forKey:[NSNumber numberWithInt:section++]];
+        }
+        
+        [objectsInSection addObject:[NSNumber numberWithInt:rowIndex++]];
+        [self.sections setObject:objectsInSection forKey:type];
+    }
+    
+    [self.tableView reloadData];
+}
+
+
+- (PFObject *)objectAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *sportType = [self typeForSection:indexPath.section];
+    
+    NSArray *rowIndecesInSection = [self.sections objectForKey:sportType];
+    
+    NSNumber *rowIndex = [rowIndecesInSection objectAtIndex:indexPath.row];
+    return [self.objects objectAtIndex:[rowIndex intValue]];
+}
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return [[self.fetchedResultsController sections] count];
+    return self.sections.allKeys.count;
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
+    NSString *type = [self typeForSection:section];
+    NSArray *rowIndecesInSection = [self.sections objectForKey:type];
+    return rowIndecesInSection.count;
 }
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    Category *category = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = NSLocalizedString(category.name, @"");
-    
-    return cell;
-}
-
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSString *type = [self typeForSection:section];
+    return type;
+}
 
-    switch (section) {
-        case 1:
-            return @"Доход";
-            break;
-            
-        default:
-            return @"Расход";
-            break;
+
+#pragma mark - Table view data source
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+                        object:(PFObject *)object {
+    
+    static NSString *cellIdentifier = @"Cell";
+    
+    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:cellIdentifier];
     }
+    
+    // Configure the cell to show todo item with a priority at the bottom
+    NSString *name = [object objectForKey:@"name"];
+    cell.textLabel.text = NSLocalizedString(name, NULL);
+    
+    return cell;
 }
 
 
@@ -152,22 +197,11 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //удаляем данную категорию из базы и производим пересортировку оставшихся
-        
-        Category *categoryToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        [categoryToDelete MR_deleteEntity];
-        
-        NSManagedObjectContext *context = [NSManagedObjectContext MR_contextForCurrentThread];
-        
-        NSMutableArray *categories = [[self.fetchedResultsController fetchedObjects] mutableCopy];
-        
-        int i = 0;
-        for (Category *category in categories) {
-            category.order = [NSNumber numberWithInteger:i];
-            i++;
-        }
-        
-        
-        [context MR_saveToPersistentStoreAndWait];
+        PFObject *object = [self objectAtIndexPath:indexPath];
+        [object deleteInBackgroundWithBlock:^(BOOL success, NSError *error){
+            if (success) {
+                [self loadObjects];            }
+        }];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -179,22 +213,7 @@
     
     self.changeIsUserDriven = YES;
     
-    NSManagedObjectContext *context = [NSManagedObjectContext MR_contextForCurrentThread];
-    
-    NSMutableArray *categories = [[self.fetchedResultsController fetchedObjects] mutableCopy];
-    
-    Category *c = [self.fetchedResultsController objectAtIndexPath:fromIndexPath];
-    
-    [categories removeObject:c];
-    [categories insertObject:c atIndex:toIndexPath.row];
-        
-    int i = 0;
-    for (Category *category in categories) {
-        category.order = [NSNumber numberWithInteger:i];
-        i++;
-    }
-    
-    [context MR_saveToPersistentStoreAndWait];
+
     
     self.changeIsUserDriven = NO;
 }
@@ -205,113 +224,15 @@
      return YES;
 }
 
-#pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+
+    PFObject *object = [self objectAtIndexPath:indexPath];
     
-    Category *c = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
-    IMCategoryEditViewController *categoryEditVC = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([IMCategoryEditViewController class])];
-    [categoryEditVC setCategory:c];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:categoryEditVC];
+    IMCategoryEditViewController *categoryEdit = [self.storyboard instantiateViewControllerWithIdentifier:@"IMCategoryEditViewController"];
+    [categoryEdit setObjectId:object.objectId];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:categoryEdit];
     [self presentViewController:navVC animated:YES completion:NULL];
-}
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    Category *c = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
-    IMTransactionsTableViewController *transactionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"transactions table view controller"];
-    transactionsVC.category = c;
-    [self.navigationController pushViewController:transactionsVC animated:YES];
-}
-
-
-- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
-    
-    if (sourceIndexPath.section != proposedDestinationIndexPath.section) {
-        NSInteger row = 0;
-        if (sourceIndexPath.section < proposedDestinationIndexPath.section) {
-            row = [tableView numberOfRowsInSection:sourceIndexPath.section] - 1;
-        }
-        return [NSIndexPath indexPathForRow:row inSection:sourceIndexPath.section];
-    }
-    
-    return proposedDestinationIndexPath;
-}
-
-
-#pragma mark -
-#pragma mark - NSFetchedResultsControllerDelegate
-
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-    
-    if (self.changeIsUserDriven) return;
-    
-    [self.tableView beginUpdates];
-}
-
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
-           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
-    
-    if (self.changeIsUserDriven) return;
-    
-    switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]
-                          withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]
-                          withRowAnimation:UITableViewRowAnimationFade];
-            break;
-    }
-}
-
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
-       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
-      newIndexPath:(NSIndexPath *)newIndexPath {
-    
-    if (self.changeIsUserDriven) return;
-    
-    UITableView *tableView = self.tableView;
-    
-    switch(type) {
-            
-        case NSFetchedResultsChangeInsert:
-            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
-                             withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                             withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeUpdate:
-            [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                             withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeMove:
-            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                             withRowAnimation:UITableViewRowAnimationFade];
-            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
-                             withRowAnimation:UITableViewRowAnimationFade];
-            break;
-    }
-}
-
-
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    
-    if (self.changeIsUserDriven) return;
-    
-    [self.tableView endUpdates];
 }
 
 @end

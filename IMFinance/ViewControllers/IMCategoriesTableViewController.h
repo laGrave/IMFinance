@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IMCategoriesTableViewController : UITableViewController
+@interface IMCategoriesTableViewController : PFQueryTableViewController
 
 @end

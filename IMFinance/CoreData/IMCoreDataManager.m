@@ -69,42 +69,8 @@ static NSString *kAccountType = @"account type";
                       success:(void (^)())successBlock
                       failure:(void (^)(NSError *))failureBlock {
     
-    dispatch_async([self background_save_queue], ^{
-        [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
 
-            Account *account = [parameters objectForKey:kAccount];
-            
-            if (account) {
-                account = [account MR_inContext:localContext];
-            }
-            else {
-                account = [Account MR_createInContext:localContext];
-            }
-
-            [parameters setValue:account forKey:kAccount];
-            
-            account.modDate = [NSDate date];
-            
-            account.name = [parameters objectForKey:kAccountName];
-            account.currency = [parameters objectForKey:kAccountCurrency];
-            account.type = [parameters objectForKey:kAccountType];
-        }
-                          completion:^(BOOL success, NSError *error){
-                              if (success) {
-                                  [self correctTransaction:parameters success:^{
-                                      Account *account = [parameters[kAccount] MR_inThreadContext];
-                                      PFObject *parseAccount = [PFObject objectWithClassName:@"Account"];
-                                      [parseAccount setObject:account.name forKey:@"name"];
-                                      [parseAccount setObject:account.value forKey:@"value"];
-                                      [parseAccount saveInBackground];
-                                  }];
-                                  successBlock();
-                              }
-                              else {
-                                  failureBlock(error);
-                              }
-                          }];
-    });
+    
 }
 
 - (void)correctTransaction:(NSDictionary *)parameters success:(void (^)())successBlock {

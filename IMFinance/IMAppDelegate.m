@@ -9,8 +9,6 @@
 #import "IMAppDelegate.h"
 
 #import <Parse/Parse.h>
-#import "FTASync.h"
-#import "ParseKeys.h"
 
 #import "IMCoreDataManager.h"
 #import "Category.h"
@@ -78,8 +76,8 @@
     
     [MagicalRecord setupCoreDataStack];
     
-    [Parse setApplicationId:kParseAppId
-                  clientKey:kParseClientKey];
+    [Parse setApplicationId:@"pIpS2OPgLbzbt6M0DmQ5A2RFk0VjCL8kRMsvTlPl"
+                  clientKey:@"CcPTCbuGwdJwlxK47H1Xuf8Wu4UVKQs4cdhWiYix"];
     [PFUser enableAutomaticUser];
     PFACL *defaultACL = [PFACL ACL];
     // Optionally enable public read access by default.

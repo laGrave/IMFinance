@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IMAccountsTableViewController : UITableViewController
+@interface IMAccountsTableViewController : PFQueryTableViewController
 
 @end

@@ -23,11 +23,15 @@
 
 @implementation IMAccountsTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style {
-    
-    self = [super initWithStyle:style];
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        // Custom initialization
+        self.className = @"Account";
+        self.pullToRefreshEnabled = YES;
+        self.paginationEnabled = NO;
+        self.objectsPerPage = 25;
     }
     return self;
 }
@@ -42,51 +46,45 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Account"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
-        if (!error) {
-            self.objectsArray = objects;
-            [self.tableView reloadData];
-        }
-    }];
 }
 
-- (void)didReceiveMemoryWarning
-{
+
+- (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 
-#pragma mark -
-#pragma mark - Instance Methods
-
-
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
-    return 1;
+- (PFQuery *)queryForTable {
+    PFQuery *query = [PFQuery queryWithClassName:self.className];
+    
+    // If no objects are loaded in memory, we look to the cache first to fill the table
+    // and then subsequently do a query against the network.
+    if (self.objects.count == 0) {
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    }
+    
+    [query orderByDescending:@"createdAt"];
+    
+    return query;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    NSUInteger count = self.objectsArray.count;
-    NSLog(@"count: %i", count);
-    return count;
-}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+                        object:(PFObject *)object {
     
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *cellIdentifier = @"Cell";
     
-    PFObject *account = [self.objectsArray objectAtIndex:indexPath.row];
-    NSString *name = [account objectForKey:@"name"];
-    NSLog(@"name: %@", name);
-    cell.textLabel.text = name;
+    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:cellIdentifier];
+    }
+    
+    // Configure the cell to show todo item with a priority at the bottom
+    cell.textLabel.text = [object objectForKey:@"name"];
     
     return cell;
 }

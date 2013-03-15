@@ -2,7 +2,7 @@
 // Make changes to Category.h instead.
 
 #import <CoreData/CoreData.h>
-#import "FTASyncParent.h"
+
 
 extern const struct CategoryAttributes {
 	__unsafe_unretained NSString *budget;
@@ -38,7 +38,7 @@ extern const struct CategoryFetchedProperties {
 @interface CategoryID : NSManagedObjectID {}
 @end
 
-@interface _Category : FTASyncParent {}
+@interface _Category : NSManagedObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;

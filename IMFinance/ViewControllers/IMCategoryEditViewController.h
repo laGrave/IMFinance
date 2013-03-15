@@ -13,5 +13,6 @@
 @interface IMCategoryEditViewController : UIViewController
 
 @property (nonatomic, strong) Category *category;
+@property (nonatomic, strong) NSString *objectId;
 
 @end

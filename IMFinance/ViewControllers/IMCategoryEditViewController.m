@@ -26,6 +26,7 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (nonatomic, strong) PFObject *categoryObject;
 
 @end
 
@@ -69,6 +70,16 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
         
         [self setCategory:nil];
     }
+    
+    if (self.objectId) {
+        PFQuery *query = [PFQuery queryWithClassName:@"Category"];
+        self.categoryObject = [query getObjectWithId:self.objectId];
+        
+        self.nameTextField.text = NSLocalizedString([self.categoryObject objectForKey:@"name"], @"");
+        [self.segmentedControl setSelectedSegmentIndex:[[self.categoryObject objectForKey:@"type"] integerValue]];
+    }
+    else
+        self.categoryObject = [PFObject objectWithClassName:@"Category"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,31 +100,29 @@ static NSString *kCategoryIncomeType = @"categoryIncomeType";
 - (IBAction)doneButtonPressed:(id)sender {
     
     if (self.nameTextField.text.length) {
-        NSString *localizedName = NSLocalizedString([self.params objectForKey:kCategoryName], @"");
+        NSString *localizedName = NSLocalizedString([self.categoryObject objectForKey:@"name"], @"");
         if (![localizedName isEqualToString:self.nameTextField.text]) {
             [self.params setValue:self.nameTextField.text forKey:kCategoryName];
+            [self.categoryObject setObject:self.nameTextField.text forKey:@"name"];
         }
         
-        BOOL incomeType = NO;
-        switch (self.segmentedControl.selectedSegmentIndex) {
-            case 1:
-                incomeType =  YES;
-                break;
-            default:
-                incomeType = NO;
-                break;
-        }
+        NSInteger incomeType = self.segmentedControl.selectedSegmentIndex;
+        NSNumber *type = [NSNumber numberWithInteger:incomeType];
         
-        NSNumber *type = [NSNumber numberWithBool:incomeType];
+        [self.categoryObject setObject:type forKey:@"type"];
+        
+        [self.categoryObject saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+            [self dismissViewControllerAnimated:YES completion:NULL];
+        }];
 
-        if (incomeType != [[self.params valueForKey:kCategoryIncomeType] boolValue])
-            [self.params removeObjectForKey:kCategoryOrder];
-        
-        [self.params setValue:type forKey:kCategoryIncomeType];
-
-        [[IMCoreDataManager sharedInstance] editCategoryWithParams:self.params];
-        
-        [self dismissViewControllerAnimated:YES completion:NULL];
+//        if (incomeType != [[self.params valueForKey:kCategoryIncomeType] boolValue])
+//            [self.params removeObjectForKey:kCategoryOrder];
+//        
+//        [self.params setValue:type forKey:kCategoryIncomeType];
+//
+//        [[IMCoreDataManager sharedInstance] editCategoryWithParams:self.params];
+//        
+//        [self dismissViewControllerAnimated:YES completion:NULL];
     }
     else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Внимание"

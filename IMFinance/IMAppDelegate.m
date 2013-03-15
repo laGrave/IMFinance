@@ -78,8 +78,8 @@
     
     [MagicalRecord setupCoreDataStack];
     
-    [Parse setApplicationId:@"pIpS2OPgLbzbt6M0DmQ5A2RFk0VjCL8kRMsvTlPl"
-                  clientKey:@"CcPTCbuGwdJwlxK47H1Xuf8Wu4UVKQs4cdhWiYix"];
+    [Parse setApplicationId:kParseAppId
+                  clientKey:kParseClientKey];
     [PFACL setDefaultACL:[PFACL ACL] withAccessForCurrentUser:YES];
     
     [FTASyncHandler sharedInstance];

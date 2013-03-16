@@ -177,7 +177,7 @@
         <!--Account Edit View Controller-->
         <scene sceneID="GJJ-xc-oJ8">
             <objects>
-                <viewController storyboardIdentifier="Account Edit Controller" id="gEp-vz-r04" customClass="IMAccountEditViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IMAccountEditController" id="gEp-vz-r04" customClass="IMAccountEditViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gz6-gl-1hQ">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -903,6 +903,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="2O9-z5-Ylv"/>
+        <segue reference="s8p-IF-Sys"/>
     </inferredMetricsTieBreakers>
 </document>

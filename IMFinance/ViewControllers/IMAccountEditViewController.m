@@ -8,19 +8,10 @@
 
 #import "IMAccountEditViewController.h"
 
-#import "IMCoreDataManager.h"
-#import "Account+Extensions.h"
-
 #import "IMAccountTypeConfig.h"
 
 #import "IMCurrecyPickerViewController.h"
 #import "CurrencyConfig.h"
-
-static NSString *kAccount = @"account";
-static NSString *kAccountName = @"account name";
-static NSString *kAccountInitialValue = @"account initial value";
-static NSString *kAccountCurrency = @"account currency";
-static NSString *kAccountType = @"account type";
 
 @interface IMAccountEditViewController () <UITextFieldDelegate, IMCurrecyPickerViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -28,25 +19,13 @@ static NSString *kAccountType = @"account type";
 @property (weak, nonatomic) IBOutlet UITextField *valueTextField;
 @property (weak, nonatomic) IBOutlet UIButton *currencyButton;
 @property (weak, nonatomic) IBOutlet UIPickerView *accountTypePicker;
+@property (nonatomic, strong) NSString *currencyCode;
 
 @property (nonatomic, strong) NSDictionary *params;
 
 @end
 
 @implementation IMAccountEditViewController
-
-
-#pragma mark -
-#pragma mark - Getters
-
-- (NSDictionary *)params {
-
-    if (!_params) {
-        _params = [[NSMutableDictionary alloc] init];
-    }
-    return _params;
-}
-
 
 #pragma mark -
 #pragma mark - View Controller's Lifecycle
@@ -64,28 +43,8 @@ static NSString *kAccountType = @"account type";
     [self.accountTypePicker reloadAllComponents];
     
     CurrencyConfig *curConfig = [[CurrencyConfig alloc] init];
-    
-    if (self.account) {
-        Account *account = [self.account MR_inThreadContext];
+    self.currencyCode = [curConfig defaultCurrencyCode];
         
-        [self.params setValue:account forKey:kAccount];
-        [self.params setValue:account.name forKey:kAccountName];
-        [self.params setValue:account.type forKey:kAccountType];
-        [self.accountTypePicker selectRow:account.type.integerValue inComponent:0 animated:NO];
-        
-        NSString *currency = account.currency;
-        if (currency && currency.length) {
-            [self.currencyButton setTitle:[curConfig currencyNameWithCode:currency] forState:UIControlStateNormal];
-            [self.params setValue:account.currency forKey:kAccountCurrency];
-        }
-        
-        
-        self.nameTextField.text = account.name;
-        self.valueTextField.text = [NSString stringWithFormat:@"%@", account.value];
-    }
-    
-    else [self.params setValue:[curConfig defaultCurrencyCode] forKey:kAccountCurrency];
-    
     [self updateCurrencyButtonTitle];
     
 }
@@ -120,42 +79,27 @@ static NSString *kAccountType = @"account type";
         [textField resignFirstResponder];
     }
     
-    if ([self setupParams]) {
-//        [[[IMCoreDataManager sharedInstance] editAccountWithParams:self.params
-//                                                          success:^{[self dismissViewControllerAnimated:YES completion:NULL];}
-//                                                          failure:^(NSError *error){;}]];
-        
-        PFObject *account = [PFObject objectWithClassName:@"Account"];
-        [account setObject:[self.params objectForKey:kAccountName] forKey:@"name"];
-        [account saveInBackgroundWithBlock:^(BOOL success, NSError *error){
-            [self dismissViewControllerAnimated:YES completion:NULL];
-        }];
-    }
-    else NSLog(@"заполните все поля!");
-}
-
-
-- (BOOL)setupParams {
-    
     for (UITextField *textField in self.view.subviews) {
         if ([textField isKindOfClass:[UITextField class]]) {
             [textField resignFirstResponder];
-            if (!textField.text.length) return NO;
+            if (!textField.text.length) return;
         }
     }
-    
-    [self.params setValue:self.nameTextField.text forKey:kAccountName];
-    [self.params setValue:[NSNumber numberWithDouble:self.valueTextField.text.doubleValue] forKey:kAccountInitialValue];
     NSNumber *accountType = [NSNumber numberWithInteger:[self.accountTypePicker selectedRowInComponent:0]];
-    [self.params setValue:accountType forKey:kAccountType];
-    
-    return YES;
+        
+    PFObject *account = [PFObject objectWithClassName:@"Account"];
+    if (![account[@"name"] isEqualToString:self.nameTextField.text])
+        [account setObject:self.nameTextField.text forKey:@"name"];
+    [account setObject:accountType forKey:@"type"];
+    [account saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }];
 }
 
 
 - (void)updateCurrencyButtonTitle {
 
-    NSString *currencyCode = [self.params objectForKey:kAccountCurrency];
+    NSString *currencyCode = self.currencyCode;
     NSString *currencyName = [[[CurrencyConfig alloc] init] currencyNameWithCode:currencyCode];
     [self.currencyButton setTitle:currencyName forState:UIControlStateNormal];
 }
@@ -193,7 +137,7 @@ static NSString *kAccountType = @"account type";
 
 - (void)pickerDidSelectCurrency:(NSString *)currencyCode {
 
-    [self.params setValue:currencyCode forKey:kAccountCurrency];
+    [self setCurrencyCode:currencyCode];
     [self updateCurrencyButtonTitle];
 }
 

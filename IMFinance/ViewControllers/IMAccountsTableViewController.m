@@ -89,4 +89,14 @@
     return cell;
 }
 
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+
+    PFObject *category = [self.objectsArray objectAtIndex:indexPath.row];
+    IMAccountEditViewController *accountEditVC = [self.storyboard instantiateViewControllerWithIdentifier:[[IMAccountEditViewController class] description]];
+    [accountEditVC setAccount:category];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:accountEditVC];
+    [self presentViewController:navVC animated:YES completion:NULL];
+}
+
 @end

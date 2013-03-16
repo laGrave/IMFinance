@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class Account;
-
 @interface IMAccountEditViewController : UIViewController
 
-@property (nonatomic, strong) Account *account;
+@property (nonatomic, strong) PFObject *account;
 
 @end

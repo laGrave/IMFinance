@@ -9,8 +9,6 @@
 #import "IMAppDelegate.h"
 
 #import <Parse/Parse.h>
-#import "FTASync.h"
-#import "ParseKeys.h"
 
 #import "IMCoreDataManager.h"
 #import "Category.h"
@@ -80,9 +78,6 @@
     
     [Parse setApplicationId:@"pIpS2OPgLbzbt6M0DmQ5A2RFk0VjCL8kRMsvTlPl"
                   clientKey:@"CcPTCbuGwdJwlxK47H1Xuf8Wu4UVKQs4cdhWiYix"];
-    [PFACL setDefaultACL:[PFACL ACL] withAccessForCurrentUser:YES];
-    
-    [FTASyncHandler sharedInstance];
     
     //при первом запуске валюту по умолчанию на основании локали телефона
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],@"firstLaunch",nil]];

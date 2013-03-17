@@ -8,9 +8,6 @@
 
 #import "IMSummaryViewController.h"
 
-#import "FTASync.h"
-#import "ParseKeys.h"
-
 @interface IMSummaryViewController ()
 
 @end
@@ -30,8 +27,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    [[FTASyncHandler sharedInstance] syncWithCompletionBlock:nil progressBlock:nil];
 }
 
 - (void)didReceiveMemoryWarning

@@ -22,7 +22,6 @@
 
 /* Begin PBXBuildFile section */
 		A741CC1A898D4B31B347DB75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591F429DE7F4C5AB075756F /* libPods.a */; };
-		B049483B16F26BA000E96FB1 /* IMFinance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B049483916F26BA000E96FB1 /* IMFinance.xcdatamodeld */; };
 		B0925E0516F26620003FFC1F /* IMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DE016F26620003FFC1F /* IMCoreDataManager.m */; };
 		B0925E0716F26620003FFC1F /* IMAccountEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DE516F26620003FFC1F /* IMAccountEditViewController.m */; };
 		B0925E0816F26620003FFC1F /* IMAccountSelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DE716F26620003FFC1F /* IMAccountSelectorController.m */; };
@@ -39,6 +38,7 @@
 		B0925E1316F26620003FFC1F /* IMTransactionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DFD16F26620003FFC1F /* IMTransactionsTableViewController.m */; };
 		B0925E1416F26620003FFC1F /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DFF16F26620003FFC1F /* TestVC.m */; };
 		B0925E1716F266C0003FFC1F /* Account+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E1616F266C0003FFC1F /* Account+Extensions.m */; };
+		B0925E1A16F2673D003FFC1F /* IMFinance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0925E1816F2673D003FFC1F /* IMFinance.xcdatamodeld */; };
 		B0925E2B16F268E6003FFC1F /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E2216F268E6003FFC1F /* Account.m */; };
 		B0925E2C16F268E6003FFC1F /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E2416F268E6003FFC1F /* Category.m */; };
 		B0925E2D16F268E6003FFC1F /* Contractor.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E2616F268E6003FFC1F /* Contractor.m */; };
@@ -87,7 +87,6 @@
 
 /* Begin PBXFileReference section */
 		6591F429DE7F4C5AB075756F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B049483A16F26BA000E96FB1 /* IMFinance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IMFinance.xcdatamodel; sourceTree = "<group>"; };
 		B0925DDF16F26620003FFC1F /* IMCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCoreDataManager.h; sourceTree = "<group>"; };
 		B0925DE016F26620003FFC1F /* IMCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCoreDataManager.m; sourceTree = "<group>"; };
 		B0925DE416F26620003FFC1F /* IMAccountEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountEditViewController.h; sourceTree = "<group>"; };
@@ -120,6 +119,7 @@
 		B0925DFF16F26620003FFC1F /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		B0925E1516F266C0003FFC1F /* Account+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+Extensions.h"; sourceTree = "<group>"; };
 		B0925E1616F266C0003FFC1F /* Account+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+Extensions.m"; sourceTree = "<group>"; };
+		B0925E1916F2673D003FFC1F /* IMFinance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IMFinance.xcdatamodel; sourceTree = "<group>"; };
 		B0925E2116F268E6003FFC1F /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		B0925E2216F268E6003FFC1F /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		B0925E2316F268E6003FFC1F /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
@@ -217,7 +217,6 @@
 		B0925DD316F26620003FFC1F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				B049483916F26BA000E96FB1 /* IMFinance.xcdatamodeld */,
 				B0925E2016F268E6003FFC1F /* Human */,
 				B0925E3016F26911003FFC1F /* Machine */,
 				B0925E1516F266C0003FFC1F /* Account+Extensions.h */,
@@ -382,6 +381,7 @@
 		DCD7264A16B67B6A006F5E2D /* IMFinance */ = {
 			isa = PBXGroup;
 			children = (
+				B0925E1816F2673D003FFC1F /* IMFinance.xcdatamodeld */,
 				B0925DD316F26620003FFC1F /* CoreData */,
 				B0925DE316F26620003FFC1F /* ViewControllers */,
 				DC999AB016DB7D8900B05612 /* Views */,
@@ -529,7 +529,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd IMFinance/CoreData\n/usr/local/bin/mogenerator --template-var arc=true -m IMFinance.xcdatamodeld/IMFinance.xcdatamodel/ -M Machine/ -H Human/";
+			shellScript = "cd IMFinance\n/usr/local/bin/mogenerator --template-var arc=true -m IMFinance.xcdatamodeld/IMFinance.xcdatamodel/ -M CoreData/Machine/ -H CoreData/Human/";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -563,6 +563,7 @@
 				B0925E1316F26620003FFC1F /* IMTransactionsTableViewController.m in Sources */,
 				B0925E1416F26620003FFC1F /* TestVC.m in Sources */,
 				B0925E1716F266C0003FFC1F /* Account+Extensions.m in Sources */,
+				B0925E1A16F2673D003FFC1F /* IMFinance.xcdatamodeld in Sources */,
 				B0925E2B16F268E6003FFC1F /* Account.m in Sources */,
 				B0925E2C16F268E6003FFC1F /* Category.m in Sources */,
 				B0925E2D16F268E6003FFC1F /* Contractor.m in Sources */,
@@ -571,7 +572,6 @@
 				B0925E3C16F26911003FFC1F /* _Category.m in Sources */,
 				B0925E3D16F26911003FFC1F /* _Contractor.m in Sources */,
 				B0925E3F16F26911003FFC1F /* _Transaction.m in Sources */,
-				B049483B16F26BA000E96FB1 /* IMFinance.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,7 +713,6 @@
 				B0925E1E16F267B3003FFC1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		DCD7263C16B67B6A006F5E2D /* Build configuration list for PBXProject "IMFinance" */ = {
 			isa = XCConfigurationList;
@@ -736,12 +735,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B049483916F26BA000E96FB1 /* IMFinance.xcdatamodeld */ = {
+		B0925E1816F2673D003FFC1F /* IMFinance.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B049483A16F26BA000E96FB1 /* IMFinance.xcdatamodel */,
+				B0925E1916F2673D003FFC1F /* IMFinance.xcdatamodel */,
 			);
-			currentVersion = B049483A16F26BA000E96FB1 /* IMFinance.xcdatamodel */;
+			currentVersion = B0925E1916F2673D003FFC1F /* IMFinance.xcdatamodel */;
 			path = IMFinance.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

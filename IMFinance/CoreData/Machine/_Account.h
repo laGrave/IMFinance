@@ -2,7 +2,7 @@
 // Make changes to Account.h instead.
 
 #import <CoreData/CoreData.h>
-
+#import "FTASyncParent.h"
 
 extern const struct AccountAttributes {
 	__unsafe_unretained NSString *currency;
@@ -34,7 +34,7 @@ extern const struct AccountFetchedProperties {
 @interface AccountID : NSManagedObjectID {}
 @end
 
-@interface _Account : NSManagedObject {}
+@interface _Account : FTASyncParent {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;

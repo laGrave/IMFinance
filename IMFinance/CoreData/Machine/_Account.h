@@ -10,6 +10,7 @@ extern const struct AccountAttributes {
 	__unsafe_unretained NSString *limit;
 	__unsafe_unretained NSString *modDate;
 	__unsafe_unretained NSString *name;
+	__unsafe_unretained NSString *objectId;
 	__unsafe_unretained NSString *startDate;
 	__unsafe_unretained NSString *type;
 } AccountAttributes;
@@ -22,6 +23,7 @@ extern const struct AccountFetchedProperties {
 } AccountFetchedProperties;
 
 @class Transaction;
+
 
 
 
@@ -93,6 +95,16 @@ extern const struct AccountFetchedProperties {
 
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, strong) NSString* objectId;
+
+
+
+//- (BOOL)validateObjectId:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -173,6 +185,12 @@ extern const struct AccountFetchedProperties {
 
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
+
+
+
+
+- (NSString*)primitiveObjectId;
+- (void)setPrimitiveObjectId:(NSString*)value;
 
 
 

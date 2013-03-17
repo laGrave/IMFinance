@@ -9,6 +9,7 @@ const struct AccountAttributes AccountAttributes = {
 	.limit = @"limit",
 	.modDate = @"modDate",
 	.name = @"name",
+	.objectId = @"objectId",
 	.startDate = @"startDate",
 	.type = @"type",
 };
@@ -111,6 +112,13 @@ const struct AccountFetchedProperties AccountFetchedProperties = {
 
 
 @dynamic name;
+
+
+
+
+
+
+@dynamic objectId;
 
 
 

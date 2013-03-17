@@ -99,6 +99,8 @@
     [numberFormatter setMaximumFractionDigits:2];
     cell.detailTextLabel.text = [numberFormatter stringFromNumber:account.value];
     
+    NSLog(@"account id : %@", account.objectId);
+    
     return cell;
 }
 

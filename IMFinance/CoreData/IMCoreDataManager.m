@@ -70,10 +70,8 @@ static NSString *kAccountType = @"account type";
                       failure:(void (^)(NSError *))failureBlock {
     
     dispatch_async([self background_save_queue], ^{
+        __block Account *account = [parameters objectForKey:kAccount];        
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
-
-            Account *account = [parameters objectForKey:kAccount];
-            
             if (account) {
                 account = [account MR_inContext:localContext];
             }
@@ -91,13 +89,31 @@ static NSString *kAccountType = @"account type";
         }
                           completion:^(BOOL success, NSError *error){
                               if (success) {
-                                  [self correctTransaction:parameters success:^{
-                                      Account *account = [parameters[kAccount] MR_inThreadContext];
-                                      PFObject *parseAccount = [PFObject objectWithClassName:@"Account"];
-                                      [parseAccount setObject:account.name forKey:@"name"];
-                                      [parseAccount setObject:account.value forKey:@"value"];
-                                      [parseAccount saveInBackground];
+                                  account = [account MR_inThreadContext];
+                                  PFObject *parseAccount = nil;
+                                  if (account.objectId && account.objectId.length) {
+                                      parseAccount = [PFQuery getObjectOfClass:@"Account" objectId:account.objectId];
+                                  }
+                                  else {
+                                      parseAccount = [PFObject objectWithClassName:@"Account"];
+                                  }
+                                  [parseAccount setObject:account.name forKey:@"name"];
+//                                  [parseAccount setObject:account.value forKey:@"value"];
+                                  [parseAccount saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+                                      if (success) {
+                                          [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *localContext){
+                                              Account *anAccount = [account MR_inContext:localContext];
+                                              anAccount.objectId = parseAccount.objectId;
+                                          }];
+                                      }
                                   }];
+//                                  [self correctTransaction:parameters success:^{
+//                                      Account *account = [parameters[kAccount] MR_inThreadContext];
+//                                      PFObject *parseAccount = [PFObject objectWithClassName:@"Account"];
+//                                      [parseAccount setObject:account.name forKey:@"name"];
+//                                      [parseAccount setObject:account.value forKey:@"value"];
+//                                      [parseAccount saveInBackground];
+//                                  }];
                                   successBlock();
                               }
                               else {

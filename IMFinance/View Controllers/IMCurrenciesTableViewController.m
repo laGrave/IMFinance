@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
 
-    self.currenciesList = [[[CurrencyConfig alloc] init] currenciesList];
+    self.currenciesList = [CurrencyConfig currenciesList];
 }
 
 - (void)didReceiveMemoryWarning

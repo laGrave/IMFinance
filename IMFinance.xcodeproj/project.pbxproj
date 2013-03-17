@@ -6,47 +6,9 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		B0925E1B16F267B3003FFC1F /* Mogenerator */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = B0925E1C16F267B3003FFC1F /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
-			buildPhases = (
-				B0925E1F16F267B9003FFC1F /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = Mogenerator;
-			productName = Mogenerator;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		A741CC1A898D4B31B347DB75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591F429DE7F4C5AB075756F /* libPods.a */; };
-		B0925E0516F26620003FFC1F /* IMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DE016F26620003FFC1F /* IMCoreDataManager.m */; };
-		B0925E0716F26620003FFC1F /* IMAccountEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DE516F26620003FFC1F /* IMAccountEditViewController.m */; };
-		B0925E0816F26620003FFC1F /* IMAccountSelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DE716F26620003FFC1F /* IMAccountSelectorController.m */; };
-		B0925E0916F26620003FFC1F /* IMAccountsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DE916F26620003FFC1F /* IMAccountsTableViewController.m */; };
-		B0925E0A16F26620003FFC1F /* IMCategoriesPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DEB16F26620003FFC1F /* IMCategoriesPickerViewController.m */; };
-		B0925E0B16F26620003FFC1F /* IMCategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DED16F26620003FFC1F /* IMCategoriesTableViewController.m */; };
-		B0925E0C16F26620003FFC1F /* IMCategoryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DEF16F26620003FFC1F /* IMCategoryEditViewController.m */; };
-		B0925E0D16F26620003FFC1F /* IMCurrecyPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DF116F26620003FFC1F /* IMCurrecyPickerViewController.m */; };
-		B0925E0E16F26620003FFC1F /* IMCurrenciesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DF316F26620003FFC1F /* IMCurrenciesTableViewController.m */; };
-		B0925E0F16F26620003FFC1F /* IMLeftSidePanelControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DF516F26620003FFC1F /* IMLeftSidePanelControllerViewController.m */; };
-		B0925E1016F26620003FFC1F /* IMSidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DF716F26620003FFC1F /* IMSidePanelController.m */; };
-		B0925E1116F26620003FFC1F /* IMSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DF916F26620003FFC1F /* IMSummaryViewController.m */; };
-		B0925E1216F26620003FFC1F /* IMTransactionEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DFB16F26620003FFC1F /* IMTransactionEditViewController.m */; };
-		B0925E1316F26620003FFC1F /* IMTransactionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DFD16F26620003FFC1F /* IMTransactionsTableViewController.m */; };
-		B0925E1416F26620003FFC1F /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925DFF16F26620003FFC1F /* TestVC.m */; };
-		B0925E1716F266C0003FFC1F /* Account+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E1616F266C0003FFC1F /* Account+Extensions.m */; };
-		B0925E1A16F2673D003FFC1F /* IMFinance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0925E1816F2673D003FFC1F /* IMFinance.xcdatamodeld */; };
-		B0925E2B16F268E6003FFC1F /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E2216F268E6003FFC1F /* Account.m */; };
-		B0925E2C16F268E6003FFC1F /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E2416F268E6003FFC1F /* Category.m */; };
-		B0925E2D16F268E6003FFC1F /* Contractor.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E2616F268E6003FFC1F /* Contractor.m */; };
-		B0925E2F16F268E6003FFC1F /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E2A16F268E6003FFC1F /* Transaction.m */; };
-		B0925E3B16F26911003FFC1F /* _Account.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E3216F26911003FFC1F /* _Account.m */; };
-		B0925E3C16F26911003FFC1F /* _Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E3416F26911003FFC1F /* _Category.m */; };
-		B0925E3D16F26911003FFC1F /* _Contractor.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E3616F26911003FFC1F /* _Contractor.m */; };
-		B0925E3F16F26911003FFC1F /* _Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = B0925E3A16F26911003FFC1F /* _Transaction.m */; };
+		B06D4D7616D91573006190E4 /* IMCategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06D4D7516D91573006190E4 /* IMCategoriesTableViewController.m */; };
 		B0BEC76B16F24703008D33EC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC76A16F24703008D33EC /* AudioToolbox.framework */; };
 		B0BEC76D16F2470D008D33EC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC76C16F2470D008D33EC /* CFNetwork.framework */; };
 		B0BEC76F16F2471B008D33EC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC76E16F2471B008D33EC /* CoreLocation.framework */; };
@@ -55,9 +17,23 @@
 		B0BEC77716F24764008D33EC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC77616F24764008D33EC /* StoreKit.framework */; };
 		B0BEC77916F24770008D33EC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC77816F24770008D33EC /* SystemConfiguration.framework */; };
 		B0BEC77F16F24B5E008D33EC /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEC77016F24741008D33EC /* libz.1.1.3.dylib */; };
+		B0D51D9D16DA8C0A00938799 /* IMCategoryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D51D9C16DA8C0A00938799 /* IMCategoryEditViewController.m */; };
 		B0EF468816D77706008A6C78 /* BaseCategories.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0EF468716D77706008A6C78 /* BaseCategories.plist */; };
 		B0EF46A616D7A67F008A6C78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0EF46A816D7A67F008A6C78 /* Localizable.strings */; };
+		B0EF46AC16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EF46AB16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m */; };
+		DC15943616B7E69100672A89 /* IMAccountEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC15943516B7E69100672A89 /* IMAccountEditViewController.m */; };
+		DC2FB60816E4DF6600987A44 /* Account+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2FB60716E4DF6600987A44 /* Account+Extensions.m */; };
+		DC36749516B6A56100D26206 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = DC36749416B6A56100D26206 /* Account.m */; };
 		DC8812AF16BFE85200DAE434 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8812AE16BFE85200DAE434 /* libz.dylib */; };
+		DC8812B216BFF9BB00DAE434 /* IMCurrecyPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8812B116BFF9BB00DAE434 /* IMCurrecyPickerViewController.m */; };
+		DC8812FF16C3BCC300DAE434 /* IMTransactionEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8812FE16C3BCC300DAE434 /* IMTransactionEditViewController.m */; };
+		DC90987216C3E63F00CF9D00 /* IMAccountSelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC90987116C3E63F00CF9D00 /* IMAccountSelectorController.m */; };
+		DC90987D16C4E67900CF9D00 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC90987C16C4E67900CF9D00 /* TestVC.m */; };
+		DC98389416B7C84C00BE939C /* IMSidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389316B7C84C00BE939C /* IMSidePanelController.m */; };
+		DC98389716B7C89D00BE939C /* IMLeftSidePanelControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389616B7C89D00BE939C /* IMLeftSidePanelControllerViewController.m */; };
+		DC98389B16B7C9D000BE939C /* IMSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389A16B7C9D000BE939C /* IMSummaryViewController.m */; };
+		DC98389F16B7CCBC00BE939C /* IMAccountsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC98389E16B7CCBC00BE939C /* IMAccountsTableViewController.m */; };
+		DC9838A216B7CCCB00BE939C /* IMTransactionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9838A116B7CCCB00BE939C /* IMTransactionsTableViewController.m */; };
 		DC999AB316DB7DA800B05612 /* IMTransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC999AB216DB7DA800B05612 /* IMTransactionCell.m */; };
 		DC999AB616DB992C00B05612 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DC999AB516DB992C00B05612 /* NSDate+Utilities.m */; };
 		DCB52F1916DF41A7008799E9 /* AccountTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCB52F1816DF41A7008799E9 /* AccountTypes.plist */; };
@@ -78,7 +54,12 @@
 		DCD7265716B67B6B006F5E2D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD7265616B67B6B006F5E2D /* Default.png */; };
 		DCD7265916B67B6B006F5E2D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD7265816B67B6B006F5E2D /* Default@2x.png */; };
 		DCD7265B16B67B6B006F5E2D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD7265A16B67B6B006F5E2D /* Default-568h@2x.png */; };
+		DCD7267316B67C8E006F5E2D /* IMFinance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCD7267116B67C8E006F5E2D /* IMFinance.xcdatamodeld */; };
 		DCD7267516B67CC3006F5E2D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD7267416B67CC3006F5E2D /* CoreData.framework */; };
+		DCD726A416B68649006F5E2D /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7269C16B68649006F5E2D /* Category.m */; };
+		DCD726A516B68649006F5E2D /* Contractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD7269E16B68649006F5E2D /* Contractor.m */; };
+		DCD726A716B68649006F5E2D /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726A216B68649006F5E2D /* Transaction.m */; };
+		DCD726AA16B686DA006F5E2D /* IMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726A916B686DA006F5E2D /* IMCoreDataManager.m */; };
 		DCD726AC16B687D4006F5E2D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD726AB16B687D4006F5E2D /* QuartzCore.framework */; };
 		DCD726D416B68833006F5E2D /* Currency.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCD726D116B68833006F5E2D /* Currency.plist */; };
 		DCD726D516B68833006F5E2D /* CurrencyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD726D316B68833006F5E2D /* CurrencyConfig.m */; };
@@ -87,55 +68,8 @@
 
 /* Begin PBXFileReference section */
 		6591F429DE7F4C5AB075756F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0925DDF16F26620003FFC1F /* IMCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCoreDataManager.h; sourceTree = "<group>"; };
-		B0925DE016F26620003FFC1F /* IMCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCoreDataManager.m; sourceTree = "<group>"; };
-		B0925DE416F26620003FFC1F /* IMAccountEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountEditViewController.h; sourceTree = "<group>"; };
-		B0925DE516F26620003FFC1F /* IMAccountEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountEditViewController.m; sourceTree = "<group>"; };
-		B0925DE616F26620003FFC1F /* IMAccountSelectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountSelectorController.h; sourceTree = "<group>"; };
-		B0925DE716F26620003FFC1F /* IMAccountSelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountSelectorController.m; sourceTree = "<group>"; };
-		B0925DE816F26620003FFC1F /* IMAccountsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountsTableViewController.h; sourceTree = "<group>"; };
-		B0925DE916F26620003FFC1F /* IMAccountsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountsTableViewController.m; sourceTree = "<group>"; };
-		B0925DEA16F26620003FFC1F /* IMCategoriesPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoriesPickerViewController.h; sourceTree = "<group>"; };
-		B0925DEB16F26620003FFC1F /* IMCategoriesPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoriesPickerViewController.m; sourceTree = "<group>"; };
-		B0925DEC16F26620003FFC1F /* IMCategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoriesTableViewController.h; sourceTree = "<group>"; };
-		B0925DED16F26620003FFC1F /* IMCategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoriesTableViewController.m; sourceTree = "<group>"; };
-		B0925DEE16F26620003FFC1F /* IMCategoryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoryEditViewController.h; sourceTree = "<group>"; };
-		B0925DEF16F26620003FFC1F /* IMCategoryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoryEditViewController.m; sourceTree = "<group>"; };
-		B0925DF016F26620003FFC1F /* IMCurrecyPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCurrecyPickerViewController.h; sourceTree = "<group>"; };
-		B0925DF116F26620003FFC1F /* IMCurrecyPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCurrecyPickerViewController.m; sourceTree = "<group>"; };
-		B0925DF216F26620003FFC1F /* IMCurrenciesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCurrenciesTableViewController.h; sourceTree = "<group>"; };
-		B0925DF316F26620003FFC1F /* IMCurrenciesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCurrenciesTableViewController.m; sourceTree = "<group>"; };
-		B0925DF416F26620003FFC1F /* IMLeftSidePanelControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMLeftSidePanelControllerViewController.h; sourceTree = "<group>"; };
-		B0925DF516F26620003FFC1F /* IMLeftSidePanelControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMLeftSidePanelControllerViewController.m; sourceTree = "<group>"; };
-		B0925DF616F26620003FFC1F /* IMSidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSidePanelController.h; sourceTree = "<group>"; };
-		B0925DF716F26620003FFC1F /* IMSidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSidePanelController.m; sourceTree = "<group>"; };
-		B0925DF816F26620003FFC1F /* IMSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSummaryViewController.h; sourceTree = "<group>"; };
-		B0925DF916F26620003FFC1F /* IMSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSummaryViewController.m; sourceTree = "<group>"; };
-		B0925DFA16F26620003FFC1F /* IMTransactionEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTransactionEditViewController.h; sourceTree = "<group>"; };
-		B0925DFB16F26620003FFC1F /* IMTransactionEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTransactionEditViewController.m; sourceTree = "<group>"; };
-		B0925DFC16F26620003FFC1F /* IMTransactionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTransactionsTableViewController.h; sourceTree = "<group>"; };
-		B0925DFD16F26620003FFC1F /* IMTransactionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTransactionsTableViewController.m; sourceTree = "<group>"; };
-		B0925DFE16F26620003FFC1F /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
-		B0925DFF16F26620003FFC1F /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
-		B0925E1516F266C0003FFC1F /* Account+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+Extensions.h"; sourceTree = "<group>"; };
-		B0925E1616F266C0003FFC1F /* Account+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+Extensions.m"; sourceTree = "<group>"; };
-		B0925E1916F2673D003FFC1F /* IMFinance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IMFinance.xcdatamodel; sourceTree = "<group>"; };
-		B0925E2116F268E6003FFC1F /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
-		B0925E2216F268E6003FFC1F /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
-		B0925E2316F268E6003FFC1F /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
-		B0925E2416F268E6003FFC1F /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
-		B0925E2516F268E6003FFC1F /* Contractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contractor.h; sourceTree = "<group>"; };
-		B0925E2616F268E6003FFC1F /* Contractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contractor.m; sourceTree = "<group>"; };
-		B0925E2916F268E6003FFC1F /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
-		B0925E2A16F268E6003FFC1F /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
-		B0925E3116F26911003FFC1F /* _Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Account.h; sourceTree = "<group>"; };
-		B0925E3216F26911003FFC1F /* _Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Account.m; sourceTree = "<group>"; };
-		B0925E3316F26911003FFC1F /* _Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Category.h; sourceTree = "<group>"; };
-		B0925E3416F26911003FFC1F /* _Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Category.m; sourceTree = "<group>"; };
-		B0925E3516F26911003FFC1F /* _Contractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Contractor.h; sourceTree = "<group>"; };
-		B0925E3616F26911003FFC1F /* _Contractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Contractor.m; sourceTree = "<group>"; };
-		B0925E3916F26911003FFC1F /* _Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Transaction.h; sourceTree = "<group>"; };
-		B0925E3A16F26911003FFC1F /* _Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Transaction.m; sourceTree = "<group>"; };
+		B06D4D7416D91573006190E4 /* IMCategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoriesTableViewController.h; sourceTree = "<group>"; };
+		B06D4D7516D91573006190E4 /* IMCategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoriesTableViewController.m; sourceTree = "<group>"; };
 		B0BEC76A16F24703008D33EC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B0BEC76C16F2470D008D33EC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B0BEC76E16F2471B008D33EC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -144,12 +78,40 @@
 		B0BEC77416F2475C008D33EC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B0BEC77616F24764008D33EC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B0BEC77816F24770008D33EC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B0D51D9B16DA8C0A00938799 /* IMCategoryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoryEditViewController.h; sourceTree = "<group>"; };
+		B0D51D9C16DA8C0A00938799 /* IMCategoryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoryEditViewController.m; sourceTree = "<group>"; };
 		B0EF468716D77706008A6C78 /* BaseCategories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BaseCategories.plist; sourceTree = "<group>"; };
 		B0EF46A716D7A67F008A6C78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B0EF46A916D7A684008A6C78 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B0EF46AA16D7A7BD008A6C78 /* IMCategoriesPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCategoriesPickerViewController.h; sourceTree = "<group>"; };
+		B0EF46AB16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCategoriesPickerViewController.m; sourceTree = "<group>"; };
 		B208322CA55F4E3780DE5636 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		DC15943416B7E69100672A89 /* IMAccountEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountEditViewController.h; sourceTree = "<group>"; };
+		DC15943516B7E69100672A89 /* IMAccountEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountEditViewController.m; sourceTree = "<group>"; };
+		DC2FB60616E4DF6600987A44 /* Account+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+Extensions.h"; sourceTree = "<group>"; };
+		DC2FB60716E4DF6600987A44 /* Account+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+Extensions.m"; sourceTree = "<group>"; };
+		DC36749316B6A56000D26206 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		DC36749416B6A56100D26206 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		DC8812AE16BFE85200DAE434 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DC8812B016BFF9BA00DAE434 /* IMCurrecyPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCurrecyPickerViewController.h; sourceTree = "<group>"; };
+		DC8812B116BFF9BB00DAE434 /* IMCurrecyPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCurrecyPickerViewController.m; sourceTree = "<group>"; };
+		DC8812FD16C3BCC300DAE434 /* IMTransactionEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTransactionEditViewController.h; sourceTree = "<group>"; };
+		DC8812FE16C3BCC300DAE434 /* IMTransactionEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTransactionEditViewController.m; sourceTree = "<group>"; };
+		DC90987016C3E63F00CF9D00 /* IMAccountSelectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountSelectorController.h; sourceTree = "<group>"; };
+		DC90987116C3E63F00CF9D00 /* IMAccountSelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountSelectorController.m; sourceTree = "<group>"; };
+		DC90987B16C4E67900CF9D00 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		DC90987C16C4E67900CF9D00 /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		DC90989216C4F28A00CF9D00 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC98389216B7C84C00BE939C /* IMSidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSidePanelController.h; sourceTree = "<group>"; };
+		DC98389316B7C84C00BE939C /* IMSidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSidePanelController.m; sourceTree = "<group>"; };
+		DC98389516B7C89D00BE939C /* IMLeftSidePanelControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMLeftSidePanelControllerViewController.h; sourceTree = "<group>"; };
+		DC98389616B7C89D00BE939C /* IMLeftSidePanelControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMLeftSidePanelControllerViewController.m; sourceTree = "<group>"; };
+		DC98389916B7C9D000BE939C /* IMSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSummaryViewController.h; sourceTree = "<group>"; };
+		DC98389A16B7C9D000BE939C /* IMSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSummaryViewController.m; sourceTree = "<group>"; };
+		DC98389D16B7CCBC00BE939C /* IMAccountsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAccountsTableViewController.h; sourceTree = "<group>"; };
+		DC98389E16B7CCBC00BE939C /* IMAccountsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAccountsTableViewController.m; sourceTree = "<group>"; };
+		DC9838A016B7CCCB00BE939C /* IMTransactionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTransactionsTableViewController.h; sourceTree = "<group>"; };
+		DC9838A116B7CCCB00BE939C /* IMTransactionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTransactionsTableViewController.m; sourceTree = "<group>"; };
 		DC999AB116DB7DA800B05612 /* IMTransactionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTransactionCell.h; sourceTree = "<group>"; };
 		DC999AB216DB7DA800B05612 /* IMTransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTransactionCell.m; sourceTree = "<group>"; };
 		DC999AB416DB992C00B05612 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
@@ -180,7 +142,16 @@
 		DCD7265616B67B6B006F5E2D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DCD7265816B67B6B006F5E2D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DCD7265A16B67B6B006F5E2D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DCD7267216B67C8E006F5E2D /* IMFinance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IMFinance.xcdatamodel; sourceTree = "<group>"; };
 		DCD7267416B67CC3006F5E2D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DCD7269B16B68649006F5E2D /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		DCD7269C16B68649006F5E2D /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		DCD7269D16B68649006F5E2D /* Contractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contractor.h; sourceTree = "<group>"; };
+		DCD7269E16B68649006F5E2D /* Contractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contractor.m; sourceTree = "<group>"; };
+		DCD726A116B68649006F5E2D /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		DCD726A216B68649006F5E2D /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		DCD726A816B686DA006F5E2D /* IMCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCoreDataManager.h; sourceTree = "<group>"; };
+		DCD726A916B686DA006F5E2D /* IMCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCoreDataManager.m; sourceTree = "<group>"; };
 		DCD726AB16B687D4006F5E2D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DCD726D116B68833006F5E2D /* Currency.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Currency.plist; sourceTree = "<group>"; };
 		DCD726D216B68833006F5E2D /* CurrencyConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyConfig.h; sourceTree = "<group>"; };
@@ -214,90 +185,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B0925DD316F26620003FFC1F /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				B0925E2016F268E6003FFC1F /* Human */,
-				B0925E3016F26911003FFC1F /* Machine */,
-				B0925E1516F266C0003FFC1F /* Account+Extensions.h */,
-				B0925E1616F266C0003FFC1F /* Account+Extensions.m */,
-				B0925DDF16F26620003FFC1F /* IMCoreDataManager.h */,
-				B0925DE016F26620003FFC1F /* IMCoreDataManager.m */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		B0925DE316F26620003FFC1F /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				B0925DE416F26620003FFC1F /* IMAccountEditViewController.h */,
-				B0925DE516F26620003FFC1F /* IMAccountEditViewController.m */,
-				B0925DE616F26620003FFC1F /* IMAccountSelectorController.h */,
-				B0925DE716F26620003FFC1F /* IMAccountSelectorController.m */,
-				B0925DE816F26620003FFC1F /* IMAccountsTableViewController.h */,
-				B0925DE916F26620003FFC1F /* IMAccountsTableViewController.m */,
-				B0925DEA16F26620003FFC1F /* IMCategoriesPickerViewController.h */,
-				B0925DEB16F26620003FFC1F /* IMCategoriesPickerViewController.m */,
-				B0925DEC16F26620003FFC1F /* IMCategoriesTableViewController.h */,
-				B0925DED16F26620003FFC1F /* IMCategoriesTableViewController.m */,
-				B0925DEE16F26620003FFC1F /* IMCategoryEditViewController.h */,
-				B0925DEF16F26620003FFC1F /* IMCategoryEditViewController.m */,
-				B0925DF016F26620003FFC1F /* IMCurrecyPickerViewController.h */,
-				B0925DF116F26620003FFC1F /* IMCurrecyPickerViewController.m */,
-				B0925DF216F26620003FFC1F /* IMCurrenciesTableViewController.h */,
-				B0925DF316F26620003FFC1F /* IMCurrenciesTableViewController.m */,
-				B0925DF416F26620003FFC1F /* IMLeftSidePanelControllerViewController.h */,
-				B0925DF516F26620003FFC1F /* IMLeftSidePanelControllerViewController.m */,
-				B0925DF616F26620003FFC1F /* IMSidePanelController.h */,
-				B0925DF716F26620003FFC1F /* IMSidePanelController.m */,
-				B0925DF816F26620003FFC1F /* IMSummaryViewController.h */,
-				B0925DF916F26620003FFC1F /* IMSummaryViewController.m */,
-				B0925DFA16F26620003FFC1F /* IMTransactionEditViewController.h */,
-				B0925DFB16F26620003FFC1F /* IMTransactionEditViewController.m */,
-				B0925DFC16F26620003FFC1F /* IMTransactionsTableViewController.h */,
-				B0925DFD16F26620003FFC1F /* IMTransactionsTableViewController.m */,
-				B0925DFE16F26620003FFC1F /* TestVC.h */,
-				B0925DFF16F26620003FFC1F /* TestVC.m */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		B0925E2016F268E6003FFC1F /* Human */ = {
-			isa = PBXGroup;
-			children = (
-				B0925E2116F268E6003FFC1F /* Account.h */,
-				B0925E2216F268E6003FFC1F /* Account.m */,
-				B0925E2316F268E6003FFC1F /* Category.h */,
-				B0925E2416F268E6003FFC1F /* Category.m */,
-				B0925E2516F268E6003FFC1F /* Contractor.h */,
-				B0925E2616F268E6003FFC1F /* Contractor.m */,
-				B0925E2916F268E6003FFC1F /* Transaction.h */,
-				B0925E2A16F268E6003FFC1F /* Transaction.m */,
-			);
-			path = Human;
-			sourceTree = "<group>";
-		};
-		B0925E3016F26911003FFC1F /* Machine */ = {
-			isa = PBXGroup;
-			children = (
-				B0925E3116F26911003FFC1F /* _Account.h */,
-				B0925E3216F26911003FFC1F /* _Account.m */,
-				B0925E3316F26911003FFC1F /* _Category.h */,
-				B0925E3416F26911003FFC1F /* _Category.m */,
-				B0925E3516F26911003FFC1F /* _Contractor.h */,
-				B0925E3616F26911003FFC1F /* _Contractor.m */,
-				B0925E3916F26911003FFC1F /* _Transaction.h */,
-				B0925E3A16F26911003FFC1F /* _Transaction.m */,
-			);
-			path = Machine;
-			sourceTree = "<group>";
-		};
 		B0EF468616D77706008A6C78 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				B0EF468716D77706008A6C78 /* BaseCategories.plist */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		B0EF46AD16D7A7C2008A6C78 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B06D4D7416D91573006190E4 /* IMCategoriesTableViewController.h */,
+				B06D4D7516D91573006190E4 /* IMCategoriesTableViewController.m */,
+				B0D51D9B16DA8C0A00938799 /* IMCategoryEditViewController.h */,
+				B0D51D9C16DA8C0A00938799 /* IMCategoryEditViewController.m */,
+				B0EF46AA16D7A7BD008A6C78 /* IMCategoriesPickerViewController.h */,
+				B0EF46AB16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		DC15943316B7E66000672A89 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				DC98389D16B7CCBC00BE939C /* IMAccountsTableViewController.h */,
+				DC98389E16B7CCBC00BE939C /* IMAccountsTableViewController.m */,
+				DC15943416B7E69100672A89 /* IMAccountEditViewController.h */,
+				DC15943516B7E69100672A89 /* IMAccountEditViewController.m */,
+				DC90987016C3E63F00CF9D00 /* IMAccountSelectorController.h */,
+				DC90987116C3E63F00CF9D00 /* IMAccountSelectorController.m */,
+			);
+			name = Accounts;
+			sourceTree = "<group>";
+		};
+		DC8812FC16C3BC9100DAE434 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				DC9838A016B7CCCB00BE939C /* IMTransactionsTableViewController.h */,
+				DC9838A116B7CCCB00BE939C /* IMTransactionsTableViewController.m */,
+				DC8812FD16C3BCC300DAE434 /* IMTransactionEditViewController.h */,
+				DC8812FE16C3BCC300DAE434 /* IMTransactionEditViewController.m */,
+			);
+			name = Transactions;
 			sourceTree = "<group>";
 		};
 		DC90987E16C4EE7100CF9D00 /* Date */ = {
@@ -317,6 +247,42 @@
 				DC999AB516DB992C00B05612 /* NSDate+Utilities.m */,
 			);
 			path = Date;
+			sourceTree = "<group>";
+		};
+		DC98389116B7C84C00BE939C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC98389216B7C84C00BE939C /* IMSidePanelController.h */,
+				DC98389316B7C84C00BE939C /* IMSidePanelController.m */,
+				DC98389816B7C8A400BE939C /* Left Side */,
+				DC98389C16B7C9D400BE939C /* Center */,
+				DC8812B016BFF9BA00DAE434 /* IMCurrecyPickerViewController.h */,
+				DC8812B116BFF9BB00DAE434 /* IMCurrecyPickerViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DC98389816B7C8A400BE939C /* Left Side */ = {
+			isa = PBXGroup;
+			children = (
+				DC98389516B7C89D00BE939C /* IMLeftSidePanelControllerViewController.h */,
+				DC98389616B7C89D00BE939C /* IMLeftSidePanelControllerViewController.m */,
+			);
+			name = "Left Side";
+			sourceTree = "<group>";
+		};
+		DC98389C16B7C9D400BE939C /* Center */ = {
+			isa = PBXGroup;
+			children = (
+				DC98389916B7C9D000BE939C /* IMSummaryViewController.h */,
+				DC98389A16B7C9D000BE939C /* IMSummaryViewController.m */,
+				DC15943316B7E66000672A89 /* Accounts */,
+				DC8812FC16C3BC9100DAE434 /* Transactions */,
+				B0EF46AD16D7A7C2008A6C78 /* Categories */,
+				DC90987B16C4E67900CF9D00 /* TestVC.h */,
+				DC90987C16C4E67900CF9D00 /* TestVC.m */,
+			);
+			name = Center;
 			sourceTree = "<group>";
 		};
 		DC999AB016DB7D8900B05612 /* Views */ = {
@@ -381,9 +347,8 @@
 		DCD7264A16B67B6A006F5E2D /* IMFinance */ = {
 			isa = PBXGroup;
 			children = (
-				B0925E1816F2673D003FFC1F /* IMFinance.xcdatamodeld */,
-				B0925DD316F26620003FFC1F /* CoreData */,
-				B0925DE316F26620003FFC1F /* ViewControllers */,
+				DCD7266116B67C80006F5E2D /* Core Data */,
+				DC98389116B7C84C00BE939C /* View Controllers */,
 				DC999AB016DB7D8900B05612 /* Views */,
 				DCD726CF16B68833006F5E2D /* Utilities */,
 				DCD7265316B67B6B006F5E2D /* IMAppDelegate.h */,
@@ -407,6 +372,34 @@
 				B0EF46A816D7A67F008A6C78 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCD7266116B67C80006F5E2D /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				DCD7267116B67C8E006F5E2D /* IMFinance.xcdatamodeld */,
+				DCD726A816B686DA006F5E2D /* IMCoreDataManager.h */,
+				DCD726A916B686DA006F5E2D /* IMCoreDataManager.m */,
+				DCD7269816B68649006F5E2D /* Entities */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		DCD7269816B68649006F5E2D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DC36749316B6A56000D26206 /* Account.h */,
+				DC36749416B6A56100D26206 /* Account.m */,
+				DC2FB60616E4DF6600987A44 /* Account+Extensions.h */,
+				DC2FB60716E4DF6600987A44 /* Account+Extensions.m */,
+				DCD7269B16B68649006F5E2D /* Category.h */,
+				DCD7269C16B68649006F5E2D /* Category.m */,
+				DCD7269D16B68649006F5E2D /* Contractor.h */,
+				DCD7269E16B68649006F5E2D /* Contractor.m */,
+				DCD726A116B68649006F5E2D /* Transaction.h */,
+				DCD726A216B68649006F5E2D /* Transaction.m */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		DCD726CF16B68833006F5E2D /* Utilities */ = {
@@ -475,7 +468,6 @@
 			projectRoot = "";
 			targets = (
 				DCD7264016B67B6A006F5E2D /* IMFinance */,
-				B0925E1B16F267B3003FFC1F /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -518,19 +510,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 		};
-		B0925E1F16F267B9003FFC1F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd IMFinance\n/usr/local/bin/mogenerator --template-var arc=true -m IMFinance.xcdatamodeld/IMFinance.xcdatamodel/ -M CoreData/Machine/ -H CoreData/Human/";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -540,38 +519,33 @@
 			files = (
 				DCD7265116B67B6B006F5E2D /* main.m in Sources */,
 				DCD7265516B67B6B006F5E2D /* IMAppDelegate.m in Sources */,
+				DCD7267316B67C8E006F5E2D /* IMFinance.xcdatamodeld in Sources */,
+				DCD726A416B68649006F5E2D /* Category.m in Sources */,
+				DCD726A516B68649006F5E2D /* Contractor.m in Sources */,
+				DCD726A716B68649006F5E2D /* Transaction.m in Sources */,
+				DCD726AA16B686DA006F5E2D /* IMCoreDataManager.m in Sources */,
 				DCD726D516B68833006F5E2D /* CurrencyConfig.m in Sources */,
+				DC36749516B6A56100D26206 /* Account.m in Sources */,
+				DC98389416B7C84C00BE939C /* IMSidePanelController.m in Sources */,
+				DC98389716B7C89D00BE939C /* IMLeftSidePanelControllerViewController.m in Sources */,
+				DC98389B16B7C9D000BE939C /* IMSummaryViewController.m in Sources */,
+				DC98389F16B7CCBC00BE939C /* IMAccountsTableViewController.m in Sources */,
+				DC9838A216B7CCCB00BE939C /* IMTransactionsTableViewController.m in Sources */,
+				DC15943616B7E69100672A89 /* IMAccountEditViewController.m in Sources */,
+				DC8812B216BFF9BB00DAE434 /* IMCurrecyPickerViewController.m in Sources */,
+				DC8812FF16C3BCC300DAE434 /* IMTransactionEditViewController.m in Sources */,
+				DC90987216C3E63F00CF9D00 /* IMAccountSelectorController.m in Sources */,
+				DC90987D16C4E67900CF9D00 /* TestVC.m in Sources */,
 				DCCFDDDB16C8F7E1002886E2 /* IMDateIntervalPicker.m in Sources */,
 				DCCFDDDE16C913C3002886E2 /* IMDateStartPicker.m in Sources */,
 				DCCFDDE116C91C35002886E2 /* IMDateEndPicker.m in Sources */,
+				B0EF46AC16D7A7BD008A6C78 /* IMCategoriesPickerViewController.m in Sources */,
+				B06D4D7616D91573006190E4 /* IMCategoriesTableViewController.m in Sources */,
+				B0D51D9D16DA8C0A00938799 /* IMCategoryEditViewController.m in Sources */,
 				DC999AB316DB7DA800B05612 /* IMTransactionCell.m in Sources */,
 				DC999AB616DB992C00B05612 /* NSDate+Utilities.m in Sources */,
 				DCB52F1C16DF4893008799E9 /* IMAccountTypeConfig.m in Sources */,
-				B0925E0516F26620003FFC1F /* IMCoreDataManager.m in Sources */,
-				B0925E0716F26620003FFC1F /* IMAccountEditViewController.m in Sources */,
-				B0925E0816F26620003FFC1F /* IMAccountSelectorController.m in Sources */,
-				B0925E0916F26620003FFC1F /* IMAccountsTableViewController.m in Sources */,
-				B0925E0A16F26620003FFC1F /* IMCategoriesPickerViewController.m in Sources */,
-				B0925E0B16F26620003FFC1F /* IMCategoriesTableViewController.m in Sources */,
-				B0925E0C16F26620003FFC1F /* IMCategoryEditViewController.m in Sources */,
-				B0925E0D16F26620003FFC1F /* IMCurrecyPickerViewController.m in Sources */,
-				B0925E0E16F26620003FFC1F /* IMCurrenciesTableViewController.m in Sources */,
-				B0925E0F16F26620003FFC1F /* IMLeftSidePanelControllerViewController.m in Sources */,
-				B0925E1016F26620003FFC1F /* IMSidePanelController.m in Sources */,
-				B0925E1116F26620003FFC1F /* IMSummaryViewController.m in Sources */,
-				B0925E1216F26620003FFC1F /* IMTransactionEditViewController.m in Sources */,
-				B0925E1316F26620003FFC1F /* IMTransactionsTableViewController.m in Sources */,
-				B0925E1416F26620003FFC1F /* TestVC.m in Sources */,
-				B0925E1716F266C0003FFC1F /* Account+Extensions.m in Sources */,
-				B0925E1A16F2673D003FFC1F /* IMFinance.xcdatamodeld in Sources */,
-				B0925E2B16F268E6003FFC1F /* Account.m in Sources */,
-				B0925E2C16F268E6003FFC1F /* Category.m in Sources */,
-				B0925E2D16F268E6003FFC1F /* Contractor.m in Sources */,
-				B0925E2F16F268E6003FFC1F /* Transaction.m in Sources */,
-				B0925E3B16F26911003FFC1F /* _Account.m in Sources */,
-				B0925E3C16F26911003FFC1F /* _Category.m in Sources */,
-				B0925E3D16F26911003FFC1F /* _Contractor.m in Sources */,
-				B0925E3F16F26911003FFC1F /* _Transaction.m in Sources */,
+				DC2FB60816E4DF6600987A44 /* Account+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,20 +573,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B0925E1D16F267B3003FFC1F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		B0925E1E16F267B3003FFC1F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		DCD7265C16B67B6B006F5E2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -677,6 +637,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/IMFinance/Libraries\"",
 					"\"$(SRCROOT)/IMFinance\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -693,6 +654,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/IMFinance/Libraries\"",
 					"\"$(SRCROOT)/IMFinance\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -706,14 +668,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B0925E1C16F267B3003FFC1F /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B0925E1D16F267B3003FFC1F /* Debug */,
-				B0925E1E16F267B3003FFC1F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		DCD7263C16B67B6A006F5E2D /* Build configuration list for PBXProject "IMFinance" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -735,12 +689,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B0925E1816F2673D003FFC1F /* IMFinance.xcdatamodeld */ = {
+		DCD7267116B67C8E006F5E2D /* IMFinance.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B0925E1916F2673D003FFC1F /* IMFinance.xcdatamodel */,
+				DCD7267216B67C8E006F5E2D /* IMFinance.xcdatamodel */,
 			);
-			currentVersion = B0925E1916F2673D003FFC1F /* IMFinance.xcdatamodel */;
+			currentVersion = DCD7267216B67C8E006F5E2D /* IMFinance.xcdatamodel */;
 			path = IMFinance.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

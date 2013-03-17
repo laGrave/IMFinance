@@ -2,7 +2,7 @@
 // Make changes to Contractor.h instead.
 
 #import <CoreData/CoreData.h>
-#import "FTASyncParent.h"
+
 
 extern const struct ContractorAttributes {
 	__unsafe_unretained NSString *name;
@@ -22,7 +22,7 @@ extern const struct ContractorFetchedProperties {
 @interface ContractorID : NSManagedObjectID {}
 @end
 
-@interface _Contractor : FTASyncParent {}
+@interface _Contractor : NSManagedObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;

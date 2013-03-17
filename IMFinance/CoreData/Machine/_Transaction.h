@@ -2,7 +2,7 @@
 // Make changes to Transaction.h instead.
 
 #import <CoreData/CoreData.h>
-#import "FTASyncParent.h"
+
 
 extern const struct TransactionAttributes {
 	__unsafe_unretained NSString *currency;
@@ -46,7 +46,7 @@ extern const struct TransactionFetchedProperties {
 @interface TransactionID : NSManagedObjectID {}
 @end
 
-@interface _Transaction : FTASyncParent {}
+@interface _Transaction : NSManagedObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;

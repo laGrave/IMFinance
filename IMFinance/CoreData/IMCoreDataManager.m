@@ -164,24 +164,27 @@ static IMCoreDataManager *sharedInstance = nil;
 - (void)accountSync {
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSArray *accounts = [Account MR_findAll];
+        NSArray *accounts = [Account MR_findAllInContext:[NSManagedObjectContext MR_contextForCurrentThread]];
         NSMutableArray *syncDates = [[NSMutableArray alloc] initWithCapacity:accounts.count];
         for (Account *account in accounts) {
             NSDate *syncDate = account.last_modified;
             if (syncDate) [syncDates addObject:syncDate];
         }
-        
-        NSDate *lastSyncDate = [syncDates valueForKeyPath:@"max.self"];
-        
-        PFQuery *query = [PFQuery queryWithClassName:@"Account"];
-        [query whereKey:@"updatedAt" greaterThan:lastSyncDate];
-        NSArray *accountsToSync = [query findObjects];
-        for (PFObject *parseObject in accountsToSync) {
-            Account *account = [Account MR_findFirstByAttribute:@"object_id" withValue:parseObject.objectId];
-            if (!account) {
-                account = [Account MR_createEntity];
+        if (accounts.count) {
+            
+            NSDate *lastSyncDate = [accounts valueForKeyPath:@"max.last_modified"];
+            
+            PFQuery *query = [PFQuery queryWithClassName:@"Account"];
+            [query whereKey:@"updatedAt" greaterThan:lastSyncDate];
+            NSArray *accountsToSync = [query findObjects];
+            for (PFObject *parseObject in accountsToSync) {
+                Account *account = [Account MR_findFirstByAttribute:@"object_id" withValue:parseObject.objectId];
+                if (!account) {
+                    account = [Account MR_createEntity];
+                }
+                [self syncLocalObject:account withParseObject:parseObject];
             }
-//            [self syncLocalObject:]
+
         }
     });
 }

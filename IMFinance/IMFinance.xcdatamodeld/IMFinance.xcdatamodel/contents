@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Account" representedClassName="Account" parentEntity="SyncObject" syncable="YES">
         <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="limit" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="modDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="iconName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
-        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Transaction" inverseName="account" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="Category" representedClassName="Category" parentEntity="SyncObject" syncable="YES">
-        <attribute name="budget" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="iconName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="incomeType" optional="YES" attributeType="Boolean" minValueString="0" defaultValueString="NO" syncable="YES"/>
         <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -27,7 +23,7 @@
         <relationship name="transactions" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="contractor" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="SyncObject" representedClassName="SyncObject" isAbstract="YES" syncable="YES">
-        <attribute name="is_deleted" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="is_deleted" optional="YES" attributeType="Integer 16" defaultValueString="NO" spotlightIndexingEnabled="YES" syncable="YES"/>
         <attribute name="last_modified" optional="YES" attributeType="Date" spotlightIndexingEnabled="YES" syncable="YES"/>
         <attribute name="object_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sync_status" optional="YES" attributeType="Integer 16" defaultValueString="0" spotlightIndexingEnabled="YES" syncable="YES"/>
@@ -37,7 +33,7 @@
         <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="fee" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="hidden" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="iconName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="incomeType" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="repeatInterval" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -48,8 +44,8 @@
         <relationship name="contractor" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Contractor" inverseName="transactions" inverseEntity="Contractor" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-191" positionY="36" width="128" height="165"/>
-        <element name="Category" positionX="45" positionY="-45" width="128" height="195"/>
+        <element name="Account" positionX="-191" positionY="36" width="128" height="120"/>
+        <element name="Category" positionX="45" positionY="-45" width="128" height="180"/>
         <element name="Contractor" positionX="360" positionY="294" width="128" height="75"/>
         <element name="SyncObject" positionX="160" positionY="192" width="128" height="105"/>
         <element name="Transaction" positionX="160" positionY="192" width="128" height="240"/>

@@ -2,7 +2,7 @@
 //  Account.h
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 18.03.13.
+//  Created by Игорь Мищенко on 18.03.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -15,11 +15,8 @@
 @interface Account : SyncObject
 
 @property (nonatomic, retain) NSString * currency;
-@property (nonatomic, retain) NSData * image;
-@property (nonatomic, retain) NSNumber * limit;
-@property (nonatomic, retain) NSDate * modDate;
+@property (nonatomic, retain) NSString * iconName;
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSDate * startDate;
 @property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSSet *transactions;
 @end

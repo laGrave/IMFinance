@@ -2,7 +2,7 @@
 //  SyncObject.m
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 18.03.13.
+//  Created by Игорь Мищенко on 18.03.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 

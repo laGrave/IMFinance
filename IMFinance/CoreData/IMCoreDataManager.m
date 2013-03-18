@@ -68,24 +68,139 @@ static IMCoreDataManager *sharedInstance = nil;
 #pragma mark -
 #pragma mark - Sync
 
-- (void)syncWithSuccessBetweenLocalObject:(SyncObject *)localObject andParseObject:(PFObject *)parseObject {
+- (void)syncBetweenLocalObject:(SyncObject *)localObject andParseObject:(PFObject *)parseObject {
 
     [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *localContext){
         SyncObject *object = [localObject MR_inContext:localContext];
-        if (!(object.object_id && [object.object_id length]))
-            object.object_id = parseObject.objectId;
+        
         object.sync_status = [NSNumber numberWithInteger:0];
-        if ([object.is_deleted boolValue] == YES) {
-            [object MR_deleteInContext:localContext];
+        
+        if ([parseObject.updatedAt compare:object.last_modified] == NSOrderedDescending) {
+            [self syncObject:object andObject:parseObject forClass:[[object class] description]];
         }
+        else if ([parseObject.updatedAt compare:object.last_modified] == NSOrderedAscending || !localObject.last_modified) {
+            [self syncObject:parseObject andObject:object forClass:[[object class] description]];
+        }
+        
+        object.last_modified = parseObject.updatedAt;
+        
+        if (object.is_deleted == [NSNumber numberWithInteger:1]) {
+            [object MR_deleteInContext:localContext];
+            return;
+        }
+        
+        [parseObject saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+            if (success && ![object.object_id length]) {
+                [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *context){
+                    object.object_id = parseObject.objectId;
+                }];
+            }
+            else {
+                NSLog(@"error: %@", error.localizedDescription);
+                [parseObject saveEventually:^(BOOL success, NSError *error){
+                    if (success && ![object.object_id length])
+                        [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *context){
+                            object.object_id = parseObject.objectId;
+                        }];
+                }];
+            }
+        }];
     }];
+}
+
+- (void)syncLocalObject:(SyncObject *)localObject {
+    
+    [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *localContext){
+        SyncObject *object = [localObject MR_inContext:localContext];
+        
+        PFObject *parseObject = nil;
+        if (object.object_id && [object.object_id length])
+            parseObject = [PFObject objectWithoutDataWithClassName:[[object class] description] objectId:object.object_id];
+        else
+            parseObject = [PFObject objectWithClassName:[[object class] description]];
+        
+        object.sync_status = [NSNumber numberWithInteger:0];
+        
+        if ([parseObject.updatedAt compare:object.last_modified] == NSOrderedDescending) {
+            [self syncObject:object andObject:parseObject forClass:[[object class] description]];
+        }
+        else if ([parseObject.updatedAt compare:object.last_modified] == NSOrderedAscending || !localObject.last_modified) {
+            [self syncObject:parseObject andObject:object forClass:[[object class] description]];
+        }
+        
+        object.last_modified = parseObject.updatedAt;
+        
+        if (object.is_deleted == [NSNumber numberWithInteger:1]) {
+            [object MR_deleteInContext:localContext];
+            return;
+        }
+        
+        [parseObject saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+            if (success && ![object.object_id length])
+                [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *context){
+                    SyncObject *anObject = [object MR_inContext:context];
+                    anObject.object_id = parseObject.objectId;
+                }];
+            else {
+                NSLog(@"error: %@", error.localizedDescription);
+                [parseObject saveEventually:^(BOOL success, NSError *error){
+                    if (success && ![object.object_id length])
+                        [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *context){
+                            SyncObject *anObject = [object MR_inContext:context];
+                            anObject.object_id = parseObject.objectId;
+                        }];
+                }];
+            }
+        }];
+    }];
+}
+
+- (void)syncObject:(id)obj1 andObject:(id)obj2 forClass:(NSString *)className {
+
+    [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"name"];
+    [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"is_deleted"];
+    
+    if ([className isEqualToString:@"Account"]) {
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"currency"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"iconName"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"type"];
+    }
+    if ([className isEqualToString:@"Category"]) {
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"iconName"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"incomeType"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"key"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"order"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"system"];
+    }
+    if ([className isEqualToString:@"Contractor"]) {
+        //
+    }
+    if ([className isEqualToString:@"Transaction"]) {
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"currency"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"endDate"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"fee"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"hidden"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"iconName"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"incomeType"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"repeatInterval"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"startDate"];
+        [self setAttributeToObject:obj1 fromObject:obj2 attributeKey:@"value"];
+    }
+    
+}
+
+- (void)setAttributeToObject:(id)obj1 fromObject:(id)obj2 attributeKey:(NSString *)key {
+
+    id attribute = [obj2 valueForKey:key];
+    if (attribute)
+        [obj1 setValue:attribute forKey:key];
 }
 
 
 - (void)performSync {
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSPredicate *firstPredicate = [NSPredicate predicateWithFormat:@"is_deleted == YES"];
+        NSPredicate *firstPredicate = [NSPredicate predicateWithFormat:@"is_deleted == %@", [NSNumber numberWithInteger:1]];
         NSPredicate *secondPredicate = [NSPredicate predicateWithFormat:@"sync_status == 0"];
         NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:firstPredicate, secondPredicate, nil]];
         
@@ -97,39 +212,48 @@ static IMCoreDataManager *sharedInstance = nil;
 }
 
 
+- (void)accountSync {
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSArray *accounts = [Account MR_findAll];
+        NSMutableArray *syncDates = [[NSMutableArray alloc] initWithCapacity:accounts.count];
+        for (Account *account in accounts) {
+            NSDate *syncDate = account.last_modified;
+            if (syncDate) [syncDates addObject:syncDate];
+        }
+        
+        NSDate *lastSyncDate = [syncDates valueForKeyPath:@"max.self"];
+        
+        PFQuery *query = [PFQuery queryWithClassName:@"Account"];
+        [query whereKey:@"updatedAt" greaterThan:lastSyncDate];
+        NSArray *accountsToSync = [query findObjects];
+    });
+}
+
+
 #pragma mark -
 #pragma mark - Delete objects
 
 - (void)deleteObject:(SyncObject *)object {
 
-    __block SyncObject *syncObject = nil;
+    __block SyncObject *objectToClean = nil;
     dispatch_async([self background_save_queue], ^{
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
-            syncObject = [object MR_inContext:localContext];
-            NSDictionary *keys = [[syncObject entity] attributesByName];
+            objectToClean = [object MR_inContext:localContext];
+            NSDictionary *keys = [[objectToClean entity] attributesByName];
             for (NSString *key in keys) {
                 if (![key isEqualToString:@"object_id"] && ![key isEqualToString:@"last_modified"])
-                    [syncObject setValue:nil forKey:key];
+                    [objectToClean setValue:nil forKey:key];
             }
-            syncObject.is_deleted = [NSNumber numberWithBool:YES];
-            syncObject.sync_status = [NSNumber numberWithInteger:1];
+            objectToClean.is_deleted = [NSNumber numberWithInteger:1];
+            objectToClean.sync_status = [NSNumber numberWithInteger:1];
         }
                           completion:^(BOOL success, NSError *error){
                               if (success) {
-                                  if (syncObject.object_id && [syncObject.object_id length]) {
-                                      PFObject *parseObject = [PFQuery getObjectOfClass:[[syncObject class] description] objectId:syncObject.object_id];
-                                      [parseObject setValue:[NSNumber numberWithBool:YES] forKey:@"is_deleted"];
-                                      [parseObject saveInBackgroundWithBlock:^(BOOL success, NSError *error){
-                                          if (success) {
-                                              [self syncWithSuccessBetweenLocalObject:syncObject andParseObject:parseObject];
-                                              
-                                          }
-                                          else {
-                                              [parseObject saveEventually:^(BOOL success, NSError *error){
-                                                  if (success)  [self syncWithSuccessBetweenLocalObject:syncObject andParseObject:parseObject];
-                                              }];
-                                          }
-                                      }];
+                                  if (objectToClean.object_id && [objectToClean.object_id length]) {
+                                      PFObject *parseObject = [PFQuery getObjectOfClass:[[objectToClean class] description] objectId:objectToClean.object_id];
+                                      [parseObject setValue:[NSNumber numberWithInteger:1] forKey:@"is_deleted"];
+                                      [self syncBetweenLocalObject:objectToClean andParseObject:parseObject];
                                   }
                                   else NSLog(@"%@", error.localizedDescription);
                               }
@@ -181,27 +305,7 @@ static NSString *kAccountType = @"account type";
                           completion:^(BOOL success, NSError *error){
                               if (success) {
                                   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-                                      account = [account MR_inThreadContext];
-                                      PFObject *parseAccount = nil;
-                                      if (account.object_id && account.object_id.length) {
-                                          parseAccount = [PFQuery getObjectOfClass:@"Account" objectId:account.object_id];
-                                      }
-                                      else {
-                                          parseAccount = [PFObject objectWithClassName:@"Account"];
-                                      }
-                                      [parseAccount setObject:account.name forKey:@"name"];
-                                      [parseAccount saveInBackgroundWithBlock:^(BOOL success, NSError *error){
-                                          if (success) {
-                                              [self syncWithSuccessBetweenLocalObject:account andParseObject:parseAccount];
-                                              
-                                          }
-                                          else {
-                                              [parseAccount saveEventually:^(BOOL success, NSError *error){
-                                                  if (success)  [self syncWithSuccessBetweenLocalObject:account andParseObject:parseAccount];
-                                              }];
-                                          }
-                                      }];
-
+                                      [self syncLocalObject:account];
                                   });
                                                                     
                                   [self correctTransaction:parameters success:^{
@@ -326,27 +430,7 @@ static NSString *kTransactionHidden = @"transaction hidden";
                               if (success) {
                                   if (successBlock) {
                                       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-                                          transaction = [transaction MR_inThreadContext];
-                                          PFObject *parseTrans = nil;
-                                          if (transaction.object_id && transaction.object_id.length) {
-                                              parseTrans = [PFQuery getObjectOfClass:@"Transaction" objectId:transaction.object_id];
-                                          }
-                                          else {
-                                              parseTrans = [PFObject objectWithClassName:@"Transaction"];
-                                          }
-                                          [parseTrans setObject:transaction.name forKey:@"name"];
-                                          [parseTrans saveInBackgroundWithBlock:^(BOOL success, NSError *error){
-                                              if (success) {
-                                                  [self syncWithSuccessBetweenLocalObject:transaction andParseObject:parseTrans];
-                                                  
-                                              }
-                                              else {
-                                                  [parseTrans saveEventually:^(BOOL success, NSError *error){
-                                                      if (success)  [self syncWithSuccessBetweenLocalObject:transaction andParseObject:parseTrans];
-                                                  }];
-                                              }
-                                          }];
-                                          
+                                          [self syncLocalObject:transaction];
                                       });
                                       successBlock();
                                   }
@@ -415,9 +499,6 @@ static NSString *kCategorySystem = @"categorySystem";
                 category.system = [parameters valueForKey:kCategorySystem];
             }
             else category.system = [NSNumber numberWithBool:NO];
-            
-            if ([parameters objectForKey:kCategoryIcon])
-                category.image = UIImagePNGRepresentation([UIImage imageNamed:[parameters objectForKey:kCategoryIcon]]);
         }];
     });
 

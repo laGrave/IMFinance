@@ -36,7 +36,7 @@
         return _fetchedResultsController;
     }
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"is_deleted == NO"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"is_deleted == %@", [NSNumber numberWithInteger:0]];
     _fetchedResultsController = [Account MR_fetchAllGroupedBy:@"type" withPredicate:predicate sortedBy:nil ascending:YES delegate:self];
     
     return _fetchedResultsController;

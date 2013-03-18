@@ -2,7 +2,7 @@
 //  Category.h
 //  IMFinance
 //
-//  Created by Igor Mishchenko on 18.03.13.
+//  Created by Игорь Мищенко on 18.03.13.
 //  Copyright (c) 2013 Igor Mishchenko. All rights reserved.
 //
 
@@ -14,8 +14,7 @@
 
 @interface Category : SyncObject
 
-@property (nonatomic, retain) NSNumber * budget;
-@property (nonatomic, retain) NSData * image;
+@property (nonatomic, retain) NSString * iconName;
 @property (nonatomic, retain) NSNumber * incomeType;
 @property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) NSString * name;

@@ -4,7 +4,9 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/FBSBJSON</TokenIdentifier>
-			<Abstract type="html">@brief Facade for SBJsonWriter/SBJsonParser.</Abstract>
+			<Abstract type="html">Facade for SBJsonWriter/SBJsonParser.
+
+Requests are forwarded to instances of SBJsonWriter and SBJsonParser.</Abstract>
 			<DeclaredIn>FBSBJSON.h</DeclaredIn>
 			
 			<NodeRef refid="28"/>

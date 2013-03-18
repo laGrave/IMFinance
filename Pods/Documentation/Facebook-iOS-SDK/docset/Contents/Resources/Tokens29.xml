@@ -4,7 +4,9 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/FBSBJsonBase</TokenIdentifier>
-			<Abstract type="html">@brief Common base class for parsing &amp;amp; writing.</Abstract>
+			<Abstract type="html">Common base class for parsing &amp;amp; writing.
+
+This class contains the common error-handling code and option between the parser/writer.</Abstract>
 			<DeclaredIn>FBSBJsonBase.h</DeclaredIn>
 			
 			<NodeRef refid="29"/>
@@ -13,7 +15,11 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSBJsonBase/setMaxDepth:</TokenIdentifier>
-			<Abstract type="html">@brief The maximum recursing depth.</Abstract>
+			<Abstract type="html">The maximum recursing depth.
+
+Defaults to 512. If the input is nested deeper than this the input will be deemed to be
+malicious and the parser returns nil, signalling an error. (&quot;Nested too deep&quot;.) You can
+turn off this security feature by setting the maxDepth value to 0.</Abstract>
 			<DeclaredIn>FBSBJsonBase.h</DeclaredIn>			
 			
 			<Declaration>@property NSUInteger maxDepth</Declaration>
@@ -24,7 +30,11 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBSBJsonBase/maxDepth</TokenIdentifier>
-			<Abstract type="html">@brief The maximum recursing depth.</Abstract>
+			<Abstract type="html">The maximum recursing depth.
+
+Defaults to 512. If the input is nested deeper than this the input will be deemed to be
+malicious and the parser returns nil, signalling an error. (&quot;Nested too deep&quot;.) You can
+turn off this security feature by setting the maxDepth value to 0.</Abstract>
 			<DeclaredIn>FBSBJsonBase.h</DeclaredIn>			
 			
 			<Declaration>@property NSUInteger maxDepth</Declaration>
@@ -35,7 +45,11 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSBJsonBase/setErrorTrace:</TokenIdentifier>
-			<Abstract type="html">@brief Return an error trace, or nil if there was no errors.</Abstract>
+			<Abstract type="html">Return an error trace, or nil if there was no errors.
+
+Note that this method returns the trace of the last method that failed.
+You need to check the return value of the call you&apos;re making to figure out
+if the call actually failed, before you know call this method.</Abstract>
 			<DeclaredIn>FBSBJsonBase.h</DeclaredIn>			
 			
 			<Declaration>@property (copy, readonly) NSArray *errorTrace</Declaration>
@@ -46,7 +60,11 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBSBJsonBase/errorTrace</TokenIdentifier>
-			<Abstract type="html">@brief Return an error trace, or nil if there was no errors.</Abstract>
+			<Abstract type="html">Return an error trace, or nil if there was no errors.
+
+Note that this method returns the trace of the last method that failed.
+You need to check the return value of the call you&apos;re making to figure out
+if the call actually failed, before you know call this method.</Abstract>
 			<DeclaredIn>FBSBJsonBase.h</DeclaredIn>			
 			
 			<Declaration>@property (copy, readonly) NSArray *errorTrace</Declaration>

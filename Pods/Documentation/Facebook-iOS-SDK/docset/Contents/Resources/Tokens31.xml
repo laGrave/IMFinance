@@ -4,7 +4,25 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/FBSBJsonWriter</TokenIdentifier>
-			<Abstract type="html">@brief The JSON writer class.</Abstract>
+			<Abstract type="html">The JSON writer class.
+
+Objective-C types are mapped to JSON types in the following way:
+
+@li NSNull -&gt; Null
+@li NSString -&gt; String
+@li NSArray -&gt; Array
+@li NSDictionary -&gt; Object
+@li NSNumber (-initWithBool:) -&gt; Boolean
+@li NSNumber -&gt; Number
+
+In JSON the keys of an object must be strings. NSDictionary keys need
+not be, but attempting to convert an NSDictionary with non-string keys
+into JSON will throw an exception.
+
+NSNumber instances created with the +initWithBool: method are
+converted into the JSON boolean &quot;true&quot; and &quot;false&quot; values, and vice
+versa. Any other NSNumber instances are converted to a JSON number the
+way you would expect.</Abstract>
 			<DeclaredIn>FBSBJsonWriter.h</DeclaredIn>
 			
 			<NodeRef refid="31"/>

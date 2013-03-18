@@ -4,8 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/FBLoginView</TokenIdentifier>
-			<Abstract type="html">@class FBLoginView
-@abstract FBLoginView is a custom UIView that renders a button to login or logout based on the
+			<Abstract type="html">FBLoginView is a custom UIView that renders a button to login or logout based on the
   state of FBSession.activeSession</Abstract>
 			<DeclaredIn>FBLoginView.h</DeclaredIn>
 			
@@ -131,10 +130,7 @@ Initializes and returns an FBLoginView object.  The underlying session has basic
 				<Parameter>
 					<Name>permissions</Name>
 					<Abstract type="html">An array of strings representing the permissions to request during the
-authentication flow. A value of nil will indicates basic permissions.
-
-@discussion Methods and properties that specify permissions without a read or publish
-qualification are deprecated; use of a read-qualified or publish-qualified alternative is preferred.</Abstract>
+authentication flow. A value of nil will indicates basic permissions.</Abstract>
 				</Parameter>
 			</Parameters>
 			

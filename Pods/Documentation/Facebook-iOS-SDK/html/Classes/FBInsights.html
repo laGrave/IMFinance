@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -481,10 +481,7 @@ a conversion pixel.</p></dd>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>value</em></dt>
-			<dd><p>Value of what the logging of this pixel is worth to you.  The currency that this is expressed in doesn&rsquo;t matter, so long as it is consistent across all logging for this pixel.</p>
-
-<p>@discussion          This event immediately triggers a <a href="#//api/name/flush">flush</a> of the <code>FBInsights</code> event queue, unless the <a href="#//api/name/flushBehavior"><code>flushBehavior</code></a> is set
-to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p></dd>
+			<dd><p>Value of what the logging of this pixel is worth to you.  The currency that this is expressed in doesn&rsquo;t matter, so long as it is consistent across all logging for this pixel.</p></dd>
 		</dl>
 		
 	</div>
@@ -500,7 +497,8 @@ to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p></dd>
 		<p>@method</p>
 
 <p>@abstract
-Log, or &ldquo;Fire&rdquo; a Conversion Pixel.  Conversion Pixels are used for Ads Conversion Tracking.  See <a href="https://www.facebook.com/help/435189689870514">https://www.facebook.com/help/435189689870514</a> to learn more.</p>
+Log, or &ldquo;Fire&rdquo; a Conversion Pixel.  Conversion Pixels are used for Ads Conversion Tracking.  See <a href="https://www.facebook.com/help/435189689870514">https://www.facebook.com/help/435189689870514</a> to learn more.</p><p>This event immediately triggers a <a href="#//api/name/flush">flush</a> of the <code>FBInsights</code> event queue, unless the <a href="#//api/name/flushBehavior"><code>flushBehavior</code></a> is set
+to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p>
 	</div>
 	
 	
@@ -550,10 +548,7 @@ a conversion pixel.</p></dd>
 		<dl class="argument-def parameter-def">
 			<dt><em>session</em></dt>
 			<dd><p><a href="../Classes/FBSession.html">FBSession</a> to direct the event logging to, and thus be logged with whatever user (if any)
-is associated with that <a href="../Classes/FBSession.html">FBSession</a>.  A value of <code>nil</code> will use <a href="../Classes/FBSession.html#//api/name/activeSession"><code>[FBSession activeSession]</code></a>.</p>
-
-<p>@discussion          This event immediately triggers a <a href="#//api/name/flush">flush</a> of the <code>FBInsights</code> event queue, unless the <a href="#//api/name/flushBehavior"><code>flushBehavior</code></a> is set
-to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p></dd>
+is associated with that <a href="../Classes/FBSession.html">FBSession</a>.  A value of <code>nil</code> will use <a href="../Classes/FBSession.html#//api/name/activeSession"><code>[FBSession activeSession]</code></a>.</p></dd>
 		</dl>
 		
 	</div>
@@ -569,7 +564,8 @@ to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p></dd>
 		<p>@method</p>
 
 <p>@abstract
-Log, or &ldquo;Fire&rdquo; a Conversion Pixel.  Conversion Pixels are used for Ads Conversion Tracking.  See <a href="https://www.facebook.com/help/435189689870514">https://www.facebook.com/help/435189689870514</a> to learn more.</p>
+Log, or &ldquo;Fire&rdquo; a Conversion Pixel.  Conversion Pixels are used for Ads Conversion Tracking.  See <a href="https://www.facebook.com/help/435189689870514">https://www.facebook.com/help/435189689870514</a> to learn more.</p><p>This event immediately triggers a <a href="#//api/name/flush">flush</a> of the <code>FBInsights</code> event queue, unless the <a href="#//api/name/flushBehavior"><code>flushBehavior</code></a> is set
+to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p>
 	</div>
 	
 	
@@ -624,10 +620,7 @@ Log, or &ldquo;Fire&rdquo; a Conversion Pixel.  Conversion Pixels are used for A
 		<dl class="argument-def parameter-def">
 			<dt><em>currency</em></dt>
 			<dd><p>Currency, is denoted as, e.g. &ldquo;USD&rdquo;, &ldquo;EUR&rdquo;, &ldquo;GBP&rdquo;.  See ISO-4217 for
-specific values.  One reference for these is <a href="http://en.wikipedia.org/wiki/ISO_4217">http://en.wikipedia.org/wiki/ISO_4217</a>.</p>
-
-<p>@discussion              This event immediately triggers a <a href="#//api/name/flush">flush</a> of the <code>FBInsights</code> event queue, unless the <a href="#//api/name/flushBehavior"><code>flushBehavior</code></a> is set
-to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p></dd>
+specific values.  One reference for these is <a href="http://en.wikipedia.org/wiki/ISO_4217">http://en.wikipedia.org/wiki/ISO_4217</a>.</p></dd>
 		</dl>
 		
 	</div>
@@ -643,7 +636,8 @@ to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p></dd>
 		<p>@method</p>
 
 <p>@abstract
-Log a purchase of the specified amount, in the specified currency.</p>
+Log a purchase of the specified amount, in the specified currency.</p><p>This event immediately triggers a <a href="#//api/name/flush">flush</a> of the <code>FBInsights</code> event queue, unless the <a href="#//api/name/flushBehavior"><code>flushBehavior</code></a> is set
+to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p>
 	</div>
 	
 	
@@ -694,10 +688,7 @@ specific values.  One reference for these is <a href="http://en.wikipedia.org/wi
 			<dt><em>parameters</em></dt>
 			<dd><p>Arbitrary parameter dictionary of characteristics. The keys to this dictionary must
 be NSString&rsquo;s, and the values are expected to be NSString or NSNumber.  Limitations on the number of
-parameters and name construction are given in the <code>FBInsights</code> documentation.</p>
-
-<p>@discussion              This event immediately triggers a <a href="#//api/name/flush">flush</a> of the <code>FBInsights</code> event queue, unless the <a href="#//api/name/flushBehavior"><code>flushBehavior</code></a> is set
-to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p></dd>
+parameters and name construction are given in the <code>FBInsights</code> documentation.</p></dd>
 		</dl>
 		
 	</div>
@@ -714,7 +705,8 @@ to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p></dd>
 
 <p>@abstract
 Log a purchase of the specified amount, in the specified currency, also providing a set of
-additional characteristics describing the purchase.</p>
+additional characteristics describing the purchase.</p><p>This event immediately triggers a <a href="#//api/name/flush">flush</a> of the <code>FBInsights</code> event queue, unless the <a href="#//api/name/flushBehavior"><code>flushBehavior</code></a> is set
+to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p>
 	</div>
 	
 	
@@ -771,10 +763,7 @@ parameters and name construction are given in the <code>FBInsights</code> docume
 		<dl class="argument-def parameter-def">
 			<dt><em>session</em></dt>
 			<dd><p><a href="../Classes/FBSession.html">FBSession</a> to direct the event logging to, and thus be logged with whatever user (if any)
-is associated with that <a href="../Classes/FBSession.html">FBSession</a>.  A value of <code>nil</code> will use <a href="../Classes/FBSession.html#//api/name/activeSession"><code>[FBSession activeSession]</code></a>.</p>
-
-<p>@discussion            This event immediately triggers a <a href="#//api/name/flush">flush</a> of the <code>FBInsights</code> event queue, unless the <a href="#//api/name/flushBehavior"><code>flushBehavior</code></a> is set
-to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p></dd>
+is associated with that <a href="../Classes/FBSession.html">FBSession</a>.  A value of <code>nil</code> will use <a href="../Classes/FBSession.html#//api/name/activeSession"><code>[FBSession activeSession]</code></a>.</p></dd>
 		</dl>
 		
 	</div>
@@ -791,7 +780,8 @@ to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p></dd>
 
 <p>@abstract
 Log a purchase of the specified amount, in the specified currency, also providing a set of
-additional characteristics describing the purchase, as well as an <a href="../Classes/FBSession.html">FBSession</a> to log to.</p>
+additional characteristics describing the purchase, as well as an <a href="../Classes/FBSession.html">FBSession</a> to log to.</p><p>This event immediately triggers a <a href="#//api/name/flush">flush</a> of the <code>FBInsights</code> event queue, unless the <a href="#//api/name/flushBehavior"><code>flushBehavior</code></a> is set
+to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p>
 	</div>
 	
 	
@@ -933,9 +923,9 @@ Set the current event flushing behavior specifying when events are sent back to 
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-14)</span><br />
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-18)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
 					</div>
 				</div>

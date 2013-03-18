@@ -52,10 +52,7 @@ Enables analysis and breakdown of logged events by app version.</Abstract>
 				</Parameter><Parameter>
 					<Name>currency</Name>
 					<Abstract type="html">Currency, is denoted as, e.g. &quot;USD&quot;, &quot;EUR&quot;, &quot;GBP&quot;.  See ISO-4217 for
-specific values.  One reference for these is http://en.wikipedia.org/wiki/ISO_4217.
-
-@discussion              This event immediately triggers a flush of the FBInsights event queue, unless the flushBehavior is set
-to FBInsightsFlushBehaviorExplicitOnly.</Abstract>
+specific values.  One reference for these is http://en.wikipedia.org/wiki/ISO_4217.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -80,10 +77,7 @@ specific values.  One reference for these is http://en.wikipedia.org/wiki/ISO_42
 					<Name>parameters</Name>
 					<Abstract type="html">Arbitrary parameter dictionary of characteristics. The keys to this dictionary must
 be NSString&apos;s, and the values are expected to be NSString or NSNumber.  Limitations on the number of
-parameters and name construction are given in the FBInsights documentation.
-
-@discussion              This event immediately triggers a flush of the FBInsights event queue, unless the flushBehavior is set
-to FBInsightsFlushBehaviorExplicitOnly.</Abstract>
+parameters and name construction are given in the FBInsights documentation.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -112,10 +106,7 @@ parameters and name construction are given in the FBInsights documentation.</Abs
 				</Parameter><Parameter>
 					<Name>session</Name>
 					<Abstract type="html">FBSession to direct the event logging to, and thus be logged with whatever user (if any)
-is associated with that FBSession.  A value of nil will use [FBSession activeSession].
-
-@discussion            This event immediately triggers a flush of the FBInsights event queue, unless the flushBehavior is set
-to FBInsightsFlushBehaviorExplicitOnly.</Abstract>
+is associated with that FBSession.  A value of nil will use [FBSession activeSession].</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -135,10 +126,7 @@ to FBInsightsFlushBehaviorExplicitOnly.</Abstract>
 a conversion pixel.</Abstract>
 				</Parameter><Parameter>
 					<Name>value</Name>
-					<Abstract type="html">Value of what the logging of this pixel is worth to you.  The currency that this is expressed in doesn&apos;t matter, so long as it is consistent across all logging for this pixel.
-
-@discussion          This event immediately triggers a flush of the FBInsights event queue, unless the flushBehavior is set
-to FBInsightsFlushBehaviorExplicitOnly.</Abstract>
+					<Abstract type="html">Value of what the logging of this pixel is worth to you.  The currency that this is expressed in doesn&apos;t matter, so long as it is consistent across all logging for this pixel.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -162,10 +150,7 @@ a conversion pixel.</Abstract>
 				</Parameter><Parameter>
 					<Name>session</Name>
 					<Abstract type="html">FBSession to direct the event logging to, and thus be logged with whatever user (if any)
-is associated with that FBSession.  A value of nil will use [FBSession activeSession].
-
-@discussion          This event immediately triggers a flush of the FBInsights event queue, unless the flushBehavior is set
-to FBInsightsFlushBehaviorExplicitOnly.</Abstract>
+is associated with that FBSession.  A value of nil will use [FBSession activeSession].</Abstract>
 				</Parameter>
 			</Parameters>
 			

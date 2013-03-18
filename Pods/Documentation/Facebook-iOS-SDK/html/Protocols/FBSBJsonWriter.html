@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -122,14 +122,6 @@
 					
 					
 					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@brief Options for the writer class.</p>
-
-<p>This exists so the SBJSON facade can implement the options in the writer without having to re-declare them.</p>
-					</div>
-					
 					
 					
 					
@@ -146,21 +138,32 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/humanReadable">&nbsp;&nbsp;humanReadable</a></code>
-		<span class="tooltip"><p>@brief Whether we are generating human-readable (multiline) JSON.</p></span>
+		<span class="tooltip"><p>Whether we are generating human-readable (multiline) JSON.</p>
+
+<p>Set whether or not to generate human-readable JSON. The default is NO, which produces
+JSON without any whitespace. (Except inside strings.) If set to YES, generates human-readable
+JSON with linebreaks after each array value and dictionary key/value pair, indented two
+spaces per nesting level.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/sortKeys">&nbsp;&nbsp;sortKeys</a></code>
-		<span class="tooltip"><p>@brief Whether or not to sort the dictionary keys in the output.</p></span>
+		<span class="tooltip"><p>Whether or not to sort the dictionary keys in the output.</p>
+
+<p>If this is set to YES, the dictionary keys in the JSON output will be in sorted order.
+(This is useful if you need to compare two structures, for example.) The default is NO.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/stringWithObject:">&ndash;&nbsp;stringWithObject:</a></code>
-		<span class="tooltip"><p>@brief Return JSON representation (or fragment) for the given object.</p></span>
+		<span class="tooltip"><p>Return JSON representation (or fragment) for the given object.</p>
+
+<p>Returns a string containing JSON representation of the passed in value, or nil on error.
+If nil is returned and @p error is not NULL, @p *error can be interrogated to find the cause of the error.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
@@ -184,7 +187,12 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@brief Whether we are generating human-readable (multiline) JSON.</p>
+		<p>Whether we are generating human-readable (multiline) JSON.</p>
+
+<p>Set whether or not to generate human-readable JSON. The default is NO, which produces
+JSON without any whitespace. (Except inside strings.) If set to YES, generates human-readable
+JSON with linebreaks after each array value and dictionary key/value pair, indented two
+spaces per nesting level.</p>
 	</div>		
 	
     
@@ -198,16 +206,6 @@
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>@brief Whether we are generating human-readable (multiline) JSON.</p>
-
-<p>Set whether or not to generate human-readable JSON. The default is NO, which produces
-JSON without any whitespace. (Except inside strings.) If set to YES, generates human-readable
-JSON with linebreaks after each array value and dictionary key/value pair, indented two
-spaces per nesting level.</p>
-	</div>
 	
 	
 	
@@ -230,7 +228,10 @@ spaces per nesting level.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@brief Whether or not to sort the dictionary keys in the output.</p>
+		<p>Whether or not to sort the dictionary keys in the output.</p>
+
+<p>If this is set to YES, the dictionary keys in the JSON output will be in sorted order.
+(This is useful if you need to compare two structures, for example.) The default is NO.</p>
 	</div>		
 	
     
@@ -244,14 +245,6 @@ spaces per nesting level.</p>
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>@brief Whether or not to sort the dictionary keys in the output.</p>
-
-<p>If this is set to YES, the dictionary keys in the JSON output will be in sorted order.
-(This is useful if you need to compare two structures, for example.) The default is NO.</p>
-	</div>
 	
 	
 	
@@ -284,7 +277,10 @@ spaces per nesting level.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@brief Return JSON representation (or fragment) for the given object.</p>
+		<p>Return JSON representation (or fragment) for the given object.</p>
+
+<p>Returns a string containing JSON representation of the passed in value, or nil on error.
+If nil is returned and @p error is not NULL, @p *error can be interrogated to find the cause of the error.</p>
 	</div>		
 	
     
@@ -308,14 +304,6 @@ spaces per nesting level.</p>
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>@brief Return JSON representation (or fragment) for the given object.</p>
-
-<p>Returns a string containing JSON representation of the passed in value, or nil on error.
-If nil is returned and @p error is not NULL, @p *error can be interrogated to find the cause of the error.</p>
-	</div>
 	
 	
 	
@@ -344,9 +332,9 @@ If nil is returned and @p error is not NULL, @p *error can be interrogated to fi
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-14)</span><br />
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-18)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
 					</div>
 				</div>

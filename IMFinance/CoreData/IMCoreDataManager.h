@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class SyncObject;
+
 @interface IMCoreDataManager : NSObject
 
 // создание синглтона
@@ -15,6 +17,13 @@
 
 // отдельный поток для сохранения core data в фоне
 - (dispatch_queue_t)background_save_queue;
+
+//синхронизация
+- (void)performSync;
+
+//очищаем содержимое объекта для последующей синхронизации
+//окончательное удаление произойдет после успешной синхронизации
+- (void)deleteObject:(SyncObject *)object;
 
 
 /*

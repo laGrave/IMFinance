@@ -13,7 +13,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSessionTokenCachingStrategy/init</TokenIdentifier>
-			<Abstract type="html">@abstract Initializes and returns an instance</Abstract>
+			<Abstract type="html">Initializes and returns an instance</Abstract>
 			<DeclaredIn>FBSessionTokenCachingStrategy.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
@@ -50,9 +50,7 @@ Called by FBSession (and overridden by inheritors), in order to cache token info
 			<Parameters>
 				<Parameter>
 					<Name>tokenInformation</Name>
-					<Abstract type="html">Dictionary containing token information to be cached by the method
-@discussion You should favor overriding this instead of cacheFBAccessTokenData only if you intend
-to cache additional data not captured by the FBAccessTokenData type.</Abstract>
+					<Abstract type="html">Dictionary containing token information to be cached by the method</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -61,16 +59,14 @@ to cache additional data not captured by the FBAccessTokenData type.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSessionTokenCachingStrategy/cacheFBAccessTokenData:</TokenIdentifier>
-			<Abstract type="html">@abstract Cache the supplied token.</Abstract>
+			<Abstract type="html">Cache the supplied token.</Abstract>
 			<DeclaredIn>FBSessionTokenCachingStrategy.h</DeclaredIn>			
 			
 			<Declaration>- (void)cacheFBAccessTokenData:(FBAccessTokenData *)accessToken</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>accessToken</Name>
-					<Abstract type="html">The token instance.
-@discussion This essentially wraps a call to cacheTokenInformation so you should
-override this when providing a custom token caching strategy.</Abstract>
+					<Abstract type="html">The token instance.</Abstract>
 				</Parameter>
 			</Parameters>
 			

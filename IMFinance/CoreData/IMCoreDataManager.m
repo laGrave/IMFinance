@@ -13,6 +13,7 @@
 #import "Account+Extensions.h"
 #import "Transaction.h"
 #import "Category.h"
+#import "SyncObject.h"
 
 #import "NSDate+Utilities.h"
 
@@ -36,6 +37,18 @@ static IMCoreDataManager *sharedInstance = nil;
     }
 }
 
+#pragma mark -
+#pragma mark - Keys 
+
+- (NSArray *)allKeys {
+
+    NSMutableArray *keys = [[NSMutableArray alloc] init];
+    
+    //account
+    [keys addObject:@"name"];
+    
+    return keys;
+}
 
 #pragma mark -
 #pragma mark GCD
@@ -49,6 +62,79 @@ static IMCoreDataManager *sharedInstance = nil;
     }
     
     return coredata_background_save_queue;
+}
+
+
+#pragma mark -
+#pragma mark - Sync
+
+- (void)syncWithSuccessBetweenLocalObject:(SyncObject *)localObject andParseObject:(PFObject *)parseObject {
+
+    [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *localContext){
+        SyncObject *object = [localObject MR_inContext:localContext];
+        if (!(object.object_id && [object.object_id length]))
+            object.object_id = parseObject.objectId;
+        object.sync_status = [NSNumber numberWithInteger:0];
+    }];
+}
+
+
+- (void)performSync {
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSPredicate *firstPredicate = [NSPredicate predicateWithFormat:@"is_deleted == YES"];
+        NSPredicate *secondPredicate = [NSPredicate predicateWithFormat:@"sync_status == 0"];
+        NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:firstPredicate, secondPredicate, nil]];
+        
+        NSArray *objectsToDelete = [SyncObject MR_findAllWithPredicate:predicate];
+        for (SyncObject *object in objectsToDelete) {
+            [object MR_deleteEntity];
+        }
+    });
+}
+
+
+#pragma mark -
+#pragma mark - Delete objects
+
+- (void)deleteObject:(SyncObject *)object {
+
+    __block SyncObject *syncObject = nil;
+    dispatch_async([self background_save_queue], ^{
+        [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
+            syncObject = [object MR_inContext:localContext];
+            NSDictionary *keys = [[syncObject entity] attributesByName];
+            for (NSString *key in keys) {
+                if (![key isEqualToString:@"object_id"] && ![key isEqualToString:@"last_modified"])
+                    [syncObject setValue:nil forKey:key];
+            }
+            syncObject.is_deleted = [NSNumber numberWithBool:YES];
+            syncObject.sync_status = [NSNumber numberWithInteger:1];
+        }
+                          completion:^(BOOL success, NSError *error){
+                              if (success) {
+                                  if (syncObject.object_id && [syncObject.object_id length]) {
+                                      PFObject *parseObject = [PFQuery getObjectOfClass:[[syncObject class] description] objectId:syncObject.object_id];
+                                      [parseObject setValue:[NSNumber numberWithBool:YES] forKey:@"is_deleted"];
+                                      [parseObject saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+                                          if (success) {
+                                              [self syncWithSuccessBetweenLocalObject:syncObject andParseObject:parseObject];
+                                              
+                                          }
+                                          else {
+                                              [parseObject saveEventually:^(BOOL success, NSError *error){
+                                                  if (success)  [self syncWithSuccessBetweenLocalObject:syncObject andParseObject:parseObject];
+                                              }];
+                                          }
+                                      }];
+                                  }
+                                  else NSLog(@"%@", error.localizedDescription);
+                              }
+                              else {
+                                  NSLog(@"purge completed");
+                              }
+                          }];
+    });
 }
 
 
@@ -70,7 +156,9 @@ static NSString *kAccountType = @"account type";
                       failure:(void (^)(NSError *))failureBlock {
     
     dispatch_async([self background_save_queue], ^{
-        __block Account *account = [parameters objectForKey:kAccount];        
+        
+        __block Account *account = [parameters objectForKey:kAccount];
+        
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
             if (account) {
                 account = [account MR_inContext:localContext];
@@ -81,7 +169,7 @@ static NSString *kAccountType = @"account type";
 
             [parameters setValue:account forKey:kAccount];
             
-            account.modDate = [NSDate date];
+            account.sync_status = [NSNumber numberWithInteger:1];
             
             account.name = [parameters objectForKey:kAccountName];
             account.currency = [parameters objectForKey:kAccountCurrency];
@@ -89,31 +177,33 @@ static NSString *kAccountType = @"account type";
         }
                           completion:^(BOOL success, NSError *error){
                               if (success) {
-                                  account = [account MR_inThreadContext];
-                                  PFObject *parseAccount = nil;
-                                  if (account.objectId && account.objectId.length) {
-                                      parseAccount = [PFQuery getObjectOfClass:@"Account" objectId:account.objectId];
-                                  }
-                                  else {
-                                      parseAccount = [PFObject objectWithClassName:@"Account"];
-                                  }
-                                  [parseAccount setObject:account.name forKey:@"name"];
-//                                  [parseAccount setObject:account.value forKey:@"value"];
-                                  [parseAccount saveInBackgroundWithBlock:^(BOOL success, NSError *error){
-                                      if (success) {
-                                          [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:^(NSManagedObjectContext *localContext){
-                                              Account *anAccount = [account MR_inContext:localContext];
-                                              anAccount.objectId = parseAccount.objectId;
-                                          }];
+                                  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+                                      account = [account MR_inThreadContext];
+                                      PFObject *parseAccount = nil;
+                                      if (account.object_id && account.object_id.length) {
+                                          parseAccount = [PFQuery getObjectOfClass:@"Account" objectId:account.object_id];
                                       }
-                                  }];
-//                                  [self correctTransaction:parameters success:^{
-//                                      Account *account = [parameters[kAccount] MR_inThreadContext];
-//                                      PFObject *parseAccount = [PFObject objectWithClassName:@"Account"];
-//                                      [parseAccount setObject:account.name forKey:@"name"];
-//                                      [parseAccount setObject:account.value forKey:@"value"];
-//                                      [parseAccount saveInBackground];
-//                                  }]; 
+                                      else {
+                                          parseAccount = [PFObject objectWithClassName:@"Account"];
+                                      }
+                                      [parseAccount setObject:account.name forKey:@"name"];
+                                      [parseAccount saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+                                          if (success) {
+                                              [self syncWithSuccessBetweenLocalObject:account andParseObject:parseAccount];
+                                              
+                                          }
+                                          else {
+                                              [parseAccount saveEventually:^(BOOL success, NSError *error){
+                                                  if (success)  [self syncWithSuccessBetweenLocalObject:account andParseObject:parseAccount];
+                                              }];
+                                          }
+                                      }];
+
+                                  });
+                                                                    
+                                  [self correctTransaction:parameters success:^{
+                                      //
+                                  }]; 
                                   successBlock();
                               }
                               else {
@@ -178,9 +268,10 @@ static NSString *kTransactionHidden = @"transaction hidden";
                           failure:(void (^)())failureBlock {
     
     dispatch_async([self background_save_queue], ^{
+        
+        __block Transaction *transaction = [parameters objectForKey:kTramsaction];
+        
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext){
-            
-            Transaction *transaction = [parameters objectForKey:kTramsaction];
             
             if (transaction) {
                 transaction = [transaction MR_inContext:localContext];
@@ -189,6 +280,8 @@ static NSString *kTransactionHidden = @"transaction hidden";
                 transaction = [Transaction MR_createInContext:localContext];
                 transaction.startDate = [NSDate date];
             }
+            
+            transaction.sync_status = [NSNumber numberWithInteger:1];
             
             Account *account = [parameters objectForKey:kAccount];
             transaction.account = [account MR_inContext:localContext];
@@ -225,12 +318,33 @@ static NSString *kTransactionHidden = @"transaction hidden";
                 transaction.startDate = [startDate dateWithOutTime];
             }
             
-            transaction.modDate = [NSDate date];
-            
         }
                           completion:^(BOOL success, NSError *error){
                               if (success) {
                                   if (successBlock) {
+                                      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+                                          transaction = [transaction MR_inThreadContext];
+                                          PFObject *parseTrans = nil;
+                                          if (transaction.object_id && transaction.object_id.length) {
+                                              parseTrans = [PFQuery getObjectOfClass:@"Transaction" objectId:transaction.object_id];
+                                          }
+                                          else {
+                                              parseTrans = [PFObject objectWithClassName:@"Transaction"];
+                                          }
+                                          [parseTrans setObject:transaction.name forKey:@"name"];
+                                          [parseTrans saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+                                              if (success) {
+                                                  [self syncWithSuccessBetweenLocalObject:transaction andParseObject:parseTrans];
+                                                  
+                                              }
+                                              else {
+                                                  [parseTrans saveEventually:^(BOOL success, NSError *error){
+                                                      if (success)  [self syncWithSuccessBetweenLocalObject:transaction andParseObject:parseTrans];
+                                                  }];
+                                              }
+                                          }];
+                                          
+                                      });
                                       successBlock();
                                   }
                               }

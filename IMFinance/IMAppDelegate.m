@@ -79,6 +79,8 @@
     [Parse setApplicationId:@"pIpS2OPgLbzbt6M0DmQ5A2RFk0VjCL8kRMsvTlPl"
                   clientKey:@"CcPTCbuGwdJwlxK47H1Xuf8Wu4UVKQs4cdhWiYix"];
     
+    [[IMCoreDataManager sharedInstance] performSync];
+    
     //при первом запуске валюту по умолчанию на основании локали телефона
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],@"firstLaunch",nil]];
     BOOL firstLaunch = [[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"];
@@ -92,7 +94,7 @@
     
     //заносим базовые категории в базу
     if ([[Category MR_numberOfEntities] integerValue] == 0)
-        [[[IMCoreDataManager alloc] init] setupBaseCategories];
+        [[IMCoreDataManager sharedInstance] setupBaseCategories];
 
     #define TESTING 1
     #ifdef TESTING

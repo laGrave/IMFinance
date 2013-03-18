@@ -4,7 +4,10 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/FBAccessTokenData</TokenIdentifier>
-			<Abstract type="html">@class FBAccessTokenData</Abstract>
+			<Abstract type="html">Represents an access token used for the Facebook login flow
+  and includes associated metadata such as expiration date and permissions.
+  You should use factory methods (createToken...) to construct instances
+  and should be treated as immutable.</Abstract>
 			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>
 			
 			<NodeRef refid="1"/>
@@ -13,7 +16,8 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBAccessTokenData/createTokenFromFacebookURL:appID:urlSchemeSuffix:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Creates an FBAccessTokenData from an App Link provided by the Facebook application
+  or nil if the url is not valid.</Abstract>
 			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
 			
 			<Declaration>+ (FBAccessTokenData *)createTokenFromFacebookURL:(NSURL *)url appID:(NSString *)appID urlSchemeSuffix:(NSString *)urlSchemeSuffix</Declaration>
@@ -35,7 +39,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBAccessTokenData/createTokenFromDictionary:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Creates an FBAccessTokenData from a dictionary or returns nil if required data is missing.</Abstract>
 			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
 			
 			<Declaration>+ (FBAccessTokenData *)createTokenFromDictionary:(NSDictionary *)dictionary</Declaration>
@@ -51,7 +55,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBAccessTokenData/createTokenFromString:permissions:expirationDate:loginType:refreshDate:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Creates an FBAccessTokenData from existing information or returns nil if required data is missing.</Abstract>
 			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
 			
 			<Declaration>+ (FBAccessTokenData *)createTokenFromString:(NSString *)accessToken permissions:(NSArray *)permissions expirationDate:(NSDate *)expirationDate loginType:(FBSessionLoginType)loginType refreshDate:(NSDate *)refreshDate</Declaration>
@@ -79,7 +83,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/dictionary</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Returns a dictionary representation of this instance.</Abstract>
 			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
 			
 			<Declaration>- (NSMutableDictionary *)dictionary</Declaration>
@@ -90,7 +94,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/isEqualToAccessTokenData:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Returns a Boolean value that indicates whether a given object is an FBAccessTokenData object and exactly equal the receiver.</Abstract>
 			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
 			
 			<Declaration>- (BOOL)isEqualToAccessTokenData:(FBAccessTokenData *)accessTokenData</Declaration>
@@ -106,7 +110,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/setAccessToken:</TokenIdentifier>
-			<Abstract type="html">@abstract returns the access token NSString.</Abstract>
+			<Abstract type="html">returns the access token NSString.</Abstract>
 			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic, copy) NSString *accessToken</Declaration>
@@ -117,7 +121,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBAccessTokenData/accessToken</TokenIdentifier>
-			<Abstract type="html">@abstract returns the access token NSString.</Abstract>
+			<Abstract type="html">returns the access token NSString.</Abstract>
 			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic, copy) NSString *accessToken</Declaration>
@@ -128,7 +132,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/setPermissions:</TokenIdentifier>
-			<Abstract type="html">@abstract returns the permissions associated with the access token.</Abstract>
+			<Abstract type="html">returns the permissions associated with the access token.</Abstract>
 			<DeclaredIn>FBAccessTokenData+Internal.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic, copy) NSArray *permissions</Declaration>
@@ -139,7 +143,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBAccessTokenData/permissions</TokenIdentifier>
-			<Abstract type="html">@abstract returns the permissions associated with the access token.</Abstract>
+			<Abstract type="html">returns the permissions associated with the access token.</Abstract>
 			<DeclaredIn>FBAccessTokenData+Internal.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic, copy) NSArray *permissions</Declaration>
@@ -150,7 +154,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/setExpirationDate:</TokenIdentifier>
-			<Abstract type="html">@abstract returns the expiration date of the access token.</Abstract>
+			<Abstract type="html">returns the expiration date of the access token.</Abstract>
 			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic, copy) NSDate *expirationDate</Declaration>
@@ -161,7 +165,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBAccessTokenData/expirationDate</TokenIdentifier>
-			<Abstract type="html">@abstract returns the expiration date of the access token.</Abstract>
+			<Abstract type="html">returns the expiration date of the access token.</Abstract>
 			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic, copy) NSDate *expirationDate</Declaration>
@@ -172,7 +176,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/setLoginType:</TokenIdentifier>
-			<Abstract type="html">@abstract returns the login type associated with the token.</Abstract>
+			<Abstract type="html">returns the login type associated with the token.</Abstract>
 			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) FBSessionLoginType loginType</Declaration>
@@ -183,7 +187,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBAccessTokenData/loginType</TokenIdentifier>
-			<Abstract type="html">@abstract returns the login type associated with the token.</Abstract>
+			<Abstract type="html">returns the login type associated with the token.</Abstract>
 			<DeclaredIn>FBAccessTokenData.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) FBSessionLoginType loginType</Declaration>
@@ -194,7 +198,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBAccessTokenData/setRefreshDate:</TokenIdentifier>
-			<Abstract type="html">@abstract returns the date the token was last refreshed.</Abstract>
+			<Abstract type="html">returns the date the token was last refreshed.</Abstract>
 			<DeclaredIn>FBAccessTokenData+Internal.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic, copy) NSDate *refreshDate</Declaration>
@@ -205,7 +209,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBAccessTokenData/refreshDate</TokenIdentifier>
-			<Abstract type="html">@abstract returns the date the token was last refreshed.</Abstract>
+			<Abstract type="html">returns the date the token was last refreshed.</Abstract>
 			<DeclaredIn>FBAccessTokenData+Internal.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic, copy) NSDate *refreshDate</Declaration>

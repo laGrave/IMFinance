@@ -95,9 +95,7 @@ Called if the view controller encounters an error while trying to log a user in.
 					<Abstract type="html">The view controller sending the message.</Abstract>
 				</Parameter><Parameter>
 					<Name>error</Name>
-					<Abstract type="html">The error encountered.
-@discussion See https://developers.facebook.com/docs/technical-guides/iossdk/errors/
-for error handling best practices.</Abstract>
+					<Abstract type="html">The error encountered.</Abstract>
 				</Parameter>
 			</Parameters>
 			

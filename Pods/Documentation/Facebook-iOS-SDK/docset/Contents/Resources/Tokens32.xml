@@ -111,7 +111,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setIsOpen:</TokenIdentifier>
-			<Abstract type="html">@abstract Indicates whether the session is open and ready for use.</Abstract>
+			<Abstract type="html">Indicates whether the session is open and ready for use.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly) BOOL isOpen</Declaration>
@@ -122,7 +122,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBSession/isOpen</TokenIdentifier>
-			<Abstract type="html">@abstract Indicates whether the session is open and ready for use.</Abstract>
+			<Abstract type="html">Indicates whether the session is open and ready for use.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly) BOOL isOpen</Declaration>
@@ -133,7 +133,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setState:</TokenIdentifier>
-			<Abstract type="html">@abstract Detailed session state</Abstract>
+			<Abstract type="html">Detailed session state</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly) FBSessionState state</Declaration>
@@ -144,7 +144,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBSession/state</TokenIdentifier>
-			<Abstract type="html">@abstract Detailed session state</Abstract>
+			<Abstract type="html">Detailed session state</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly) FBSessionState state</Declaration>
@@ -155,7 +155,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setAppID:</TokenIdentifier>
-			<Abstract type="html">@abstract Identifies the Facebook app which the session object represents.</Abstract>
+			<Abstract type="html">Identifies the Facebook app which the session object represents.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, copy) NSString *appID</Declaration>
@@ -166,7 +166,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBSession/appID</TokenIdentifier>
-			<Abstract type="html">@abstract Identifies the Facebook app which the session object represents.</Abstract>
+			<Abstract type="html">Identifies the Facebook app which the session object represents.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, copy) NSString *appID</Declaration>
@@ -177,7 +177,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setUrlSchemeSuffix:</TokenIdentifier>
-			<Abstract type="html">@abstract Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single Facebook app ID.</Abstract>
+			<Abstract type="html">Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single Facebook app ID.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, copy) NSString *urlSchemeSuffix</Declaration>
@@ -188,7 +188,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBSession/urlSchemeSuffix</TokenIdentifier>
-			<Abstract type="html">@abstract Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single Facebook app ID.</Abstract>
+			<Abstract type="html">Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single Facebook app ID.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, copy) NSString *urlSchemeSuffix</Declaration>
@@ -199,8 +199,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setAccessToken:</TokenIdentifier>
-			<Abstract type="html">@abstract The access token for the session object.
-    @discussion Deprecated. Use the accessTokenData property. </Abstract>
+			<Abstract type="html">The access token for the session object.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, copy) NSString *accessToken</Declaration>
@@ -211,8 +210,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBSession/accessToken</TokenIdentifier>
-			<Abstract type="html">@abstract The access token for the session object.
-    @discussion Deprecated. Use the accessTokenData property. </Abstract>
+			<Abstract type="html">The access token for the session object.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, copy) NSString *accessToken</Declaration>
@@ -223,8 +221,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setExpirationDate:</TokenIdentifier>
-			<Abstract type="html">@abstract The expiration date of the access token for the session object.
-    @discussion Deprecated. Use the accessTokenData property. </Abstract>
+			<Abstract type="html">The expiration date of the access token for the session object.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, copy) NSDate *expirationDate</Declaration>
@@ -235,8 +232,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBSession/expirationDate</TokenIdentifier>
-			<Abstract type="html">@abstract The expiration date of the access token for the session object.
-    @discussion Deprecated. Use the accessTokenData property. </Abstract>
+			<Abstract type="html">The expiration date of the access token for the session object.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, copy) NSDate *expirationDate</Declaration>
@@ -247,7 +243,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setPermissions:</TokenIdentifier>
-			<Abstract type="html">@abstract The permissions granted to the access token during the authentication flow.</Abstract>
+			<Abstract type="html">The permissions granted to the access token during the authentication flow.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, copy) NSArray *permissions</Declaration>
@@ -258,7 +254,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBSession/permissions</TokenIdentifier>
-			<Abstract type="html">@abstract The permissions granted to the access token during the authentication flow.</Abstract>
+			<Abstract type="html">The permissions granted to the access token during the authentication flow.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, copy) NSArray *permissions</Declaration>
@@ -269,8 +265,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setLoginType:</TokenIdentifier>
-			<Abstract type="html">@abstract Specifies the login type used to authenticate the user.
-    @discussion Deprecated. Use the accessTokenData property. </Abstract>
+			<Abstract type="html">Specifies the login type used to authenticate the user.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly) FBSessionLoginType loginType</Declaration>
@@ -281,8 +276,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBSession/loginType</TokenIdentifier>
-			<Abstract type="html">@abstract Specifies the login type used to authenticate the user.
-    @discussion Deprecated. Use the accessTokenData property. </Abstract>
+			<Abstract type="html">Specifies the login type used to authenticate the user.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly) FBSessionLoginType loginType</Declaration>
@@ -293,7 +287,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setAccessTokenData:</TokenIdentifier>
-			<Abstract type="html">@abstract Gets the FBAccessTokenData for the session</Abstract>
+			<Abstract type="html">Gets the FBAccessTokenData for the session</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, copy) FBAccessTokenData *accessTokenData</Declaration>
@@ -304,7 +298,7 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FBSession/accessTokenData</TokenIdentifier>
-			<Abstract type="html">@abstract Gets the FBAccessTokenData for the session</Abstract>
+			<Abstract type="html">Gets the FBAccessTokenData for the session</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, copy) FBAccessTokenData *accessTokenData</Declaration>
@@ -315,7 +309,9 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSession/openWithCompletionHandler:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Opens a session for the Facebook.
+
+</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>- (void)openWithCompletionHandler:(FBSessionStateHandler)handler</Declaration>
@@ -331,7 +327,9 @@ are used, then the audience must also be specified.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSession/openWithBehavior:completionHandler:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Logs a user on to Facebook.
+
+</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>- (void)openWithBehavior:(FBSessionLoginBehavior)behavior completionHandler:(FBSessionStateHandler)handler</Declaration>
@@ -351,7 +349,9 @@ is to allow Facebook Login, with fallback to Inline Facebook Login.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FBSession/openFromAccessTokenData:completionHandler:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Imports an existing access token and opens the session with it.
+
+</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>- (BOOL)openFromAccessTokenData:(FBAccessTokenData *)accessTokenData completionHandler:(FBSessionStateHandler)handler</Declaration>
@@ -410,11 +410,7 @@ authentication flow. A value of nil indicates basic permissions. The default is 
 is to allow Facebook Login and fall back to Inline Facebook Login if needed.</Abstract>
 				</Parameter><Parameter>
 					<Name>handler</Name>
-					<Abstract type="html">A block to call with session state changes. The default is nil.
-
-@discussion Methods and properties that specify permissions without a read or publish
-qualification are deprecated; use of a read-qualified or publish-qualified alternative is preferred
-(e.g. reauthorizeWithReadPermissions or reauthorizeWithPublishPermissions)</Abstract>
+					<Abstract type="html">A block to call with session state changes. The default is nil.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -435,10 +431,7 @@ Reauthorizes the session, with additional permissions.</Abstract>
 authentication flow. A value of nil indicates basic permissions.</Abstract>
 				</Parameter><Parameter>
 					<Name>handler</Name>
-					<Abstract type="html">A block to call with session state changes. The default is nil.
-
-@discussion This method is a deprecated alias of [FBSession requestNewReadPermissions:completionHandler:]. Consider
-using [FBSession requestNewReadPermissions:completionHandler:], which is preferred for readability.</Abstract>
+					<Abstract type="html">A block to call with session state changes. The default is nil.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -463,10 +456,7 @@ authentication flow.</Abstract>
 					<Abstract type="html">Specifies the audience for posts.</Abstract>
 				</Parameter><Parameter>
 					<Name>handler</Name>
-					<Abstract type="html">A block to call with session state changes. The default is nil.
-
-@discussion This method is a deprecated alias of [FBSession requestNewPublishPermissions:defaultAudience:completionHandler:].
-Consider using [FBSession requestNewPublishPermissions:defaultAudience:completionHandler:], which is preferred for readability.</Abstract>
+					<Abstract type="html">A block to call with session state changes. The default is nil.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -487,11 +477,7 @@ Requests new or additional read permissions for the session.</Abstract>
 authentication flow. A value of nil indicates basic permissions.</Abstract>
 				</Parameter><Parameter>
 					<Name>handler</Name>
-					<Abstract type="html">A block to call with session state changes. The default is nil.
-
-@discussion The handler, if non-nil, is called once the operation has completed or failed. This is in contrast to the
-state completion handler used in [FBSession openWithCompletionHandler:] (and other open* methods) which is called
-for each state-change for the session.</Abstract>
+					<Abstract type="html">A block to call with session state changes. The default is nil.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -515,11 +501,7 @@ authentication flow.</Abstract>
 					<Abstract type="html">Specifies the audience for posts.</Abstract>
 				</Parameter><Parameter>
 					<Name>handler</Name>
-					<Abstract type="html">A block to call with session state changes. The default is nil.
-
-@discussion The handler, if non-nil, is called once the operation has completed or failed. This is in contrast to the
-state completion handler used in [FBSession openWithCompletionHandler:] (and other open* methods) which is called
-for each state-change for the session.</Abstract>
+					<Abstract type="html">A block to call with session state changes. The default is nil.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -761,7 +743,8 @@ session can be set directly.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSession/setDefaultAppID:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Set the default Facebook App ID to use for sessions. The app ID may be
+overridden on a per session basis.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>+ (void)setDefaultAppID:(NSString *)appID</Declaration>
@@ -777,7 +760,9 @@ session can be set directly.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSession/defaultAppID</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Get the default Facebook App ID to use for sessions. If not explicitly
+set, the default will be read from the application&apos;s plist. The app ID may be
+overridden on a per session basis.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>+ (NSString *)defaultAppID</Declaration>
@@ -788,7 +773,8 @@ session can be set directly.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSession/setDefaultUrlSchemeSuffix:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Set the default url scheme suffix to use for sessions. The url
+scheme suffix may be overridden on a per session basis.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>+ (void)setDefaultUrlSchemeSuffix:(NSString *)urlSchemeSuffix</Declaration>
@@ -804,7 +790,9 @@ session can be set directly.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSession/defaultUrlSchemeSuffix</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Get the default url scheme suffix used for sessions.  If not
+explicitly set, the default will be read from the application&apos;s plist. The
+url scheme suffix may be overridden on a per session basis.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>+ (NSString *)defaultUrlSchemeSuffix</Declaration>
@@ -815,7 +803,7 @@ session can be set directly.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSession/renewSystemCredentials:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Issues an asychronous renewCredentialsForAccount call to the device Facebook account store.</Abstract>
 			<DeclaredIn>FBSession.h</DeclaredIn>			
 			
 			<Declaration>+ (void)renewSystemCredentials:(FBSessionRenewSystemCredentialsHandler)handler</Declaration>
@@ -823,15 +811,7 @@ session can be set directly.</Abstract>
 				<Parameter>
 					<Name>handler</Name>
 					<Abstract type="html">The completion handler to call when the renewal is completed. The handler will be
-invoked on the main thread.
-
-@discussion This can be used to explicitly renew account credentials on iOS 6 devices and is provided
-as a convenience wrapper around [ACAccountStore renewCredentialsForAccount:completion]. Note the
-method will not issue the renewal call if the the Facebook account has not been set on the device, or
-if access had not been granted to the account (though the handler wil receive an error).
-
-This is safe to call (and will surface an error to the handler) on versions of iOS before 6 or if the user
-logged in via Safari or Facebook SSO.</Abstract>
+invoked on the main thread.</Abstract>
 				</Parameter>
 			</Parameters>
 			

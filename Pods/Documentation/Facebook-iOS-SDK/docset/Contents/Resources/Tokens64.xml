@@ -4,7 +4,9 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intf/FBSBJsonParser</TokenIdentifier>
-			<Abstract type="html">  @brief Options for the parser class.</Abstract>
+			<Abstract type="html">Options for the parser class.
+
+This exists so the SBJSON facade can implement the options in the parser without having to re-declare them.</Abstract>
 			<DeclaredIn>FBSBJsonParser.h</DeclaredIn>
 			
 			<NodeRef refid="64"/>
@@ -13,7 +15,10 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBSBJsonParser/objectWithString:</TokenIdentifier>
-			<Abstract type="html">@brief Return the object represented by the given string.</Abstract>
+			<Abstract type="html">Return the object represented by the given string.
+
+Returns the object represented by the passed-in string or nil on error. The returned object can be
+a string, number, boolean, null, array or dictionary.</Abstract>
 			<DeclaredIn>FBSBJsonParser.h</DeclaredIn>			
 			
 			<Declaration>- (id)objectWithString:(NSString *)repr</Declaration>

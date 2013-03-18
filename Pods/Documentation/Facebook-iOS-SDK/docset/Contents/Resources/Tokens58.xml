@@ -13,8 +13,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphUser/setId:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s ID.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s ID.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *id</Declaration>
@@ -25,8 +24,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphUser/id</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s ID.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s ID.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *id</Declaration>
@@ -37,8 +35,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphUser/setName:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s name.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s name.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *name</Declaration>
@@ -49,8 +46,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphUser/name</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s name.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s name.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *name</Declaration>
@@ -61,8 +57,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphUser/setFirst_name:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s first name.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s first name.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *first_name</Declaration>
@@ -73,8 +68,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphUser/first_name</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s first name.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s first name.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *first_name</Declaration>
@@ -85,8 +79,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphUser/setMiddle_name:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s middle name.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s middle name.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *middle_name</Declaration>
@@ -97,8 +90,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphUser/middle_name</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s middle name.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s middle name.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *middle_name</Declaration>
@@ -109,8 +101,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphUser/setLast_name:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s last name.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s last name.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *last_name</Declaration>
@@ -121,8 +112,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphUser/last_name</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s last name.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s last name.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *last_name</Declaration>
@@ -133,8 +123,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphUser/setLink:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s profile URL.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s profile URL.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *link</Declaration>
@@ -145,8 +134,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphUser/link</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s profile URL.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s profile URL.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *link</Declaration>
@@ -157,8 +145,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphUser/setUsername:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s username.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s username.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *username</Declaration>
@@ -169,8 +156,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphUser/username</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s username.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s username.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *username</Declaration>
@@ -181,8 +167,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphUser/setBirthday:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s birthday.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s birthday.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *birthday</Declaration>
@@ -193,8 +178,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphUser/birthday</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s birthday.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s birthday.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *birthday</Declaration>
@@ -205,8 +189,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphUser/setLocation:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s current city.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s current city.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) id&lt;FBGraphPlace&gt; location</Declaration>
@@ -217,8 +200,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphUser/location</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the user&apos;s current city.</Abstract>
+			<Abstract type="html">Typed access to the user&apos;s current city.</Abstract>
 			<DeclaredIn>FBGraphUser.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) id&lt;FBGraphPlace&gt; location</Declaration>

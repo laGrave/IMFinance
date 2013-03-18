@@ -13,8 +13,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphLocation/setStreet:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s street.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s street.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *street</Declaration>
@@ -25,8 +24,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphLocation/street</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s street.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s street.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *street</Declaration>
@@ -37,8 +35,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphLocation/setCity:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s city.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s city.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *city</Declaration>
@@ -49,8 +46,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphLocation/city</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s city.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s city.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *city</Declaration>
@@ -61,8 +57,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphLocation/setState:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s state.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s state.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *state</Declaration>
@@ -73,8 +68,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphLocation/state</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s state.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s state.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *state</Declaration>
@@ -85,8 +79,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphLocation/setCountry:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s country.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s country.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *country</Declaration>
@@ -97,8 +90,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphLocation/country</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s country.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s country.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *country</Declaration>
@@ -109,8 +101,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphLocation/setZip:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s zip code.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s zip code.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *zip</Declaration>
@@ -121,8 +112,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphLocation/zip</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s zip code.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s zip code.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *zip</Declaration>
@@ -133,8 +123,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphLocation/setLatitude:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s latitude.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s latitude.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSNumber *latitude</Declaration>
@@ -145,8 +134,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphLocation/latitude</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s latitude.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s latitude.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSNumber *latitude</Declaration>
@@ -157,8 +145,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphLocation/setLongitude:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s longitude.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s longitude.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSNumber *longitude</Declaration>
@@ -169,8 +156,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphLocation/longitude</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to a location&apos;s longitude.</Abstract>
+			<Abstract type="html">Typed access to a location&apos;s longitude.</Abstract>
 			<DeclaredIn>FBGraphLocation.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSNumber *longitude</Declaration>

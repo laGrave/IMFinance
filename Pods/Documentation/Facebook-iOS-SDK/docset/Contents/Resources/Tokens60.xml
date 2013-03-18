@@ -78,9 +78,7 @@ Tells the delegate that there is a communication or authorization error.</Abstra
 					<Abstract type="html">The login view that transitioned its view mode</Abstract>
 				</Parameter><Parameter>
 					<Name>error</Name>
-					<Abstract type="html">An error object containing details of the error.
-@discussion See https://developers.facebook.com/docs/technical-guides/iossdk/errors/
-for error handling best practices.</Abstract>
+					<Abstract type="html">An error object containing details of the error.</Abstract>
 				</Parameter>
 			</Parameters>
 			

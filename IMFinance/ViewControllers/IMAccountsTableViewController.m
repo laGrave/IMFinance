@@ -9,11 +9,14 @@
 #import "IMAccountsTableViewController.h"
 
 #import "Account+Extensions.h"
+#import "SyncObject.h"
 
 #import "IMAccountEditViewController.h"
 #import "IMTransactionsTableViewController.h"
 
 #import "IMAccountTypeConfig.h"
+
+#import "IMCoreDataManager.h"
 
 @interface IMAccountsTableViewController () <NSFetchedResultsControllerDelegate>
 
@@ -33,7 +36,8 @@
         return _fetchedResultsController;
     }
     
-    _fetchedResultsController = [Account MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:nil ascending:YES delegate:self];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"is_deleted == NO"];
+    _fetchedResultsController = [Account MR_fetchAllGroupedBy:@"type" withPredicate:predicate sortedBy:nil ascending:YES delegate:self];
     
     return _fetchedResultsController;
 }
@@ -63,6 +67,19 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSArray *accounts = [Account MR_findAll];
+        for (Account *account in accounts) {
+            NSLog(@"account id %@", account.object_id);
+            NSLog(@"account ID %@", account.objectID);
+            NSLog(@"account name %@", account.name);
+        }
+    });
 }
 
 
@@ -99,7 +116,7 @@
     [numberFormatter setMaximumFractionDigits:2];
     cell.detailTextLabel.text = [numberFormatter stringFromNumber:account.value];
     
-    NSLog(@"account id : %@", account.objectId);
+    NSLog(@"account id : %@", account.object_id);
     
     return cell;
 }
@@ -123,8 +140,9 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        Account *accountToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        [accountToDelete MR_deleteEntity];
+//        Account *accountToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
+//        [accountToDelete MR_deleteEntity];
+        [[IMCoreDataManager sharedInstance] deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

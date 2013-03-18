@@ -4,7 +4,8 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/FBSettings</TokenIdentifier>
-			<Abstract type="html">@typedef</Abstract>
+			<Abstract type="html">Block type used to get install data that is returned by server when publishInstall is called
+</Abstract>
 			<DeclaredIn>FBSettings.h</DeclaredIn>
 			
 			<NodeRef refid="36"/>
@@ -13,7 +14,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/loggingBehavior</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Retrieve the current Facebook SDK logging behavior.</Abstract>
 			<DeclaredIn>FBSettings.h</DeclaredIn>			
 			
 			<Declaration>+ (NSSet *)loggingBehavior</Declaration>
@@ -24,7 +25,8 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/setLoggingBehavior:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Set the current Facebook SDK logging behavior.  This should consist of strings defined as
+constants with FBLogBehavior*, and can be constructed with, e.g., [NSSet initWithObjects:].</Abstract>
 			<DeclaredIn>FBSettings.h</DeclaredIn>			
 			
 			<Declaration>+ (void)setLoggingBehavior:(NSSet *)loggingBehavior</Declaration>
@@ -41,7 +43,7 @@ behavior is reset to the default set of enabled behaviors.  Set in an empty set 
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/shouldAutoPublishInstall</TokenIdentifier>
-			<Abstract type="html">@abstract Retreive the current auto publish behavior.  Defaults to YES.</Abstract>
+			<Abstract type="html">Retreive the current auto publish behavior.  Defaults to YES.</Abstract>
 			<DeclaredIn>FBSettings.h</DeclaredIn>			
 			
 			<Declaration>+ (BOOL)shouldAutoPublishInstall</Declaration>
@@ -52,7 +54,8 @@ behavior is reset to the default set of enabled behaviors.  Set in an empty set 
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/setShouldAutoPublishInstall:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Sets whether the SDK will automatically publish an install to Facebook during first FBSession init
+or on first network request to Facebook.</Abstract>
 			<DeclaredIn>FBSettings.h</DeclaredIn>			
 			
 			<Declaration>+ (void)setShouldAutoPublishInstall:(BOOL)autoPublishInstall</Declaration>
@@ -68,7 +71,10 @@ behavior is reset to the default set of enabled behaviors.  Set in an empty set 
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/publishInstall:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Manually publish an attributed install to the facebook graph. Calling this method will implicitly
+turn off auto-publish.  This method acquires the current attribution id from the facebook application, queries the
+graph API to determine if the application has install attribution enabled, publishes the id, and records
+success to avoid reporting more than once.</Abstract>
 			<DeclaredIn>FBSettings.h</DeclaredIn>			
 			
 			<Declaration>+ (void)publishInstall:(NSString *)appID</Declaration>
@@ -84,7 +90,10 @@ behavior is reset to the default set of enabled behaviors.  Set in an empty set 
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/publishInstall:withHandler:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Manually publish an attributed install to the Facebook graph, and return the server response back in
+the supplied handler.  Calling this method will implicitly turn off auto-publish.  This method acquires the
+current attribution id from the facebook application, queries the graph API to determine if the application
+has install attribution enabled, publishes the id, and records success to avoid reporting more than once.</Abstract>
 			<DeclaredIn>FBSettings.h</DeclaredIn>			
 			
 			<Declaration>+ (void)publishInstall:(NSString *)appID withHandler:(FBInstallResponseDataHandler)handler</Declaration>
@@ -103,7 +112,7 @@ behavior is reset to the default set of enabled behaviors.  Set in an empty set 
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/clientToken</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Retrieve the Client Token that has been set via [FBSettings setClientToken]</Abstract>
 			<DeclaredIn>FBSettings.h</DeclaredIn>			
 			
 			<Declaration>+ (NSString *)clientToken</Declaration>
@@ -114,7 +123,9 @@ behavior is reset to the default set of enabled behaviors.  Set in an empty set 
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FBSettings/setClientToken:</TokenIdentifier>
-			<Abstract type="html">@method</Abstract>
+			<Abstract type="html">Sets the Client Token for the Facebook App.  This is needed for certain API calls when made anonymously,
+without a user-based Session. Calls to FBInsights logging events are examples of this, when there may
+have been no user login established.</Abstract>
 			<DeclaredIn>FBSettings.h</DeclaredIn>			
 			
 			<Declaration>+ (void)setClientToken:(NSString *)clientToken</Declaration>

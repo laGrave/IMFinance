@@ -13,8 +13,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphPlace/setId:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the place ID.</Abstract>
+			<Abstract type="html">Typed access to the place ID.</Abstract>
 			<DeclaredIn>FBGraphPlace.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *id</Declaration>
@@ -25,8 +24,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphPlace/id</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the place ID.</Abstract>
+			<Abstract type="html">Typed access to the place ID.</Abstract>
 			<DeclaredIn>FBGraphPlace.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *id</Declaration>
@@ -37,8 +35,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphPlace/setName:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the place name.</Abstract>
+			<Abstract type="html">Typed access to the place name.</Abstract>
 			<DeclaredIn>FBGraphPlace.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *name</Declaration>
@@ -49,8 +46,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphPlace/name</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the place name.</Abstract>
+			<Abstract type="html">Typed access to the place name.</Abstract>
 			<DeclaredIn>FBGraphPlace.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *name</Declaration>
@@ -61,8 +57,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphPlace/setCategory:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the place category.</Abstract>
+			<Abstract type="html">Typed access to the place category.</Abstract>
 			<DeclaredIn>FBGraphPlace.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *category</Declaration>
@@ -73,8 +68,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphPlace/category</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the place category.</Abstract>
+			<Abstract type="html">Typed access to the place category.</Abstract>
 			<DeclaredIn>FBGraphPlace.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *category</Declaration>
@@ -85,8 +79,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphPlace/setLocation:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the place location.</Abstract>
+			<Abstract type="html">Typed access to the place location.</Abstract>
 			<DeclaredIn>FBGraphPlace.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) id&lt;FBGraphLocation&gt; location</Declaration>
@@ -97,8 +90,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBGraphPlace/location</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to the place location.</Abstract>
+			<Abstract type="html">Typed access to the place location.</Abstract>
 			<DeclaredIn>FBGraphPlace.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) id&lt;FBGraphLocation&gt; location</Declaration>

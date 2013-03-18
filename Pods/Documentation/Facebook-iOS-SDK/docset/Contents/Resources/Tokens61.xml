@@ -13,8 +13,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setId:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s id</Abstract>
+			<Abstract type="html">Typed access to action&apos;s id</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *id</Declaration>
@@ -25,8 +24,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/id</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s id</Abstract>
+			<Abstract type="html">Typed access to action&apos;s id</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *id</Declaration>
@@ -37,8 +35,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setStart_time:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s start time</Abstract>
+			<Abstract type="html">Typed access to action&apos;s start time</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *start_time</Declaration>
@@ -49,8 +46,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/start_time</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s start time</Abstract>
+			<Abstract type="html">Typed access to action&apos;s start time</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *start_time</Declaration>
@@ -61,8 +57,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setEnd_time:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s end time</Abstract>
+			<Abstract type="html">Typed access to action&apos;s end time</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *end_time</Declaration>
@@ -73,8 +68,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/end_time</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s end time</Abstract>
+			<Abstract type="html">Typed access to action&apos;s end time</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *end_time</Declaration>
@@ -85,8 +79,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setPublish_time:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s publication time</Abstract>
+			<Abstract type="html">Typed access to action&apos;s publication time</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *publish_time</Declaration>
@@ -97,8 +90,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/publish_time</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s publication time</Abstract>
+			<Abstract type="html">Typed access to action&apos;s publication time</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *publish_time</Declaration>
@@ -109,8 +101,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setCreated_time:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s creation time</Abstract>
+			<Abstract type="html">Typed access to action&apos;s creation time</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *created_time</Declaration>
@@ -121,8 +112,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/created_time</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s creation time</Abstract>
+			<Abstract type="html">Typed access to action&apos;s creation time</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *created_time</Declaration>
@@ -133,8 +123,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setExpires_time:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s expiration time</Abstract>
+			<Abstract type="html">Typed access to action&apos;s expiration time</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *expires_time</Declaration>
@@ -145,8 +134,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/expires_time</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s expiration time</Abstract>
+			<Abstract type="html">Typed access to action&apos;s expiration time</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *expires_time</Declaration>
@@ -157,8 +145,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setRef:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s ref</Abstract>
+			<Abstract type="html">Typed access to action&apos;s ref</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *ref</Declaration>
@@ -169,8 +156,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/ref</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s ref</Abstract>
+			<Abstract type="html">Typed access to action&apos;s ref</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *ref</Declaration>
@@ -181,8 +167,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setMessage:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s user message</Abstract>
+			<Abstract type="html">Typed access to action&apos;s user message</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *message</Declaration>
@@ -193,8 +178,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/message</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s user message</Abstract>
+			<Abstract type="html">Typed access to action&apos;s user message</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSString *message</Declaration>
@@ -205,8 +189,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setPlace:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s place</Abstract>
+			<Abstract type="html">Typed access to action&apos;s place</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) id&lt;FBGraphPlace&gt; place</Declaration>
@@ -217,8 +200,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/place</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s place</Abstract>
+			<Abstract type="html">Typed access to action&apos;s place</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) id&lt;FBGraphPlace&gt; place</Declaration>
@@ -229,8 +211,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setTags:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s tags</Abstract>
+			<Abstract type="html">Typed access to action&apos;s tags</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSArray *tags</Declaration>
@@ -241,8 +222,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/tags</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s tags</Abstract>
+			<Abstract type="html">Typed access to action&apos;s tags</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSArray *tags</Declaration>
@@ -253,8 +233,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setImage:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s images</Abstract>
+			<Abstract type="html">Typed access to action&apos;s images</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSArray *image</Declaration>
@@ -265,8 +244,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/image</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s images</Abstract>
+			<Abstract type="html">Typed access to action&apos;s images</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSArray *image</Declaration>
@@ -277,8 +255,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setFrom:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s from-user</Abstract>
+			<Abstract type="html">Typed access to action&apos;s from-user</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) id&lt;FBGraphUser&gt; from</Declaration>
@@ -289,8 +266,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/from</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s from-user</Abstract>
+			<Abstract type="html">Typed access to action&apos;s from-user</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) id&lt;FBGraphUser&gt; from</Declaration>
@@ -301,8 +277,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setLikes:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s likes</Abstract>
+			<Abstract type="html">Typed access to action&apos;s likes</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSArray *likes</Declaration>
@@ -313,8 +288,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/likes</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s likes</Abstract>
+			<Abstract type="html">Typed access to action&apos;s likes</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSArray *likes</Declaration>
@@ -325,8 +299,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setApplication:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s application</Abstract>
+			<Abstract type="html">Typed access to action&apos;s application</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) id&lt;FBGraphObject&gt; application</Declaration>
@@ -337,8 +310,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/application</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s application</Abstract>
+			<Abstract type="html">Typed access to action&apos;s application</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) id&lt;FBGraphObject&gt; application</Declaration>
@@ -349,8 +321,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/FBOpenGraphAction/setComments:</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s comments</Abstract>
+			<Abstract type="html">Typed access to action&apos;s comments</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSArray *comments</Declaration>
@@ -361,8 +332,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfp/FBOpenGraphAction/comments</TokenIdentifier>
-			<Abstract type="html">@property
-@abstract Typed access to action&apos;s comments</Abstract>
+			<Abstract type="html">Typed access to action&apos;s comments</Abstract>
 			<DeclaredIn>FBOpenGraphAction.h</DeclaredIn>			
 			
 			<Declaration>@property (retain, nonatomic) NSArray *comments</Declaration>

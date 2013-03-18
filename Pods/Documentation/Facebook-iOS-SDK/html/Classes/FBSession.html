@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -393,93 +393,84 @@ back in the course of <a href="#//api/name/state">state</a> transitions for the 
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/isOpen">&nbsp;&nbsp;isOpen</a></code>
-		<span class="tooltip"><p>@abstract Indicates whether the session is open and ready for use.</p></span>
+		<span class="tooltip"><p>Indicates whether the session is open and ready for use.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/state">&nbsp;&nbsp;state</a></code>
-		<span class="tooltip"><p>@abstract Detailed session state</p></span>
+		<span class="tooltip"><p>Detailed session state</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/appID">&nbsp;&nbsp;appID</a></code>
-		<span class="tooltip"><p>@abstract Identifies the <a href="../Classes/Facebook.html">Facebook</a> app which the session object represents.</p></span>
+		<span class="tooltip"><p>Identifies the <a href="../Classes/Facebook.html">Facebook</a> app which the session object represents.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/urlSchemeSuffix">&nbsp;&nbsp;urlSchemeSuffix</a></code>
-		<span class="tooltip"><p>@abstract Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single <a href="../Classes/Facebook.html">Facebook</a> app ID.</p></span>
+		<span class="tooltip"><p>Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single <a href="../Classes/Facebook.html">Facebook</a> app ID.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/accessToken">&nbsp;&nbsp;accessToken</a></code>
-		<span class="tooltip"><p>@abstract The access token for the session object.</p>
-
-<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
-</code></pre></span>
+		<span class="tooltip"><p>The access token for the session object.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/expirationDate">&nbsp;&nbsp;expirationDate</a></code>
-		<span class="tooltip"><p>@abstract The expiration date of the access token for the session object.</p>
-
-<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
-</code></pre></span>
+		<span class="tooltip"><p>The expiration date of the access token for the session object.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/permissions">&nbsp;&nbsp;permissions</a></code>
-		<span class="tooltip"><p>@abstract The permissions granted to the access token during the authentication flow.</p></span>
+		<span class="tooltip"><p>The permissions granted to the access token during the authentication flow.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/loginType">&nbsp;&nbsp;loginType</a></code>
-		<span class="tooltip"><p>@abstract Specifies the login type used to authenticate the user.</p>
-
-<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
-</code></pre></span>
+		<span class="tooltip"><p>Specifies the login type used to authenticate the user.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/accessTokenData">&nbsp;&nbsp;accessTokenData</a></code>
-		<span class="tooltip"><p>@abstract Gets the <a href="../Classes/FBAccessTokenData.html">FBAccessTokenData</a> for the session</p></span>
+		<span class="tooltip"><p>Gets the <a href="../Classes/FBAccessTokenData.html">FBAccessTokenData</a> for the session</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/openWithCompletionHandler:">&ndash;&nbsp;openWithCompletionHandler:</a></code>
-		<span class="tooltip"><p>@method</p></span>
+		<span class="tooltip"><p>Opens a session for the <a href="../Classes/Facebook.html">Facebook</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/openWithBehavior:completionHandler:">&ndash;&nbsp;openWithBehavior:completionHandler:</a></code>
-		<span class="tooltip"><p>@method</p></span>
+		<span class="tooltip"><p>Logs a user on to <a href="../Classes/Facebook.html">Facebook</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/openFromAccessTokenData:completionHandler:">&ndash;&nbsp;openFromAccessTokenData:completionHandler:</a></code>
-		<span class="tooltip"><p>@method</p></span>
+		<span class="tooltip"><p>Imports an existing access token and opens the session with it.</p></span>
 	</span>
 	
 	
@@ -620,35 +611,41 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setDefaultAppID:">+&nbsp;setDefaultAppID:</a></code>
-		<span class="tooltip"><p>@method</p></span>
+		<span class="tooltip"><p>Set the default <a href="../Classes/Facebook.html">Facebook</a> App ID to use for sessions. The app ID may be
+overridden on a per session basis.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/defaultAppID">+&nbsp;defaultAppID</a></code>
-		<span class="tooltip"><p>@method</p></span>
+		<span class="tooltip"><p>Get the default <a href="../Classes/Facebook.html">Facebook</a> App ID to use for sessions. If not explicitly
+set, the default will be read from the application&rsquo;s plist. The app ID may be
+overridden on a per session basis.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setDefaultUrlSchemeSuffix:">+&nbsp;setDefaultUrlSchemeSuffix:</a></code>
-		<span class="tooltip"><p>@method</p></span>
+		<span class="tooltip"><p>Set the default url scheme suffix to use for sessions. The url
+scheme suffix may be overridden on a per session basis.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/defaultUrlSchemeSuffix">+&nbsp;defaultUrlSchemeSuffix</a></code>
-		<span class="tooltip"><p>@method</p></span>
+		<span class="tooltip"><p>Get the default url scheme suffix used for sessions.  If not
+explicitly set, the default will be read from the application&rsquo;s plist. The
+url scheme suffix may be overridden on a per session basis.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/renewSystemCredentials:">+&nbsp;renewSystemCredentials:</a></code>
-		<span class="tooltip"><p>@method</p></span>
+		<span class="tooltip"><p>Issues an asychronous renewCredentialsForAccount call to the device <a href="../Classes/Facebook.html">Facebook</a> account store.</p></span>
 	</span>
 	
 	
@@ -786,10 +783,7 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@abstract The access token for the session object.</p>
-
-<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
-</code></pre>
+		<p>The access token for the session object.</p>
 	</div>		
 	
     
@@ -806,10 +800,7 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>@abstract The access token for the session object.</p>
-
-<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
-</code></pre>
+		<p>Deprecated. Use the <a href="#//api/name/accessTokenData"><code>accessTokenData</code></a> property.</p>
 	</div>
 	
 	
@@ -833,7 +824,7 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@abstract Gets the <a href="../Classes/FBAccessTokenData.html">FBAccessTokenData</a> for the session</p>
+		<p>Gets the <a href="../Classes/FBAccessTokenData.html">FBAccessTokenData</a> for the session</p>
 	</div>		
 	
     
@@ -847,11 +838,6 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>@abstract Gets the <a href="../Classes/FBAccessTokenData.html">FBAccessTokenData</a> for the session</p>
-	</div>
 	
 	
 	
@@ -874,7 +860,7 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@abstract Identifies the <a href="../Classes/Facebook.html">Facebook</a> app which the session object represents.</p>
+		<p>Identifies the <a href="../Classes/Facebook.html">Facebook</a> app which the session object represents.</p>
 	</div>		
 	
     
@@ -888,11 +874,6 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>@abstract Identifies the <a href="../Classes/Facebook.html">Facebook</a> app which the session object represents.</p>
-	</div>
 	
 	
 	
@@ -915,10 +896,7 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@abstract The expiration date of the access token for the session object.</p>
-
-<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
-</code></pre>
+		<p>The expiration date of the access token for the session object.</p>
 	</div>		
 	
     
@@ -935,10 +913,7 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>@abstract The expiration date of the access token for the session object.</p>
-
-<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
-</code></pre>
+		<p>Deprecated. Use the <a href="#//api/name/accessTokenData"><code>accessTokenData</code></a> property.</p>
 	</div>
 	
 	
@@ -984,7 +959,7 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@abstract Indicates whether the session is open and ready for use.</p>
+		<p>Indicates whether the session is open and ready for use.</p>
 	</div>		
 	
     
@@ -998,11 +973,6 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>@abstract Indicates whether the session is open and ready for use.</p>
-	</div>
 	
 	
 	
@@ -1036,10 +1006,7 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@abstract Specifies the login type used to authenticate the user.</p>
-
-<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
-</code></pre>
+		<p>Specifies the login type used to authenticate the user.</p>
 	</div>		
 	
     
@@ -1056,10 +1023,7 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>@abstract Specifies the login type used to authenticate the user.</p>
-
-<pre><code>@discussion Deprecated. Use the `accessTokenData` property. 
-</code></pre>
+		<p>Deprecated. Use the <a href="#//api/name/accessTokenData"><code>accessTokenData</code></a> property.</p>
 	</div>
 	
 	
@@ -1083,7 +1047,7 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@abstract The permissions granted to the access token during the authentication flow.</p>
+		<p>The permissions granted to the access token during the authentication flow.</p>
 	</div>		
 	
     
@@ -1097,11 +1061,6 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>@abstract The permissions granted to the access token during the authentication flow.</p>
-	</div>
 	
 	
 	
@@ -1124,7 +1083,7 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@abstract Detailed session state</p>
+		<p>Detailed session state</p>
 	</div>		
 	
     
@@ -1138,11 +1097,6 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>@abstract Detailed session state</p>
-	</div>
 	
 	
 	
@@ -1165,7 +1119,7 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@abstract Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single <a href="../Classes/Facebook.html">Facebook</a> app ID.</p>
+		<p>Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single <a href="../Classes/Facebook.html">Facebook</a> app ID.</p>
 	</div>		
 	
     
@@ -1179,11 +1133,6 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>@abstract Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single <a href="../Classes/Facebook.html">Facebook</a> app ID.</p>
-	</div>
 	
 	
 	
@@ -1276,7 +1225,9 @@ in order for it to be useable for communication with <a href="../Classes/Faceboo
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@method</p>
+		<p>Get the default <a href="../Classes/Facebook.html">Facebook</a> App ID to use for sessions. If not explicitly
+set, the default will be read from the application&rsquo;s plist. The app ID may be
+overridden on a per session basis.</p>
 	</div>		
 	
     
@@ -1294,10 +1245,6 @@ in order for it to be useable for communication with <a href="../Classes/Faceboo
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>@method</p>
-
-<p>@abstract Get the default <a href="../Classes/Facebook.html">Facebook</a> App ID to use for sessions. If not explicitly
-set, the default will be read from the application&rsquo;s plist. The app ID may be
-overridden on a per session basis.</p>
 	</div>
 	
 	
@@ -1321,7 +1268,9 @@ overridden on a per session basis.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@method</p>
+		<p>Get the default url scheme suffix used for sessions.  If not
+explicitly set, the default will be read from the application&rsquo;s plist. The
+url scheme suffix may be overridden on a per session basis.</p>
 	</div>		
 	
     
@@ -1339,10 +1288,6 @@ overridden on a per session basis.</p>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>@method</p>
-
-<p>@abstract Get the default url scheme suffix used for sessions.  If not
-explicitly set, the default will be read from the application&rsquo;s plist. The
-url scheme suffix may be overridden on a per session basis.</p>
 	</div>
 	
 	
@@ -1710,7 +1655,7 @@ used by the application. This session becomes the active session, whether open s
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@method</p>
+		<p>Issues an asychronous renewCredentialsForAccount call to the device <a href="../Classes/Facebook.html">Facebook</a> account store.</p>
 	</div>		
 	
     
@@ -1725,15 +1670,7 @@ used by the application. This session becomes the active session, whether open s
 		<dl class="argument-def parameter-def">
 			<dt><em>handler</em></dt>
 			<dd><p>The completion handler to call when the renewal is completed. The handler will be
-invoked on the main thread.</p>
-
-<p>@discussion This can be used to explicitly renew account credentials on iOS 6 devices and is provided
-as a convenience wrapper around <code>[ACAccountStore renewCredentialsForAccount:completion]</code>. Note the
-method will not issue the renewal call if the the <a href="../Classes/Facebook.html">Facebook</a> account has not been set on the device, or
-if access had not been granted to the account (though the handler wil receive an error).</p>
-
-<p>This is safe to call (and will surface an error to the handler) on versions of iOS before 6 or if the user
-logged in via Safari or <a href="../Classes/Facebook.html">Facebook</a> SSO.</p></dd>
+invoked on the main thread.</p></dd>
 		</dl>
 		
 	</div>
@@ -1746,9 +1683,13 @@ logged in via Safari or <a href="../Classes/Facebook.html">Facebook</a> SSO.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>@method</p>
+		<p>@method</p><p>This can be used to explicitly renew account credentials on iOS 6 devices and is provided
+as a convenience wrapper around <code>[ACAccountStore renewCredentialsForAccount:completion]</code>. Note the
+method will not issue the renewal call if the the <a href="../Classes/Facebook.html">Facebook</a> account has not been set on the device, or
+if access had not been granted to the account (though the handler wil receive an error).</p>
 
-<p>@abstract Issues an asychronous renewCredentialsForAccount call to the device <a href="../Classes/Facebook.html">Facebook</a> account store.</p>
+<p>This is safe to call (and will surface an error to the handler) on versions of iOS before 6 or if the user
+logged in via Safari or <a href="../Classes/Facebook.html">Facebook</a> SSO.</p>
 	</div>
 	
 	
@@ -1831,7 +1772,8 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@method</p>
+		<p>Set the default <a href="../Classes/Facebook.html">Facebook</a> App ID to use for sessions. The app ID may be
+overridden on a per session basis.</p>
 	</div>		
 	
     
@@ -1859,9 +1801,6 @@ will use the <a href="#//api/name/activeSession">activeSession</a> to set defaul
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>@method</p>
-
-<p>@abstract Set the default <a href="../Classes/Facebook.html">Facebook</a> App ID to use for sessions. The app ID may be
-overridden on a per session basis.</p>
 	</div>
 	
 	
@@ -1885,7 +1824,8 @@ overridden on a per session basis.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@method</p>
+		<p>Set the default url scheme suffix to use for sessions. The url
+scheme suffix may be overridden on a per session basis.</p>
 	</div>		
 	
     
@@ -1913,9 +1853,6 @@ overridden on a per session basis.</p>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>@method</p>
-
-<p>@abstract Set the default url scheme suffix to use for sessions. The url
-scheme suffix may be overridden on a per session basis.</p>
 	</div>
 	
 	
@@ -2455,7 +2392,7 @@ default values for parameters to <a href="#//api/name/initWithAppID:permissions:
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@method</p>
+		<p>Imports an existing access token and opens the session with it.</p>
 	</div>		
 	
     
@@ -2488,20 +2425,6 @@ default values for parameters to <a href="#//api/name/initWithAppID:permissions:
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>@method</p>
-
-<p>@abstract Imports an existing access token and opens the session with it.</p>
-
-<p>@discussion
-The method attempts to open the session using an existing access token. No UX will occur. If
-successful, the session with be in an Open <a href="#//api/name/state">state</a> and the method will return YES; otherwise, NO.</p>
-
-<p>The method may be called at most once and must be called after the <code>FBSession</code> is initialized (see below).
-It must be called before the session is closed. Calling the method at an invalid time will result in
-an exception. The open session methods may be passed a block that will be called back when the session
-<a href="#//api/name/state">state</a> changes. The block will be released when the session is closed.</p>
-
-<p>The initialized session must not have already been initialized from a cache (for example, you could use
-the <a href="../Classes/FBSessionTokenCachingStrategy.html#//api/name/nullCacheInstance"><code>[FBSessionTokenCachingStrategy nullCacheInstance]</code></a> instance).</p>
 	</div>
 	
 	
@@ -2525,7 +2448,7 @@ the <a href="../Classes/FBSessionTokenCachingStrategy.html#//api/name/nullCacheI
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@method</p>
+		<p>Logs a user on to <a href="../Classes/Facebook.html">Facebook</a>.</p>
 	</div>		
 	
     
@@ -2559,20 +2482,6 @@ is to allow <a href="../Classes/Facebook.html">Facebook</a> Login, with fallback
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>@method</p>
-
-<p>@abstract Logs a user on to <a href="../Classes/Facebook.html">Facebook</a>.</p>
-
-<p>@discussion
-A session may not be used with <a href="../Classes/FBRequest.html">FBRequest</a> and other classes in the SDK until it is open. If, prior
-to calling open, the session is in the <FBSessionStateCreatedTokenLoaded> <a href="#//api/name/state">state</a>, then no UX occurs, and
-the session becomes available for use. If the session is in the <FBSessionStateCreated> <a href="#//api/name/state">state</a>, prior
-to calling open, then a call to open causes login UX to occur, either via the <a href="../Classes/Facebook.html">Facebook</a> application
-or via mobile Safari.</p>
-
-<p>The method may be called at most once and must be called after the <code>FBSession</code> is initialized. It must
-be called before the session is closed. Calling the method at an invalid time will result in
-an exception. The open session methods may be passed a block that will be called back when the session
-<a href="#//api/name/state">state</a> changes. The block will be released when the session is closed.</p>
 	</div>
 	
 	
@@ -2596,7 +2505,7 @@ an exception. The open session methods may be passed a block that will be called
 	
 	
 	<div class="method-subsection brief-description">
-		<p>@method</p>
+		<p>Opens a session for the <a href="../Classes/Facebook.html">Facebook</a>.</p>
 	</div>		
 	
     
@@ -2624,20 +2533,6 @@ an exception. The open session methods may be passed a block that will be called
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>@method</p>
-
-<p>@abstract Opens a session for the <a href="../Classes/Facebook.html">Facebook</a>.</p>
-
-<p>@discussion
-A session may not be used with <a href="../Classes/FBRequest.html">FBRequest</a> and other classes in the SDK until it is open. If, prior
-to calling open, the session is in the <FBSessionStateCreatedTokenLoaded> <a href="#//api/name/state">state</a>, then no UX occurs, and
-the session becomes available for use. If the session is in the <FBSessionStateCreated> <a href="#//api/name/state">state</a>, prior
-to calling open, then a call to open causes login UX to occur, either via the <a href="../Classes/Facebook.html">Facebook</a> application
-or via mobile Safari.</p>
-
-<p>Open may be called at most once and must be called after the <code>FBSession</code> is initialized. Open must
-be called before the session is closed. Calling an open method at an invalid time will result in
-an exception. The open session methods may be passed a block that will be called back when the session
-<a href="#//api/name/state">state</a> changes. The block will be released when the session is closed.</p>
 	</div>
 	
 	
@@ -2688,11 +2583,7 @@ is to allow <a href="../Classes/Facebook.html">Facebook</a> Login and fall back 
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>handler</em></dt>
-			<dd><p>A block to call with session <a href="#//api/name/state">state</a> changes. The default is nil.</p>
-
-<p>@discussion Methods and properties that specify <a href="#//api/name/permissions">permissions</a> without a read or publish
-qualification are deprecated; use of a read-qualified or publish-qualified alternative is preferred
-(e.g. reauthorizeWithReadPermissions or reauthorizeWithPublishPermissions)</p></dd>
+			<dd><p>A block to call with session <a href="#//api/name/state">state</a> changes. The default is nil.</p></dd>
 		</dl>
 		
 	</div>
@@ -2706,7 +2597,9 @@ qualification are deprecated; use of a read-qualified or publish-qualified alter
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>@abstract
-Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p>
+Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p><p>Methods and properties that specify <a href="#//api/name/permissions">permissions</a> without a read or publish
+qualification are deprecated; use of a read-qualified or publish-qualified alternative is preferred
+(e.g. reauthorizeWithReadPermissions or reauthorizeWithPublishPermissions)</p>
 	</div>
 	
 	
@@ -2756,10 +2649,7 @@ authentication flow.</p></dd>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>handler</em></dt>
-			<dd><p>A block to call with session state changes. The default is nil.</p>
-
-<p>@discussion This method is a deprecated alias of <a href="#//api/name/requestNewPublishPermissions:defaultAudience:completionHandler:">[FBSession requestNewPublishPermissions:defaultAudience:completionHandler:]</a>.
-Consider using <a href="#//api/name/requestNewPublishPermissions:defaultAudience:completionHandler:">[FBSession requestNewPublishPermissions:defaultAudience:completionHandler:]</a>, which is preferred for readability.</p></dd>
+			<dd><p>A block to call with session <a href="#//api/name/state">state</a> changes. The default is nil.</p></dd>
 		</dl>
 		
 	</div>
@@ -2773,7 +2663,8 @@ Consider using <a href="#//api/name/requestNewPublishPermissions:defaultAudience
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>@abstract
-Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p>
+Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p><p>This method is a deprecated alias of <a href="#//api/name/requestNewPublishPermissions:defaultAudience:completionHandler:">[FBSession requestNewPublishPermissions:defaultAudience:completionHandler:]</a>.
+Consider using <a href="#//api/name/requestNewPublishPermissions:defaultAudience:completionHandler:">[FBSession requestNewPublishPermissions:defaultAudience:completionHandler:]</a>, which is preferred for readability.</p>
 	</div>
 	
 	
@@ -2818,10 +2709,7 @@ authentication flow. A value of nil indicates basic <a href="#//api/name/permiss
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>handler</em></dt>
-			<dd><p>A block to call with session state changes. The default is nil.</p>
-
-<p>@discussion This method is a deprecated alias of <a href="#//api/name/requestNewReadPermissions:completionHandler:">[FBSession requestNewReadPermissions:completionHandler:]</a>. Consider
-using <a href="#//api/name/requestNewReadPermissions:completionHandler:">[FBSession requestNewReadPermissions:completionHandler:]</a>, which is preferred for readability.</p></dd>
+			<dd><p>A block to call with session <a href="#//api/name/state">state</a> changes. The default is nil.</p></dd>
 		</dl>
 		
 	</div>
@@ -2835,7 +2723,8 @@ using <a href="#//api/name/requestNewReadPermissions:completionHandler:">[FBSess
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>@abstract
-Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p>
+Reauthorizes the session, with additional <a href="#//api/name/permissions">permissions</a>.</p><p>This method is a deprecated alias of <a href="#//api/name/requestNewReadPermissions:completionHandler:">[FBSession requestNewReadPermissions:completionHandler:]</a>. Consider
+using <a href="#//api/name/requestNewReadPermissions:completionHandler:">[FBSession requestNewReadPermissions:completionHandler:]</a>, which is preferred for readability.</p>
 	</div>
 	
 	
@@ -2896,11 +2785,7 @@ authentication flow.</p></dd>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>handler</em></dt>
-			<dd><p>A block to call with session state changes. The default is nil.</p>
-
-<p>@discussion The handler, if non-nil, is called once the operation has completed or failed. This is in contrast to the
-state completion handler used in <a href="#//api/name/openWithCompletionHandler:">[FBSession openWithCompletionHandler:]</a> (and other <code>open*</code> methods) which is called
-for each state-change for the session.</p></dd>
+			<dd><p>A block to call with session <a href="#//api/name/state">state</a> changes. The default is nil.</p></dd>
 		</dl>
 		
 	</div>
@@ -2914,7 +2799,9 @@ for each state-change for the session.</p></dd>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>@abstract
-Requests new or additional write <a href="#//api/name/permissions">permissions</a> for the session.</p>
+Requests new or additional write <a href="#//api/name/permissions">permissions</a> for the session.</p><p>The handler, if non-nil, is called once the operation has completed or failed. This is in contrast to the
+state completion handler used in <a href="#//api/name/openWithCompletionHandler:">[FBSession openWithCompletionHandler:]</a> (and other <code>open*</code> methods) which is called
+for each state-change for the session.</p>
 	</div>
 	
 	
@@ -2959,11 +2846,7 @@ authentication flow. A value of nil indicates basic <a href="#//api/name/permiss
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>handler</em></dt>
-			<dd><p>A block to call with session state changes. The default is nil.</p>
-
-<p>@discussion The handler, if non-nil, is called once the operation has completed or failed. This is in contrast to the
-state completion handler used in <a href="#//api/name/openWithCompletionHandler:">[FBSession openWithCompletionHandler:]</a> (and other <code>open*</code> methods) which is called
-for each state-change for the session.</p></dd>
+			<dd><p>A block to call with session <a href="#//api/name/state">state</a> changes. The default is nil.</p></dd>
 		</dl>
 		
 	</div>
@@ -2977,7 +2860,9 @@ for each state-change for the session.</p></dd>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>@abstract
-Requests new or additional read <a href="#//api/name/permissions">permissions</a> for the session.</p>
+Requests new or additional read <a href="#//api/name/permissions">permissions</a> for the session.</p><p>The handler, if non-nil, is called once the operation has completed or failed. This is in contrast to the
+state completion handler used in <a href="#//api/name/openWithCompletionHandler:">[FBSession openWithCompletionHandler:]</a> (and other <code>open*</code> methods) which is called
+for each state-change for the session.</p>
 	</div>
 	
 	
@@ -3040,9 +2925,9 @@ Requests new or additional read <a href="#//api/name/permissions">permissions</a
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-14)</span><br />
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-18)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
 					</div>
 				</div>

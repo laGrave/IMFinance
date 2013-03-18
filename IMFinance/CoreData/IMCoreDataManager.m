@@ -75,6 +75,9 @@ static IMCoreDataManager *sharedInstance = nil;
         if (!(object.object_id && [object.object_id length]))
             object.object_id = parseObject.objectId;
         object.sync_status = [NSNumber numberWithInteger:0];
+        if ([object.is_deleted boolValue] == YES) {
+            [object MR_deleteInContext:localContext];
+        }
     }];
 }
 

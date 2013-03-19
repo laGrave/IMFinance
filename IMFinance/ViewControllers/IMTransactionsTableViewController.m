@@ -15,6 +15,8 @@
 #import "IMTransactionEditViewController.h"
 #import "IMTransactionCell.h"
 
+#import "IMCoreDataManager.h"
+
 @interface IMTransactionsTableViewController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
@@ -70,6 +72,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [[IMCoreDataManager sharedInstance] transactionSync];
 }
 
 - (void)didReceiveMemoryWarning
@@ -158,10 +162,7 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        Transaction *transToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        [transToDelete MR_deleteEntity];
-        
-        //        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [[IMCoreDataManager sharedInstance] deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

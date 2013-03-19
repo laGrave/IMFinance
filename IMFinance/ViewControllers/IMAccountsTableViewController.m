@@ -142,8 +142,6 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-//        Account *accountToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
-//        [accountToDelete MR_deleteEntity];
         [[IMCoreDataManager sharedInstance] deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {

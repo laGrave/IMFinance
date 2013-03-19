@@ -19,8 +19,8 @@
 - (dispatch_queue_t)background_save_queue;
 
 //синхронизация
-- (void)performSync;
 - (void)accountSync;
+- (void)transactionSync;
 
 //очищаем содержимое объекта для последующей синхронизации
 //окончательное удаление произойдет после успешной синхронизации

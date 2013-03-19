@@ -37,7 +37,7 @@
     }
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"is_deleted == %@", [NSNumber numberWithInteger:0]];
-    _fetchedResultsController = [Account MR_fetchAllGroupedBy:@"type" withPredicate:predicate sortedBy:nil ascending:YES delegate:self];
+    _fetchedResultsController = [Account MR_fetchAllGroupedBy:@"type" withPredicate:predicate sortedBy:@"type" ascending:YES delegate:self];
     
     return _fetchedResultsController;
 }
@@ -61,6 +61,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [[IMCoreDataManager sharedInstance] accountSync];
 }
 
 - (void)didReceiveMemoryWarning
